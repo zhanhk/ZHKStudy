@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * Éú²úÕßÏß³Ì
+ * ç”Ÿäº§è€…çº¿ç¨‹
  * 
  * @author jackyuj
  */
@@ -28,23 +28,23 @@ public class Producer implements Runnable {
 		String data = null;
 		Random r = new Random();
 
-		System.out.println("Æô¶¯Éú²úÕßÏß³Ì£¡");
+		System.out.println("å¯åŠ¨ç”Ÿäº§è€…çº¿ç¨‹ï¼");
 		try {
 			while (isRunning) {
-				System.out.println("ÕıÔÚÉú²úÊı¾İ...");
+				System.out.println("æ­£åœ¨ç”Ÿäº§æ•°æ®...");
 				Thread.sleep(r.nextInt(DEFAULT_RANGE_FOR_SLEEP));
 
 				data = "data:" + count.incrementAndGet();
-				System.out.println("½«Êı¾İ£º" + data + "·ÅÈë¶ÓÁĞ...");
+				System.out.println("å°†æ•°æ®ï¼š" + data + "æ”¾å…¥é˜Ÿåˆ—...");
 				if (!queue.offer(data, 2, TimeUnit.SECONDS)) {
-					System.out.println("·ÅÈëÊı¾İÊ§°Ü£º" + data);
+					System.out.println("æ”¾å…¥æ•°æ®å¤±è´¥ï¼š" + data);
 				}
 			}
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 			Thread.currentThread().interrupt();
 		} finally {
-			System.out.println("ÍË³öÉú²úÕßÏß³Ì£¡");
+			System.out.println("é€€å‡ºç”Ÿäº§è€…çº¿ç¨‹ï¼");
 		}
 	}
 

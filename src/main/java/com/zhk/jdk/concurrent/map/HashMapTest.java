@@ -2,6 +2,7 @@ package com.zhk.jdk.concurrent.map;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 public class HashMapTest {
 	
@@ -10,10 +11,26 @@ public class HashMapTest {
 		
 		Map<String,String> map = new HashMap<String,String>();
 		
-		map.put("北京", "woca");
+		Random rd = new Random();
 		
-		map.put("北京", "woca11s");
+		long time = System.currentTimeMillis();
+		for(int i = 0 ; i < 1000000; i ++) {
+			int ird = rd.nextInt(1000000);
+			map.put("s"+ird, "woca");
+		}
 		
-		System.out.println(map.toString());
+		System.out.println(System.currentTimeMillis() - time);
+		
+		
+		Map<String,String> map1 = new HashMap<String,String>(1000000);
+		
+		Random rd1 = new Random();
+		
+		long time1 = System.currentTimeMillis();
+		for(int i = 0 ; i < 1000000; i ++) {
+			int ird = rd1.nextInt(1000000);
+			map1.put("aa"+ird, "woca");
+		}
+		System.out.println(System.currentTimeMillis() - time1);
 	}
 }

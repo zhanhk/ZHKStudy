@@ -7,24 +7,24 @@ public class CountDownLatchTest {
 	private final static int GROUP_SIZE = 5;
 	
 	public static void main(String []args) {
-		processOneGroup("·Ö×é1");
-		processOneGroup("·Ö×é2");
+		processOneGroup("åˆ†ç»„1");
+		processOneGroup("åˆ†ç»„2");
 	}
 	
 	private static void processOneGroup(final String groupName) {
 		final CountDownLatch start_count_down = new CountDownLatch(1);
 		final CountDownLatch end_count_down = new CountDownLatch(GROUP_SIZE);
-		System.out.println("==========================>\n·Ö×é£º" + groupName + "±ÈÈü¿ªÊ¼£º");
+		System.out.println("==========================>\nåˆ†ç»„ï¼š" + groupName + "æ¯”èµ›å¼€å§‹ï¼š");
 		for(int i = 0 ; i < GROUP_SIZE ; i++) {
 			new Thread(String.valueOf(i)) {
 				public void run() {
-					System.out.println("ÎÒÊÇÏß³Ì×é£º¡¾" + groupName + "¡¿,µÚ£º" + this.getName() + " ºÅÏß³Ì,ÎÒÒÑ¾­×¼±¸¾ÍÐ÷£¡");
+					System.out.println("æˆ‘æ˜¯çº¿ç¨‹ç»„ï¼šã€" + groupName + "ã€‘,ç¬¬ï¼š" + this.getName() + " å·çº¿ç¨‹,æˆ‘å·²ç»å‡†å¤‡å°±ç»ªï¼");
 					try {
-						start_count_down.await();//µÈ´ý¿ªÊ¼Ö¸Áî·¢³ö¼´£ºstart_count_down.countDown();
+						start_count_down.await();//ç­‰å¾…å¼€å§‹æŒ‡ä»¤å‘å‡ºå³ï¼šstart_count_down.countDown();
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
-					System.out.println("ÎÒÊÇÏß³Ì×é£º¡¾" + groupName + "¡¿,µÚ£º" + this.getName() + " ºÅÏß³Ì,ÎÒÒÑÖ´ÐÐÍê³É£¡");
+					System.out.println("æˆ‘æ˜¯çº¿ç¨‹ç»„ï¼šã€" + groupName + "ã€‘,ç¬¬ï¼š" + this.getName() + " å·çº¿ç¨‹,æˆ‘å·²æ‰§è¡Œå®Œæˆï¼");
 					end_count_down.countDown();
 				}
 			}.start();
@@ -34,13 +34,13 @@ public class CountDownLatchTest {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		System.out.println("¸÷¾Í¸÷Î»£¬Ô¤±¸£¡");
-		start_count_down.countDown();//¿ªÊ¼ÈüÅÜ
+		System.out.println("å„å°±å„ä½ï¼Œé¢„å¤‡ï¼");
+		start_count_down.countDown();//å¼€å§‹èµ›è·‘
 		try {
-			end_count_down.await();//µÈ´ý¶à¸öÈüÅÜÕßÖð¸ö½áÊø
+			end_count_down.await();//ç­‰å¾…å¤šä¸ªèµ›è·‘è€…é€ä¸ªç»“æŸ
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		System.out.println("·Ö×é£º" + groupName + "±ÈÈü½áÊø£¡");
+		System.out.println("åˆ†ç»„ï¼š" + groupName + "æ¯”èµ›ç»“æŸï¼");
 	}
 }

@@ -10,11 +10,11 @@ public class ExchangerTest {
 			final Integer num = i;
 			new Thread() {
 				public void run() {
-					System.out.println("我是线程：Thread_" + this.getName() + "我的数据是：" + num);
+					System.out.println("鎴戞槸绾跨▼锛歍hread_" + this.getName() + "鎴戠殑鏁版嵁鏄細" + num);
 					try {
 						Integer exchangeNum = exchanger.exchange(num);
 						Thread.sleep(1000);
-						System.out.println("我是线程：Thread_" + this.getName() + "我原先的数据为：" + num + " , 交换后的数据为：" + exchangeNum);
+						System.out.println("鎴戞槸绾跨▼锛歍hread_" + this.getName() + "鎴戝師鍏堢殑鏁版嵁涓猴細" + num + " , 浜ゆ崲鍚庣殑鏁版嵁涓猴細" + exchangeNum);
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}

@@ -17,10 +17,10 @@ public class SemaphoreTest {
                        try {  
                             MAX_SEMA_PHORE.acquire();  
                             acquired = true;  
-                            System.out.println("ÎÒÊÇÏß³Ì£º" + num + " ÎÒ»ñµÃÁËÊ¹ÓÃÈ¨£¡" + DateUtil.getDate());  
+                            System.out.println("æˆ‘æ˜¯çº¿ç¨‹ï¼š" + num + " æˆ‘è·å¾—äº†ä½¿ç”¨æƒï¼" + DateUtil.getDate());  
                             long time = 1000 * Math.max(1, Math.abs(radom.nextInt() % 10));  
                             Thread.sleep(time);  
-                            System.out.println("ÎÒÊÇÏß³Ì£º" + num + " ÎÒÖ´ĞĞÍêÁË£¡" + DateUtil.getDate());  
+                            System.out.println("æˆ‘æ˜¯çº¿ç¨‹ï¼š" + num + " æˆ‘æ‰§è¡Œå®Œäº†ï¼" + DateUtil.getDate());  
                        }catch(Exception e) {  
                             e.printStackTrace();  
                        }finally {  

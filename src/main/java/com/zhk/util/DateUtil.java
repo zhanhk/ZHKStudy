@@ -16,17 +16,17 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 /**
  * <p>
- * 日期时间工具类，提供对日期和时间进行各种运算操作的支�?
+ * 日期时间工具类，提供对日期和时间进行各种运算操作的支持
  * </p>
  */
 public class DateUtil {
 	/**
-	 * 1000毫秒*60�?60�?24小时=�?��毫秒�?
+	 * 1000毫秒*60秒*60分*24小时=一天毫秒数
 	 */
 	public static final long MILLISECOND_DAY = 86400000;
 
 	/**
-	 * 1�?31536000�?
+	 * 1年=31536000秒
 	 */
 	public static final int SECOND_YEAR = 31536000;
 
@@ -37,7 +37,7 @@ public class DateUtil {
 	 * @param pattern
 	 * @return String
 	 */
-	private static String format(Date date, String pattern) {
+	public static String format(Date date, String pattern) {
 		return new SimpleDateFormat(pattern).format(date);
 	}
 	/**
@@ -58,18 +58,8 @@ public class DateUtil {
 	public static String format(Date date) {
 		return format(date, "yyyy-MM-dd HH:mm:ss");
 	}
-	
-	/**
-	 * 将日期类型转换为字符类型[10位：yyyy-MM-dd]
-	 * @param date
-	 * @return
-	 */
-	public static String formatYMD(Date date) {
-		return format(date, "yyyy-MM-dd");
-	}
-	
 	/***
-	 * 日期类型为订单号�?��的特殊形�?
+	 * 日期类型为订单号需求的特殊形式
 	 * @param date
 	 * @return
 	 *
@@ -77,22 +67,25 @@ public class DateUtil {
 	public static String formatForNO(Date date){
 		return format (date,"yyyyMMddHHmm");
 	}
+	
+	public static String getNowDate(String formatter){
+		return format (DateUtil.getDate(),formatter);
+	}
 
 	/**
-	 * 将字符类型转换为sql类日期类�?
+	 * 将字符类型转换为sql类日期类型
 	 * 
 	 * @param date
 	 * @param pattern
 	 * @return java.sql.Date
 	 * @throws ParseException
 	 */
-	public static java.sql.Date parse(String date, String pattern)
-			throws ParseException {
+	public static java.sql.Date parse(String date, String pattern) throws ParseException {
 		return convert(new SimpleDateFormat(pattern).parse(date));
 	}
 
 	/**
-	 * 将字符类型[19位：yyyy-MM-dd HH:mm:ss]转换为日期类�?
+	 * 将字符类型[19位：yyyy-MM-dd HH:mm:ss]转换为日期类型
 	 * 
 	 * @param date
 	 * @return java.sql.Date
@@ -103,7 +96,7 @@ public class DateUtil {
 	}
 
 	/**
-	 * 将字符类型[10位：yyyy-MM-dd HH:mm:ss]转换为日期类�?
+	 * 将字符类型[10位：yyyy-MM-dd HH:mm:ss]转换为日期类型
 	 * 
 	 * @param date
 	 * @return java.sql.Date
@@ -114,7 +107,7 @@ public class DateUtil {
 	}
 
 	/**
-	 * 将util类日期转换为sql类日�?
+	 * 将util类日期转换为sql类日期
 	 * 
 	 * @param date
 	 * @return java.sql.Date
@@ -142,7 +135,7 @@ public class DateUtil {
 	}
 
 	/**
-	 * 获得从现在开始步�?b>�?/b>数后的日期，�?1则昨天�?2则后天，以此类推
+	 * 获得从现在开始步进<b>天</b>数后的日期，如-1则昨天、2则后天，以此类推
 	 * 
 	 * @param amount
 	 * @return java.sql.Date
@@ -155,7 +148,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * 获得从指定日期开始步�?b>�?/b>数后的日期，�?1则昨天�?2则后天，以此类推
+	 * 获得从指定日期开始步进<b>天</b>数后的日期，如-1则昨天、2则后天，以此类推
 	 * 
 	 * @param amount
 	 * @return java.sql.Date
@@ -168,7 +161,7 @@ public class DateUtil {
 	}
 
 	/**
-	 * 获得从现在开始步�?b>�?/b>数后的日期，�?1则上周�?2则下下周，以此类�?
+	 * 获得从现在开始步进<b>周</b>数后的日期，如-1则上周、2则下下周，以此类推
 	 * 
 	 * @param amount
 	 * @return java.sql.Date
@@ -181,7 +174,7 @@ public class DateUtil {
 	}
 	
 	/*
-	 * 获得从现在开始步�?b>�?/b>数后的日期，�?1则上周�?2则下下周，以此类�?
+	 * 获得从现在开始步进<b>周</b>数后的日期，如-1则上周、2则下下周，以此类推
 	 * @param date
 	 * @param amount
 	 * @return java.sql.Date
@@ -194,7 +187,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * 获得从现在开始步�?b>�?/b>数后的日期，�?1则上周�?2则下下周，以此类�?
+	 * 获得从现在开始步进<b>周</b>数后的日期，如-1则上周、2则下下周，以此类推
 	 * @param date
 	 * @param amount
 	 * @return java.sql.Date
@@ -211,7 +204,7 @@ public class DateUtil {
 	}
 
 	/**
-	 * 获得从现在开始步�?b>�?/b>数后的日期，�?1则上月�?2则下下月，以此类�?
+	 * 获得从现在开始步进<b>月</b>数后的日期，如-1则上月、2则下下月，以此类推
 	 * 
 	 * @param amount
 	 * @return java.sql.Date
@@ -231,7 +224,7 @@ public class DateUtil {
 	}
 
 	/**
-	 * 日期相减，返回长整型数�?
+	 * 日期相减，返回长整型数值
 	 * 
 	 * @param begin
 	 * @param end
@@ -247,7 +240,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * 日期相减，返回长整型数�?
+	 * 日期相减，返回长整型数值
 	 * 
 	 * @param begin
 	 * @param end
@@ -275,7 +268,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * 返回日期指示�?��星期中的某天
+	 * 返回日期指示一个星期中的某天
 	 * @param date
 	 * @param amount
 	 * @return
@@ -289,13 +282,13 @@ public class DateUtil {
 	
 	/**
 	 * 始终返回某日期一周中的星期几 
-	 * @param toDay4 以某日期为基�?
-	 * @param i	返回星期�?
+	 * @param toDay4 以某日期为基准
+	 * @param i	返回星期几
 	 * @return java.sql.Date
 	 * <p>
 	 * <ul>
 	 * <li>
-	 * Example: getStepBeforeDay(new Date(),0) 返回当前日期为基本的上周�?/li>
+	 * Example: getStepBeforeDay(new Date(),0) 返回当前日期为基本的上周日</li>
 	 * </ul>
 	 * </p>
 	 */
@@ -353,7 +346,7 @@ public class DateUtil {
 	}
 	
 	/***
-	 * 比较2个时间点先后，返回时间点靠后�?
+	 * 比较2个时间点先后，返回时间点靠后的
 	 * @param date1
 	 * @param date2
 	 * @return
@@ -374,12 +367,12 @@ public class DateUtil {
 			} catch (ParseException e) {
 				e.printStackTrace();
 			}
-			//如果时间判断出错，直接从�?��时间�?��计算
+			//如果时间判断出错，直接从最新时间开始计算
 			return DateUtil.format(new Date());
 		}
 	}
 	/***
-	 * 从指定时间计算用户购买时�?
+	 * 从指定时间计算用户购买时间
 	 * @param timelimit
 	 * @return
 	 */
@@ -420,9 +413,9 @@ public class DateUtil {
 	}
 	
 	/**
-	 * �?��时间格式
+	 * 检验时间格式
 	 * @param time 时间
-	 * @param formatter 格式字符�?
+	 * @param formatter 格式字符串
 	 * @return
 	 */
 	public static Boolean checkTimeFormat(String time, String formatter) {
@@ -436,5 +429,84 @@ public class DateUtil {
 			return false;
 		}
 		return false;
+	}
+	
+
+	public static int Hour(Date time) {
+		SimpleDateFormat st = new SimpleDateFormat("yyyyMMddHH");
+		return Integer.parseInt(st.format(time));
+	}
+
+	public static Date StringToDate(String s) {
+		Date time = new Date();
+		SimpleDateFormat sd = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		try {
+			time = sd.parse(s);
+		} catch (Exception e) {
+			System.out.println("输入的日期格式有误！");
+		}
+		return time;
+	}
+	
+	public static String subTime(String begin, String end) {
+		DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		Calendar calBegin = new GregorianCalendar();
+		Calendar calEnd = new GregorianCalendar();
+		try {
+			calBegin.setTime(format.parse(begin));
+			
+		} catch (ParseException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		try {
+			calEnd.setTime(format.parse(end));
+		} catch (ParseException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		StringBuffer sb = new StringBuffer("");
+		long temp = calEnd.getTimeInMillis() - calBegin.getTimeInMillis();
+		if(86400000 < temp){
+			//sb.append((temp/86400000) + "天");
+			temp = temp%86400000;
+		}
+		if(3600000 < temp){
+			long hour = (temp/3600000);
+			sb.append((((hour+"").length() == 1 ? "0"+hour : hour))+":");
+			temp = temp%3600000;
+		}else {
+			sb.append("00:");
+		}
+		if(60000 < temp){
+			long min = (temp/60000);
+			if(min == 60) {
+				min = min -1;
+			}
+			sb.append((((min+"").length() == 1 ? "0"+min : min))+":");
+			temp = temp%60000;
+		}else {
+			sb.append("00:");
+		}
+		if(1000 < temp){
+			long second = temp/1000;
+			if(second == 60) {
+				second = second -1;
+			}
+			sb.append(((second+"").length() == 1 ? "0"+second : second));
+		}else {
+			sb.append("00");
+		}
+		return sb.toString();
+	}
+	
+	/**
+	 * 时间戳转Date对象
+	 * @param timestamp
+	 * @return
+	 */
+	public static Date getTimestampToDate(long timestamp) {
+		Date date = new Date(timestamp);
+		return date;
 	}
 }

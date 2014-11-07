@@ -3,9 +3,9 @@ package com.zhk.jvm.classloader;
 public class ClassLoaderTest {
 
 	/**
-	 * @Description:Æô¶¯Àà
+	 * @Description:å¯åŠ¨ç±»
 	 * @param args
-	 * @author YHJ create at 2011-6-4 ÏÂÎç08:30:12
+	 * @author YHJ create at 2011-6-4 ä¸‹åˆ08:30:12
 	 */
 	@SuppressWarnings("static-access")
 	public static void main(String[] args) {
@@ -15,12 +15,12 @@ public class ClassLoaderTest {
 	}
 	
 	/**
-	ÎÒÃÇÏÈ²Â²âÒ»ÏÂÔËĞĞ½á¹û
-	È»ºóÎÒÃÇÔÙÀ´µ÷»»Ò»ÏÂµ¥ÊµÀıÉú³ÉµÄË³Ğò£¬½«
+	æˆ‘ä»¬å…ˆçŒœæµ‹ä¸€ä¸‹è¿è¡Œç»“æœ
+	ç„¶åæˆ‘ä»¬å†æ¥è°ƒæ¢ä¸€ä¸‹å•å®ä¾‹ç”Ÿæˆçš„é¡ºåºï¼Œå°†
 	    private static Singleton singleton=new Singleton();
 	    private static int counter1;
 	    private static int counter2 = 0;
-	ĞŞ¸ÄÎª
+	ä¿®æ”¹ä¸º
 	    private static int counter1;
 	    private static int counter2 = 0;
 	    private static Singleton singleton=new Singleton();

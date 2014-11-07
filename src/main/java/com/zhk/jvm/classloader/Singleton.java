@@ -19,9 +19,9 @@ public class Singleton {
 	}
 
 	/**
-	 * @Description:ÊµÀı»¯
+	 * @Description:å®ä¾‹åŒ–
 	 * @return
-	 * @author YHJ create at 2011-6-4 ÏÂÎç08:34:43
+	 * @author YHJ create at 2011-6-4 ä¸‹åˆ08:34:43
 	 */
 	public static Singleton getInstance() {
 		return singleton;

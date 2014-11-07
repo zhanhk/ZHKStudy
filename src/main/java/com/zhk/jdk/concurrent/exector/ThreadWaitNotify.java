@@ -18,22 +18,22 @@ public class ThreadWaitNotify {
 					int nowValue = NOW_CALL_COUNT.get();
 					while(true) {
 						if(nowValue < QUERY_MAX_LENGTH && NOW_CALL_COUNT.compareAndSet(nowValue, nowValue + 1)) {
-							break;//获取到了
+							break;//鑾峰彇鍒颁簡
 						}
 						try {
 							this.wait(1000);
 						} catch (InterruptedException e) {
 							e.printStackTrace();
 						}
-						nowValue = NOW_CALL_COUNT.get();//获取一个数据，用于对比
+						nowValue = NOW_CALL_COUNT.get();//鑾峰彇涓�涓暟鎹紝鐢ㄤ簬瀵规瘮
 					}
-					System.out.println(this.getName() + "======我开始做操作了！");
+					System.out.println(this.getName() + "======鎴戝紑濮嬪仛鎿嶄綔浜嗭紒");
 					try {
 						Thread.sleep(1000);
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
-					System.out.println(this.getName() + "======操作结束了！");
+					System.out.println(this.getName() + "======鎿嶄綔缁撴潫浜嗭紒");
 					NOW_CALL_COUNT.getAndDecrement();
 					this.notify();
 				}

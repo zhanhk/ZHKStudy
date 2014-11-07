@@ -13,7 +13,7 @@ public class ThreadJoinTest {
 				public void run() {
 					int j = 0;
 					while(j++ < 10) {
-						System.out.println("ÎÒÊÇ1ºÅ×éÏß³Ì£º" + num + " Õâ¸öÊÇÎÒµÚ£º" + j + " ´ÎÔËĞĞ£¡");
+						System.out.println("æˆ‘æ˜¯1å·ç»„çº¿ç¨‹ï¼š" + num + " è¿™ä¸ªæ˜¯æˆ‘ç¬¬ï¼š" + j + " æ¬¡è¿è¡Œï¼");
 					}
 				}
 			};
@@ -21,7 +21,7 @@ public class ThreadJoinTest {
 				public void run() {
 					int j = 0;
 					while(j++ < 10) {
-						System.out.println("ÎÒÊÇ2ºÅ×éÏß³Ì£º" + num + " Õâ¸öÊÇÎÒµÚ£º" + j + " ´ÎÔËĞĞ£¡");
+						System.out.println("æˆ‘æ˜¯2å·ç»„çº¿ç¨‹ï¼š" + num + " è¿™ä¸ªæ˜¯æˆ‘ç¬¬ï¼š" + j + " æ¬¡è¿è¡Œï¼");
 					}
 				}
 			};
@@ -30,13 +30,13 @@ public class ThreadJoinTest {
 		for(int i = 0 ; i < GROUP_SIZE ; i++) {
 			threadGroup1[i].join();
 		}
-		System.out.println("-==================>Ïß³Ì×é1Ö´ĞĞÍêÁË£¬¸ÃÂÖµ½°³ÁË£¡");
+		System.out.println("-==================>çº¿ç¨‹ç»„1æ‰§è¡Œå®Œäº†ï¼Œè¯¥è½®åˆ°ä¿ºäº†ï¼");
 		for(int i = 0 ; i < GROUP_SIZE ; i++) {
 			threadGroup2[i].start();
 		}
 		for(int i = 0 ; i < GROUP_SIZE ; i++) {
 			threadGroup2[i].join();
 		}
-		System.out.println("È«²¿½áÊøÀ²£¡¹ş¹ş£¬»Ø¼ÒºÈÏ¡·¹£¡");
+		System.out.println("å…¨éƒ¨ç»“æŸå•¦ï¼å“ˆå“ˆï¼Œå›å®¶å–ç¨€é¥­ï¼");
 	}
 }

@@ -12,9 +12,9 @@ public class YoungGenGC {
     }  
   
     /** 
-     * ²âÊÔÄêÇá´ú»ØÊÕ
+     * æµ‹è¯•å¹´è½»ä»£å›æ”¶
      * 
-     * VM²ÎÊı£º-verbose:gc -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio=8 
+     * VMå‚æ•°ï¼š-verbose:gc -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio=8 
      * 
      * [GC [DefNew: 6487K->147K(9216K), 0.0039095 secs] 6487K->6291K(19456K), 0.0039393 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
 		Heap
@@ -35,12 +35,12 @@ public class YoungGenGC {
         allocation1 = new byte[2 * _1MB];  
         allocation2 = new byte[2 * _1MB];  
         allocation3 = new byte[2 * _1MB];  
-        allocation4 = new byte[4 * _1MB];  // ³öÏÖÒ»´ÎMinor GC  
+        allocation4 = new byte[4 * _1MB];  // å‡ºç°ä¸€æ¬¡Minor GC  
     }  
   
     /** 
-     * ¶ÔÏóÖ±½Ó½øÈëÄêÀÏ´ú
-     * VM²ÎÊı£º-verbose:gc -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio=8 
+     * å¯¹è±¡ç›´æ¥è¿›å…¥å¹´è€ä»£
+     * VMå‚æ•°ï¼š-verbose:gc -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio=8 
      * -XX:PretenureSizeThreshold=3145728 
      * 
      * Heap
@@ -57,17 +57,17 @@ public class YoungGenGC {
     @SuppressWarnings("unused")  
     public static void testPretenureSizeThreshold() {  
         byte[] allocation;  
-        allocation = new byte[4 * _1MB];  //Ö±½Ó·ÖÅäÔÚÀÏÄê´úÖĞ  
+        allocation = new byte[4 * _1MB];  //ç›´æ¥åˆ†é…åœ¨è€å¹´ä»£ä¸­  
     }  
   
     /** 
-     * VM²ÎÊı£º-verbose:gc -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio=8 -XX:MaxTenuringThreshold=1 
+     * VMå‚æ•°ï¼š-verbose:gc -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio=8 -XX:MaxTenuringThreshold=1 
      * -XX:+PrintTenuringDistribution 
      */  
     @SuppressWarnings("unused")  
     public static void testTenuringThreshold() {  
         byte[] allocation1, allocation2, allocation3;  
-        allocation1 = new byte[_1MB / 4];  // Ê²Ã´Ê±ºò½øÈëÀÏÄê´ú¾ö¶¨ÓÚXX:MaxTenuringThresholdÉèÖÃ  
+        allocation1 = new byte[_1MB / 4];  // ä»€ä¹ˆæ—¶å€™è¿›å…¥è€å¹´ä»£å†³å®šäºXX:MaxTenuringThresholdè®¾ç½®  
         allocation2 = new byte[4 * _1MB];  
         allocation3 = new byte[4 * _1MB];  
         allocation3 = null;  
@@ -75,13 +75,13 @@ public class YoungGenGC {
     }  
   
     /** 
-     * VM²ÎÊı£º-verbose:gc -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio=8 -XX:MaxTenuringThreshold=15 
+     * VMå‚æ•°ï¼š-verbose:gc -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio=8 -XX:MaxTenuringThreshold=15 
      * -XX:+PrintTenuringDistribution 
      */  
     @SuppressWarnings("unused")  
     public static void testTenuringThreshold2() {  
         byte[] allocation1, allocation2, allocation3, allocation4;  
-        allocation1 = new byte[_1MB / 4];   // allocation1+allocation2´óÓÚsurvivo¿Õ¼äÒ»°ë  
+        allocation1 = new byte[_1MB / 4];   // allocation1+allocation2å¤§äºsurvivoç©ºé—´ä¸€åŠ  
         allocation2 = new byte[_1MB / 4];    
         allocation3 = new byte[4 * _1MB];  
         allocation4 = new byte[4 * _1MB];  
@@ -90,7 +90,7 @@ public class YoungGenGC {
     }  
   
     /** 
-     * VM²ÎÊı£º-verbose:gc -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio=8 -XX:-HandlePromotionFailure 
+     * VMå‚æ•°ï¼š-verbose:gc -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio=8 -XX:-HandlePromotionFailure 
      */  
     @SuppressWarnings("unused")  
     public static void testHandlePromotion() {  

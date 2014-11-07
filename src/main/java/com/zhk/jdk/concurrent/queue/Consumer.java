@@ -5,7 +5,7 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Ïû·ÑÕßÏß³Ì
+ * æ¶ˆè´¹è€…çº¿ç¨‹
  * 
  * @author jackyuj
  */
@@ -20,19 +20,19 @@ public class Consumer implements Runnable {
 	}
 
 	public void run() {
-		System.out.println("Æô¶¯Ïû·ÑÕßÏß³Ì£¡");
+		System.out.println("å¯åŠ¨æ¶ˆè´¹è€…çº¿ç¨‹ï¼");
 		Random r = new Random();
 		boolean isRunning = true;
 		try {
 			while (isRunning) {
-				System.out.println("Õı´Ó¶ÓÁĞ»ñÈ¡Êı¾İ...");
+				System.out.println("æ­£ä»é˜Ÿåˆ—è·å–æ•°æ®...");
 				String data = queue.poll(2, TimeUnit.SECONDS);
 				if (null != data) {
-					System.out.println("ÄÃµ½Êı¾İ£º" + data);
-					System.out.println("ÕıÔÚÏû·ÑÊı¾İ£º" + data);
+					System.out.println("æ‹¿åˆ°æ•°æ®ï¼š" + data);
+					System.out.println("æ­£åœ¨æ¶ˆè´¹æ•°æ®ï¼š" + data);
 					Thread.sleep(r.nextInt(DEFAULT_RANGE_FOR_SLEEP));
 				} else {
-					// ³¬¹ı2s»¹Ã»Êı¾İ£¬ÈÏÎªËùÓĞÉú²úÏß³Ì¶¼ÒÑ¾­ÍË³ö£¬×Ô¶¯ÍË³öÏû·ÑÏß³Ì¡£
+					// è¶…è¿‡2sè¿˜æ²¡æ•°æ®ï¼Œè®¤ä¸ºæ‰€æœ‰ç”Ÿäº§çº¿ç¨‹éƒ½å·²ç»é€€å‡ºï¼Œè‡ªåŠ¨é€€å‡ºæ¶ˆè´¹çº¿ç¨‹ã€‚
 					isRunning = false;
 				}
 			}
@@ -40,7 +40,7 @@ public class Consumer implements Runnable {
 			e.printStackTrace();
 			Thread.currentThread().interrupt();
 		} finally {
-			System.out.println("ÍË³öÏû·ÑÕßÏß³Ì£¡");
+			System.out.println("é€€å‡ºæ¶ˆè´¹è€…çº¿ç¨‹ï¼");
 		}
 	}
 }

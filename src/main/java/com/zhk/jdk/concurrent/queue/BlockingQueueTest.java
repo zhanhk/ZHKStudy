@@ -11,7 +11,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 public class BlockingQueueTest {
  
     public static void main(String[] args) throws InterruptedException {
-        // ÉùÃ÷Ò»¸öÈİÁ¿Îª10µÄ»º´æ¶ÓÁĞ
+        // å£°æ˜ä¸€ä¸ªå®¹é‡ä¸º10çš„ç¼“å­˜é˜Ÿåˆ—
         BlockingQueue<String> queue = new LinkedBlockingQueue<String>(10);
  
         Producer producer1 = new Producer(queue);
@@ -19,22 +19,22 @@ public class BlockingQueueTest {
         Producer producer3 = new Producer(queue);
         Consumer consumer = new Consumer(queue);
  
-        // ½èÖúExecutors
+        // å€ŸåŠ©Executors
         ExecutorService service = Executors.newCachedThreadPool();
-        // Æô¶¯Ïß³Ì
+        // å¯åŠ¨çº¿ç¨‹
         service.execute(producer1);
         service.execute(producer2);
         service.execute(producer3);
         service.execute(consumer);
  
-        // Ö´ĞĞ10s
+        // æ‰§è¡Œ10s
         Thread.sleep(10 * 1000);
         producer1.stop();
         producer2.stop();
         producer3.stop();
  
         Thread.sleep(2000);
-        // ÍË³öExecutor
+        // é€€å‡ºExecutor
         service.shutdown();
     }
 }

@@ -14,19 +14,19 @@ public class AtomicTest {
 	}
 
 	public static void main(String[] args) {
-		// ×èÈû¶ÓÁĞ£¬ÄÜÈİÄÉ100¸öÎÄ¼ş
+		// é˜»å¡é˜Ÿåˆ—ï¼Œèƒ½å®¹çº³100ä¸ªæ–‡ä»¶
 		final BlockingQueue<File> queue = new LinkedBlockingQueue<File>(100);
-		// Ïß³Ì³Ø
+		// çº¿ç¨‹æ± 
 		final ExecutorService exec = Executors.newFixedThreadPool(5);
 		final File root = new File("D:\\ISO");
-		// Íê³É±êÖ¾
+		// å®Œæˆæ ‡å¿—
 		final File exitFile = new File("");
-		// Ô­×ÓÕûĞÍ£¬¶Á¸öÊı
-		// AtomicInteger¿ÉÒÔÔÚ²¢·¢Çé¿öÏÂ´ïµ½Ô­×Ó»¯¸üĞÂ£¬±ÜÃâÊ¹ÓÃÁËsynchronized£¬¶øÇÒĞÔÄÜ·Ç³£¸ß¡£
+		// åŸå­æ•´å‹ï¼Œè¯»ä¸ªæ•°
+		// AtomicIntegerå¯ä»¥åœ¨å¹¶å‘æƒ…å†µä¸‹è¾¾åˆ°åŸå­åŒ–æ›´æ–°ï¼Œé¿å…ä½¿ç”¨äº†synchronizedï¼Œè€Œä¸”æ€§èƒ½éå¸¸é«˜ã€‚
 		final AtomicInteger rc = new AtomicInteger();
-		// Ô­×ÓÕûĞÍ£¬Ğ´¸öÊı
+		// åŸå­æ•´å‹ï¼Œå†™ä¸ªæ•°
 		final AtomicInteger wc = new AtomicInteger();
-		// ¶ÁÏß³Ì
+		// è¯»çº¿ç¨‹
 		Runnable read = new Runnable() {
 			public void run() {
 				scanFile(root);
@@ -45,11 +45,11 @@ public class AtomicTest {
 						scanFile(one);
 				} else {
 					try {
-						// Ô­×ÓÕûĞÍµÄincrementAndGet·½·¨£¬ÒÔÔ­×Ó·½Ê½½«µ±Ç°Öµ¼Ó 1£¬·µ»Ø¸üĞÂµÄÖµ
+						// åŸå­æ•´å‹çš„incrementAndGetæ–¹æ³•ï¼Œä»¥åŸå­æ–¹å¼å°†å½“å‰å€¼åŠ  1ï¼Œè¿”å›æ›´æ–°çš„å€¼
 						int index = rc.incrementAndGet();
 						System.out.println("Read0: " + index + " "
 								+ file.getPath());
-						// Ìí¼Óµ½×èÈû¶ÓÁĞÖĞ
+						// æ·»åŠ åˆ°é˜»å¡é˜Ÿåˆ—ä¸­
 						queue.put(file);
 					} catch (InterruptedException e) {
 
@@ -57,10 +57,10 @@ public class AtomicTest {
 				}
 			}
 		};
-		// submit·½·¨Ìá½»Ò»¸ö Runnable ÈÎÎñÓÃÓÚÖ´ĞĞ£¬²¢·µ»ØÒ»¸ö±íÊ¾¸ÃÈÎÎñµÄ Future¡£
+		// submitæ–¹æ³•æäº¤ä¸€ä¸ª Runnable ä»»åŠ¡ç”¨äºæ‰§è¡Œï¼Œå¹¶è¿”å›ä¸€ä¸ªè¡¨ç¤ºè¯¥ä»»åŠ¡çš„ Futureã€‚
 		exec.submit(read);
 
-		// ËÄ¸öĞ´Ïß³Ì
+		// å››ä¸ªå†™çº¿ç¨‹
 		for (int index = 0; index < 4; index++) {
 			// write thread
 			final int num = index;
@@ -71,13 +71,13 @@ public class AtomicTest {
 					while (true) {
 						try {
 							Thread.sleep(randomTime());
-							// Ô­×ÓÕûĞÍµÄincrementAndGet·½·¨£¬ÒÔÔ­×Ó·½Ê½½«µ±Ç°Öµ¼Ó 1£¬·µ»Ø¸üĞÂµÄÖµ
+							// åŸå­æ•´å‹çš„incrementAndGetæ–¹æ³•ï¼Œä»¥åŸå­æ–¹å¼å°†å½“å‰å€¼åŠ  1ï¼Œè¿”å›æ›´æ–°çš„å€¼
 							int index = wc.incrementAndGet();
-							// »ñÈ¡²¢ÒÆ³ı´Ë¶ÓÁĞµÄÍ·²¿£¬ÔÚÔªËØ±äµÃ¿ÉÓÃÖ®Ç°Ò»Ö±µÈ´ı£¨Èç¹ûÓĞ±ØÒª£©¡£
+							// è·å–å¹¶ç§»é™¤æ­¤é˜Ÿåˆ—çš„å¤´éƒ¨ï¼Œåœ¨å…ƒç´ å˜å¾—å¯ç”¨ä¹‹å‰ä¸€ç›´ç­‰å¾…ï¼ˆå¦‚æœæœ‰å¿…è¦ï¼‰ã€‚
 							File file = queue.take();
-							// ¶ÓÁĞÒÑ¾­ÎŞ¶ÔÏó
+							// é˜Ÿåˆ—å·²ç»æ— å¯¹è±¡
 							if (file == exitFile) {
-								// ÔÙ´ÎÌí¼Ó"±êÖ¾"£¬ÒÔÈÃÆäËûÏß³ÌÕı³£ÍË³ö
+								// å†æ¬¡æ·»åŠ "æ ‡å¿—"ï¼Œä»¥è®©å…¶ä»–çº¿ç¨‹æ­£å¸¸é€€å‡º
 								queue.put(exitFile);
 								break;
 							}

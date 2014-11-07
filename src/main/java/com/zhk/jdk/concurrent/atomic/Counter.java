@@ -9,7 +9,7 @@ public class Counter {
 	public static AtomicInteger countAtomic = new AtomicInteger(0);  
 
 	public synchronized static void synchFunctioninc() {
-		// ÕâÀïÑÓ³Ù5ºÁÃë£¬Ê¹µÃ½á¹ûÃ÷ÏÔ
+		// è¿™é‡Œå»¶è¿Ÿ5æ¯«ç§’ï¼Œä½¿å¾—ç»“æœæ˜æ˜¾
 		try {
 			Thread.sleep(5);
 		} catch (InterruptedException e) {
@@ -18,7 +18,7 @@ public class Counter {
 	}
 	
 	public static void synchObjectinc() {
-		// ÕâÀïÑÓ³Ù5ºÁÃë£¬Ê¹µÃ½á¹ûÃ÷ÏÔ
+		// è¿™é‡Œå»¶è¿Ÿ5æ¯«ç§’ï¼Œä½¿å¾—ç»“æœæ˜æ˜¾
 		try {
 			Thread.sleep(5);
 		} catch (InterruptedException e) {
@@ -29,7 +29,7 @@ public class Counter {
 	}
 	
 	public static void atomicinc() {
-		// ÕâÀïÑÓ³Ù5ºÁÃë£¬Ê¹µÃ½á¹ûÃ÷ÏÔ
+		// è¿™é‡Œå»¶è¿Ÿ5æ¯«ç§’ï¼Œä½¿å¾—ç»“æœæ˜æ˜¾
 		try {
 			Thread.sleep(5);
 		} catch (InterruptedException e) {
@@ -40,7 +40,7 @@ public class Counter {
 	public static void main(String[] args) throws InterruptedException {
 		long start = System.currentTimeMillis();  
 		final CountDownLatch latch = new CountDownLatch(1000);
-		// Í¬Ê±Æô¶¯1000¸öÏß³Ì£¬È¥½øĞĞi++¼ÆËã£¬¿´¿´Êµ¼Ê½á¹û
+		// åŒæ—¶å¯åŠ¨1000ä¸ªçº¿ç¨‹ï¼Œå»è¿›è¡Œi++è®¡ç®—ï¼Œçœ‹çœ‹å®é™…ç»“æœ
 		for (int i = 0; i < 1000; i++) {
 			new Thread(new Runnable() {
 				@Override
@@ -51,14 +51,14 @@ public class Counter {
 			}).start();
 		}
 		latch.await();
-		// ÕâÀïÃ¿´ÎÔËĞĞµÄÖµ¶¼ÓĞ¿ÉÄÜ²»Í¬,¿ÉÄÜÎª1000
+		// è¿™é‡Œæ¯æ¬¡è¿è¡Œçš„å€¼éƒ½æœ‰å¯èƒ½ä¸åŒ,å¯èƒ½ä¸º1000
 		long end = System.currentTimeMillis();  
-		System.out.println("ÔËĞĞ½á¹û:Counter.count=" + Counter.count+" synch function time elapse:"+(end -start));
+		System.out.println("è¿è¡Œç»“æœ:Counter.count=" + Counter.count+" synch function time elapse:"+(end -start));
 		
 		count = 0;
 		start = System.currentTimeMillis();  
 		final CountDownLatch latch1 = new CountDownLatch(1000);
-		// Í¬Ê±Æô¶¯1000¸öÏß³Ì£¬È¥½øĞĞi++¼ÆËã£¬¿´¿´Êµ¼Ê½á¹û
+		// åŒæ—¶å¯åŠ¨1000ä¸ªçº¿ç¨‹ï¼Œå»è¿›è¡Œi++è®¡ç®—ï¼Œçœ‹çœ‹å®é™…ç»“æœ
 		for (int i = 0; i < 1000; i++) {
 			new Thread(new Runnable() {
 				@Override
@@ -69,15 +69,15 @@ public class Counter {
 			}).start();
 		}
 		latch1.await();
-		// ÕâÀïÃ¿´ÎÔËĞĞµÄÖµ¶¼ÓĞ¿ÉÄÜ²»Í¬,¿ÉÄÜÎª1000
+		// è¿™é‡Œæ¯æ¬¡è¿è¡Œçš„å€¼éƒ½æœ‰å¯èƒ½ä¸åŒ,å¯èƒ½ä¸º1000
 		end = System.currentTimeMillis();  
-		System.out.println("ÔËĞĞ½á¹û:Counter.count=" + Counter.count+" synch object time elapse:"+(end -start));
+		System.out.println("è¿è¡Œç»“æœ:Counter.count=" + Counter.count+" synch object time elapse:"+(end -start));
 		
 		
 		count = 0;
 		start = System.currentTimeMillis();  
 		final CountDownLatch latch2 = new CountDownLatch(1000);
-		// Í¬Ê±Æô¶¯1000¸öÏß³Ì£¬È¥½øĞĞi++¼ÆËã£¬¿´¿´Êµ¼Ê½á¹û
+		// åŒæ—¶å¯åŠ¨1000ä¸ªçº¿ç¨‹ï¼Œå»è¿›è¡Œi++è®¡ç®—ï¼Œçœ‹çœ‹å®é™…ç»“æœ
 		for (int i = 0; i < 1000; i++) {
 			new Thread(new Runnable() {
 				@Override
@@ -88,8 +88,8 @@ public class Counter {
 			}).start();
 		}
 		latch2.await();
-		// ÕâÀïÃ¿´ÎÔËĞĞµÄÖµ¶¼ÓĞ¿ÉÄÜ²»Í¬,¿ÉÄÜÎª1000
+		// è¿™é‡Œæ¯æ¬¡è¿è¡Œçš„å€¼éƒ½æœ‰å¯èƒ½ä¸åŒ,å¯èƒ½ä¸º1000
 		end = System.currentTimeMillis();  
-		System.out.println("ÔËĞĞ½á¹û:Counter.count=" + Counter.countAtomic+" atomic time elapse:"+(end -start));
+		System.out.println("è¿è¡Œç»“æœ:Counter.count=" + Counter.countAtomic+" atomic time elapse:"+(end -start));
 	}
 }

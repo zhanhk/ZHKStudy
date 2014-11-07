@@ -10,14 +10,14 @@ public class MapSortDemo {
 		map.put("WNBA", "wnba");
 		map.put("NBA", "nba");
 		map.put("CBA", "cba");
-		Map<String, String> resultMap = sortMapByKey(map); // 按Key进行排序
+		Map<String, String> resultMap = sortMapByKey(map); // 鎸塊ey杩涜鎺掑簭
 		for (Map.Entry<String, String> entry : resultMap.entrySet()) {
 			System.out.println(entry.getKey() + " " + entry.getValue());
 		}
 	}
 
 	/**
-	 * 使用 Map按key进行排序
+	 * 浣跨敤 Map鎸塳ey杩涜鎺掑簭
 	 * 
 	 * @param map
 	 * @return
