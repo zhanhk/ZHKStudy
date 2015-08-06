@@ -17,19 +17,19 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 
 public class RedisStatisTest {
-	
+
 	MongoTemplate mongoTemplate;
-	
+
 	public static List<String> list = new ArrayList<String>();
-	
+
 	public static AtomicInteger count1 = new AtomicInteger();
-	
+
 	public static AtomicInteger count2 = new AtomicInteger();
-	
+
 	public static AtomicInteger count3 = new AtomicInteger();
-	
+
 	public static AtomicInteger count4 = new AtomicInteger();
-	
+
 	public static AtomicInteger count5 = new AtomicInteger();
 
 	@Before
@@ -40,7 +40,7 @@ public class RedisStatisTest {
 			list.add("channel3");
 			list.add("channel4");
 			list.add("channel5");
-			
+
 			//ApplicationContext context = new FileSystemXmlApplicationContext("src/main/webapp/spring-configuration/*.xml");
 			//ApplicationContext context = new ClassPathXmlApplicationContext("classpath:/*.xml");
 			//mongoTemplate = (MongoTemplate) context.getBean("mongoTemplate");
@@ -55,9 +55,9 @@ public class RedisStatisTest {
 	@Test
 	public void testStatis() {
 		final String date = DateUtil.getNowDate("yyyy-MM-dd")+"channel";
-		
+
 		this.clear(date);
-		
+
 		while(true) {
 			int count = 100;
 			final CountDownLatch latch = new CountDownLatch(count);
@@ -84,7 +84,7 @@ public class RedisStatisTest {
 									count5.incrementAndGet();
 								}
 								//RedisDBUtil.setHashValue(date, list.get(ird), RedisDBUtil.incr(list.get(ird))+"");
-								
+
 								RedisDBUtil.setHashHincr(date, list.get(ird), 1);
 								latch.countDown();
 							} catch (Exception e) {
@@ -94,16 +94,16 @@ public class RedisStatisTest {
 						}
 					}).start();
 			}
-			
+
 			try {
 				latch.await();
-				
+
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
+
 			System.out.println("---------------------- real data ---------------------------------");
 			System.out.println("channel1"+":"+count1.get());
 			System.out.println("channel2"+":"+count2.get());
@@ -111,11 +111,11 @@ public class RedisStatisTest {
 			System.out.println("channel4"+":"+count4.get());
 			System.out.println("channel5"+":"+count5.get());
 			System.out.println("------------------------------------------------------------------");
-		
+
 			this.desc(date);
 		}
 	}
-	
+
 	public void desc(String key) {
 		System.out.println("----------------------- redis data -------------------------------");
 		Map<String,String> channelResult = RedisDBUtil.getAllKeys(key);
@@ -138,7 +138,7 @@ public class RedisStatisTest {
 		}
 		System.out.println("------------------------------------------------------------------");
 	}
-	
+
 	public void clear(String key) {
 		System.out.println("----------------------- clear key -------------------------------");
 		Map<String,String> channelResult = RedisDBUtil.getAllKeys(key);
