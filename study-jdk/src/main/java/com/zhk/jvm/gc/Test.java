@@ -3,10 +3,6 @@ package com.zhk.jvm.gc;
 //import sun.jvmstat.monitor.*;
 //import sun.tools.jps.Arguments;
 
-import java.net.URISyntaxException;
-import java.util.Iterator;
-import java.util.Set;
-
 public class Test {
 
 //	public static void main(String[] args) throws MonitorException, URISyntaxException {

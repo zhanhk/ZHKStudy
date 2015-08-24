@@ -7,48 +7,45 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * 生产者线程
- * 
+ *
  * @author jackyuj
  */
 public class Producer implements Runnable {
-	
-	private volatile boolean isRunning = true;
-	
-	private BlockingQueue<String> queue;
-	
-	private static AtomicInteger count = new AtomicInteger();
-	
-	private static final int DEFAULT_RANGE_FOR_SLEEP = 1000;
 
-	public Producer(BlockingQueue<String> queue) {
-		this.queue = queue;
-	}
+    private static final int DEFAULT_RANGE_FOR_SLEEP = 1000;
+    private static AtomicInteger count = new AtomicInteger();
+    private volatile boolean isRunning = true;
+    private BlockingQueue<String> queue;
 
-	public void run() {
-		String data = null;
-		Random r = new Random();
+    public Producer(BlockingQueue<String> queue) {
+        this.queue = queue;
+    }
 
-		System.out.println("启动生产者线程！");
-		try {
-			while (isRunning) {
-				System.out.println("正在生产数据...");
-				Thread.sleep(r.nextInt(DEFAULT_RANGE_FOR_SLEEP));
+    public void run() {
+        String data = null;
+        Random r = new Random();
 
-				data = "data:" + count.incrementAndGet();
-				System.out.println("将数据：" + data + "放入队列...");
-				if (!queue.offer(data, 2, TimeUnit.SECONDS)) {
-					System.out.println("放入数据失败：" + data);
-				}
-			}
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-			Thread.currentThread().interrupt();
-		} finally {
-			System.out.println("退出生产者线程！");
-		}
-	}
+        System.out.println("启动生产者线程！");
+        try {
+            while (isRunning) {
+                System.out.println("正在生产数据...");
+                Thread.sleep(r.nextInt(DEFAULT_RANGE_FOR_SLEEP));
 
-	public void stop() {
-		isRunning = false;
-	}
+                data = "data:" + count.incrementAndGet();
+                System.out.println("将数据：" + data + "放入队列...");
+                if (!queue.offer(data, 2, TimeUnit.SECONDS)) {
+                    System.out.println("放入数据失败：" + data);
+                }
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+            Thread.currentThread().interrupt();
+        } finally {
+            System.out.println("退出生产者线程！");
+        }
+    }
+
+    public void stop() {
+        isRunning = false;
+    }
 }
