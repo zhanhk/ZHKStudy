@@ -1,0 +1,111 @@
+package proto;
+
+option java_package = "com.yuanliu.testframework.proto";
+option java_outer_classname = "LogicalDataModelProtos";
+
+message LogicalDataModel {// 整体
+	required Envelope envelope = 1;
+	required Path path = 2;
+	repeated PathEvent pathEvent = 3;
+}
+message Envelope {// 头
+	required int32 version = 1;// PB数据模型
+	optional NaviVersion naviVersion = 2;
+	required string appKey = 3;// 客户端标识
+	required string guid = 4;// 设备标识
+	required string sid = 5;// 会话标识
+	required uint64 timestampNTP = 6;// NTP时间
+	required uint64 timestamp = 7;// 设备时间
+}
+message NaviVersion {// 版本
+	optional string engineVersion = 1;// 引擎版本
+	optional string appc = 2;// 客户端版本号
+	optional string appn = 3;// 客户端版本名
+}
+message Path {// 轨迹与路线
+	repeated PositionEstimate positionEstimate = 1;// 轨迹（GPS...）
+	repeated PathSegment pathSegments = 2;// 路线
+}
+message PositionEstimate {// 定位点
+	required uint64 timestampUTC = 1;// 设备时间
+	enum PositionTypeEnum {
+		RAW_GPS = 1;
+		FILTERED = 2;
+		MAP_MATCHED_REGULAR_MAP = 3;
+		MAP_MATCHED_HD_MAP = 4;
+		MAP_MATCHED_HD_MAP_LANE = 5;
+	}
+	required PositionTypeEnum positionType = 2;
+	required MapPoint2D pointSegments = 3;
+	required float horizontalAccuracy = 4;// HDOP定位精度
+	optional float altitude = 5;// 海拔
+	optional float altitudeAccuracy = 6;// VDOP海拔精度
+	optional float heading = 7;// 朝向
+	optional float speed = 8;// 速度
+	optional int32 satelliteNumber = 9;// 卫星数量
+	optional float slope = 10;// slope
+	optional float headingAccuracy_deg = 11;
+	optional float speedAccuracy_mps = 12;
+	optional float slopeAccuracy_deg = 13;
+	enum HeadingDetectionEnum {
+		HEADING_RAW_GPS = 1;
+		HEADING_MAGNETIC_SENSOR = 2;
+		HEADING_MULTI_SENSOR_FUSION = 3;
+		HEADING_BY_MAP = 4;
+	}
+	optional HeadingDetectionEnum headingDetectionType = 14;
+	enum SpeedDetectionEnum {
+		SPEED_RAW_GPS = 1;
+		SPEED_WHEEL_TICKS = 2;
+		SPEED_RADAR_SONAR = 3;
+	}
+	optional SpeedDetectionEnum speedDetectionType = 15;
+	enum SlopeDetectionEnum {
+		SLOPE_RAW_GPS = 1;
+		SLOPE_ACCELEROMETER_SENSOR = 2;
+		SLOPE_MULTI_SENSOR_FUSION = 3;
+		SLOPE_BY_MAP = 4;
+	}
+	optional SlopeDetectionEnum slopeDetectionType = 16;
+}
+message PathSegment {// 路线
+	required uint64 timestampUTC = 1;// 算路之后采纳路线的时间
+	repeated MapPoint2D pointSegments = 2;
+	repeated int64 navinfoIds = 3;// 在线算路产出的四维ID
+	enum RouteBaseTypeEnum {
+		OFF_LINE = 1;// 离线路线
+		ON_LINE = 2;// 在线路线
+	}
+	required RouteBaseTypeEnum routeBaseType = 4;// 离线还是在线算路
+	optional string navinfoDataVer = 5;// 离线算路所用数据的版本
+}
+message MapPoint2D {// 坐标点
+	required int32 lon = 1;
+	required int32 lat = 2;
+}
+message PathEvent {// 所有事件容器
+	repeated NaviEvent naviEvent = 1;// 导航过程事件
+}
+message NaviEvent {// 导航过程事件
+	required uint64 timestampUTC = 1;// 发生时间
+	enum NaviEventEnum {
+		ROUTE_STARTED = 1;// 算路开始
+		ROUTE_CANCELLED = 2;// 算路放弃
+		ROUTE_COMPLETE = 3;// 算路完成
+		ROUTE_FAILED = 4;// 算路失败
+		NEEDS_REROUTE = 5;// 偏航发生
+		NAVI_BEGIN = 6;// 导航开始
+		NAVI_END_MANUAL = 7;// 导航手动结束
+		NAVI_END_AUTOMATIC = 8;// 导航自动结束
+		NEW_ROUTE_TAKEN = 9;// 采纳路线（首次算路之后采纳其中一路线和偏航重算路之后采纳路线都会触发，也是采集路线数据的时机与依据）
+		REROUTE_STARTED = 10;// 重算路开始
+		REROUTE_CANCELLED = 11;// 重算路放弃
+		REROUTE_COMPLETE = 12;// 重算路完成
+		REROUTE_FAILED = 13;// 重算路失败
+		SATELLITE_SIGNAL_LOSS = 14;// 卫星信号丢失
+		SATELLITE_SIGNAL_RECOVER = 15;// 卫星信号恢复
+		OFF_ROAD = 16;// 进入无路状况
+		ON_ROAD = 17;// 退出无路状况
+	}
+	required NaviEventEnum type = 2;
+}

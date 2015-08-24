@@ -11,6 +11,9 @@
     <modules>
         <module>common-util</module>
         <module>study-jdk</module>
+        <module>study-spring4</module>
+        <module>study-tcp</module>
+        <module>study-protobuf</module>
     </modules>
 
     <dependencies>
