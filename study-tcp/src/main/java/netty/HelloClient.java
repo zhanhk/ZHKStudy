@@ -47,7 +47,7 @@ public class HelloClient {
         // 客户端收到服务端发送过来的消息时，触发此方法
         @Override
         public void messageReceived(ChannelHandlerContext ctx, MessageEvent e) throws Exception {
-            ChannelBuffer buffer = (ChannelBuffer)e.getMessage();
+            ChannelBuffer buffer = (ChannelBuffer) e.getMessage();
             System.out.println("Receive:" + buffer.toString(Charset.defaultCharset()));
         }
 

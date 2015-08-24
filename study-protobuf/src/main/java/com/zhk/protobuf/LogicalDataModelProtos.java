@@ -4,11115 +4,11793 @@
 package com.zhk.protobuf;
 
 public final class LogicalDataModelProtos {
-  private LogicalDataModelProtos() {}
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-  }
-  public interface LogicalDataModelOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:proto.LogicalDataModel)
-      com.google.protobuf.MessageOrBuilder {
+    private static final com.google.protobuf.Descriptors.Descriptor
+            internal_static_proto_LogicalDataModel_descriptor;
+    private static final com.google.protobuf.Descriptors.Descriptor
+            internal_static_proto_Envelope_descriptor;
+    private static final com.google.protobuf.Descriptors.Descriptor
+            internal_static_proto_NaviVersion_descriptor;
+    private static final com.google.protobuf.Descriptors.Descriptor
+            internal_static_proto_Path_descriptor;
+    private static final com.google.protobuf.Descriptors.Descriptor
+            internal_static_proto_PositionEstimate_descriptor;
+    private static final com.google.protobuf.Descriptors.Descriptor
+            internal_static_proto_PathSegment_descriptor;
+    private static final com.google.protobuf.Descriptors.Descriptor
+            internal_static_proto_MapPoint2D_descriptor;
+    private static final com.google.protobuf.Descriptors.Descriptor
+            internal_static_proto_PathEvent_descriptor;
+    private static final com.google.protobuf.Descriptors.Descriptor
+            internal_static_proto_NaviEvent_descriptor;
+    private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internal_static_proto_LogicalDataModel_fieldAccessorTable;
+    private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internal_static_proto_Envelope_fieldAccessorTable;
+    private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internal_static_proto_NaviVersion_fieldAccessorTable;
+    private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internal_static_proto_Path_fieldAccessorTable;
+    private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internal_static_proto_PositionEstimate_fieldAccessorTable;
+    private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internal_static_proto_PathSegment_fieldAccessorTable;
+    private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internal_static_proto_MapPoint2D_fieldAccessorTable;
+    private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internal_static_proto_PathEvent_fieldAccessorTable;
+    private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internal_static_proto_NaviEvent_fieldAccessorTable;
+    private static com.google.protobuf.Descriptors.FileDescriptor
+            descriptor;
 
-    /**
-     * <code>required .proto.Envelope envelope = 1;</code>
-     */
-    boolean hasEnvelope();
-    /**
-     * <code>required .proto.Envelope envelope = 1;</code>
-     */
-    com.zhk.protobuf.LogicalDataModelProtos.Envelope getEnvelope();
-    /**
-     * <code>required .proto.Envelope envelope = 1;</code>
-     */
-    com.zhk.protobuf.LogicalDataModelProtos.EnvelopeOrBuilder getEnvelopeOrBuilder();
+    static {
+        String[] descriptorData = {
+                "\n\025data_collection.proto\022\005proto\"u\n\020Logica" +
+                        "lDataModel\022!\n\010envelope\030\001 \002(\0132\017.proto.Env" +
+                        "elope\022\031\n\004path\030\002 \002(\0132\013.proto.Path\022#\n\tpath" +
+                        "Event\030\003 \003(\0132\020.proto.PathEvent\"\230\001\n\010Envelo" +
+                        "pe\022\017\n\007version\030\001 \002(\005\022\'\n\013naviVersion\030\002 \001(\013" +
+                        "2\022.proto.NaviVersion\022\016\n\006appKey\030\003 \002(\t\022\014\n\004" +
+                        "guid\030\004 \002(\t\022\013\n\003sid\030\005 \002(\t\022\024\n\014timestampNTP\030" +
+                        "\006 \002(\004\022\021\n\ttimestamp\030\007 \002(\004\"@\n\013NaviVersion\022" +
+                        "\025\n\rengineVersion\030\001 \001(\t\022\014\n\004appc\030\002 \001(\t\022\014\n\004" +
+                        "appn\030\003 \001(\t\"c\n\004Path\0221\n\020positionEstimate\030\001",
+                " \003(\0132\027.proto.PositionEstimate\022(\n\014pathSeg" +
+                        "ments\030\002 \003(\0132\022.proto.PathSegment\"\242\010\n\020Posi" +
+                        "tionEstimate\022\024\n\014timestampUTC\030\001 \002(\004\022>\n\014po" +
+                        "sitionType\030\002 \002(\0162(.proto.PositionEstimat" +
+                        "e.PositionTypeEnum\022(\n\rpointSegments\030\003 \002(" +
+                        "\0132\021.proto.MapPoint2D\022\032\n\022horizontalAccura" +
+                        "cy\030\004 \002(\002\022\020\n\010altitude\030\005 \001(\002\022\030\n\020altitudeAc" +
+                        "curacy\030\006 \001(\002\022\017\n\007heading\030\007 \001(\002\022\r\n\005speed\030\010" +
+                        " \001(\002\022\027\n\017satelliteNumber\030\t \001(\005\022\r\n\005slope\030\n" +
+                        " \001(\002\022\033\n\023headingAccuracy_deg\030\013 \001(\002\022\031\n\021spe",
+                "edAccuracy_mps\030\014 \001(\002\022\031\n\021slopeAccuracy_de" +
+                        "g\030\r \001(\002\022J\n\024headingDetectionType\030\016 \001(\0162,." +
+                        "proto.PositionEstimate.HeadingDetectionE" +
+                        "num\022F\n\022speedDetectionType\030\017 \001(\0162*.proto." +
+                        "PositionEstimate.SpeedDetectionEnum\022F\n\022s" +
+                        "lopeDetectionType\030\020 \001(\0162*.proto.Position" +
+                        "Estimate.SlopeDetectionEnum\"\177\n\020PositionT" +
+                        "ypeEnum\022\013\n\007RAW_GPS\020\001\022\014\n\010FILTERED\020\002\022\033\n\027MA" +
+                        "P_MATCHED_REGULAR_MAP\020\003\022\026\n\022MAP_MATCHED_H" +
+                        "D_MAP\020\004\022\033\n\027MAP_MATCHED_HD_MAP_LANE\020\005\"}\n\024",
+                "HeadingDetectionEnum\022\023\n\017HEADING_RAW_GPS\020" +
+                        "\001\022\033\n\027HEADING_MAGNETIC_SENSOR\020\002\022\037\n\033HEADIN" +
+                        "G_MULTI_SENSOR_FUSION\020\003\022\022\n\016HEADING_BY_MA" +
+                        "P\020\004\"U\n\022SpeedDetectionEnum\022\021\n\rSPEED_RAW_G" +
+                        "PS\020\001\022\025\n\021SPEED_WHEEL_TICKS\020\002\022\025\n\021SPEED_RAD" +
+                        "AR_SONAR\020\003\"x\n\022SlopeDetectionEnum\022\021\n\rSLOP" +
+                        "E_RAW_GPS\020\001\022\036\n\032SLOPE_ACCELEROMETER_SENSO" +
+                        "R\020\002\022\035\n\031SLOPE_MULTI_SENSOR_FUSION\020\003\022\020\n\014SL" +
+                        "OPE_BY_MAP\020\004\"\346\001\n\013PathSegment\022\024\n\014timestam" +
+                        "pUTC\030\001 \002(\004\022(\n\rpointSegments\030\002 \003(\0132\021.prot",
+                "o.MapPoint2D\022\022\n\nnavinfoIds\030\003 \003(\003\022;\n\rrout" +
+                        "eBaseType\030\004 \002(\0162$.proto.PathSegment.Rout" +
+                        "eBaseTypeEnum\022\026\n\016navinfoDataVer\030\005 \001(\t\".\n" +
+                        "\021RouteBaseTypeEnum\022\014\n\010OFF_LINE\020\001\022\013\n\007ON_L" +
+                        "INE\020\002\"&\n\nMapPoint2D\022\013\n\003lon\030\001 \002(\005\022\013\n\003lat\030" +
+                        "\002 \002(\005\"0\n\tPathEvent\022#\n\tnaviEvent\030\001 \003(\0132\020." +
+                        "proto.NaviEvent\"\276\003\n\tNaviEvent\022\024\n\014timesta" +
+                        "mpUTC\030\001 \002(\004\022,\n\004type\030\002 \002(\0162\036.proto.NaviEv" +
+                        "ent.NaviEventEnum\"\354\002\n\rNaviEventEnum\022\021\n\rR" +
+                        "OUTE_STARTED\020\001\022\023\n\017ROUTE_CANCELLED\020\002\022\022\n\016R",
+                "OUTE_COMPLETE\020\003\022\020\n\014ROUTE_FAILED\020\004\022\021\n\rNEE" +
+                        "DS_REROUTE\020\005\022\016\n\nNAVI_BEGIN\020\006\022\023\n\017NAVI_END" +
+                        "_MANUAL\020\007\022\026\n\022NAVI_END_AUTOMATIC\020\010\022\023\n\017NEW" +
+                        "_ROUTE_TAKEN\020\t\022\023\n\017REROUTE_STARTED\020\n\022\025\n\021R" +
+                        "EROUTE_CANCELLED\020\013\022\024\n\020REROUTE_COMPLETE\020\014" +
+                        "\022\022\n\016REROUTE_FAILED\020\r\022\031\n\025SATELLITE_SIGNAL" +
+                        "_LOSS\020\016\022\034\n\030SATELLITE_SIGNAL_RECOVER\020\017\022\014\n" +
+                        "\010OFF_ROAD\020\020\022\013\n\007ON_ROAD\020\021B-\n\023com.mapbar.p" +
+                        "rotobufB\026LogicalDataModelProtos"
+        };
+        com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+                new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
+                    public com.google.protobuf.ExtensionRegistry assignDescriptors(
+                            com.google.protobuf.Descriptors.FileDescriptor root) {
+                        descriptor = root;
+                        return null;
+                    }
+                };
+        com.google.protobuf.Descriptors.FileDescriptor
+                .internalBuildGeneratedFileFrom(descriptorData,
+                        new com.google.protobuf.Descriptors.FileDescriptor[]{
+                        }, assigner);
+        internal_static_proto_LogicalDataModel_descriptor =
+                getDescriptor().getMessageTypes().get(0);
+        internal_static_proto_LogicalDataModel_fieldAccessorTable = new
+                com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+                internal_static_proto_LogicalDataModel_descriptor,
+                new String[]{"Envelope", "Path", "PathEvent",});
+        internal_static_proto_Envelope_descriptor =
+                getDescriptor().getMessageTypes().get(1);
+        internal_static_proto_Envelope_fieldAccessorTable = new
+                com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+                internal_static_proto_Envelope_descriptor,
+                new String[]{"Version", "NaviVersion", "AppKey", "Guid", "Sid", "TimestampNTP", "Timestamp",});
+        internal_static_proto_NaviVersion_descriptor =
+                getDescriptor().getMessageTypes().get(2);
+        internal_static_proto_NaviVersion_fieldAccessorTable = new
+                com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+                internal_static_proto_NaviVersion_descriptor,
+                new String[]{"EngineVersion", "Appc", "Appn",});
+        internal_static_proto_Path_descriptor =
+                getDescriptor().getMessageTypes().get(3);
+        internal_static_proto_Path_fieldAccessorTable = new
+                com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+                internal_static_proto_Path_descriptor,
+                new String[]{"PositionEstimate", "PathSegments",});
+        internal_static_proto_PositionEstimate_descriptor =
+                getDescriptor().getMessageTypes().get(4);
+        internal_static_proto_PositionEstimate_fieldAccessorTable = new
+                com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+                internal_static_proto_PositionEstimate_descriptor,
+                new String[]{"TimestampUTC", "PositionType", "PointSegments", "HorizontalAccuracy", "Altitude", "AltitudeAccuracy", "Heading", "Speed", "SatelliteNumber", "Slope", "HeadingAccuracyDeg", "SpeedAccuracyMps", "SlopeAccuracyDeg", "HeadingDetectionType", "SpeedDetectionType", "SlopeDetectionType",});
+        internal_static_proto_PathSegment_descriptor =
+                getDescriptor().getMessageTypes().get(5);
+        internal_static_proto_PathSegment_fieldAccessorTable = new
+                com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+                internal_static_proto_PathSegment_descriptor,
+                new String[]{"TimestampUTC", "PointSegments", "NavinfoIds", "RouteBaseType", "NavinfoDataVer",});
+        internal_static_proto_MapPoint2D_descriptor =
+                getDescriptor().getMessageTypes().get(6);
+        internal_static_proto_MapPoint2D_fieldAccessorTable = new
+                com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+                internal_static_proto_MapPoint2D_descriptor,
+                new String[]{"Lon", "Lat",});
+        internal_static_proto_PathEvent_descriptor =
+                getDescriptor().getMessageTypes().get(7);
+        internal_static_proto_PathEvent_fieldAccessorTable = new
+                com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+                internal_static_proto_PathEvent_descriptor,
+                new String[]{"NaviEvent",});
+        internal_static_proto_NaviEvent_descriptor =
+                getDescriptor().getMessageTypes().get(8);
+        internal_static_proto_NaviEvent_fieldAccessorTable = new
+                com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+                internal_static_proto_NaviEvent_descriptor,
+                new String[]{"TimestampUTC", "Type",});
+    }
 
-    /**
-     * <code>required .proto.Path path = 2;</code>
-     */
-    boolean hasPath();
-    /**
-     * <code>required .proto.Path path = 2;</code>
-     */
-    com.zhk.protobuf.LogicalDataModelProtos.Path getPath();
-    /**
-     * <code>required .proto.Path path = 2;</code>
-     */
-    com.zhk.protobuf.LogicalDataModelProtos.PathOrBuilder getPathOrBuilder();
+    private LogicalDataModelProtos() {
+    }
 
-    /**
-     * <code>repeated .proto.PathEvent pathEvent = 3;</code>
-     */
-    java.util.List<com.zhk.protobuf.LogicalDataModelProtos.PathEvent> 
+    public static void registerAllExtensions(
+            com.google.protobuf.ExtensionRegistry registry) {
+    }
+
+    public static com.google.protobuf.Descriptors.FileDescriptor
+    getDescriptor() {
+        return descriptor;
+    }
+
+    public interface LogicalDataModelOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:proto.LogicalDataModel)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>required .proto.Envelope envelope = 1;</code>
+         */
+        boolean hasEnvelope();
+
+        /**
+         * <code>required .proto.Envelope envelope = 1;</code>
+         */
+        com.zhk.protobuf.LogicalDataModelProtos.Envelope getEnvelope();
+
+        /**
+         * <code>required .proto.Envelope envelope = 1;</code>
+         */
+        com.zhk.protobuf.LogicalDataModelProtos.EnvelopeOrBuilder getEnvelopeOrBuilder();
+
+        /**
+         * <code>required .proto.Path path = 2;</code>
+         */
+        boolean hasPath();
+
+        /**
+         * <code>required .proto.Path path = 2;</code>
+         */
+        com.zhk.protobuf.LogicalDataModelProtos.Path getPath();
+
+        /**
+         * <code>required .proto.Path path = 2;</code>
+         */
+        com.zhk.protobuf.LogicalDataModelProtos.PathOrBuilder getPathOrBuilder();
+
+        /**
+         * <code>repeated .proto.PathEvent pathEvent = 3;</code>
+         */
+        java.util.List<com.zhk.protobuf.LogicalDataModelProtos.PathEvent>
         getPathEventList();
-    /**
-     * <code>repeated .proto.PathEvent pathEvent = 3;</code>
-     */
-    com.zhk.protobuf.LogicalDataModelProtos.PathEvent getPathEvent(int index);
-    /**
-     * <code>repeated .proto.PathEvent pathEvent = 3;</code>
-     */
-    int getPathEventCount();
-    /**
-     * <code>repeated .proto.PathEvent pathEvent = 3;</code>
-     */
-    java.util.List<? extends com.zhk.protobuf.LogicalDataModelProtos.PathEventOrBuilder> 
+
+        /**
+         * <code>repeated .proto.PathEvent pathEvent = 3;</code>
+         */
+        com.zhk.protobuf.LogicalDataModelProtos.PathEvent getPathEvent(int index);
+
+        /**
+         * <code>repeated .proto.PathEvent pathEvent = 3;</code>
+         */
+        int getPathEventCount();
+
+        /**
+         * <code>repeated .proto.PathEvent pathEvent = 3;</code>
+         */
+        java.util.List<? extends com.zhk.protobuf.LogicalDataModelProtos.PathEventOrBuilder>
         getPathEventOrBuilderList();
-    /**
-     * <code>repeated .proto.PathEvent pathEvent = 3;</code>
-     */
-    com.zhk.protobuf.LogicalDataModelProtos.PathEventOrBuilder getPathEventOrBuilder(
-            int index);
-  }
-  /**
-   * Protobuf type {@code proto.LogicalDataModel}
-   *
-   * <pre>
-   * 整体
-   * </pre>
-   */
-  public static final class LogicalDataModel extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:proto.LogicalDataModel)
-      LogicalDataModelOrBuilder {
-    // Use LogicalDataModel.newBuilder() to construct.
-    private LogicalDataModel(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-      this.unknownFields = builder.getUnknownFields();
-    }
-    private LogicalDataModel(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-    private static final LogicalDataModel defaultInstance;
-    public static LogicalDataModel getDefaultInstance() {
-      return defaultInstance;
+        /**
+         * <code>repeated .proto.PathEvent pathEvent = 3;</code>
+         */
+        com.zhk.protobuf.LogicalDataModelProtos.PathEventOrBuilder getPathEventOrBuilder(
+                int index);
     }
 
-    public LogicalDataModel getDefaultInstanceForType() {
-      return defaultInstance;
+    public interface EnvelopeOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:proto.Envelope)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>required int32 version = 1;</code>
+         * <p/>
+         * <pre>
+         * PB数据模型
+         * </pre>
+         */
+        boolean hasVersion();
+
+        /**
+         * <code>required int32 version = 1;</code>
+         * <p/>
+         * <pre>
+         * PB数据模型
+         * </pre>
+         */
+        int getVersion();
+
+        /**
+         * <code>optional .proto.NaviVersion naviVersion = 2;</code>
+         */
+        boolean hasNaviVersion();
+
+        /**
+         * <code>optional .proto.NaviVersion naviVersion = 2;</code>
+         */
+        com.zhk.protobuf.LogicalDataModelProtos.NaviVersion getNaviVersion();
+
+        /**
+         * <code>optional .proto.NaviVersion naviVersion = 2;</code>
+         */
+        com.zhk.protobuf.LogicalDataModelProtos.NaviVersionOrBuilder getNaviVersionOrBuilder();
+
+        /**
+         * <code>required string appKey = 3;</code>
+         * <p/>
+         * <pre>
+         * 客户端标识
+         * </pre>
+         */
+        boolean hasAppKey();
+
+        /**
+         * <code>required string appKey = 3;</code>
+         * <p/>
+         * <pre>
+         * 客户端标识
+         * </pre>
+         */
+        String getAppKey();
+
+        /**
+         * <code>required string appKey = 3;</code>
+         * <p/>
+         * <pre>
+         * 客户端标识
+         * </pre>
+         */
+        com.google.protobuf.ByteString
+        getAppKeyBytes();
+
+        /**
+         * <code>required string guid = 4;</code>
+         * <p/>
+         * <pre>
+         * 设备标识
+         * </pre>
+         */
+        boolean hasGuid();
+
+        /**
+         * <code>required string guid = 4;</code>
+         * <p/>
+         * <pre>
+         * 设备标识
+         * </pre>
+         */
+        String getGuid();
+
+        /**
+         * <code>required string guid = 4;</code>
+         * <p/>
+         * <pre>
+         * 设备标识
+         * </pre>
+         */
+        com.google.protobuf.ByteString
+        getGuidBytes();
+
+        /**
+         * <code>required string sid = 5;</code>
+         * <p/>
+         * <pre>
+         * 会话标识
+         * </pre>
+         */
+        boolean hasSid();
+
+        /**
+         * <code>required string sid = 5;</code>
+         * <p/>
+         * <pre>
+         * 会话标识
+         * </pre>
+         */
+        String getSid();
+
+        /**
+         * <code>required string sid = 5;</code>
+         * <p/>
+         * <pre>
+         * 会话标识
+         * </pre>
+         */
+        com.google.protobuf.ByteString
+        getSidBytes();
+
+        /**
+         * <code>required uint64 timestampNTP = 6;</code>
+         * <p/>
+         * <pre>
+         * NTP时间
+         * </pre>
+         */
+        boolean hasTimestampNTP();
+
+        /**
+         * <code>required uint64 timestampNTP = 6;</code>
+         * <p/>
+         * <pre>
+         * NTP时间
+         * </pre>
+         */
+        long getTimestampNTP();
+
+        /**
+         * <code>required uint64 timestamp = 7;</code>
+         * <p/>
+         * <pre>
+         * 设备时间
+         * </pre>
+         */
+        boolean hasTimestamp();
+
+        /**
+         * <code>required uint64 timestamp = 7;</code>
+         * <p/>
+         * <pre>
+         * 设备时间
+         * </pre>
+         */
+        long getTimestamp();
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private LogicalDataModel(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              com.zhk.protobuf.LogicalDataModelProtos.Envelope.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000001) == 0x00000001)) {
-                subBuilder = envelope_.toBuilder();
-              }
-              envelope_ = input.readMessage(com.zhk.protobuf.LogicalDataModelProtos.Envelope.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(envelope_);
-                envelope_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000001;
-              break;
-            }
-            case 18: {
-              com.zhk.protobuf.LogicalDataModelProtos.Path.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000002) == 0x00000002)) {
-                subBuilder = path_.toBuilder();
-              }
-              path_ = input.readMessage(com.zhk.protobuf.LogicalDataModelProtos.Path.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(path_);
-                path_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000002;
-              break;
-            }
-            case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-                pathEvent_ = new java.util.ArrayList<com.zhk.protobuf.LogicalDataModelProtos.PathEvent>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              pathEvent_.add(input.readMessage(com.zhk.protobuf.LogicalDataModelProtos.PathEvent.PARSER, extensionRegistry));
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-          pathEvent_ = java.util.Collections.unmodifiableList(pathEvent_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_LogicalDataModel_descriptor;
+    public interface NaviVersionOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:proto.NaviVersion)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>optional string engineVersion = 1;</code>
+         * <p/>
+         * <pre>
+         * 引擎版本
+         * </pre>
+         */
+        boolean hasEngineVersion();
+
+        /**
+         * <code>optional string engineVersion = 1;</code>
+         * <p/>
+         * <pre>
+         * 引擎版本
+         * </pre>
+         */
+        String getEngineVersion();
+
+        /**
+         * <code>optional string engineVersion = 1;</code>
+         * <p/>
+         * <pre>
+         * 引擎版本
+         * </pre>
+         */
+        com.google.protobuf.ByteString
+        getEngineVersionBytes();
+
+        /**
+         * <code>optional string appc = 2;</code>
+         * <p/>
+         * <pre>
+         * 客户端版本号
+         * </pre>
+         */
+        boolean hasAppc();
+
+        /**
+         * <code>optional string appc = 2;</code>
+         * <p/>
+         * <pre>
+         * 客户端版本号
+         * </pre>
+         */
+        String getAppc();
+
+        /**
+         * <code>optional string appc = 2;</code>
+         * <p/>
+         * <pre>
+         * 客户端版本号
+         * </pre>
+         */
+        com.google.protobuf.ByteString
+        getAppcBytes();
+
+        /**
+         * <code>optional string appn = 3;</code>
+         * <p/>
+         * <pre>
+         * 客户端版本名
+         * </pre>
+         */
+        boolean hasAppn();
+
+        /**
+         * <code>optional string appn = 3;</code>
+         * <p/>
+         * <pre>
+         * 客户端版本名
+         * </pre>
+         */
+        String getAppn();
+
+        /**
+         * <code>optional string appn = 3;</code>
+         * <p/>
+         * <pre>
+         * 客户端版本名
+         * </pre>
+         */
+        com.google.protobuf.ByteString
+        getAppnBytes();
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_LogicalDataModel_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel.class, com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel.Builder.class);
+    public interface PathOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:proto.Path)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
+         * <p/>
+         * <pre>
+         * 轨迹（GPS...）
+         * </pre>
+         */
+        java.util.List<com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate>
+        getPositionEstimateList();
+
+        /**
+         * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
+         * <p/>
+         * <pre>
+         * 轨迹（GPS...）
+         * </pre>
+         */
+        com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate getPositionEstimate(int index);
+
+        /**
+         * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
+         * <p/>
+         * <pre>
+         * 轨迹（GPS...）
+         * </pre>
+         */
+        int getPositionEstimateCount();
+
+        /**
+         * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
+         * <p/>
+         * <pre>
+         * 轨迹（GPS...）
+         * </pre>
+         */
+        java.util.List<? extends com.zhk.protobuf.LogicalDataModelProtos.PositionEstimateOrBuilder>
+        getPositionEstimateOrBuilderList();
+
+        /**
+         * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
+         * <p/>
+         * <pre>
+         * 轨迹（GPS...）
+         * </pre>
+         */
+        com.zhk.protobuf.LogicalDataModelProtos.PositionEstimateOrBuilder getPositionEstimateOrBuilder(
+                int index);
+
+        /**
+         * <code>repeated .proto.PathSegment pathSegments = 2;</code>
+         * <p/>
+         * <pre>
+         * 路线
+         * </pre>
+         */
+        java.util.List<com.zhk.protobuf.LogicalDataModelProtos.PathSegment>
+        getPathSegmentsList();
+
+        /**
+         * <code>repeated .proto.PathSegment pathSegments = 2;</code>
+         * <p/>
+         * <pre>
+         * 路线
+         * </pre>
+         */
+        com.zhk.protobuf.LogicalDataModelProtos.PathSegment getPathSegments(int index);
+
+        /**
+         * <code>repeated .proto.PathSegment pathSegments = 2;</code>
+         * <p/>
+         * <pre>
+         * 路线
+         * </pre>
+         */
+        int getPathSegmentsCount();
+
+        /**
+         * <code>repeated .proto.PathSegment pathSegments = 2;</code>
+         * <p/>
+         * <pre>
+         * 路线
+         * </pre>
+         */
+        java.util.List<? extends com.zhk.protobuf.LogicalDataModelProtos.PathSegmentOrBuilder>
+        getPathSegmentsOrBuilderList();
+
+        /**
+         * <code>repeated .proto.PathSegment pathSegments = 2;</code>
+         * <p/>
+         * <pre>
+         * 路线
+         * </pre>
+         */
+        com.zhk.protobuf.LogicalDataModelProtos.PathSegmentOrBuilder getPathSegmentsOrBuilder(
+                int index);
     }
 
-    public static com.google.protobuf.Parser<LogicalDataModel> PARSER =
-        new com.google.protobuf.AbstractParser<LogicalDataModel>() {
-      public LogicalDataModel parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new LogicalDataModel(input, extensionRegistry);
-      }
-    };
+    public interface PositionEstimateOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:proto.PositionEstimate)
+            com.google.protobuf.MessageOrBuilder {
 
-    @Override
-    public com.google.protobuf.Parser<LogicalDataModel> getParserForType() {
-      return PARSER;
+        /**
+         * <code>required uint64 timestampUTC = 1;</code>
+         * <p/>
+         * <pre>
+         * 设备时间
+         * </pre>
+         */
+        boolean hasTimestampUTC();
+
+        /**
+         * <code>required uint64 timestampUTC = 1;</code>
+         * <p/>
+         * <pre>
+         * 设备时间
+         * </pre>
+         */
+        long getTimestampUTC();
+
+        /**
+         * <code>required .proto.PositionEstimate.PositionTypeEnum positionType = 2;</code>
+         */
+        boolean hasPositionType();
+
+        /**
+         * <code>required .proto.PositionEstimate.PositionTypeEnum positionType = 2;</code>
+         */
+        com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.PositionTypeEnum getPositionType();
+
+        /**
+         * <code>required .proto.MapPoint2D pointSegments = 3;</code>
+         */
+        boolean hasPointSegments();
+
+        /**
+         * <code>required .proto.MapPoint2D pointSegments = 3;</code>
+         */
+        com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D getPointSegments();
+
+        /**
+         * <code>required .proto.MapPoint2D pointSegments = 3;</code>
+         */
+        com.zhk.protobuf.LogicalDataModelProtos.MapPoint2DOrBuilder getPointSegmentsOrBuilder();
+
+        /**
+         * <code>required float horizontalAccuracy = 4;</code>
+         * <p/>
+         * <pre>
+         * HDOP定位精度
+         * </pre>
+         */
+        boolean hasHorizontalAccuracy();
+
+        /**
+         * <code>required float horizontalAccuracy = 4;</code>
+         * <p/>
+         * <pre>
+         * HDOP定位精度
+         * </pre>
+         */
+        float getHorizontalAccuracy();
+
+        /**
+         * <code>optional float altitude = 5;</code>
+         * <p/>
+         * <pre>
+         * 海拔
+         * </pre>
+         */
+        boolean hasAltitude();
+
+        /**
+         * <code>optional float altitude = 5;</code>
+         * <p/>
+         * <pre>
+         * 海拔
+         * </pre>
+         */
+        float getAltitude();
+
+        /**
+         * <code>optional float altitudeAccuracy = 6;</code>
+         * <p/>
+         * <pre>
+         * VDOP海拔精度
+         * </pre>
+         */
+        boolean hasAltitudeAccuracy();
+
+        /**
+         * <code>optional float altitudeAccuracy = 6;</code>
+         * <p/>
+         * <pre>
+         * VDOP海拔精度
+         * </pre>
+         */
+        float getAltitudeAccuracy();
+
+        /**
+         * <code>optional float heading = 7;</code>
+         * <p/>
+         * <pre>
+         * 朝向
+         * </pre>
+         */
+        boolean hasHeading();
+
+        /**
+         * <code>optional float heading = 7;</code>
+         * <p/>
+         * <pre>
+         * 朝向
+         * </pre>
+         */
+        float getHeading();
+
+        /**
+         * <code>optional float speed = 8;</code>
+         * <p/>
+         * <pre>
+         * 速度
+         * </pre>
+         */
+        boolean hasSpeed();
+
+        /**
+         * <code>optional float speed = 8;</code>
+         * <p/>
+         * <pre>
+         * 速度
+         * </pre>
+         */
+        float getSpeed();
+
+        /**
+         * <code>optional int32 satelliteNumber = 9;</code>
+         * <p/>
+         * <pre>
+         * 卫星数量
+         * </pre>
+         */
+        boolean hasSatelliteNumber();
+
+        /**
+         * <code>optional int32 satelliteNumber = 9;</code>
+         * <p/>
+         * <pre>
+         * 卫星数量
+         * </pre>
+         */
+        int getSatelliteNumber();
+
+        /**
+         * <code>optional float slope = 10;</code>
+         * <p/>
+         * <pre>
+         * slope
+         * </pre>
+         */
+        boolean hasSlope();
+
+        /**
+         * <code>optional float slope = 10;</code>
+         * <p/>
+         * <pre>
+         * slope
+         * </pre>
+         */
+        float getSlope();
+
+        /**
+         * <code>optional float headingAccuracy_deg = 11;</code>
+         */
+        boolean hasHeadingAccuracyDeg();
+
+        /**
+         * <code>optional float headingAccuracy_deg = 11;</code>
+         */
+        float getHeadingAccuracyDeg();
+
+        /**
+         * <code>optional float speedAccuracy_mps = 12;</code>
+         */
+        boolean hasSpeedAccuracyMps();
+
+        /**
+         * <code>optional float speedAccuracy_mps = 12;</code>
+         */
+        float getSpeedAccuracyMps();
+
+        /**
+         * <code>optional float slopeAccuracy_deg = 13;</code>
+         */
+        boolean hasSlopeAccuracyDeg();
+
+        /**
+         * <code>optional float slopeAccuracy_deg = 13;</code>
+         */
+        float getSlopeAccuracyDeg();
+
+        /**
+         * <code>optional .proto.PositionEstimate.HeadingDetectionEnum headingDetectionType = 14;</code>
+         */
+        boolean hasHeadingDetectionType();
+
+        /**
+         * <code>optional .proto.PositionEstimate.HeadingDetectionEnum headingDetectionType = 14;</code>
+         */
+        com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.HeadingDetectionEnum getHeadingDetectionType();
+
+        /**
+         * <code>optional .proto.PositionEstimate.SpeedDetectionEnum speedDetectionType = 15;</code>
+         */
+        boolean hasSpeedDetectionType();
+
+        /**
+         * <code>optional .proto.PositionEstimate.SpeedDetectionEnum speedDetectionType = 15;</code>
+         */
+        com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SpeedDetectionEnum getSpeedDetectionType();
+
+        /**
+         * <code>optional .proto.PositionEstimate.SlopeDetectionEnum slopeDetectionType = 16;</code>
+         */
+        boolean hasSlopeDetectionType();
+
+        /**
+         * <code>optional .proto.PositionEstimate.SlopeDetectionEnum slopeDetectionType = 16;</code>
+         */
+        com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SlopeDetectionEnum getSlopeDetectionType();
     }
 
-    private int bitField0_;
-    public static final int ENVELOPE_FIELD_NUMBER = 1;
-    private com.zhk.protobuf.LogicalDataModelProtos.Envelope envelope_;
-    /**
-     * <code>required .proto.Envelope envelope = 1;</code>
-     */
-    public boolean hasEnvelope() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>required .proto.Envelope envelope = 1;</code>
-     */
-    public com.zhk.protobuf.LogicalDataModelProtos.Envelope getEnvelope() {
-      return envelope_;
-    }
-    /**
-     * <code>required .proto.Envelope envelope = 1;</code>
-     */
-    public com.zhk.protobuf.LogicalDataModelProtos.EnvelopeOrBuilder getEnvelopeOrBuilder() {
-      return envelope_;
+    public interface PathSegmentOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:proto.PathSegment)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>required uint64 timestampUTC = 1;</code>
+         * <p/>
+         * <pre>
+         * 算路之后采纳路线的时间
+         * </pre>
+         */
+        boolean hasTimestampUTC();
+
+        /**
+         * <code>required uint64 timestampUTC = 1;</code>
+         * <p/>
+         * <pre>
+         * 算路之后采纳路线的时间
+         * </pre>
+         */
+        long getTimestampUTC();
+
+        /**
+         * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
+         */
+        java.util.List<com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D>
+        getPointSegmentsList();
+
+        /**
+         * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
+         */
+        com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D getPointSegments(int index);
+
+        /**
+         * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
+         */
+        int getPointSegmentsCount();
+
+        /**
+         * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
+         */
+        java.util.List<? extends com.zhk.protobuf.LogicalDataModelProtos.MapPoint2DOrBuilder>
+        getPointSegmentsOrBuilderList();
+
+        /**
+         * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
+         */
+        com.zhk.protobuf.LogicalDataModelProtos.MapPoint2DOrBuilder getPointSegmentsOrBuilder(
+                int index);
+
+        /**
+         * <code>repeated int64 navinfoIds = 3;</code>
+         * <p/>
+         * <pre>
+         * 在线算路产出的四维ID
+         * </pre>
+         */
+        java.util.List<Long> getNavinfoIdsList();
+
+        /**
+         * <code>repeated int64 navinfoIds = 3;</code>
+         * <p/>
+         * <pre>
+         * 在线算路产出的四维ID
+         * </pre>
+         */
+        int getNavinfoIdsCount();
+
+        /**
+         * <code>repeated int64 navinfoIds = 3;</code>
+         * <p/>
+         * <pre>
+         * 在线算路产出的四维ID
+         * </pre>
+         */
+        long getNavinfoIds(int index);
+
+        /**
+         * <code>required .proto.PathSegment.RouteBaseTypeEnum routeBaseType = 4;</code>
+         * <p/>
+         * <pre>
+         * 离线还是在线算路
+         * </pre>
+         */
+        boolean hasRouteBaseType();
+
+        /**
+         * <code>required .proto.PathSegment.RouteBaseTypeEnum routeBaseType = 4;</code>
+         * <p/>
+         * <pre>
+         * 离线还是在线算路
+         * </pre>
+         */
+        com.zhk.protobuf.LogicalDataModelProtos.PathSegment.RouteBaseTypeEnum getRouteBaseType();
+
+        /**
+         * <code>optional string navinfoDataVer = 5;</code>
+         * <p/>
+         * <pre>
+         * 离线算路所用数据的版本
+         * </pre>
+         */
+        boolean hasNavinfoDataVer();
+
+        /**
+         * <code>optional string navinfoDataVer = 5;</code>
+         * <p/>
+         * <pre>
+         * 离线算路所用数据的版本
+         * </pre>
+         */
+        String getNavinfoDataVer();
+
+        /**
+         * <code>optional string navinfoDataVer = 5;</code>
+         * <p/>
+         * <pre>
+         * 离线算路所用数据的版本
+         * </pre>
+         */
+        com.google.protobuf.ByteString
+        getNavinfoDataVerBytes();
     }
 
-    public static final int PATH_FIELD_NUMBER = 2;
-    private com.zhk.protobuf.LogicalDataModelProtos.Path path_;
-    /**
-     * <code>required .proto.Path path = 2;</code>
-     */
-    public boolean hasPath() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>required .proto.Path path = 2;</code>
-     */
-    public com.zhk.protobuf.LogicalDataModelProtos.Path getPath() {
-      return path_;
-    }
-    /**
-     * <code>required .proto.Path path = 2;</code>
-     */
-    public com.zhk.protobuf.LogicalDataModelProtos.PathOrBuilder getPathOrBuilder() {
-      return path_;
+    public interface MapPoint2DOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:proto.MapPoint2D)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>required int32 lon = 1;</code>
+         */
+        boolean hasLon();
+
+        /**
+         * <code>required int32 lon = 1;</code>
+         */
+        int getLon();
+
+        /**
+         * <code>required int32 lat = 2;</code>
+         */
+        boolean hasLat();
+
+        /**
+         * <code>required int32 lat = 2;</code>
+         */
+        int getLat();
     }
 
-    public static final int PATHEVENT_FIELD_NUMBER = 3;
-    private java.util.List<com.zhk.protobuf.LogicalDataModelProtos.PathEvent> pathEvent_;
-    /**
-     * <code>repeated .proto.PathEvent pathEvent = 3;</code>
-     */
-    public java.util.List<com.zhk.protobuf.LogicalDataModelProtos.PathEvent> getPathEventList() {
-      return pathEvent_;
-    }
-    /**
-     * <code>repeated .proto.PathEvent pathEvent = 3;</code>
-     */
-    public java.util.List<? extends com.zhk.protobuf.LogicalDataModelProtos.PathEventOrBuilder> 
-        getPathEventOrBuilderList() {
-      return pathEvent_;
-    }
-    /**
-     * <code>repeated .proto.PathEvent pathEvent = 3;</code>
-     */
-    public int getPathEventCount() {
-      return pathEvent_.size();
-    }
-    /**
-     * <code>repeated .proto.PathEvent pathEvent = 3;</code>
-     */
-    public com.zhk.protobuf.LogicalDataModelProtos.PathEvent getPathEvent(int index) {
-      return pathEvent_.get(index);
-    }
-    /**
-     * <code>repeated .proto.PathEvent pathEvent = 3;</code>
-     */
-    public com.zhk.protobuf.LogicalDataModelProtos.PathEventOrBuilder getPathEventOrBuilder(
-        int index) {
-      return pathEvent_.get(index);
+    public interface PathEventOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:proto.PathEvent)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
+         * <p/>
+         * <pre>
+         * 导航过程事件
+         * </pre>
+         */
+        java.util.List<com.zhk.protobuf.LogicalDataModelProtos.NaviEvent>
+        getNaviEventList();
+
+        /**
+         * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
+         * <p/>
+         * <pre>
+         * 导航过程事件
+         * </pre>
+         */
+        com.zhk.protobuf.LogicalDataModelProtos.NaviEvent getNaviEvent(int index);
+
+        /**
+         * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
+         * <p/>
+         * <pre>
+         * 导航过程事件
+         * </pre>
+         */
+        int getNaviEventCount();
+
+        /**
+         * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
+         * <p/>
+         * <pre>
+         * 导航过程事件
+         * </pre>
+         */
+        java.util.List<? extends com.zhk.protobuf.LogicalDataModelProtos.NaviEventOrBuilder>
+        getNaviEventOrBuilderList();
+
+        /**
+         * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
+         * <p/>
+         * <pre>
+         * 导航过程事件
+         * </pre>
+         */
+        com.zhk.protobuf.LogicalDataModelProtos.NaviEventOrBuilder getNaviEventOrBuilder(
+                int index);
     }
 
-    private void initFields() {
-      envelope_ = com.zhk.protobuf.LogicalDataModelProtos.Envelope.getDefaultInstance();
-      path_ = com.zhk.protobuf.LogicalDataModelProtos.Path.getDefaultInstance();
-      pathEvent_ = java.util.Collections.emptyList();
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
+    public interface NaviEventOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:proto.NaviEvent)
+            com.google.protobuf.MessageOrBuilder {
 
-      if (!hasEnvelope()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasPath()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!getEnvelope().isInitialized()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!getPath().isInitialized()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      for (int i = 0; i < getPathEventCount(); i++) {
-        if (!getPathEvent(i).isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
-      memoizedIsInitialized = 1;
-      return true;
+        /**
+         * <code>required uint64 timestampUTC = 1;</code>
+         * <p/>
+         * <pre>
+         * 发生时间
+         * </pre>
+         */
+        boolean hasTimestampUTC();
+
+        /**
+         * <code>required uint64 timestampUTC = 1;</code>
+         * <p/>
+         * <pre>
+         * 发生时间
+         * </pre>
+         */
+        long getTimestampUTC();
+
+        /**
+         * <code>required .proto.NaviEvent.NaviEventEnum type = 2;</code>
+         */
+        boolean hasType();
+
+        /**
+         * <code>required .proto.NaviEvent.NaviEventEnum type = 2;</code>
+         */
+        com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.NaviEventEnum getType();
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeMessage(1, envelope_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeMessage(2, path_);
-      }
-      for (int i = 0; i < pathEvent_.size(); i++) {
-        output.writeMessage(3, pathEvent_.get(i));
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, envelope_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, path_);
-      }
-      for (int i = 0; i < pathEvent_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, pathEvent_.get(i));
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @Override
-    protected Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
-    public static com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-
-    @Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code proto.LogicalDataModel}
-     *
+     * <p/>
      * <pre>
      * 整体
      * </pre>
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:proto.LogicalDataModel)
-        com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModelOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_LogicalDataModel_descriptor;
-      }
+    public static final class LogicalDataModel extends
+            com.google.protobuf.GeneratedMessage implements
+            // @@protoc_insertion_point(message_implements:proto.LogicalDataModel)
+            LogicalDataModelOrBuilder {
+        public static final int ENVELOPE_FIELD_NUMBER = 1;
+        public static final int PATH_FIELD_NUMBER = 2;
+        public static final int PATHEVENT_FIELD_NUMBER = 3;
+        private static final LogicalDataModel defaultInstance;
+        private static final long serialVersionUID = 0L;
+        public static com.google.protobuf.Parser<LogicalDataModel> PARSER =
+                new com.google.protobuf.AbstractParser<LogicalDataModel>() {
+                    public LogicalDataModel parsePartialFrom(
+                            com.google.protobuf.CodedInputStream input,
+                            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                            throws com.google.protobuf.InvalidProtocolBufferException {
+                        return new LogicalDataModel(input, extensionRegistry);
+                    }
+                };
+        private final com.google.protobuf.UnknownFieldSet unknownFields;
+        private int bitField0_;
+        private com.zhk.protobuf.LogicalDataModelProtos.Envelope envelope_;
+        private com.zhk.protobuf.LogicalDataModelProtos.Path path_;
+        private java.util.List<com.zhk.protobuf.LogicalDataModelProtos.PathEvent> pathEvent_;
+        private byte memoizedIsInitialized = -1;
+        private int memoizedSerializedSize = -1;
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_LogicalDataModel_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel.class, com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel.Builder.class);
-      }
+        // Use LogicalDataModel.newBuilder() to construct.
+        private LogicalDataModel(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+            super(builder);
+            this.unknownFields = builder.getUnknownFields();
+        }
 
-      // Construct using com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+        private LogicalDataModel(boolean noInit) {
+            this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+        }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getEnvelopeFieldBuilder();
-          getPathFieldBuilder();
-          getPathEventFieldBuilder();
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-
-      public Builder clear() {
-        super.clear();
-        if (envelopeBuilder_ == null) {
-          envelope_ = com.zhk.protobuf.LogicalDataModelProtos.Envelope.getDefaultInstance();
-        } else {
-          envelopeBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        if (pathBuilder_ == null) {
-          path_ = com.zhk.protobuf.LogicalDataModelProtos.Path.getDefaultInstance();
-        } else {
-          pathBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000002);
-        if (pathEventBuilder_ == null) {
-          pathEvent_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
-        } else {
-          pathEventBuilder_.clear();
-        }
-        return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_LogicalDataModel_descriptor;
-      }
-
-      public com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel getDefaultInstanceForType() {
-        return com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel.getDefaultInstance();
-      }
-
-      public com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel build() {
-        com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel buildPartial() {
-        com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel result = new com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        if (envelopeBuilder_ == null) {
-          result.envelope_ = envelope_;
-        } else {
-          result.envelope_ = envelopeBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        if (pathBuilder_ == null) {
-          result.path_ = path_;
-        } else {
-          result.path_ = pathBuilder_.build();
-        }
-        if (pathEventBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
-            pathEvent_ = java.util.Collections.unmodifiableList(pathEvent_);
-            bitField0_ = (bitField0_ & ~0x00000004);
-          }
-          result.pathEvent_ = pathEvent_;
-        } else {
-          result.pathEvent_ = pathEventBuilder_.build();
-        }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel) {
-          return mergeFrom((com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel other) {
-        if (other == com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel.getDefaultInstance()) return this;
-        if (other.hasEnvelope()) {
-          mergeEnvelope(other.getEnvelope());
-        }
-        if (other.hasPath()) {
-          mergePath(other.getPath());
-        }
-        if (pathEventBuilder_ == null) {
-          if (!other.pathEvent_.isEmpty()) {
-            if (pathEvent_.isEmpty()) {
-              pathEvent_ = other.pathEvent_;
-              bitField0_ = (bitField0_ & ~0x00000004);
-            } else {
-              ensurePathEventIsMutable();
-              pathEvent_.addAll(other.pathEvent_);
+        private LogicalDataModel(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            initFields();
+            int mutable_bitField0_ = 0;
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+                    com.google.protobuf.UnknownFieldSet.newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                        case 0:
+                            done = true;
+                            break;
+                        default: {
+                            if (!parseUnknownField(input, unknownFields,
+                                    extensionRegistry, tag)) {
+                                done = true;
+                            }
+                            break;
+                        }
+                        case 10: {
+                            com.zhk.protobuf.LogicalDataModelProtos.Envelope.Builder subBuilder = null;
+                            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                                subBuilder = envelope_.toBuilder();
+                            }
+                            envelope_ = input.readMessage(com.zhk.protobuf.LogicalDataModelProtos.Envelope.PARSER, extensionRegistry);
+                            if (subBuilder != null) {
+                                subBuilder.mergeFrom(envelope_);
+                                envelope_ = subBuilder.buildPartial();
+                            }
+                            bitField0_ |= 0x00000001;
+                            break;
+                        }
+                        case 18: {
+                            com.zhk.protobuf.LogicalDataModelProtos.Path.Builder subBuilder = null;
+                            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                                subBuilder = path_.toBuilder();
+                            }
+                            path_ = input.readMessage(com.zhk.protobuf.LogicalDataModelProtos.Path.PARSER, extensionRegistry);
+                            if (subBuilder != null) {
+                                subBuilder.mergeFrom(path_);
+                                path_ = subBuilder.buildPartial();
+                            }
+                            bitField0_ |= 0x00000002;
+                            break;
+                        }
+                        case 26: {
+                            if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                                pathEvent_ = new java.util.ArrayList<com.zhk.protobuf.LogicalDataModelProtos.PathEvent>();
+                                mutable_bitField0_ |= 0x00000004;
+                            }
+                            pathEvent_.add(input.readMessage(com.zhk.protobuf.LogicalDataModelProtos.PathEvent.PARSER, extensionRegistry));
+                            break;
+                        }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(
+                        e.getMessage()).setUnfinishedMessage(this);
+            } finally {
+                if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                    pathEvent_ = java.util.Collections.unmodifiableList(pathEvent_);
+                }
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
             }
-            onChanged();
-          }
-        } else {
-          if (!other.pathEvent_.isEmpty()) {
-            if (pathEventBuilder_.isEmpty()) {
-              pathEventBuilder_.dispose();
-              pathEventBuilder_ = null;
-              pathEvent_ = other.pathEvent_;
-              bitField0_ = (bitField0_ & ~0x00000004);
-              pathEventBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getPathEventFieldBuilder() : null;
-            } else {
-              pathEventBuilder_.addAllMessages(other.pathEvent_);
-            }
-          }
         }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
 
-      public final boolean isInitialized() {
-        if (!hasEnvelope()) {
-          
-          return false;
+        public static LogicalDataModel getDefaultInstance() {
+            return defaultInstance;
         }
-        if (!hasPath()) {
-          
-          return false;
-        }
-        if (!getEnvelope().isInitialized()) {
-          
-          return false;
-        }
-        if (!getPath().isInitialized()) {
-          
-          return false;
-        }
-        for (int i = 0; i < getPathEventCount(); i++) {
-          if (!getPathEvent(i).isInitialized()) {
-            
-            return false;
-          }
-        }
-        return true;
-      }
 
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private com.zhk.protobuf.LogicalDataModelProtos.Envelope envelope_ = com.zhk.protobuf.LogicalDataModelProtos.Envelope.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
-          com.zhk.protobuf.LogicalDataModelProtos.Envelope, com.zhk.protobuf.LogicalDataModelProtos.Envelope.Builder, com.zhk.protobuf.LogicalDataModelProtos.EnvelopeOrBuilder> envelopeBuilder_;
-      /**
-       * <code>required .proto.Envelope envelope = 1;</code>
-       */
-      public boolean hasEnvelope() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>required .proto.Envelope envelope = 1;</code>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.Envelope getEnvelope() {
-        if (envelopeBuilder_ == null) {
-          return envelope_;
-        } else {
-          return envelopeBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>required .proto.Envelope envelope = 1;</code>
-       */
-      public Builder setEnvelope(com.zhk.protobuf.LogicalDataModelProtos.Envelope value) {
-        if (envelopeBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          envelope_ = value;
-          onChanged();
-        } else {
-          envelopeBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        return this;
-      }
-      /**
-       * <code>required .proto.Envelope envelope = 1;</code>
-       */
-      public Builder setEnvelope(
-          com.zhk.protobuf.LogicalDataModelProtos.Envelope.Builder builderForValue) {
-        if (envelopeBuilder_ == null) {
-          envelope_ = builderForValue.build();
-          onChanged();
-        } else {
-          envelopeBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        return this;
-      }
-      /**
-       * <code>required .proto.Envelope envelope = 1;</code>
-       */
-      public Builder mergeEnvelope(com.zhk.protobuf.LogicalDataModelProtos.Envelope value) {
-        if (envelopeBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001) &&
-              envelope_ != com.zhk.protobuf.LogicalDataModelProtos.Envelope.getDefaultInstance()) {
-            envelope_ =
-              com.zhk.protobuf.LogicalDataModelProtos.Envelope.newBuilder(envelope_).mergeFrom(value).buildPartial();
-          } else {
-            envelope_ = value;
-          }
-          onChanged();
-        } else {
-          envelopeBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000001;
-        return this;
-      }
-      /**
-       * <code>required .proto.Envelope envelope = 1;</code>
-       */
-      public Builder clearEnvelope() {
-        if (envelopeBuilder_ == null) {
-          envelope_ = com.zhk.protobuf.LogicalDataModelProtos.Envelope.getDefaultInstance();
-          onChanged();
-        } else {
-          envelopeBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-      /**
-       * <code>required .proto.Envelope envelope = 1;</code>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.Envelope.Builder getEnvelopeBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getEnvelopeFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>required .proto.Envelope envelope = 1;</code>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.EnvelopeOrBuilder getEnvelopeOrBuilder() {
-        if (envelopeBuilder_ != null) {
-          return envelopeBuilder_.getMessageOrBuilder();
-        } else {
-          return envelope_;
-        }
-      }
-      /**
-       * <code>required .proto.Envelope envelope = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          com.zhk.protobuf.LogicalDataModelProtos.Envelope, com.zhk.protobuf.LogicalDataModelProtos.Envelope.Builder, com.zhk.protobuf.LogicalDataModelProtos.EnvelopeOrBuilder> 
-          getEnvelopeFieldBuilder() {
-        if (envelopeBuilder_ == null) {
-          envelopeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              com.zhk.protobuf.LogicalDataModelProtos.Envelope, com.zhk.protobuf.LogicalDataModelProtos.Envelope.Builder, com.zhk.protobuf.LogicalDataModelProtos.EnvelopeOrBuilder>(
-                  getEnvelope(),
-                  getParentForChildren(),
-                  isClean());
-          envelope_ = null;
-        }
-        return envelopeBuilder_;
-      }
-
-      private com.zhk.protobuf.LogicalDataModelProtos.Path path_ = com.zhk.protobuf.LogicalDataModelProtos.Path.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
-          com.zhk.protobuf.LogicalDataModelProtos.Path, com.zhk.protobuf.LogicalDataModelProtos.Path.Builder, com.zhk.protobuf.LogicalDataModelProtos.PathOrBuilder> pathBuilder_;
-      /**
-       * <code>required .proto.Path path = 2;</code>
-       */
-      public boolean hasPath() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>required .proto.Path path = 2;</code>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.Path getPath() {
-        if (pathBuilder_ == null) {
-          return path_;
-        } else {
-          return pathBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>required .proto.Path path = 2;</code>
-       */
-      public Builder setPath(com.zhk.protobuf.LogicalDataModelProtos.Path value) {
-        if (pathBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          path_ = value;
-          onChanged();
-        } else {
-          pathBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        return this;
-      }
-      /**
-       * <code>required .proto.Path path = 2;</code>
-       */
-      public Builder setPath(
-          com.zhk.protobuf.LogicalDataModelProtos.Path.Builder builderForValue) {
-        if (pathBuilder_ == null) {
-          path_ = builderForValue.build();
-          onChanged();
-        } else {
-          pathBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        return this;
-      }
-      /**
-       * <code>required .proto.Path path = 2;</code>
-       */
-      public Builder mergePath(com.zhk.protobuf.LogicalDataModelProtos.Path value) {
-        if (pathBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002) &&
-              path_ != com.zhk.protobuf.LogicalDataModelProtos.Path.getDefaultInstance()) {
-            path_ =
-              com.zhk.protobuf.LogicalDataModelProtos.Path.newBuilder(path_).mergeFrom(value).buildPartial();
-          } else {
-            path_ = value;
-          }
-          onChanged();
-        } else {
-          pathBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000002;
-        return this;
-      }
-      /**
-       * <code>required .proto.Path path = 2;</code>
-       */
-      public Builder clearPath() {
-        if (pathBuilder_ == null) {
-          path_ = com.zhk.protobuf.LogicalDataModelProtos.Path.getDefaultInstance();
-          onChanged();
-        } else {
-          pathBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000002);
-        return this;
-      }
-      /**
-       * <code>required .proto.Path path = 2;</code>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.Path.Builder getPathBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getPathFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>required .proto.Path path = 2;</code>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.PathOrBuilder getPathOrBuilder() {
-        if (pathBuilder_ != null) {
-          return pathBuilder_.getMessageOrBuilder();
-        } else {
-          return path_;
-        }
-      }
-      /**
-       * <code>required .proto.Path path = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          com.zhk.protobuf.LogicalDataModelProtos.Path, com.zhk.protobuf.LogicalDataModelProtos.Path.Builder, com.zhk.protobuf.LogicalDataModelProtos.PathOrBuilder> 
-          getPathFieldBuilder() {
-        if (pathBuilder_ == null) {
-          pathBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              com.zhk.protobuf.LogicalDataModelProtos.Path, com.zhk.protobuf.LogicalDataModelProtos.Path.Builder, com.zhk.protobuf.LogicalDataModelProtos.PathOrBuilder>(
-                  getPath(),
-                  getParentForChildren(),
-                  isClean());
-          path_ = null;
-        }
-        return pathBuilder_;
-      }
-
-      private java.util.List<com.zhk.protobuf.LogicalDataModelProtos.PathEvent> pathEvent_ =
-        java.util.Collections.emptyList();
-      private void ensurePathEventIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-          pathEvent_ = new java.util.ArrayList<com.zhk.protobuf.LogicalDataModelProtos.PathEvent>(pathEvent_);
-          bitField0_ |= 0x00000004;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
-          com.zhk.protobuf.LogicalDataModelProtos.PathEvent, com.zhk.protobuf.LogicalDataModelProtos.PathEvent.Builder, com.zhk.protobuf.LogicalDataModelProtos.PathEventOrBuilder> pathEventBuilder_;
-
-      /**
-       * <code>repeated .proto.PathEvent pathEvent = 3;</code>
-       */
-      public java.util.List<com.zhk.protobuf.LogicalDataModelProtos.PathEvent> getPathEventList() {
-        if (pathEventBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(pathEvent_);
-        } else {
-          return pathEventBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .proto.PathEvent pathEvent = 3;</code>
-       */
-      public int getPathEventCount() {
-        if (pathEventBuilder_ == null) {
-          return pathEvent_.size();
-        } else {
-          return pathEventBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .proto.PathEvent pathEvent = 3;</code>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.PathEvent getPathEvent(int index) {
-        if (pathEventBuilder_ == null) {
-          return pathEvent_.get(index);
-        } else {
-          return pathEventBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .proto.PathEvent pathEvent = 3;</code>
-       */
-      public Builder setPathEvent(
-          int index, com.zhk.protobuf.LogicalDataModelProtos.PathEvent value) {
-        if (pathEventBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensurePathEventIsMutable();
-          pathEvent_.set(index, value);
-          onChanged();
-        } else {
-          pathEventBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.PathEvent pathEvent = 3;</code>
-       */
-      public Builder setPathEvent(
-          int index, com.zhk.protobuf.LogicalDataModelProtos.PathEvent.Builder builderForValue) {
-        if (pathEventBuilder_ == null) {
-          ensurePathEventIsMutable();
-          pathEvent_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          pathEventBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.PathEvent pathEvent = 3;</code>
-       */
-      public Builder addPathEvent(com.zhk.protobuf.LogicalDataModelProtos.PathEvent value) {
-        if (pathEventBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensurePathEventIsMutable();
-          pathEvent_.add(value);
-          onChanged();
-        } else {
-          pathEventBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.PathEvent pathEvent = 3;</code>
-       */
-      public Builder addPathEvent(
-          int index, com.zhk.protobuf.LogicalDataModelProtos.PathEvent value) {
-        if (pathEventBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensurePathEventIsMutable();
-          pathEvent_.add(index, value);
-          onChanged();
-        } else {
-          pathEventBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.PathEvent pathEvent = 3;</code>
-       */
-      public Builder addPathEvent(
-          com.zhk.protobuf.LogicalDataModelProtos.PathEvent.Builder builderForValue) {
-        if (pathEventBuilder_ == null) {
-          ensurePathEventIsMutable();
-          pathEvent_.add(builderForValue.build());
-          onChanged();
-        } else {
-          pathEventBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.PathEvent pathEvent = 3;</code>
-       */
-      public Builder addPathEvent(
-          int index, com.zhk.protobuf.LogicalDataModelProtos.PathEvent.Builder builderForValue) {
-        if (pathEventBuilder_ == null) {
-          ensurePathEventIsMutable();
-          pathEvent_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          pathEventBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.PathEvent pathEvent = 3;</code>
-       */
-      public Builder addAllPathEvent(
-          Iterable<? extends com.zhk.protobuf.LogicalDataModelProtos.PathEvent> values) {
-        if (pathEventBuilder_ == null) {
-          ensurePathEventIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, pathEvent_);
-          onChanged();
-        } else {
-          pathEventBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.PathEvent pathEvent = 3;</code>
-       */
-      public Builder clearPathEvent() {
-        if (pathEventBuilder_ == null) {
-          pathEvent_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
-          onChanged();
-        } else {
-          pathEventBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.PathEvent pathEvent = 3;</code>
-       */
-      public Builder removePathEvent(int index) {
-        if (pathEventBuilder_ == null) {
-          ensurePathEventIsMutable();
-          pathEvent_.remove(index);
-          onChanged();
-        } else {
-          pathEventBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.PathEvent pathEvent = 3;</code>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.PathEvent.Builder getPathEventBuilder(
-          int index) {
-        return getPathEventFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .proto.PathEvent pathEvent = 3;</code>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.PathEventOrBuilder getPathEventOrBuilder(
-          int index) {
-        if (pathEventBuilder_ == null) {
-          return pathEvent_.get(index);  } else {
-          return pathEventBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .proto.PathEvent pathEvent = 3;</code>
-       */
-      public java.util.List<? extends com.zhk.protobuf.LogicalDataModelProtos.PathEventOrBuilder> 
-           getPathEventOrBuilderList() {
-        if (pathEventBuilder_ != null) {
-          return pathEventBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(pathEvent_);
-        }
-      }
-      /**
-       * <code>repeated .proto.PathEvent pathEvent = 3;</code>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.PathEvent.Builder addPathEventBuilder() {
-        return getPathEventFieldBuilder().addBuilder(
-            com.zhk.protobuf.LogicalDataModelProtos.PathEvent.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .proto.PathEvent pathEvent = 3;</code>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.PathEvent.Builder addPathEventBuilder(
-          int index) {
-        return getPathEventFieldBuilder().addBuilder(
-            index, com.zhk.protobuf.LogicalDataModelProtos.PathEvent.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .proto.PathEvent pathEvent = 3;</code>
-       */
-      public java.util.List<com.zhk.protobuf.LogicalDataModelProtos.PathEvent.Builder> 
-           getPathEventBuilderList() {
-        return getPathEventFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
-          com.zhk.protobuf.LogicalDataModelProtos.PathEvent, com.zhk.protobuf.LogicalDataModelProtos.PathEvent.Builder, com.zhk.protobuf.LogicalDataModelProtos.PathEventOrBuilder> 
-          getPathEventFieldBuilder() {
-        if (pathEventBuilder_ == null) {
-          pathEventBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              com.zhk.protobuf.LogicalDataModelProtos.PathEvent, com.zhk.protobuf.LogicalDataModelProtos.PathEvent.Builder, com.zhk.protobuf.LogicalDataModelProtos.PathEventOrBuilder>(
-                  pathEvent_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
-                  getParentForChildren(),
-                  isClean());
-          pathEvent_ = null;
-        }
-        return pathEventBuilder_;
-      }
-
-      // @@protoc_insertion_point(builder_scope:proto.LogicalDataModel)
-    }
-
-    static {
-      defaultInstance = new LogicalDataModel(true);
-      defaultInstance.initFields();
-    }
-
-    // @@protoc_insertion_point(class_scope:proto.LogicalDataModel)
-  }
-
-  public interface EnvelopeOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:proto.Envelope)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>required int32 version = 1;</code>
-     *
-     * <pre>
-     * PB数据模型
-     * </pre>
-     */
-    boolean hasVersion();
-    /**
-     * <code>required int32 version = 1;</code>
-     *
-     * <pre>
-     * PB数据模型
-     * </pre>
-     */
-    int getVersion();
-
-    /**
-     * <code>optional .proto.NaviVersion naviVersion = 2;</code>
-     */
-    boolean hasNaviVersion();
-    /**
-     * <code>optional .proto.NaviVersion naviVersion = 2;</code>
-     */
-    com.zhk.protobuf.LogicalDataModelProtos.NaviVersion getNaviVersion();
-    /**
-     * <code>optional .proto.NaviVersion naviVersion = 2;</code>
-     */
-    com.zhk.protobuf.LogicalDataModelProtos.NaviVersionOrBuilder getNaviVersionOrBuilder();
-
-    /**
-     * <code>required string appKey = 3;</code>
-     *
-     * <pre>
-     * 客户端标识
-     * </pre>
-     */
-    boolean hasAppKey();
-    /**
-     * <code>required string appKey = 3;</code>
-     *
-     * <pre>
-     * 客户端标识
-     * </pre>
-     */
-    String getAppKey();
-    /**
-     * <code>required string appKey = 3;</code>
-     *
-     * <pre>
-     * 客户端标识
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getAppKeyBytes();
-
-    /**
-     * <code>required string guid = 4;</code>
-     *
-     * <pre>
-     * 设备标识
-     * </pre>
-     */
-    boolean hasGuid();
-    /**
-     * <code>required string guid = 4;</code>
-     *
-     * <pre>
-     * 设备标识
-     * </pre>
-     */
-    String getGuid();
-    /**
-     * <code>required string guid = 4;</code>
-     *
-     * <pre>
-     * 设备标识
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getGuidBytes();
-
-    /**
-     * <code>required string sid = 5;</code>
-     *
-     * <pre>
-     * 会话标识
-     * </pre>
-     */
-    boolean hasSid();
-    /**
-     * <code>required string sid = 5;</code>
-     *
-     * <pre>
-     * 会话标识
-     * </pre>
-     */
-    String getSid();
-    /**
-     * <code>required string sid = 5;</code>
-     *
-     * <pre>
-     * 会话标识
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getSidBytes();
-
-    /**
-     * <code>required uint64 timestampNTP = 6;</code>
-     *
-     * <pre>
-     * NTP时间
-     * </pre>
-     */
-    boolean hasTimestampNTP();
-    /**
-     * <code>required uint64 timestampNTP = 6;</code>
-     *
-     * <pre>
-     * NTP时间
-     * </pre>
-     */
-    long getTimestampNTP();
-
-    /**
-     * <code>required uint64 timestamp = 7;</code>
-     *
-     * <pre>
-     * 设备时间
-     * </pre>
-     */
-    boolean hasTimestamp();
-    /**
-     * <code>required uint64 timestamp = 7;</code>
-     *
-     * <pre>
-     * 设备时间
-     * </pre>
-     */
-    long getTimestamp();
-  }
-  /**
-   * Protobuf type {@code proto.Envelope}
-   *
-   * <pre>
-   * 头
-   * </pre>
-   */
-  public static final class Envelope extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:proto.Envelope)
-      EnvelopeOrBuilder {
-    // Use Envelope.newBuilder() to construct.
-    private Envelope(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-      this.unknownFields = builder.getUnknownFields();
-    }
-    private Envelope(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final Envelope defaultInstance;
-    public static Envelope getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public Envelope getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Envelope(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 8: {
-              bitField0_ |= 0x00000001;
-              version_ = input.readInt32();
-              break;
-            }
-            case 18: {
-              com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000002) == 0x00000002)) {
-                subBuilder = naviVersion_.toBuilder();
-              }
-              naviVersion_ = input.readMessage(com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(naviVersion_);
-                naviVersion_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000002;
-              break;
-            }
-            case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000004;
-              appKey_ = bs;
-              break;
-            }
-            case 34: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000008;
-              guid_ = bs;
-              break;
-            }
-            case 42: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000010;
-              sid_ = bs;
-              break;
-            }
-            case 48: {
-              bitField0_ |= 0x00000020;
-              timestampNTP_ = input.readUInt64();
-              break;
-            }
-            case 56: {
-              bitField0_ |= 0x00000040;
-              timestamp_ = input.readUInt64();
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
+        public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_Envelope_descriptor;
-    }
+            return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_LogicalDataModel_descriptor;
+        }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        public static com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel parseFrom(
+                com.google.protobuf.ByteString data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel parseFrom(
+                com.google.protobuf.ByteString data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel parseFrom(
+                byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return PARSER.parseFrom(input);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel parseFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return PARSER.parseFrom(input, extensionRegistry);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel parseDelimitedFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return PARSER.parseDelimitedFrom(input);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel parseDelimitedFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel parseFrom(
+                com.google.protobuf.CodedInputStream input)
+                throws java.io.IOException {
+            return PARSER.parseFrom(input);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel parseFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return PARSER.parseFrom(input, extensionRegistry);
+        }
+
+        public static Builder newBuilder() {
+            return Builder.create();
+        }
+
+        public static Builder newBuilder(com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel prototype) {
+            return newBuilder().mergeFrom(prototype);
+        }
+
+        public LogicalDataModel getDefaultInstanceForType() {
+            return defaultInstance;
+        }
+
+        @Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+            return this.unknownFields;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_Envelope_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.zhk.protobuf.LogicalDataModelProtos.Envelope.class, com.zhk.protobuf.LogicalDataModelProtos.Envelope.Builder.class);
-    }
-
-    public static com.google.protobuf.Parser<Envelope> PARSER =
-        new com.google.protobuf.AbstractParser<Envelope>() {
-      public Envelope parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Envelope(input, extensionRegistry);
-      }
-    };
-
-    @Override
-    public com.google.protobuf.Parser<Envelope> getParserForType() {
-      return PARSER;
-    }
-
-    private int bitField0_;
-    public static final int VERSION_FIELD_NUMBER = 1;
-    private int version_;
-    /**
-     * <code>required int32 version = 1;</code>
-     *
-     * <pre>
-     * PB数据模型
-     * </pre>
-     */
-    public boolean hasVersion() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>required int32 version = 1;</code>
-     *
-     * <pre>
-     * PB数据模型
-     * </pre>
-     */
-    public int getVersion() {
-      return version_;
-    }
-
-    public static final int NAVIVERSION_FIELD_NUMBER = 2;
-    private com.zhk.protobuf.LogicalDataModelProtos.NaviVersion naviVersion_;
-    /**
-     * <code>optional .proto.NaviVersion naviVersion = 2;</code>
-     */
-    public boolean hasNaviVersion() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>optional .proto.NaviVersion naviVersion = 2;</code>
-     */
-    public com.zhk.protobuf.LogicalDataModelProtos.NaviVersion getNaviVersion() {
-      return naviVersion_;
-    }
-    /**
-     * <code>optional .proto.NaviVersion naviVersion = 2;</code>
-     */
-    public com.zhk.protobuf.LogicalDataModelProtos.NaviVersionOrBuilder getNaviVersionOrBuilder() {
-      return naviVersion_;
-    }
-
-    public static final int APPKEY_FIELD_NUMBER = 3;
-    private Object appKey_;
-    /**
-     * <code>required string appKey = 3;</code>
-     *
-     * <pre>
-     * 客户端标识
-     * </pre>
-     */
-    public boolean hasAppKey() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
-    }
-    /**
-     * <code>required string appKey = 3;</code>
-     *
-     * <pre>
-     * 客户端标识
-     * </pre>
-     */
-    public String getAppKey() {
-      Object ref = appKey_;
-      if (ref instanceof String) {
-        return (String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          appKey_ = s;
+            return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_LogicalDataModel_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel.class, com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel.Builder.class);
         }
-        return s;
-      }
-    }
-    /**
-     * <code>required string appKey = 3;</code>
-     *
-     * <pre>
-     * 客户端标识
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getAppKeyBytes() {
-      Object ref = appKey_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
-        appKey_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
 
-    public static final int GUID_FIELD_NUMBER = 4;
-    private Object guid_;
-    /**
-     * <code>required string guid = 4;</code>
-     *
-     * <pre>
-     * 设备标识
-     * </pre>
-     */
-    public boolean hasGuid() {
-      return ((bitField0_ & 0x00000008) == 0x00000008);
-    }
-    /**
-     * <code>required string guid = 4;</code>
-     *
-     * <pre>
-     * 设备标识
-     * </pre>
-     */
-    public String getGuid() {
-      Object ref = guid_;
-      if (ref instanceof String) {
-        return (String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          guid_ = s;
+        @Override
+        public com.google.protobuf.Parser<LogicalDataModel> getParserForType() {
+            return PARSER;
         }
-        return s;
-      }
-    }
-    /**
-     * <code>required string guid = 4;</code>
-     *
-     * <pre>
-     * 设备标识
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getGuidBytes() {
-      Object ref = guid_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
-        guid_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
 
-    public static final int SID_FIELD_NUMBER = 5;
-    private Object sid_;
-    /**
-     * <code>required string sid = 5;</code>
-     *
-     * <pre>
-     * 会话标识
-     * </pre>
-     */
-    public boolean hasSid() {
-      return ((bitField0_ & 0x00000010) == 0x00000010);
-    }
-    /**
-     * <code>required string sid = 5;</code>
-     *
-     * <pre>
-     * 会话标识
-     * </pre>
-     */
-    public String getSid() {
-      Object ref = sid_;
-      if (ref instanceof String) {
-        return (String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          sid_ = s;
+        /**
+         * <code>required .proto.Envelope envelope = 1;</code>
+         */
+        public boolean hasEnvelope() {
+            return ((bitField0_ & 0x00000001) == 0x00000001);
         }
-        return s;
-      }
-    }
-    /**
-     * <code>required string sid = 5;</code>
-     *
-     * <pre>
-     * 会话标识
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getSidBytes() {
-      Object ref = sid_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
-        sid_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+
+        /**
+         * <code>required .proto.Envelope envelope = 1;</code>
+         */
+        public com.zhk.protobuf.LogicalDataModelProtos.Envelope getEnvelope() {
+            return envelope_;
+        }
+
+        /**
+         * <code>required .proto.Envelope envelope = 1;</code>
+         */
+        public com.zhk.protobuf.LogicalDataModelProtos.EnvelopeOrBuilder getEnvelopeOrBuilder() {
+            return envelope_;
+        }
+
+        /**
+         * <code>required .proto.Path path = 2;</code>
+         */
+        public boolean hasPath() {
+            return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+
+        /**
+         * <code>required .proto.Path path = 2;</code>
+         */
+        public com.zhk.protobuf.LogicalDataModelProtos.Path getPath() {
+            return path_;
+        }
+
+        /**
+         * <code>required .proto.Path path = 2;</code>
+         */
+        public com.zhk.protobuf.LogicalDataModelProtos.PathOrBuilder getPathOrBuilder() {
+            return path_;
+        }
+
+        /**
+         * <code>repeated .proto.PathEvent pathEvent = 3;</code>
+         */
+        public java.util.List<com.zhk.protobuf.LogicalDataModelProtos.PathEvent> getPathEventList() {
+            return pathEvent_;
+        }
+
+        /**
+         * <code>repeated .proto.PathEvent pathEvent = 3;</code>
+         */
+        public java.util.List<? extends com.zhk.protobuf.LogicalDataModelProtos.PathEventOrBuilder>
+        getPathEventOrBuilderList() {
+            return pathEvent_;
+        }
+
+        /**
+         * <code>repeated .proto.PathEvent pathEvent = 3;</code>
+         */
+        public int getPathEventCount() {
+            return pathEvent_.size();
+        }
+
+        /**
+         * <code>repeated .proto.PathEvent pathEvent = 3;</code>
+         */
+        public com.zhk.protobuf.LogicalDataModelProtos.PathEvent getPathEvent(int index) {
+            return pathEvent_.get(index);
+        }
+
+        /**
+         * <code>repeated .proto.PathEvent pathEvent = 3;</code>
+         */
+        public com.zhk.protobuf.LogicalDataModelProtos.PathEventOrBuilder getPathEventOrBuilder(
+                int index) {
+            return pathEvent_.get(index);
+        }
+
+        private void initFields() {
+            envelope_ = com.zhk.protobuf.LogicalDataModelProtos.Envelope.getDefaultInstance();
+            path_ = com.zhk.protobuf.LogicalDataModelProtos.Path.getDefaultInstance();
+            pathEvent_ = java.util.Collections.emptyList();
+        }
+
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1) return true;
+            if (isInitialized == 0) return false;
+
+            if (!hasEnvelope()) {
+                memoizedIsInitialized = 0;
+                return false;
+            }
+            if (!hasPath()) {
+                memoizedIsInitialized = 0;
+                return false;
+            }
+            if (!getEnvelope().isInitialized()) {
+                memoizedIsInitialized = 0;
+                return false;
+            }
+            if (!getPath().isInitialized()) {
+                memoizedIsInitialized = 0;
+                return false;
+            }
+            for (int i = 0; i < getPathEventCount(); i++) {
+                if (!getPathEvent(i).isInitialized()) {
+                    memoizedIsInitialized = 0;
+                    return false;
+                }
+            }
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                throws java.io.IOException {
+            getSerializedSize();
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                output.writeMessage(1, envelope_);
+            }
+            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                output.writeMessage(2, path_);
+            }
+            for (int i = 0; i < pathEvent_.size(); i++) {
+                output.writeMessage(3, pathEvent_.get(i));
+            }
+            getUnknownFields().writeTo(output);
+        }
+
+        public int getSerializedSize() {
+            int size = memoizedSerializedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeMessageSize(1, envelope_);
+            }
+            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeMessageSize(2, path_);
+            }
+            for (int i = 0; i < pathEvent_.size(); i++) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeMessageSize(3, pathEvent_.get(i));
+            }
+            size += getUnknownFields().getSerializedSize();
+            memoizedSerializedSize = size;
+            return size;
+        }
+
+        @Override
+        protected Object writeReplace()
+                throws java.io.ObjectStreamException {
+            return super.writeReplace();
+        }
+
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public Builder toBuilder() {
+            return newBuilder(this);
+        }
+
+        @Override
+        protected Builder newBuilderForType(
+                com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * Protobuf type {@code proto.LogicalDataModel}
+         * <p/>
+         * <pre>
+         * 整体
+         * </pre>
+         */
+        public static final class Builder extends
+                com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:proto.LogicalDataModel)
+                com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModelOrBuilder {
+            private int bitField0_;
+            private com.zhk.protobuf.LogicalDataModelProtos.Envelope envelope_ = com.zhk.protobuf.LogicalDataModelProtos.Envelope.getDefaultInstance();
+            private com.google.protobuf.SingleFieldBuilder<
+                    com.zhk.protobuf.LogicalDataModelProtos.Envelope, com.zhk.protobuf.LogicalDataModelProtos.Envelope.Builder, com.zhk.protobuf.LogicalDataModelProtos.EnvelopeOrBuilder> envelopeBuilder_;
+            private com.zhk.protobuf.LogicalDataModelProtos.Path path_ = com.zhk.protobuf.LogicalDataModelProtos.Path.getDefaultInstance();
+            private com.google.protobuf.SingleFieldBuilder<
+                    com.zhk.protobuf.LogicalDataModelProtos.Path, com.zhk.protobuf.LogicalDataModelProtos.Path.Builder, com.zhk.protobuf.LogicalDataModelProtos.PathOrBuilder> pathBuilder_;
+            private java.util.List<com.zhk.protobuf.LogicalDataModelProtos.PathEvent> pathEvent_ =
+                    java.util.Collections.emptyList();
+            private com.google.protobuf.RepeatedFieldBuilder<
+                    com.zhk.protobuf.LogicalDataModelProtos.PathEvent, com.zhk.protobuf.LogicalDataModelProtos.PathEvent.Builder, com.zhk.protobuf.LogicalDataModelProtos.PathEventOrBuilder> pathEventBuilder_;
+
+            // Construct using com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(
+                    com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+                return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_LogicalDataModel_descriptor;
+            }
+
+            private static Builder create() {
+                return new Builder();
+            }
+
+            protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+                return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_LogicalDataModel_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel.class, com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel.Builder.class);
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+                    getEnvelopeFieldBuilder();
+                    getPathFieldBuilder();
+                    getPathEventFieldBuilder();
+                }
+            }
+
+            public Builder clear() {
+                super.clear();
+                if (envelopeBuilder_ == null) {
+                    envelope_ = com.zhk.protobuf.LogicalDataModelProtos.Envelope.getDefaultInstance();
+                } else {
+                    envelopeBuilder_.clear();
+                }
+                bitField0_ = (bitField0_ & ~0x00000001);
+                if (pathBuilder_ == null) {
+                    path_ = com.zhk.protobuf.LogicalDataModelProtos.Path.getDefaultInstance();
+                } else {
+                    pathBuilder_.clear();
+                }
+                bitField0_ = (bitField0_ & ~0x00000002);
+                if (pathEventBuilder_ == null) {
+                    pathEvent_ = java.util.Collections.emptyList();
+                    bitField0_ = (bitField0_ & ~0x00000004);
+                } else {
+                    pathEventBuilder_.clear();
+                }
+                return this;
+            }
+
+            public Builder clone() {
+                return create().mergeFrom(buildPartial());
+            }
+
+            public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+                return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_LogicalDataModel_descriptor;
+            }
+
+            public com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel getDefaultInstanceForType() {
+                return com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel.getDefaultInstance();
+            }
+
+            public com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel build() {
+                com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            public com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel buildPartial() {
+                com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel result = new com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel(this);
+                int from_bitField0_ = bitField0_;
+                int to_bitField0_ = 0;
+                if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+                    to_bitField0_ |= 0x00000001;
+                }
+                if (envelopeBuilder_ == null) {
+                    result.envelope_ = envelope_;
+                } else {
+                    result.envelope_ = envelopeBuilder_.build();
+                }
+                if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+                    to_bitField0_ |= 0x00000002;
+                }
+                if (pathBuilder_ == null) {
+                    result.path_ = path_;
+                } else {
+                    result.path_ = pathBuilder_.build();
+                }
+                if (pathEventBuilder_ == null) {
+                    if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                        pathEvent_ = java.util.Collections.unmodifiableList(pathEvent_);
+                        bitField0_ = (bitField0_ & ~0x00000004);
+                    }
+                    result.pathEvent_ = pathEvent_;
+                } else {
+                    result.pathEvent_ = pathEventBuilder_.build();
+                }
+                result.bitField0_ = to_bitField0_;
+                onBuilt();
+                return result;
+            }
+
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel) {
+                    return mergeFrom((com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel other) {
+                if (other == com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel.getDefaultInstance()) return this;
+                if (other.hasEnvelope()) {
+                    mergeEnvelope(other.getEnvelope());
+                }
+                if (other.hasPath()) {
+                    mergePath(other.getPath());
+                }
+                if (pathEventBuilder_ == null) {
+                    if (!other.pathEvent_.isEmpty()) {
+                        if (pathEvent_.isEmpty()) {
+                            pathEvent_ = other.pathEvent_;
+                            bitField0_ = (bitField0_ & ~0x00000004);
+                        } else {
+                            ensurePathEventIsMutable();
+                            pathEvent_.addAll(other.pathEvent_);
+                        }
+                        onChanged();
+                    }
+                } else {
+                    if (!other.pathEvent_.isEmpty()) {
+                        if (pathEventBuilder_.isEmpty()) {
+                            pathEventBuilder_.dispose();
+                            pathEventBuilder_ = null;
+                            pathEvent_ = other.pathEvent_;
+                            bitField0_ = (bitField0_ & ~0x00000004);
+                            pathEventBuilder_ =
+                                    com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                                            getPathEventFieldBuilder() : null;
+                        } else {
+                            pathEventBuilder_.addAllMessages(other.pathEvent_);
+                        }
+                    }
+                }
+                this.mergeUnknownFields(other.getUnknownFields());
+                return this;
+            }
+
+            public final boolean isInitialized() {
+                if (!hasEnvelope()) {
+
+                    return false;
+                }
+                if (!hasPath()) {
+
+                    return false;
+                }
+                if (!getEnvelope().isInitialized()) {
+
+                    return false;
+                }
+                if (!getPath().isInitialized()) {
+
+                    return false;
+                }
+                for (int i = 0; i < getPathEventCount(); i++) {
+                    if (!getPathEvent(i).isInitialized()) {
+
+                        return false;
+                    }
+                }
+                return true;
+            }
+
+            public Builder mergeFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws java.io.IOException {
+                com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (com.zhk.protobuf.LogicalDataModelProtos.LogicalDataModel) e.getUnfinishedMessage();
+                    throw e;
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            /**
+             * <code>required .proto.Envelope envelope = 1;</code>
+             */
+            public boolean hasEnvelope() {
+                return ((bitField0_ & 0x00000001) == 0x00000001);
+            }
+
+            /**
+             * <code>required .proto.Envelope envelope = 1;</code>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.Envelope getEnvelope() {
+                if (envelopeBuilder_ == null) {
+                    return envelope_;
+                } else {
+                    return envelopeBuilder_.getMessage();
+                }
+            }
+
+            /**
+             * <code>required .proto.Envelope envelope = 1;</code>
+             */
+            public Builder setEnvelope(com.zhk.protobuf.LogicalDataModelProtos.Envelope value) {
+                if (envelopeBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    envelope_ = value;
+                    onChanged();
+                } else {
+                    envelopeBuilder_.setMessage(value);
+                }
+                bitField0_ |= 0x00000001;
+                return this;
+            }
+
+            /**
+             * <code>required .proto.Envelope envelope = 1;</code>
+             */
+            public Builder setEnvelope(
+                    com.zhk.protobuf.LogicalDataModelProtos.Envelope.Builder builderForValue) {
+                if (envelopeBuilder_ == null) {
+                    envelope_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    envelopeBuilder_.setMessage(builderForValue.build());
+                }
+                bitField0_ |= 0x00000001;
+                return this;
+            }
+
+            /**
+             * <code>required .proto.Envelope envelope = 1;</code>
+             */
+            public Builder mergeEnvelope(com.zhk.protobuf.LogicalDataModelProtos.Envelope value) {
+                if (envelopeBuilder_ == null) {
+                    if (((bitField0_ & 0x00000001) == 0x00000001) &&
+                            envelope_ != com.zhk.protobuf.LogicalDataModelProtos.Envelope.getDefaultInstance()) {
+                        envelope_ =
+                                com.zhk.protobuf.LogicalDataModelProtos.Envelope.newBuilder(envelope_).mergeFrom(value).buildPartial();
+                    } else {
+                        envelope_ = value;
+                    }
+                    onChanged();
+                } else {
+                    envelopeBuilder_.mergeFrom(value);
+                }
+                bitField0_ |= 0x00000001;
+                return this;
+            }
+
+            /**
+             * <code>required .proto.Envelope envelope = 1;</code>
+             */
+            public Builder clearEnvelope() {
+                if (envelopeBuilder_ == null) {
+                    envelope_ = com.zhk.protobuf.LogicalDataModelProtos.Envelope.getDefaultInstance();
+                    onChanged();
+                } else {
+                    envelopeBuilder_.clear();
+                }
+                bitField0_ = (bitField0_ & ~0x00000001);
+                return this;
+            }
+
+            /**
+             * <code>required .proto.Envelope envelope = 1;</code>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.Envelope.Builder getEnvelopeBuilder() {
+                bitField0_ |= 0x00000001;
+                onChanged();
+                return getEnvelopeFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <code>required .proto.Envelope envelope = 1;</code>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.EnvelopeOrBuilder getEnvelopeOrBuilder() {
+                if (envelopeBuilder_ != null) {
+                    return envelopeBuilder_.getMessageOrBuilder();
+                } else {
+                    return envelope_;
+                }
+            }
+
+            /**
+             * <code>required .proto.Envelope envelope = 1;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilder<
+                    com.zhk.protobuf.LogicalDataModelProtos.Envelope, com.zhk.protobuf.LogicalDataModelProtos.Envelope.Builder, com.zhk.protobuf.LogicalDataModelProtos.EnvelopeOrBuilder>
+            getEnvelopeFieldBuilder() {
+                if (envelopeBuilder_ == null) {
+                    envelopeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+                            com.zhk.protobuf.LogicalDataModelProtos.Envelope, com.zhk.protobuf.LogicalDataModelProtos.Envelope.Builder, com.zhk.protobuf.LogicalDataModelProtos.EnvelopeOrBuilder>(
+                            getEnvelope(),
+                            getParentForChildren(),
+                            isClean());
+                    envelope_ = null;
+                }
+                return envelopeBuilder_;
+            }
+
+            /**
+             * <code>required .proto.Path path = 2;</code>
+             */
+            public boolean hasPath() {
+                return ((bitField0_ & 0x00000002) == 0x00000002);
+            }
+
+            /**
+             * <code>required .proto.Path path = 2;</code>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.Path getPath() {
+                if (pathBuilder_ == null) {
+                    return path_;
+                } else {
+                    return pathBuilder_.getMessage();
+                }
+            }
+
+            /**
+             * <code>required .proto.Path path = 2;</code>
+             */
+            public Builder setPath(com.zhk.protobuf.LogicalDataModelProtos.Path value) {
+                if (pathBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    path_ = value;
+                    onChanged();
+                } else {
+                    pathBuilder_.setMessage(value);
+                }
+                bitField0_ |= 0x00000002;
+                return this;
+            }
+
+            /**
+             * <code>required .proto.Path path = 2;</code>
+             */
+            public Builder setPath(
+                    com.zhk.protobuf.LogicalDataModelProtos.Path.Builder builderForValue) {
+                if (pathBuilder_ == null) {
+                    path_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    pathBuilder_.setMessage(builderForValue.build());
+                }
+                bitField0_ |= 0x00000002;
+                return this;
+            }
+
+            /**
+             * <code>required .proto.Path path = 2;</code>
+             */
+            public Builder mergePath(com.zhk.protobuf.LogicalDataModelProtos.Path value) {
+                if (pathBuilder_ == null) {
+                    if (((bitField0_ & 0x00000002) == 0x00000002) &&
+                            path_ != com.zhk.protobuf.LogicalDataModelProtos.Path.getDefaultInstance()) {
+                        path_ =
+                                com.zhk.protobuf.LogicalDataModelProtos.Path.newBuilder(path_).mergeFrom(value).buildPartial();
+                    } else {
+                        path_ = value;
+                    }
+                    onChanged();
+                } else {
+                    pathBuilder_.mergeFrom(value);
+                }
+                bitField0_ |= 0x00000002;
+                return this;
+            }
+
+            /**
+             * <code>required .proto.Path path = 2;</code>
+             */
+            public Builder clearPath() {
+                if (pathBuilder_ == null) {
+                    path_ = com.zhk.protobuf.LogicalDataModelProtos.Path.getDefaultInstance();
+                    onChanged();
+                } else {
+                    pathBuilder_.clear();
+                }
+                bitField0_ = (bitField0_ & ~0x00000002);
+                return this;
+            }
+
+            /**
+             * <code>required .proto.Path path = 2;</code>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.Path.Builder getPathBuilder() {
+                bitField0_ |= 0x00000002;
+                onChanged();
+                return getPathFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <code>required .proto.Path path = 2;</code>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.PathOrBuilder getPathOrBuilder() {
+                if (pathBuilder_ != null) {
+                    return pathBuilder_.getMessageOrBuilder();
+                } else {
+                    return path_;
+                }
+            }
+
+            /**
+             * <code>required .proto.Path path = 2;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilder<
+                    com.zhk.protobuf.LogicalDataModelProtos.Path, com.zhk.protobuf.LogicalDataModelProtos.Path.Builder, com.zhk.protobuf.LogicalDataModelProtos.PathOrBuilder>
+            getPathFieldBuilder() {
+                if (pathBuilder_ == null) {
+                    pathBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+                            com.zhk.protobuf.LogicalDataModelProtos.Path, com.zhk.protobuf.LogicalDataModelProtos.Path.Builder, com.zhk.protobuf.LogicalDataModelProtos.PathOrBuilder>(
+                            getPath(),
+                            getParentForChildren(),
+                            isClean());
+                    path_ = null;
+                }
+                return pathBuilder_;
+            }
+
+            private void ensurePathEventIsMutable() {
+                if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+                    pathEvent_ = new java.util.ArrayList<com.zhk.protobuf.LogicalDataModelProtos.PathEvent>(pathEvent_);
+                    bitField0_ |= 0x00000004;
+                }
+            }
+
+            /**
+             * <code>repeated .proto.PathEvent pathEvent = 3;</code>
+             */
+            public java.util.List<com.zhk.protobuf.LogicalDataModelProtos.PathEvent> getPathEventList() {
+                if (pathEventBuilder_ == null) {
+                    return java.util.Collections.unmodifiableList(pathEvent_);
+                } else {
+                    return pathEventBuilder_.getMessageList();
+                }
+            }
+
+            /**
+             * <code>repeated .proto.PathEvent pathEvent = 3;</code>
+             */
+            public int getPathEventCount() {
+                if (pathEventBuilder_ == null) {
+                    return pathEvent_.size();
+                } else {
+                    return pathEventBuilder_.getCount();
+                }
+            }
+
+            /**
+             * <code>repeated .proto.PathEvent pathEvent = 3;</code>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.PathEvent getPathEvent(int index) {
+                if (pathEventBuilder_ == null) {
+                    return pathEvent_.get(index);
+                } else {
+                    return pathEventBuilder_.getMessage(index);
+                }
+            }
+
+            /**
+             * <code>repeated .proto.PathEvent pathEvent = 3;</code>
+             */
+            public Builder setPathEvent(
+                    int index, com.zhk.protobuf.LogicalDataModelProtos.PathEvent value) {
+                if (pathEventBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    ensurePathEventIsMutable();
+                    pathEvent_.set(index, value);
+                    onChanged();
+                } else {
+                    pathEventBuilder_.setMessage(index, value);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.PathEvent pathEvent = 3;</code>
+             */
+            public Builder setPathEvent(
+                    int index, com.zhk.protobuf.LogicalDataModelProtos.PathEvent.Builder builderForValue) {
+                if (pathEventBuilder_ == null) {
+                    ensurePathEventIsMutable();
+                    pathEvent_.set(index, builderForValue.build());
+                    onChanged();
+                } else {
+                    pathEventBuilder_.setMessage(index, builderForValue.build());
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.PathEvent pathEvent = 3;</code>
+             */
+            public Builder addPathEvent(com.zhk.protobuf.LogicalDataModelProtos.PathEvent value) {
+                if (pathEventBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    ensurePathEventIsMutable();
+                    pathEvent_.add(value);
+                    onChanged();
+                } else {
+                    pathEventBuilder_.addMessage(value);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.PathEvent pathEvent = 3;</code>
+             */
+            public Builder addPathEvent(
+                    int index, com.zhk.protobuf.LogicalDataModelProtos.PathEvent value) {
+                if (pathEventBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    ensurePathEventIsMutable();
+                    pathEvent_.add(index, value);
+                    onChanged();
+                } else {
+                    pathEventBuilder_.addMessage(index, value);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.PathEvent pathEvent = 3;</code>
+             */
+            public Builder addPathEvent(
+                    com.zhk.protobuf.LogicalDataModelProtos.PathEvent.Builder builderForValue) {
+                if (pathEventBuilder_ == null) {
+                    ensurePathEventIsMutable();
+                    pathEvent_.add(builderForValue.build());
+                    onChanged();
+                } else {
+                    pathEventBuilder_.addMessage(builderForValue.build());
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.PathEvent pathEvent = 3;</code>
+             */
+            public Builder addPathEvent(
+                    int index, com.zhk.protobuf.LogicalDataModelProtos.PathEvent.Builder builderForValue) {
+                if (pathEventBuilder_ == null) {
+                    ensurePathEventIsMutable();
+                    pathEvent_.add(index, builderForValue.build());
+                    onChanged();
+                } else {
+                    pathEventBuilder_.addMessage(index, builderForValue.build());
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.PathEvent pathEvent = 3;</code>
+             */
+            public Builder addAllPathEvent(
+                    Iterable<? extends com.zhk.protobuf.LogicalDataModelProtos.PathEvent> values) {
+                if (pathEventBuilder_ == null) {
+                    ensurePathEventIsMutable();
+                    com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                            values, pathEvent_);
+                    onChanged();
+                } else {
+                    pathEventBuilder_.addAllMessages(values);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.PathEvent pathEvent = 3;</code>
+             */
+            public Builder clearPathEvent() {
+                if (pathEventBuilder_ == null) {
+                    pathEvent_ = java.util.Collections.emptyList();
+                    bitField0_ = (bitField0_ & ~0x00000004);
+                    onChanged();
+                } else {
+                    pathEventBuilder_.clear();
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.PathEvent pathEvent = 3;</code>
+             */
+            public Builder removePathEvent(int index) {
+                if (pathEventBuilder_ == null) {
+                    ensurePathEventIsMutable();
+                    pathEvent_.remove(index);
+                    onChanged();
+                } else {
+                    pathEventBuilder_.remove(index);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.PathEvent pathEvent = 3;</code>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.PathEvent.Builder getPathEventBuilder(
+                    int index) {
+                return getPathEventFieldBuilder().getBuilder(index);
+            }
+
+            /**
+             * <code>repeated .proto.PathEvent pathEvent = 3;</code>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.PathEventOrBuilder getPathEventOrBuilder(
+                    int index) {
+                if (pathEventBuilder_ == null) {
+                    return pathEvent_.get(index);
+                } else {
+                    return pathEventBuilder_.getMessageOrBuilder(index);
+                }
+            }
+
+            /**
+             * <code>repeated .proto.PathEvent pathEvent = 3;</code>
+             */
+            public java.util.List<? extends com.zhk.protobuf.LogicalDataModelProtos.PathEventOrBuilder>
+            getPathEventOrBuilderList() {
+                if (pathEventBuilder_ != null) {
+                    return pathEventBuilder_.getMessageOrBuilderList();
+                } else {
+                    return java.util.Collections.unmodifiableList(pathEvent_);
+                }
+            }
+
+            /**
+             * <code>repeated .proto.PathEvent pathEvent = 3;</code>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.PathEvent.Builder addPathEventBuilder() {
+                return getPathEventFieldBuilder().addBuilder(
+                        com.zhk.protobuf.LogicalDataModelProtos.PathEvent.getDefaultInstance());
+            }
+
+            /**
+             * <code>repeated .proto.PathEvent pathEvent = 3;</code>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.PathEvent.Builder addPathEventBuilder(
+                    int index) {
+                return getPathEventFieldBuilder().addBuilder(
+                        index, com.zhk.protobuf.LogicalDataModelProtos.PathEvent.getDefaultInstance());
+            }
+
+            /**
+             * <code>repeated .proto.PathEvent pathEvent = 3;</code>
+             */
+            public java.util.List<com.zhk.protobuf.LogicalDataModelProtos.PathEvent.Builder>
+            getPathEventBuilderList() {
+                return getPathEventFieldBuilder().getBuilderList();
+            }
+
+            private com.google.protobuf.RepeatedFieldBuilder<
+                    com.zhk.protobuf.LogicalDataModelProtos.PathEvent, com.zhk.protobuf.LogicalDataModelProtos.PathEvent.Builder, com.zhk.protobuf.LogicalDataModelProtos.PathEventOrBuilder>
+            getPathEventFieldBuilder() {
+                if (pathEventBuilder_ == null) {
+                    pathEventBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+                            com.zhk.protobuf.LogicalDataModelProtos.PathEvent, com.zhk.protobuf.LogicalDataModelProtos.PathEvent.Builder, com.zhk.protobuf.LogicalDataModelProtos.PathEventOrBuilder>(
+                            pathEvent_,
+                            ((bitField0_ & 0x00000004) == 0x00000004),
+                            getParentForChildren(),
+                            isClean());
+                    pathEvent_ = null;
+                }
+                return pathEventBuilder_;
+            }
+
+            // @@protoc_insertion_point(builder_scope:proto.LogicalDataModel)
+        }
+
+        static {
+            defaultInstance = new LogicalDataModel(true);
+            defaultInstance.initFields();
+        }
+
+        // @@protoc_insertion_point(class_scope:proto.LogicalDataModel)
     }
 
-    public static final int TIMESTAMPNTP_FIELD_NUMBER = 6;
-    private long timestampNTP_;
-    /**
-     * <code>required uint64 timestampNTP = 6;</code>
-     *
-     * <pre>
-     * NTP时间
-     * </pre>
-     */
-    public boolean hasTimestampNTP() {
-      return ((bitField0_ & 0x00000020) == 0x00000020);
-    }
-    /**
-     * <code>required uint64 timestampNTP = 6;</code>
-     *
-     * <pre>
-     * NTP时间
-     * </pre>
-     */
-    public long getTimestampNTP() {
-      return timestampNTP_;
-    }
-
-    public static final int TIMESTAMP_FIELD_NUMBER = 7;
-    private long timestamp_;
-    /**
-     * <code>required uint64 timestamp = 7;</code>
-     *
-     * <pre>
-     * 设备时间
-     * </pre>
-     */
-    public boolean hasTimestamp() {
-      return ((bitField0_ & 0x00000040) == 0x00000040);
-    }
-    /**
-     * <code>required uint64 timestamp = 7;</code>
-     *
-     * <pre>
-     * 设备时间
-     * </pre>
-     */
-    public long getTimestamp() {
-      return timestamp_;
-    }
-
-    private void initFields() {
-      version_ = 0;
-      naviVersion_ = com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.getDefaultInstance();
-      appKey_ = "";
-      guid_ = "";
-      sid_ = "";
-      timestampNTP_ = 0L;
-      timestamp_ = 0L;
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      if (!hasVersion()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasAppKey()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasGuid()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasSid()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasTimestampNTP()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasTimestamp()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeInt32(1, version_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeMessage(2, naviVersion_);
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeBytes(3, getAppKeyBytes());
-      }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeBytes(4, getGuidBytes());
-      }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        output.writeBytes(5, getSidBytes());
-      }
-      if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        output.writeUInt64(6, timestampNTP_);
-      }
-      if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        output.writeUInt64(7, timestamp_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, version_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, naviVersion_);
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getAppKeyBytes());
-      }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(4, getGuidBytes());
-      }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(5, getSidBytes());
-      }
-      if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(6, timestampNTP_);
-      }
-      if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(7, timestamp_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @Override
-    protected Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
-    public static com.zhk.protobuf.LogicalDataModelProtos.Envelope parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.Envelope parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.Envelope parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.Envelope parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.Envelope parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.Envelope parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.Envelope parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.Envelope parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.Envelope parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.Envelope parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.zhk.protobuf.LogicalDataModelProtos.Envelope prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-
-    @Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code proto.Envelope}
-     *
+     * <p/>
      * <pre>
      * 头
      * </pre>
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:proto.Envelope)
-        com.zhk.protobuf.LogicalDataModelProtos.EnvelopeOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_Envelope_descriptor;
-      }
+    public static final class Envelope extends
+            com.google.protobuf.GeneratedMessage implements
+            // @@protoc_insertion_point(message_implements:proto.Envelope)
+            EnvelopeOrBuilder {
+        public static final int VERSION_FIELD_NUMBER = 1;
+        public static final int NAVIVERSION_FIELD_NUMBER = 2;
+        public static final int APPKEY_FIELD_NUMBER = 3;
+        public static final int GUID_FIELD_NUMBER = 4;
+        public static final int SID_FIELD_NUMBER = 5;
+        public static final int TIMESTAMPNTP_FIELD_NUMBER = 6;
+        public static final int TIMESTAMP_FIELD_NUMBER = 7;
+        private static final Envelope defaultInstance;
+        private static final long serialVersionUID = 0L;
+        public static com.google.protobuf.Parser<Envelope> PARSER =
+                new com.google.protobuf.AbstractParser<Envelope>() {
+                    public Envelope parsePartialFrom(
+                            com.google.protobuf.CodedInputStream input,
+                            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                            throws com.google.protobuf.InvalidProtocolBufferException {
+                        return new Envelope(input, extensionRegistry);
+                    }
+                };
+        private final com.google.protobuf.UnknownFieldSet unknownFields;
+        private int bitField0_;
+        private int version_;
+        private com.zhk.protobuf.LogicalDataModelProtos.NaviVersion naviVersion_;
+        private Object appKey_;
+        private Object guid_;
+        private Object sid_;
+        private long timestampNTP_;
+        private long timestamp_;
+        private byte memoizedIsInitialized = -1;
+        private int memoizedSerializedSize = -1;
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_Envelope_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.zhk.protobuf.LogicalDataModelProtos.Envelope.class, com.zhk.protobuf.LogicalDataModelProtos.Envelope.Builder.class);
-      }
+        // Use Envelope.newBuilder() to construct.
+        private Envelope(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+            super(builder);
+            this.unknownFields = builder.getUnknownFields();
+        }
 
-      // Construct using com.zhk.protobuf.LogicalDataModelProtos.Envelope.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+        private Envelope(boolean noInit) {
+            this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+        }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getNaviVersionFieldBuilder();
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-
-      public Builder clear() {
-        super.clear();
-        version_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        if (naviVersionBuilder_ == null) {
-          naviVersion_ = com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.getDefaultInstance();
-        } else {
-          naviVersionBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000002);
-        appKey_ = "";
-        bitField0_ = (bitField0_ & ~0x00000004);
-        guid_ = "";
-        bitField0_ = (bitField0_ & ~0x00000008);
-        sid_ = "";
-        bitField0_ = (bitField0_ & ~0x00000010);
-        timestampNTP_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000020);
-        timestamp_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000040);
-        return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_Envelope_descriptor;
-      }
-
-      public com.zhk.protobuf.LogicalDataModelProtos.Envelope getDefaultInstanceForType() {
-        return com.zhk.protobuf.LogicalDataModelProtos.Envelope.getDefaultInstance();
-      }
-
-      public com.zhk.protobuf.LogicalDataModelProtos.Envelope build() {
-        com.zhk.protobuf.LogicalDataModelProtos.Envelope result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.zhk.protobuf.LogicalDataModelProtos.Envelope buildPartial() {
-        com.zhk.protobuf.LogicalDataModelProtos.Envelope result = new com.zhk.protobuf.LogicalDataModelProtos.Envelope(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.version_ = version_;
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        if (naviVersionBuilder_ == null) {
-          result.naviVersion_ = naviVersion_;
-        } else {
-          result.naviVersion_ = naviVersionBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-          to_bitField0_ |= 0x00000004;
-        }
-        result.appKey_ = appKey_;
-        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
-          to_bitField0_ |= 0x00000008;
-        }
-        result.guid_ = guid_;
-        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
-          to_bitField0_ |= 0x00000010;
-        }
-        result.sid_ = sid_;
-        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
-          to_bitField0_ |= 0x00000020;
-        }
-        result.timestampNTP_ = timestampNTP_;
-        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
-          to_bitField0_ |= 0x00000040;
-        }
-        result.timestamp_ = timestamp_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.zhk.protobuf.LogicalDataModelProtos.Envelope) {
-          return mergeFrom((com.zhk.protobuf.LogicalDataModelProtos.Envelope)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.zhk.protobuf.LogicalDataModelProtos.Envelope other) {
-        if (other == com.zhk.protobuf.LogicalDataModelProtos.Envelope.getDefaultInstance()) return this;
-        if (other.hasVersion()) {
-          setVersion(other.getVersion());
-        }
-        if (other.hasNaviVersion()) {
-          mergeNaviVersion(other.getNaviVersion());
-        }
-        if (other.hasAppKey()) {
-          bitField0_ |= 0x00000004;
-          appKey_ = other.appKey_;
-          onChanged();
-        }
-        if (other.hasGuid()) {
-          bitField0_ |= 0x00000008;
-          guid_ = other.guid_;
-          onChanged();
-        }
-        if (other.hasSid()) {
-          bitField0_ |= 0x00000010;
-          sid_ = other.sid_;
-          onChanged();
-        }
-        if (other.hasTimestampNTP()) {
-          setTimestampNTP(other.getTimestampNTP());
-        }
-        if (other.hasTimestamp()) {
-          setTimestamp(other.getTimestamp());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        if (!hasVersion()) {
-          
-          return false;
-        }
-        if (!hasAppKey()) {
-          
-          return false;
-        }
-        if (!hasGuid()) {
-          
-          return false;
-        }
-        if (!hasSid()) {
-          
-          return false;
-        }
-        if (!hasTimestampNTP()) {
-          
-          return false;
-        }
-        if (!hasTimestamp()) {
-          
-          return false;
-        }
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.zhk.protobuf.LogicalDataModelProtos.Envelope parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.zhk.protobuf.LogicalDataModelProtos.Envelope) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private int version_ ;
-      /**
-       * <code>required int32 version = 1;</code>
-       *
-       * <pre>
-       * PB数据模型
-       * </pre>
-       */
-      public boolean hasVersion() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>required int32 version = 1;</code>
-       *
-       * <pre>
-       * PB数据模型
-       * </pre>
-       */
-      public int getVersion() {
-        return version_;
-      }
-      /**
-       * <code>required int32 version = 1;</code>
-       *
-       * <pre>
-       * PB数据模型
-       * </pre>
-       */
-      public Builder setVersion(int value) {
-        bitField0_ |= 0x00000001;
-        version_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required int32 version = 1;</code>
-       *
-       * <pre>
-       * PB数据模型
-       * </pre>
-       */
-      public Builder clearVersion() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        version_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private com.zhk.protobuf.LogicalDataModelProtos.NaviVersion naviVersion_ = com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
-          com.zhk.protobuf.LogicalDataModelProtos.NaviVersion, com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.Builder, com.zhk.protobuf.LogicalDataModelProtos.NaviVersionOrBuilder> naviVersionBuilder_;
-      /**
-       * <code>optional .proto.NaviVersion naviVersion = 2;</code>
-       */
-      public boolean hasNaviVersion() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>optional .proto.NaviVersion naviVersion = 2;</code>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.NaviVersion getNaviVersion() {
-        if (naviVersionBuilder_ == null) {
-          return naviVersion_;
-        } else {
-          return naviVersionBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>optional .proto.NaviVersion naviVersion = 2;</code>
-       */
-      public Builder setNaviVersion(com.zhk.protobuf.LogicalDataModelProtos.NaviVersion value) {
-        if (naviVersionBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          naviVersion_ = value;
-          onChanged();
-        } else {
-          naviVersionBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        return this;
-      }
-      /**
-       * <code>optional .proto.NaviVersion naviVersion = 2;</code>
-       */
-      public Builder setNaviVersion(
-          com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.Builder builderForValue) {
-        if (naviVersionBuilder_ == null) {
-          naviVersion_ = builderForValue.build();
-          onChanged();
-        } else {
-          naviVersionBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        return this;
-      }
-      /**
-       * <code>optional .proto.NaviVersion naviVersion = 2;</code>
-       */
-      public Builder mergeNaviVersion(com.zhk.protobuf.LogicalDataModelProtos.NaviVersion value) {
-        if (naviVersionBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002) &&
-              naviVersion_ != com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.getDefaultInstance()) {
-            naviVersion_ =
-              com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.newBuilder(naviVersion_).mergeFrom(value).buildPartial();
-          } else {
-            naviVersion_ = value;
-          }
-          onChanged();
-        } else {
-          naviVersionBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000002;
-        return this;
-      }
-      /**
-       * <code>optional .proto.NaviVersion naviVersion = 2;</code>
-       */
-      public Builder clearNaviVersion() {
-        if (naviVersionBuilder_ == null) {
-          naviVersion_ = com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.getDefaultInstance();
-          onChanged();
-        } else {
-          naviVersionBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000002);
-        return this;
-      }
-      /**
-       * <code>optional .proto.NaviVersion naviVersion = 2;</code>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.Builder getNaviVersionBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getNaviVersionFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>optional .proto.NaviVersion naviVersion = 2;</code>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.NaviVersionOrBuilder getNaviVersionOrBuilder() {
-        if (naviVersionBuilder_ != null) {
-          return naviVersionBuilder_.getMessageOrBuilder();
-        } else {
-          return naviVersion_;
-        }
-      }
-      /**
-       * <code>optional .proto.NaviVersion naviVersion = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          com.zhk.protobuf.LogicalDataModelProtos.NaviVersion, com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.Builder, com.zhk.protobuf.LogicalDataModelProtos.NaviVersionOrBuilder> 
-          getNaviVersionFieldBuilder() {
-        if (naviVersionBuilder_ == null) {
-          naviVersionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              com.zhk.protobuf.LogicalDataModelProtos.NaviVersion, com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.Builder, com.zhk.protobuf.LogicalDataModelProtos.NaviVersionOrBuilder>(
-                  getNaviVersion(),
-                  getParentForChildren(),
-                  isClean());
-          naviVersion_ = null;
-        }
-        return naviVersionBuilder_;
-      }
-
-      private Object appKey_ = "";
-      /**
-       * <code>required string appKey = 3;</code>
-       *
-       * <pre>
-       * 客户端标识
-       * </pre>
-       */
-      public boolean hasAppKey() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>required string appKey = 3;</code>
-       *
-       * <pre>
-       * 客户端标识
-       * </pre>
-       */
-      public String getAppKey() {
-        Object ref = appKey_;
-        if (!(ref instanceof String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            appKey_ = s;
-          }
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      /**
-       * <code>required string appKey = 3;</code>
-       *
-       * <pre>
-       * 客户端标识
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getAppKeyBytes() {
-        Object ref = appKey_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
-          appKey_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>required string appKey = 3;</code>
-       *
-       * <pre>
-       * 客户端标识
-       * </pre>
-       */
-      public Builder setAppKey(
-          String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-        appKey_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required string appKey = 3;</code>
-       *
-       * <pre>
-       * 客户端标识
-       * </pre>
-       */
-      public Builder clearAppKey() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        appKey_ = getDefaultInstance().getAppKey();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required string appKey = 3;</code>
-       *
-       * <pre>
-       * 客户端标识
-       * </pre>
-       */
-      public Builder setAppKeyBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-        appKey_ = value;
-        onChanged();
-        return this;
-      }
-
-      private Object guid_ = "";
-      /**
-       * <code>required string guid = 4;</code>
-       *
-       * <pre>
-       * 设备标识
-       * </pre>
-       */
-      public boolean hasGuid() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
-      }
-      /**
-       * <code>required string guid = 4;</code>
-       *
-       * <pre>
-       * 设备标识
-       * </pre>
-       */
-      public String getGuid() {
-        Object ref = guid_;
-        if (!(ref instanceof String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            guid_ = s;
-          }
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      /**
-       * <code>required string guid = 4;</code>
-       *
-       * <pre>
-       * 设备标识
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getGuidBytes() {
-        Object ref = guid_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
-          guid_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>required string guid = 4;</code>
-       *
-       * <pre>
-       * 设备标识
-       * </pre>
-       */
-      public Builder setGuid(
-          String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
-        guid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required string guid = 4;</code>
-       *
-       * <pre>
-       * 设备标识
-       * </pre>
-       */
-      public Builder clearGuid() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        guid_ = getDefaultInstance().getGuid();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required string guid = 4;</code>
-       *
-       * <pre>
-       * 设备标识
-       * </pre>
-       */
-      public Builder setGuidBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
-        guid_ = value;
-        onChanged();
-        return this;
-      }
-
-      private Object sid_ = "";
-      /**
-       * <code>required string sid = 5;</code>
-       *
-       * <pre>
-       * 会话标识
-       * </pre>
-       */
-      public boolean hasSid() {
-        return ((bitField0_ & 0x00000010) == 0x00000010);
-      }
-      /**
-       * <code>required string sid = 5;</code>
-       *
-       * <pre>
-       * 会话标识
-       * </pre>
-       */
-      public String getSid() {
-        Object ref = sid_;
-        if (!(ref instanceof String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            sid_ = s;
-          }
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      /**
-       * <code>required string sid = 5;</code>
-       *
-       * <pre>
-       * 会话标识
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getSidBytes() {
-        Object ref = sid_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
-          sid_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>required string sid = 5;</code>
-       *
-       * <pre>
-       * 会话标识
-       * </pre>
-       */
-      public Builder setSid(
-          String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
-        sid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required string sid = 5;</code>
-       *
-       * <pre>
-       * 会话标识
-       * </pre>
-       */
-      public Builder clearSid() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        sid_ = getDefaultInstance().getSid();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required string sid = 5;</code>
-       *
-       * <pre>
-       * 会话标识
-       * </pre>
-       */
-      public Builder setSidBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
-        sid_ = value;
-        onChanged();
-        return this;
-      }
-
-      private long timestampNTP_ ;
-      /**
-       * <code>required uint64 timestampNTP = 6;</code>
-       *
-       * <pre>
-       * NTP时间
-       * </pre>
-       */
-      public boolean hasTimestampNTP() {
-        return ((bitField0_ & 0x00000020) == 0x00000020);
-      }
-      /**
-       * <code>required uint64 timestampNTP = 6;</code>
-       *
-       * <pre>
-       * NTP时间
-       * </pre>
-       */
-      public long getTimestampNTP() {
-        return timestampNTP_;
-      }
-      /**
-       * <code>required uint64 timestampNTP = 6;</code>
-       *
-       * <pre>
-       * NTP时间
-       * </pre>
-       */
-      public Builder setTimestampNTP(long value) {
-        bitField0_ |= 0x00000020;
-        timestampNTP_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required uint64 timestampNTP = 6;</code>
-       *
-       * <pre>
-       * NTP时间
-       * </pre>
-       */
-      public Builder clearTimestampNTP() {
-        bitField0_ = (bitField0_ & ~0x00000020);
-        timestampNTP_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private long timestamp_ ;
-      /**
-       * <code>required uint64 timestamp = 7;</code>
-       *
-       * <pre>
-       * 设备时间
-       * </pre>
-       */
-      public boolean hasTimestamp() {
-        return ((bitField0_ & 0x00000040) == 0x00000040);
-      }
-      /**
-       * <code>required uint64 timestamp = 7;</code>
-       *
-       * <pre>
-       * 设备时间
-       * </pre>
-       */
-      public long getTimestamp() {
-        return timestamp_;
-      }
-      /**
-       * <code>required uint64 timestamp = 7;</code>
-       *
-       * <pre>
-       * 设备时间
-       * </pre>
-       */
-      public Builder setTimestamp(long value) {
-        bitField0_ |= 0x00000040;
-        timestamp_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required uint64 timestamp = 7;</code>
-       *
-       * <pre>
-       * 设备时间
-       * </pre>
-       */
-      public Builder clearTimestamp() {
-        bitField0_ = (bitField0_ & ~0x00000040);
-        timestamp_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:proto.Envelope)
-    }
-
-    static {
-      defaultInstance = new Envelope(true);
-      defaultInstance.initFields();
-    }
-
-    // @@protoc_insertion_point(class_scope:proto.Envelope)
-  }
-
-  public interface NaviVersionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:proto.NaviVersion)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional string engineVersion = 1;</code>
-     *
-     * <pre>
-     * 引擎版本
-     * </pre>
-     */
-    boolean hasEngineVersion();
-    /**
-     * <code>optional string engineVersion = 1;</code>
-     *
-     * <pre>
-     * 引擎版本
-     * </pre>
-     */
-    String getEngineVersion();
-    /**
-     * <code>optional string engineVersion = 1;</code>
-     *
-     * <pre>
-     * 引擎版本
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getEngineVersionBytes();
-
-    /**
-     * <code>optional string appc = 2;</code>
-     *
-     * <pre>
-     * 客户端版本号
-     * </pre>
-     */
-    boolean hasAppc();
-    /**
-     * <code>optional string appc = 2;</code>
-     *
-     * <pre>
-     * 客户端版本号
-     * </pre>
-     */
-    String getAppc();
-    /**
-     * <code>optional string appc = 2;</code>
-     *
-     * <pre>
-     * 客户端版本号
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getAppcBytes();
-
-    /**
-     * <code>optional string appn = 3;</code>
-     *
-     * <pre>
-     * 客户端版本名
-     * </pre>
-     */
-    boolean hasAppn();
-    /**
-     * <code>optional string appn = 3;</code>
-     *
-     * <pre>
-     * 客户端版本名
-     * </pre>
-     */
-    String getAppn();
-    /**
-     * <code>optional string appn = 3;</code>
-     *
-     * <pre>
-     * 客户端版本名
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getAppnBytes();
-  }
-  /**
-   * Protobuf type {@code proto.NaviVersion}
-   *
-   * <pre>
-   * 版本
-   * </pre>
-   */
-  public static final class NaviVersion extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:proto.NaviVersion)
-      NaviVersionOrBuilder {
-    // Use NaviVersion.newBuilder() to construct.
-    private NaviVersion(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-      this.unknownFields = builder.getUnknownFields();
-    }
-    private NaviVersion(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final NaviVersion defaultInstance;
-    public static NaviVersion getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public NaviVersion getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private NaviVersion(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
+        private Envelope(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            initFields();
+            int mutable_bitField0_ = 0;
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+                    com.google.protobuf.UnknownFieldSet.newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                        case 0:
+                            done = true;
+                            break;
+                        default: {
+                            if (!parseUnknownField(input, unknownFields,
+                                    extensionRegistry, tag)) {
+                                done = true;
+                            }
+                            break;
+                        }
+                        case 8: {
+                            bitField0_ |= 0x00000001;
+                            version_ = input.readInt32();
+                            break;
+                        }
+                        case 18: {
+                            com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.Builder subBuilder = null;
+                            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                                subBuilder = naviVersion_.toBuilder();
+                            }
+                            naviVersion_ = input.readMessage(com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.PARSER, extensionRegistry);
+                            if (subBuilder != null) {
+                                subBuilder.mergeFrom(naviVersion_);
+                                naviVersion_ = subBuilder.buildPartial();
+                            }
+                            bitField0_ |= 0x00000002;
+                            break;
+                        }
+                        case 26: {
+                            com.google.protobuf.ByteString bs = input.readBytes();
+                            bitField0_ |= 0x00000004;
+                            appKey_ = bs;
+                            break;
+                        }
+                        case 34: {
+                            com.google.protobuf.ByteString bs = input.readBytes();
+                            bitField0_ |= 0x00000008;
+                            guid_ = bs;
+                            break;
+                        }
+                        case 42: {
+                            com.google.protobuf.ByteString bs = input.readBytes();
+                            bitField0_ |= 0x00000010;
+                            sid_ = bs;
+                            break;
+                        }
+                        case 48: {
+                            bitField0_ |= 0x00000020;
+                            timestampNTP_ = input.readUInt64();
+                            break;
+                        }
+                        case 56: {
+                            bitField0_ |= 0x00000040;
+                            timestamp_ = input.readUInt64();
+                            break;
+                        }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(
+                        e.getMessage()).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
             }
-            case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000001;
-              engineVersion_ = bs;
-              break;
-            }
-            case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000002;
-              appc_ = bs;
-              break;
-            }
-            case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000004;
-              appn_ = bs;
-              break;
-            }
-          }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
+
+        public static Envelope getDefaultInstance() {
+            return defaultInstance;
+        }
+
+        public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_NaviVersion_descriptor;
-    }
+            return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_Envelope_descriptor;
+        }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        public static com.zhk.protobuf.LogicalDataModelProtos.Envelope parseFrom(
+                com.google.protobuf.ByteString data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.Envelope parseFrom(
+                com.google.protobuf.ByteString data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.Envelope parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.Envelope parseFrom(
+                byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.Envelope parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return PARSER.parseFrom(input);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.Envelope parseFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return PARSER.parseFrom(input, extensionRegistry);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.Envelope parseDelimitedFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return PARSER.parseDelimitedFrom(input);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.Envelope parseDelimitedFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.Envelope parseFrom(
+                com.google.protobuf.CodedInputStream input)
+                throws java.io.IOException {
+            return PARSER.parseFrom(input);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.Envelope parseFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return PARSER.parseFrom(input, extensionRegistry);
+        }
+
+        public static Builder newBuilder() {
+            return Builder.create();
+        }
+
+        public static Builder newBuilder(com.zhk.protobuf.LogicalDataModelProtos.Envelope prototype) {
+            return newBuilder().mergeFrom(prototype);
+        }
+
+        public Envelope getDefaultInstanceForType() {
+            return defaultInstance;
+        }
+
+        @Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+            return this.unknownFields;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_NaviVersion_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.class, com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.Builder.class);
-    }
-
-    public static com.google.protobuf.Parser<NaviVersion> PARSER =
-        new com.google.protobuf.AbstractParser<NaviVersion>() {
-      public NaviVersion parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new NaviVersion(input, extensionRegistry);
-      }
-    };
-
-    @Override
-    public com.google.protobuf.Parser<NaviVersion> getParserForType() {
-      return PARSER;
-    }
-
-    private int bitField0_;
-    public static final int ENGINEVERSION_FIELD_NUMBER = 1;
-    private Object engineVersion_;
-    /**
-     * <code>optional string engineVersion = 1;</code>
-     *
-     * <pre>
-     * 引擎版本
-     * </pre>
-     */
-    public boolean hasEngineVersion() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>optional string engineVersion = 1;</code>
-     *
-     * <pre>
-     * 引擎版本
-     * </pre>
-     */
-    public String getEngineVersion() {
-      Object ref = engineVersion_;
-      if (ref instanceof String) {
-        return (String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          engineVersion_ = s;
+            return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_Envelope_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            com.zhk.protobuf.LogicalDataModelProtos.Envelope.class, com.zhk.protobuf.LogicalDataModelProtos.Envelope.Builder.class);
         }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string engineVersion = 1;</code>
-     *
-     * <pre>
-     * 引擎版本
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getEngineVersionBytes() {
-      Object ref = engineVersion_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
-        engineVersion_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
 
-    public static final int APPC_FIELD_NUMBER = 2;
-    private Object appc_;
-    /**
-     * <code>optional string appc = 2;</code>
-     *
-     * <pre>
-     * 客户端版本号
-     * </pre>
-     */
-    public boolean hasAppc() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>optional string appc = 2;</code>
-     *
-     * <pre>
-     * 客户端版本号
-     * </pre>
-     */
-    public String getAppc() {
-      Object ref = appc_;
-      if (ref instanceof String) {
-        return (String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          appc_ = s;
+        @Override
+        public com.google.protobuf.Parser<Envelope> getParserForType() {
+            return PARSER;
         }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string appc = 2;</code>
-     *
-     * <pre>
-     * 客户端版本号
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getAppcBytes() {
-      Object ref = appc_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
-        appc_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
 
-    public static final int APPN_FIELD_NUMBER = 3;
-    private Object appn_;
-    /**
-     * <code>optional string appn = 3;</code>
-     *
-     * <pre>
-     * 客户端版本名
-     * </pre>
-     */
-    public boolean hasAppn() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
-    }
-    /**
-     * <code>optional string appn = 3;</code>
-     *
-     * <pre>
-     * 客户端版本名
-     * </pre>
-     */
-    public String getAppn() {
-      Object ref = appn_;
-      if (ref instanceof String) {
-        return (String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          appn_ = s;
+        /**
+         * <code>required int32 version = 1;</code>
+         * <p/>
+         * <pre>
+         * PB数据模型
+         * </pre>
+         */
+        public boolean hasVersion() {
+            return ((bitField0_ & 0x00000001) == 0x00000001);
         }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string appn = 3;</code>
-     *
-     * <pre>
-     * 客户端版本名
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getAppnBytes() {
-      Object ref = appn_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
-        appn_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+
+        /**
+         * <code>required int32 version = 1;</code>
+         * <p/>
+         * <pre>
+         * PB数据模型
+         * </pre>
+         */
+        public int getVersion() {
+            return version_;
+        }
+
+        /**
+         * <code>optional .proto.NaviVersion naviVersion = 2;</code>
+         */
+        public boolean hasNaviVersion() {
+            return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+
+        /**
+         * <code>optional .proto.NaviVersion naviVersion = 2;</code>
+         */
+        public com.zhk.protobuf.LogicalDataModelProtos.NaviVersion getNaviVersion() {
+            return naviVersion_;
+        }
+
+        /**
+         * <code>optional .proto.NaviVersion naviVersion = 2;</code>
+         */
+        public com.zhk.protobuf.LogicalDataModelProtos.NaviVersionOrBuilder getNaviVersionOrBuilder() {
+            return naviVersion_;
+        }
+
+        /**
+         * <code>required string appKey = 3;</code>
+         * <p/>
+         * <pre>
+         * 客户端标识
+         * </pre>
+         */
+        public boolean hasAppKey() {
+            return ((bitField0_ & 0x00000004) == 0x00000004);
+        }
+
+        /**
+         * <code>required string appKey = 3;</code>
+         * <p/>
+         * <pre>
+         * 客户端标识
+         * </pre>
+         */
+        public String getAppKey() {
+            Object ref = appKey_;
+            if (ref instanceof String) {
+                return (String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                String s = bs.toStringUtf8();
+                if (bs.isValidUtf8()) {
+                    appKey_ = s;
+                }
+                return s;
+            }
+        }
+
+        /**
+         * <code>required string appKey = 3;</code>
+         * <p/>
+         * <pre>
+         * 客户端标识
+         * </pre>
+         */
+        public com.google.protobuf.ByteString
+        getAppKeyBytes() {
+            Object ref = appKey_;
+            if (ref instanceof String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (String) ref);
+                appKey_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        /**
+         * <code>required string guid = 4;</code>
+         * <p/>
+         * <pre>
+         * 设备标识
+         * </pre>
+         */
+        public boolean hasGuid() {
+            return ((bitField0_ & 0x00000008) == 0x00000008);
+        }
+
+        /**
+         * <code>required string guid = 4;</code>
+         * <p/>
+         * <pre>
+         * 设备标识
+         * </pre>
+         */
+        public String getGuid() {
+            Object ref = guid_;
+            if (ref instanceof String) {
+                return (String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                String s = bs.toStringUtf8();
+                if (bs.isValidUtf8()) {
+                    guid_ = s;
+                }
+                return s;
+            }
+        }
+
+        /**
+         * <code>required string guid = 4;</code>
+         * <p/>
+         * <pre>
+         * 设备标识
+         * </pre>
+         */
+        public com.google.protobuf.ByteString
+        getGuidBytes() {
+            Object ref = guid_;
+            if (ref instanceof String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (String) ref);
+                guid_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        /**
+         * <code>required string sid = 5;</code>
+         * <p/>
+         * <pre>
+         * 会话标识
+         * </pre>
+         */
+        public boolean hasSid() {
+            return ((bitField0_ & 0x00000010) == 0x00000010);
+        }
+
+        /**
+         * <code>required string sid = 5;</code>
+         * <p/>
+         * <pre>
+         * 会话标识
+         * </pre>
+         */
+        public String getSid() {
+            Object ref = sid_;
+            if (ref instanceof String) {
+                return (String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                String s = bs.toStringUtf8();
+                if (bs.isValidUtf8()) {
+                    sid_ = s;
+                }
+                return s;
+            }
+        }
+
+        /**
+         * <code>required string sid = 5;</code>
+         * <p/>
+         * <pre>
+         * 会话标识
+         * </pre>
+         */
+        public com.google.protobuf.ByteString
+        getSidBytes() {
+            Object ref = sid_;
+            if (ref instanceof String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (String) ref);
+                sid_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        /**
+         * <code>required uint64 timestampNTP = 6;</code>
+         * <p/>
+         * <pre>
+         * NTP时间
+         * </pre>
+         */
+        public boolean hasTimestampNTP() {
+            return ((bitField0_ & 0x00000020) == 0x00000020);
+        }
+
+        /**
+         * <code>required uint64 timestampNTP = 6;</code>
+         * <p/>
+         * <pre>
+         * NTP时间
+         * </pre>
+         */
+        public long getTimestampNTP() {
+            return timestampNTP_;
+        }
+
+        /**
+         * <code>required uint64 timestamp = 7;</code>
+         * <p/>
+         * <pre>
+         * 设备时间
+         * </pre>
+         */
+        public boolean hasTimestamp() {
+            return ((bitField0_ & 0x00000040) == 0x00000040);
+        }
+
+        /**
+         * <code>required uint64 timestamp = 7;</code>
+         * <p/>
+         * <pre>
+         * 设备时间
+         * </pre>
+         */
+        public long getTimestamp() {
+            return timestamp_;
+        }
+
+        private void initFields() {
+            version_ = 0;
+            naviVersion_ = com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.getDefaultInstance();
+            appKey_ = "";
+            guid_ = "";
+            sid_ = "";
+            timestampNTP_ = 0L;
+            timestamp_ = 0L;
+        }
+
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1) return true;
+            if (isInitialized == 0) return false;
+
+            if (!hasVersion()) {
+                memoizedIsInitialized = 0;
+                return false;
+            }
+            if (!hasAppKey()) {
+                memoizedIsInitialized = 0;
+                return false;
+            }
+            if (!hasGuid()) {
+                memoizedIsInitialized = 0;
+                return false;
+            }
+            if (!hasSid()) {
+                memoizedIsInitialized = 0;
+                return false;
+            }
+            if (!hasTimestampNTP()) {
+                memoizedIsInitialized = 0;
+                return false;
+            }
+            if (!hasTimestamp()) {
+                memoizedIsInitialized = 0;
+                return false;
+            }
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                throws java.io.IOException {
+            getSerializedSize();
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                output.writeInt32(1, version_);
+            }
+            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                output.writeMessage(2, naviVersion_);
+            }
+            if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                output.writeBytes(3, getAppKeyBytes());
+            }
+            if (((bitField0_ & 0x00000008) == 0x00000008)) {
+                output.writeBytes(4, getGuidBytes());
+            }
+            if (((bitField0_ & 0x00000010) == 0x00000010)) {
+                output.writeBytes(5, getSidBytes());
+            }
+            if (((bitField0_ & 0x00000020) == 0x00000020)) {
+                output.writeUInt64(6, timestampNTP_);
+            }
+            if (((bitField0_ & 0x00000040) == 0x00000040)) {
+                output.writeUInt64(7, timestamp_);
+            }
+            getUnknownFields().writeTo(output);
+        }
+
+        public int getSerializedSize() {
+            int size = memoizedSerializedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeInt32Size(1, version_);
+            }
+            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeMessageSize(2, naviVersion_);
+            }
+            if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeBytesSize(3, getAppKeyBytes());
+            }
+            if (((bitField0_ & 0x00000008) == 0x00000008)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeBytesSize(4, getGuidBytes());
+            }
+            if (((bitField0_ & 0x00000010) == 0x00000010)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeBytesSize(5, getSidBytes());
+            }
+            if (((bitField0_ & 0x00000020) == 0x00000020)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeUInt64Size(6, timestampNTP_);
+            }
+            if (((bitField0_ & 0x00000040) == 0x00000040)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeUInt64Size(7, timestamp_);
+            }
+            size += getUnknownFields().getSerializedSize();
+            memoizedSerializedSize = size;
+            return size;
+        }
+
+        @Override
+        protected Object writeReplace()
+                throws java.io.ObjectStreamException {
+            return super.writeReplace();
+        }
+
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public Builder toBuilder() {
+            return newBuilder(this);
+        }
+
+        @Override
+        protected Builder newBuilderForType(
+                com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * Protobuf type {@code proto.Envelope}
+         * <p/>
+         * <pre>
+         * 头
+         * </pre>
+         */
+        public static final class Builder extends
+                com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:proto.Envelope)
+                com.zhk.protobuf.LogicalDataModelProtos.EnvelopeOrBuilder {
+            private int bitField0_;
+            private int version_;
+            private com.zhk.protobuf.LogicalDataModelProtos.NaviVersion naviVersion_ = com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.getDefaultInstance();
+            private com.google.protobuf.SingleFieldBuilder<
+                    com.zhk.protobuf.LogicalDataModelProtos.NaviVersion, com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.Builder, com.zhk.protobuf.LogicalDataModelProtos.NaviVersionOrBuilder> naviVersionBuilder_;
+            private Object appKey_ = "";
+            private Object guid_ = "";
+            private Object sid_ = "";
+            private long timestampNTP_;
+            private long timestamp_;
+
+            // Construct using com.zhk.protobuf.LogicalDataModelProtos.Envelope.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(
+                    com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+                return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_Envelope_descriptor;
+            }
+
+            private static Builder create() {
+                return new Builder();
+            }
+
+            protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+                return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_Envelope_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                com.zhk.protobuf.LogicalDataModelProtos.Envelope.class, com.zhk.protobuf.LogicalDataModelProtos.Envelope.Builder.class);
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+                    getNaviVersionFieldBuilder();
+                }
+            }
+
+            public Builder clear() {
+                super.clear();
+                version_ = 0;
+                bitField0_ = (bitField0_ & ~0x00000001);
+                if (naviVersionBuilder_ == null) {
+                    naviVersion_ = com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.getDefaultInstance();
+                } else {
+                    naviVersionBuilder_.clear();
+                }
+                bitField0_ = (bitField0_ & ~0x00000002);
+                appKey_ = "";
+                bitField0_ = (bitField0_ & ~0x00000004);
+                guid_ = "";
+                bitField0_ = (bitField0_ & ~0x00000008);
+                sid_ = "";
+                bitField0_ = (bitField0_ & ~0x00000010);
+                timestampNTP_ = 0L;
+                bitField0_ = (bitField0_ & ~0x00000020);
+                timestamp_ = 0L;
+                bitField0_ = (bitField0_ & ~0x00000040);
+                return this;
+            }
+
+            public Builder clone() {
+                return create().mergeFrom(buildPartial());
+            }
+
+            public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+                return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_Envelope_descriptor;
+            }
+
+            public com.zhk.protobuf.LogicalDataModelProtos.Envelope getDefaultInstanceForType() {
+                return com.zhk.protobuf.LogicalDataModelProtos.Envelope.getDefaultInstance();
+            }
+
+            public com.zhk.protobuf.LogicalDataModelProtos.Envelope build() {
+                com.zhk.protobuf.LogicalDataModelProtos.Envelope result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            public com.zhk.protobuf.LogicalDataModelProtos.Envelope buildPartial() {
+                com.zhk.protobuf.LogicalDataModelProtos.Envelope result = new com.zhk.protobuf.LogicalDataModelProtos.Envelope(this);
+                int from_bitField0_ = bitField0_;
+                int to_bitField0_ = 0;
+                if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+                    to_bitField0_ |= 0x00000001;
+                }
+                result.version_ = version_;
+                if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+                    to_bitField0_ |= 0x00000002;
+                }
+                if (naviVersionBuilder_ == null) {
+                    result.naviVersion_ = naviVersion_;
+                } else {
+                    result.naviVersion_ = naviVersionBuilder_.build();
+                }
+                if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+                    to_bitField0_ |= 0x00000004;
+                }
+                result.appKey_ = appKey_;
+                if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+                    to_bitField0_ |= 0x00000008;
+                }
+                result.guid_ = guid_;
+                if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+                    to_bitField0_ |= 0x00000010;
+                }
+                result.sid_ = sid_;
+                if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+                    to_bitField0_ |= 0x00000020;
+                }
+                result.timestampNTP_ = timestampNTP_;
+                if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+                    to_bitField0_ |= 0x00000040;
+                }
+                result.timestamp_ = timestamp_;
+                result.bitField0_ = to_bitField0_;
+                onBuilt();
+                return result;
+            }
+
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof com.zhk.protobuf.LogicalDataModelProtos.Envelope) {
+                    return mergeFrom((com.zhk.protobuf.LogicalDataModelProtos.Envelope) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(com.zhk.protobuf.LogicalDataModelProtos.Envelope other) {
+                if (other == com.zhk.protobuf.LogicalDataModelProtos.Envelope.getDefaultInstance()) return this;
+                if (other.hasVersion()) {
+                    setVersion(other.getVersion());
+                }
+                if (other.hasNaviVersion()) {
+                    mergeNaviVersion(other.getNaviVersion());
+                }
+                if (other.hasAppKey()) {
+                    bitField0_ |= 0x00000004;
+                    appKey_ = other.appKey_;
+                    onChanged();
+                }
+                if (other.hasGuid()) {
+                    bitField0_ |= 0x00000008;
+                    guid_ = other.guid_;
+                    onChanged();
+                }
+                if (other.hasSid()) {
+                    bitField0_ |= 0x00000010;
+                    sid_ = other.sid_;
+                    onChanged();
+                }
+                if (other.hasTimestampNTP()) {
+                    setTimestampNTP(other.getTimestampNTP());
+                }
+                if (other.hasTimestamp()) {
+                    setTimestamp(other.getTimestamp());
+                }
+                this.mergeUnknownFields(other.getUnknownFields());
+                return this;
+            }
+
+            public final boolean isInitialized() {
+                if (!hasVersion()) {
+
+                    return false;
+                }
+                if (!hasAppKey()) {
+
+                    return false;
+                }
+                if (!hasGuid()) {
+
+                    return false;
+                }
+                if (!hasSid()) {
+
+                    return false;
+                }
+                if (!hasTimestampNTP()) {
+
+                    return false;
+                }
+                if (!hasTimestamp()) {
+
+                    return false;
+                }
+                return true;
+            }
+
+            public Builder mergeFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws java.io.IOException {
+                com.zhk.protobuf.LogicalDataModelProtos.Envelope parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (com.zhk.protobuf.LogicalDataModelProtos.Envelope) e.getUnfinishedMessage();
+                    throw e;
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            /**
+             * <code>required int32 version = 1;</code>
+             * <p/>
+             * <pre>
+             * PB数据模型
+             * </pre>
+             */
+            public boolean hasVersion() {
+                return ((bitField0_ & 0x00000001) == 0x00000001);
+            }
+
+            /**
+             * <code>required int32 version = 1;</code>
+             * <p/>
+             * <pre>
+             * PB数据模型
+             * </pre>
+             */
+            public int getVersion() {
+                return version_;
+            }
+
+            /**
+             * <code>required int32 version = 1;</code>
+             * <p/>
+             * <pre>
+             * PB数据模型
+             * </pre>
+             */
+            public Builder setVersion(int value) {
+                bitField0_ |= 0x00000001;
+                version_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>required int32 version = 1;</code>
+             * <p/>
+             * <pre>
+             * PB数据模型
+             * </pre>
+             */
+            public Builder clearVersion() {
+                bitField0_ = (bitField0_ & ~0x00000001);
+                version_ = 0;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional .proto.NaviVersion naviVersion = 2;</code>
+             */
+            public boolean hasNaviVersion() {
+                return ((bitField0_ & 0x00000002) == 0x00000002);
+            }
+
+            /**
+             * <code>optional .proto.NaviVersion naviVersion = 2;</code>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.NaviVersion getNaviVersion() {
+                if (naviVersionBuilder_ == null) {
+                    return naviVersion_;
+                } else {
+                    return naviVersionBuilder_.getMessage();
+                }
+            }
+
+            /**
+             * <code>optional .proto.NaviVersion naviVersion = 2;</code>
+             */
+            public Builder setNaviVersion(com.zhk.protobuf.LogicalDataModelProtos.NaviVersion value) {
+                if (naviVersionBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    naviVersion_ = value;
+                    onChanged();
+                } else {
+                    naviVersionBuilder_.setMessage(value);
+                }
+                bitField0_ |= 0x00000002;
+                return this;
+            }
+
+            /**
+             * <code>optional .proto.NaviVersion naviVersion = 2;</code>
+             */
+            public Builder setNaviVersion(
+                    com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.Builder builderForValue) {
+                if (naviVersionBuilder_ == null) {
+                    naviVersion_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    naviVersionBuilder_.setMessage(builderForValue.build());
+                }
+                bitField0_ |= 0x00000002;
+                return this;
+            }
+
+            /**
+             * <code>optional .proto.NaviVersion naviVersion = 2;</code>
+             */
+            public Builder mergeNaviVersion(com.zhk.protobuf.LogicalDataModelProtos.NaviVersion value) {
+                if (naviVersionBuilder_ == null) {
+                    if (((bitField0_ & 0x00000002) == 0x00000002) &&
+                            naviVersion_ != com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.getDefaultInstance()) {
+                        naviVersion_ =
+                                com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.newBuilder(naviVersion_).mergeFrom(value).buildPartial();
+                    } else {
+                        naviVersion_ = value;
+                    }
+                    onChanged();
+                } else {
+                    naviVersionBuilder_.mergeFrom(value);
+                }
+                bitField0_ |= 0x00000002;
+                return this;
+            }
+
+            /**
+             * <code>optional .proto.NaviVersion naviVersion = 2;</code>
+             */
+            public Builder clearNaviVersion() {
+                if (naviVersionBuilder_ == null) {
+                    naviVersion_ = com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.getDefaultInstance();
+                    onChanged();
+                } else {
+                    naviVersionBuilder_.clear();
+                }
+                bitField0_ = (bitField0_ & ~0x00000002);
+                return this;
+            }
+
+            /**
+             * <code>optional .proto.NaviVersion naviVersion = 2;</code>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.Builder getNaviVersionBuilder() {
+                bitField0_ |= 0x00000002;
+                onChanged();
+                return getNaviVersionFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <code>optional .proto.NaviVersion naviVersion = 2;</code>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.NaviVersionOrBuilder getNaviVersionOrBuilder() {
+                if (naviVersionBuilder_ != null) {
+                    return naviVersionBuilder_.getMessageOrBuilder();
+                } else {
+                    return naviVersion_;
+                }
+            }
+
+            /**
+             * <code>optional .proto.NaviVersion naviVersion = 2;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilder<
+                    com.zhk.protobuf.LogicalDataModelProtos.NaviVersion, com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.Builder, com.zhk.protobuf.LogicalDataModelProtos.NaviVersionOrBuilder>
+            getNaviVersionFieldBuilder() {
+                if (naviVersionBuilder_ == null) {
+                    naviVersionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+                            com.zhk.protobuf.LogicalDataModelProtos.NaviVersion, com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.Builder, com.zhk.protobuf.LogicalDataModelProtos.NaviVersionOrBuilder>(
+                            getNaviVersion(),
+                            getParentForChildren(),
+                            isClean());
+                    naviVersion_ = null;
+                }
+                return naviVersionBuilder_;
+            }
+
+            /**
+             * <code>required string appKey = 3;</code>
+             * <p/>
+             * <pre>
+             * 客户端标识
+             * </pre>
+             */
+            public boolean hasAppKey() {
+                return ((bitField0_ & 0x00000004) == 0x00000004);
+            }
+
+            /**
+             * <code>required string appKey = 3;</code>
+             * <p/>
+             * <pre>
+             * 客户端标识
+             * </pre>
+             */
+            public String getAppKey() {
+                Object ref = appKey_;
+                if (!(ref instanceof String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    String s = bs.toStringUtf8();
+                    if (bs.isValidUtf8()) {
+                        appKey_ = s;
+                    }
+                    return s;
+                } else {
+                    return (String) ref;
+                }
+            }
+
+            /**
+             * <code>required string appKey = 3;</code>
+             * <p/>
+             * <pre>
+             * 客户端标识
+             * </pre>
+             */
+            public Builder setAppKey(
+                    String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                bitField0_ |= 0x00000004;
+                appKey_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>required string appKey = 3;</code>
+             * <p/>
+             * <pre>
+             * 客户端标识
+             * </pre>
+             */
+            public com.google.protobuf.ByteString
+            getAppKeyBytes() {
+                Object ref = appKey_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (String) ref);
+                    appKey_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>required string appKey = 3;</code>
+             * <p/>
+             * <pre>
+             * 客户端标识
+             * </pre>
+             */
+            public Builder setAppKeyBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                bitField0_ |= 0x00000004;
+                appKey_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>required string appKey = 3;</code>
+             * <p/>
+             * <pre>
+             * 客户端标识
+             * </pre>
+             */
+            public Builder clearAppKey() {
+                bitField0_ = (bitField0_ & ~0x00000004);
+                appKey_ = getDefaultInstance().getAppKey();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>required string guid = 4;</code>
+             * <p/>
+             * <pre>
+             * 设备标识
+             * </pre>
+             */
+            public boolean hasGuid() {
+                return ((bitField0_ & 0x00000008) == 0x00000008);
+            }
+
+            /**
+             * <code>required string guid = 4;</code>
+             * <p/>
+             * <pre>
+             * 设备标识
+             * </pre>
+             */
+            public String getGuid() {
+                Object ref = guid_;
+                if (!(ref instanceof String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    String s = bs.toStringUtf8();
+                    if (bs.isValidUtf8()) {
+                        guid_ = s;
+                    }
+                    return s;
+                } else {
+                    return (String) ref;
+                }
+            }
+
+            /**
+             * <code>required string guid = 4;</code>
+             * <p/>
+             * <pre>
+             * 设备标识
+             * </pre>
+             */
+            public Builder setGuid(
+                    String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                bitField0_ |= 0x00000008;
+                guid_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>required string guid = 4;</code>
+             * <p/>
+             * <pre>
+             * 设备标识
+             * </pre>
+             */
+            public com.google.protobuf.ByteString
+            getGuidBytes() {
+                Object ref = guid_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (String) ref);
+                    guid_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>required string guid = 4;</code>
+             * <p/>
+             * <pre>
+             * 设备标识
+             * </pre>
+             */
+            public Builder setGuidBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                bitField0_ |= 0x00000008;
+                guid_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>required string guid = 4;</code>
+             * <p/>
+             * <pre>
+             * 设备标识
+             * </pre>
+             */
+            public Builder clearGuid() {
+                bitField0_ = (bitField0_ & ~0x00000008);
+                guid_ = getDefaultInstance().getGuid();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>required string sid = 5;</code>
+             * <p/>
+             * <pre>
+             * 会话标识
+             * </pre>
+             */
+            public boolean hasSid() {
+                return ((bitField0_ & 0x00000010) == 0x00000010);
+            }
+
+            /**
+             * <code>required string sid = 5;</code>
+             * <p/>
+             * <pre>
+             * 会话标识
+             * </pre>
+             */
+            public String getSid() {
+                Object ref = sid_;
+                if (!(ref instanceof String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    String s = bs.toStringUtf8();
+                    if (bs.isValidUtf8()) {
+                        sid_ = s;
+                    }
+                    return s;
+                } else {
+                    return (String) ref;
+                }
+            }
+
+            /**
+             * <code>required string sid = 5;</code>
+             * <p/>
+             * <pre>
+             * 会话标识
+             * </pre>
+             */
+            public Builder setSid(
+                    String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                bitField0_ |= 0x00000010;
+                sid_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>required string sid = 5;</code>
+             * <p/>
+             * <pre>
+             * 会话标识
+             * </pre>
+             */
+            public com.google.protobuf.ByteString
+            getSidBytes() {
+                Object ref = sid_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (String) ref);
+                    sid_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>required string sid = 5;</code>
+             * <p/>
+             * <pre>
+             * 会话标识
+             * </pre>
+             */
+            public Builder setSidBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                bitField0_ |= 0x00000010;
+                sid_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>required string sid = 5;</code>
+             * <p/>
+             * <pre>
+             * 会话标识
+             * </pre>
+             */
+            public Builder clearSid() {
+                bitField0_ = (bitField0_ & ~0x00000010);
+                sid_ = getDefaultInstance().getSid();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>required uint64 timestampNTP = 6;</code>
+             * <p/>
+             * <pre>
+             * NTP时间
+             * </pre>
+             */
+            public boolean hasTimestampNTP() {
+                return ((bitField0_ & 0x00000020) == 0x00000020);
+            }
+
+            /**
+             * <code>required uint64 timestampNTP = 6;</code>
+             * <p/>
+             * <pre>
+             * NTP时间
+             * </pre>
+             */
+            public long getTimestampNTP() {
+                return timestampNTP_;
+            }
+
+            /**
+             * <code>required uint64 timestampNTP = 6;</code>
+             * <p/>
+             * <pre>
+             * NTP时间
+             * </pre>
+             */
+            public Builder setTimestampNTP(long value) {
+                bitField0_ |= 0x00000020;
+                timestampNTP_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>required uint64 timestampNTP = 6;</code>
+             * <p/>
+             * <pre>
+             * NTP时间
+             * </pre>
+             */
+            public Builder clearTimestampNTP() {
+                bitField0_ = (bitField0_ & ~0x00000020);
+                timestampNTP_ = 0L;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>required uint64 timestamp = 7;</code>
+             * <p/>
+             * <pre>
+             * 设备时间
+             * </pre>
+             */
+            public boolean hasTimestamp() {
+                return ((bitField0_ & 0x00000040) == 0x00000040);
+            }
+
+            /**
+             * <code>required uint64 timestamp = 7;</code>
+             * <p/>
+             * <pre>
+             * 设备时间
+             * </pre>
+             */
+            public long getTimestamp() {
+                return timestamp_;
+            }
+
+            /**
+             * <code>required uint64 timestamp = 7;</code>
+             * <p/>
+             * <pre>
+             * 设备时间
+             * </pre>
+             */
+            public Builder setTimestamp(long value) {
+                bitField0_ |= 0x00000040;
+                timestamp_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>required uint64 timestamp = 7;</code>
+             * <p/>
+             * <pre>
+             * 设备时间
+             * </pre>
+             */
+            public Builder clearTimestamp() {
+                bitField0_ = (bitField0_ & ~0x00000040);
+                timestamp_ = 0L;
+                onChanged();
+                return this;
+            }
+
+            // @@protoc_insertion_point(builder_scope:proto.Envelope)
+        }
+
+        static {
+            defaultInstance = new Envelope(true);
+            defaultInstance.initFields();
+        }
+
+        // @@protoc_insertion_point(class_scope:proto.Envelope)
     }
 
-    private void initFields() {
-      engineVersion_ = "";
-      appc_ = "";
-      appn_ = "";
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeBytes(1, getEngineVersionBytes());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeBytes(2, getAppcBytes());
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeBytes(3, getAppnBytes());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getEngineVersionBytes());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getAppcBytes());
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getAppnBytes());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @Override
-    protected Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
-    public static com.zhk.protobuf.LogicalDataModelProtos.NaviVersion parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.NaviVersion parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.NaviVersion parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.NaviVersion parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.NaviVersion parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.NaviVersion parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.NaviVersion parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.NaviVersion parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.NaviVersion parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.NaviVersion parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.zhk.protobuf.LogicalDataModelProtos.NaviVersion prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-
-    @Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code proto.NaviVersion}
-     *
+     * <p/>
      * <pre>
      * 版本
      * </pre>
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:proto.NaviVersion)
-        com.zhk.protobuf.LogicalDataModelProtos.NaviVersionOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_NaviVersion_descriptor;
-      }
+    public static final class NaviVersion extends
+            com.google.protobuf.GeneratedMessage implements
+            // @@protoc_insertion_point(message_implements:proto.NaviVersion)
+            NaviVersionOrBuilder {
+        public static final int ENGINEVERSION_FIELD_NUMBER = 1;
+        public static final int APPC_FIELD_NUMBER = 2;
+        public static final int APPN_FIELD_NUMBER = 3;
+        private static final NaviVersion defaultInstance;
+        private static final long serialVersionUID = 0L;
+        public static com.google.protobuf.Parser<NaviVersion> PARSER =
+                new com.google.protobuf.AbstractParser<NaviVersion>() {
+                    public NaviVersion parsePartialFrom(
+                            com.google.protobuf.CodedInputStream input,
+                            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                            throws com.google.protobuf.InvalidProtocolBufferException {
+                        return new NaviVersion(input, extensionRegistry);
+                    }
+                };
+        private final com.google.protobuf.UnknownFieldSet unknownFields;
+        private int bitField0_;
+        private Object engineVersion_;
+        private Object appc_;
+        private Object appn_;
+        private byte memoizedIsInitialized = -1;
+        private int memoizedSerializedSize = -1;
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_NaviVersion_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.class, com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.Builder.class);
-      }
-
-      // Construct using com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        // Use NaviVersion.newBuilder() to construct.
+        private NaviVersion(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+            super(builder);
+            this.unknownFields = builder.getUnknownFields();
         }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
 
-      public Builder clear() {
-        super.clear();
-        engineVersion_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
-        appc_ = "";
-        bitField0_ = (bitField0_ & ~0x00000002);
-        appn_ = "";
-        bitField0_ = (bitField0_ & ~0x00000004);
-        return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_NaviVersion_descriptor;
-      }
-
-      public com.zhk.protobuf.LogicalDataModelProtos.NaviVersion getDefaultInstanceForType() {
-        return com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.getDefaultInstance();
-      }
-
-      public com.zhk.protobuf.LogicalDataModelProtos.NaviVersion build() {
-        com.zhk.protobuf.LogicalDataModelProtos.NaviVersion result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private NaviVersion(boolean noInit) {
+            this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance();
         }
-        return result;
-      }
 
-      public com.zhk.protobuf.LogicalDataModelProtos.NaviVersion buildPartial() {
-        com.zhk.protobuf.LogicalDataModelProtos.NaviVersion result = new com.zhk.protobuf.LogicalDataModelProtos.NaviVersion(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.engineVersion_ = engineVersion_;
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.appc_ = appc_;
-        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-          to_bitField0_ |= 0x00000004;
-        }
-        result.appn_ = appn_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.zhk.protobuf.LogicalDataModelProtos.NaviVersion) {
-          return mergeFrom((com.zhk.protobuf.LogicalDataModelProtos.NaviVersion)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.zhk.protobuf.LogicalDataModelProtos.NaviVersion other) {
-        if (other == com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.getDefaultInstance()) return this;
-        if (other.hasEngineVersion()) {
-          bitField0_ |= 0x00000001;
-          engineVersion_ = other.engineVersion_;
-          onChanged();
-        }
-        if (other.hasAppc()) {
-          bitField0_ |= 0x00000002;
-          appc_ = other.appc_;
-          onChanged();
-        }
-        if (other.hasAppn()) {
-          bitField0_ |= 0x00000004;
-          appn_ = other.appn_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.zhk.protobuf.LogicalDataModelProtos.NaviVersion parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.zhk.protobuf.LogicalDataModelProtos.NaviVersion) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private Object engineVersion_ = "";
-      /**
-       * <code>optional string engineVersion = 1;</code>
-       *
-       * <pre>
-       * 引擎版本
-       * </pre>
-       */
-      public boolean hasEngineVersion() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>optional string engineVersion = 1;</code>
-       *
-       * <pre>
-       * 引擎版本
-       * </pre>
-       */
-      public String getEngineVersion() {
-        Object ref = engineVersion_;
-        if (!(ref instanceof String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            engineVersion_ = s;
-          }
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      /**
-       * <code>optional string engineVersion = 1;</code>
-       *
-       * <pre>
-       * 引擎版本
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getEngineVersionBytes() {
-        Object ref = engineVersion_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
-          engineVersion_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string engineVersion = 1;</code>
-       *
-       * <pre>
-       * 引擎版本
-       * </pre>
-       */
-      public Builder setEngineVersion(
-          String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        engineVersion_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string engineVersion = 1;</code>
-       *
-       * <pre>
-       * 引擎版本
-       * </pre>
-       */
-      public Builder clearEngineVersion() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        engineVersion_ = getDefaultInstance().getEngineVersion();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string engineVersion = 1;</code>
-       *
-       * <pre>
-       * 引擎版本
-       * </pre>
-       */
-      public Builder setEngineVersionBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        engineVersion_ = value;
-        onChanged();
-        return this;
-      }
-
-      private Object appc_ = "";
-      /**
-       * <code>optional string appc = 2;</code>
-       *
-       * <pre>
-       * 客户端版本号
-       * </pre>
-       */
-      public boolean hasAppc() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>optional string appc = 2;</code>
-       *
-       * <pre>
-       * 客户端版本号
-       * </pre>
-       */
-      public String getAppc() {
-        Object ref = appc_;
-        if (!(ref instanceof String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            appc_ = s;
-          }
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      /**
-       * <code>optional string appc = 2;</code>
-       *
-       * <pre>
-       * 客户端版本号
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getAppcBytes() {
-        Object ref = appc_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
-          appc_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string appc = 2;</code>
-       *
-       * <pre>
-       * 客户端版本号
-       * </pre>
-       */
-      public Builder setAppc(
-          String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-        appc_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string appc = 2;</code>
-       *
-       * <pre>
-       * 客户端版本号
-       * </pre>
-       */
-      public Builder clearAppc() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        appc_ = getDefaultInstance().getAppc();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string appc = 2;</code>
-       *
-       * <pre>
-       * 客户端版本号
-       * </pre>
-       */
-      public Builder setAppcBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-        appc_ = value;
-        onChanged();
-        return this;
-      }
-
-      private Object appn_ = "";
-      /**
-       * <code>optional string appn = 3;</code>
-       *
-       * <pre>
-       * 客户端版本名
-       * </pre>
-       */
-      public boolean hasAppn() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>optional string appn = 3;</code>
-       *
-       * <pre>
-       * 客户端版本名
-       * </pre>
-       */
-      public String getAppn() {
-        Object ref = appn_;
-        if (!(ref instanceof String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            appn_ = s;
-          }
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      /**
-       * <code>optional string appn = 3;</code>
-       *
-       * <pre>
-       * 客户端版本名
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getAppnBytes() {
-        Object ref = appn_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
-          appn_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string appn = 3;</code>
-       *
-       * <pre>
-       * 客户端版本名
-       * </pre>
-       */
-      public Builder setAppn(
-          String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-        appn_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string appn = 3;</code>
-       *
-       * <pre>
-       * 客户端版本名
-       * </pre>
-       */
-      public Builder clearAppn() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        appn_ = getDefaultInstance().getAppn();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string appn = 3;</code>
-       *
-       * <pre>
-       * 客户端版本名
-       * </pre>
-       */
-      public Builder setAppnBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-        appn_ = value;
-        onChanged();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:proto.NaviVersion)
-    }
-
-    static {
-      defaultInstance = new NaviVersion(true);
-      defaultInstance.initFields();
-    }
-
-    // @@protoc_insertion_point(class_scope:proto.NaviVersion)
-  }
-
-  public interface PathOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:proto.Path)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
-     *
-     * <pre>
-     * 轨迹（GPS...）
-     * </pre>
-     */
-    java.util.List<com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate> 
-        getPositionEstimateList();
-    /**
-     * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
-     *
-     * <pre>
-     * 轨迹（GPS...）
-     * </pre>
-     */
-    com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate getPositionEstimate(int index);
-    /**
-     * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
-     *
-     * <pre>
-     * 轨迹（GPS...）
-     * </pre>
-     */
-    int getPositionEstimateCount();
-    /**
-     * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
-     *
-     * <pre>
-     * 轨迹（GPS...）
-     * </pre>
-     */
-    java.util.List<? extends com.zhk.protobuf.LogicalDataModelProtos.PositionEstimateOrBuilder> 
-        getPositionEstimateOrBuilderList();
-    /**
-     * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
-     *
-     * <pre>
-     * 轨迹（GPS...）
-     * </pre>
-     */
-    com.zhk.protobuf.LogicalDataModelProtos.PositionEstimateOrBuilder getPositionEstimateOrBuilder(
-            int index);
-
-    /**
-     * <code>repeated .proto.PathSegment pathSegments = 2;</code>
-     *
-     * <pre>
-     * 路线
-     * </pre>
-     */
-    java.util.List<com.zhk.protobuf.LogicalDataModelProtos.PathSegment> 
-        getPathSegmentsList();
-    /**
-     * <code>repeated .proto.PathSegment pathSegments = 2;</code>
-     *
-     * <pre>
-     * 路线
-     * </pre>
-     */
-    com.zhk.protobuf.LogicalDataModelProtos.PathSegment getPathSegments(int index);
-    /**
-     * <code>repeated .proto.PathSegment pathSegments = 2;</code>
-     *
-     * <pre>
-     * 路线
-     * </pre>
-     */
-    int getPathSegmentsCount();
-    /**
-     * <code>repeated .proto.PathSegment pathSegments = 2;</code>
-     *
-     * <pre>
-     * 路线
-     * </pre>
-     */
-    java.util.List<? extends com.zhk.protobuf.LogicalDataModelProtos.PathSegmentOrBuilder> 
-        getPathSegmentsOrBuilderList();
-    /**
-     * <code>repeated .proto.PathSegment pathSegments = 2;</code>
-     *
-     * <pre>
-     * 路线
-     * </pre>
-     */
-    com.zhk.protobuf.LogicalDataModelProtos.PathSegmentOrBuilder getPathSegmentsOrBuilder(
-            int index);
-  }
-  /**
-   * Protobuf type {@code proto.Path}
-   *
-   * <pre>
-   * 轨迹与路线
-   * </pre>
-   */
-  public static final class Path extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:proto.Path)
-      PathOrBuilder {
-    // Use Path.newBuilder() to construct.
-    private Path(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-      this.unknownFields = builder.getUnknownFields();
-    }
-    private Path(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final Path defaultInstance;
-    public static Path getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public Path getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Path(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
+        private NaviVersion(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            initFields();
+            int mutable_bitField0_ = 0;
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+                    com.google.protobuf.UnknownFieldSet.newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                        case 0:
+                            done = true;
+                            break;
+                        default: {
+                            if (!parseUnknownField(input, unknownFields,
+                                    extensionRegistry, tag)) {
+                                done = true;
+                            }
+                            break;
+                        }
+                        case 10: {
+                            com.google.protobuf.ByteString bs = input.readBytes();
+                            bitField0_ |= 0x00000001;
+                            engineVersion_ = bs;
+                            break;
+                        }
+                        case 18: {
+                            com.google.protobuf.ByteString bs = input.readBytes();
+                            bitField0_ |= 0x00000002;
+                            appc_ = bs;
+                            break;
+                        }
+                        case 26: {
+                            com.google.protobuf.ByteString bs = input.readBytes();
+                            bitField0_ |= 0x00000004;
+                            appn_ = bs;
+                            break;
+                        }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(
+                        e.getMessage()).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
             }
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                positionEstimate_ = new java.util.ArrayList<com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              positionEstimate_.add(input.readMessage(com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.PARSER, extensionRegistry));
-              break;
-            }
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                pathSegments_ = new java.util.ArrayList<com.zhk.protobuf.LogicalDataModelProtos.PathSegment>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              pathSegments_.add(input.readMessage(com.zhk.protobuf.LogicalDataModelProtos.PathSegment.PARSER, extensionRegistry));
-              break;
-            }
-          }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-          positionEstimate_ = java.util.Collections.unmodifiableList(positionEstimate_);
+
+        public static NaviVersion getDefaultInstance() {
+            return defaultInstance;
         }
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-          pathSegments_ = java.util.Collections.unmodifiableList(pathSegments_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
+
+        public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_Path_descriptor;
-    }
+            return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_NaviVersion_descriptor;
+        }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        public static com.zhk.protobuf.LogicalDataModelProtos.NaviVersion parseFrom(
+                com.google.protobuf.ByteString data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.NaviVersion parseFrom(
+                com.google.protobuf.ByteString data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.NaviVersion parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.NaviVersion parseFrom(
+                byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.NaviVersion parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return PARSER.parseFrom(input);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.NaviVersion parseFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return PARSER.parseFrom(input, extensionRegistry);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.NaviVersion parseDelimitedFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return PARSER.parseDelimitedFrom(input);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.NaviVersion parseDelimitedFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.NaviVersion parseFrom(
+                com.google.protobuf.CodedInputStream input)
+                throws java.io.IOException {
+            return PARSER.parseFrom(input);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.NaviVersion parseFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return PARSER.parseFrom(input, extensionRegistry);
+        }
+
+        public static Builder newBuilder() {
+            return Builder.create();
+        }
+
+        public static Builder newBuilder(com.zhk.protobuf.LogicalDataModelProtos.NaviVersion prototype) {
+            return newBuilder().mergeFrom(prototype);
+        }
+
+        public NaviVersion getDefaultInstanceForType() {
+            return defaultInstance;
+        }
+
+        @Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+            return this.unknownFields;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_Path_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.zhk.protobuf.LogicalDataModelProtos.Path.class, com.zhk.protobuf.LogicalDataModelProtos.Path.Builder.class);
-    }
-
-    public static com.google.protobuf.Parser<Path> PARSER =
-        new com.google.protobuf.AbstractParser<Path>() {
-      public Path parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Path(input, extensionRegistry);
-      }
-    };
-
-    @Override
-    public com.google.protobuf.Parser<Path> getParserForType() {
-      return PARSER;
-    }
-
-    public static final int POSITIONESTIMATE_FIELD_NUMBER = 1;
-    private java.util.List<com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate> positionEstimate_;
-    /**
-     * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
-     *
-     * <pre>
-     * 轨迹（GPS...）
-     * </pre>
-     */
-    public java.util.List<com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate> getPositionEstimateList() {
-      return positionEstimate_;
-    }
-    /**
-     * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
-     *
-     * <pre>
-     * 轨迹（GPS...）
-     * </pre>
-     */
-    public java.util.List<? extends com.zhk.protobuf.LogicalDataModelProtos.PositionEstimateOrBuilder> 
-        getPositionEstimateOrBuilderList() {
-      return positionEstimate_;
-    }
-    /**
-     * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
-     *
-     * <pre>
-     * 轨迹（GPS...）
-     * </pre>
-     */
-    public int getPositionEstimateCount() {
-      return positionEstimate_.size();
-    }
-    /**
-     * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
-     *
-     * <pre>
-     * 轨迹（GPS...）
-     * </pre>
-     */
-    public com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate getPositionEstimate(int index) {
-      return positionEstimate_.get(index);
-    }
-    /**
-     * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
-     *
-     * <pre>
-     * 轨迹（GPS...）
-     * </pre>
-     */
-    public com.zhk.protobuf.LogicalDataModelProtos.PositionEstimateOrBuilder getPositionEstimateOrBuilder(
-        int index) {
-      return positionEstimate_.get(index);
-    }
-
-    public static final int PATHSEGMENTS_FIELD_NUMBER = 2;
-    private java.util.List<com.zhk.protobuf.LogicalDataModelProtos.PathSegment> pathSegments_;
-    /**
-     * <code>repeated .proto.PathSegment pathSegments = 2;</code>
-     *
-     * <pre>
-     * 路线
-     * </pre>
-     */
-    public java.util.List<com.zhk.protobuf.LogicalDataModelProtos.PathSegment> getPathSegmentsList() {
-      return pathSegments_;
-    }
-    /**
-     * <code>repeated .proto.PathSegment pathSegments = 2;</code>
-     *
-     * <pre>
-     * 路线
-     * </pre>
-     */
-    public java.util.List<? extends com.zhk.protobuf.LogicalDataModelProtos.PathSegmentOrBuilder> 
-        getPathSegmentsOrBuilderList() {
-      return pathSegments_;
-    }
-    /**
-     * <code>repeated .proto.PathSegment pathSegments = 2;</code>
-     *
-     * <pre>
-     * 路线
-     * </pre>
-     */
-    public int getPathSegmentsCount() {
-      return pathSegments_.size();
-    }
-    /**
-     * <code>repeated .proto.PathSegment pathSegments = 2;</code>
-     *
-     * <pre>
-     * 路线
-     * </pre>
-     */
-    public com.zhk.protobuf.LogicalDataModelProtos.PathSegment getPathSegments(int index) {
-      return pathSegments_.get(index);
-    }
-    /**
-     * <code>repeated .proto.PathSegment pathSegments = 2;</code>
-     *
-     * <pre>
-     * 路线
-     * </pre>
-     */
-    public com.zhk.protobuf.LogicalDataModelProtos.PathSegmentOrBuilder getPathSegmentsOrBuilder(
-        int index) {
-      return pathSegments_.get(index);
-    }
-
-    private void initFields() {
-      positionEstimate_ = java.util.Collections.emptyList();
-      pathSegments_ = java.util.Collections.emptyList();
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      for (int i = 0; i < getPositionEstimateCount(); i++) {
-        if (!getPositionEstimate(i).isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
+            return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_NaviVersion_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.class, com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.Builder.class);
         }
-      }
-      for (int i = 0; i < getPathSegmentsCount(); i++) {
-        if (!getPathSegments(i).isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
+
+        @Override
+        public com.google.protobuf.Parser<NaviVersion> getParserForType() {
+            return PARSER;
         }
-      }
-      memoizedIsInitialized = 1;
-      return true;
+
+        /**
+         * <code>optional string engineVersion = 1;</code>
+         * <p/>
+         * <pre>
+         * 引擎版本
+         * </pre>
+         */
+        public boolean hasEngineVersion() {
+            return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+
+        /**
+         * <code>optional string engineVersion = 1;</code>
+         * <p/>
+         * <pre>
+         * 引擎版本
+         * </pre>
+         */
+        public String getEngineVersion() {
+            Object ref = engineVersion_;
+            if (ref instanceof String) {
+                return (String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                String s = bs.toStringUtf8();
+                if (bs.isValidUtf8()) {
+                    engineVersion_ = s;
+                }
+                return s;
+            }
+        }
+
+        /**
+         * <code>optional string engineVersion = 1;</code>
+         * <p/>
+         * <pre>
+         * 引擎版本
+         * </pre>
+         */
+        public com.google.protobuf.ByteString
+        getEngineVersionBytes() {
+            Object ref = engineVersion_;
+            if (ref instanceof String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (String) ref);
+                engineVersion_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        /**
+         * <code>optional string appc = 2;</code>
+         * <p/>
+         * <pre>
+         * 客户端版本号
+         * </pre>
+         */
+        public boolean hasAppc() {
+            return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+
+        /**
+         * <code>optional string appc = 2;</code>
+         * <p/>
+         * <pre>
+         * 客户端版本号
+         * </pre>
+         */
+        public String getAppc() {
+            Object ref = appc_;
+            if (ref instanceof String) {
+                return (String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                String s = bs.toStringUtf8();
+                if (bs.isValidUtf8()) {
+                    appc_ = s;
+                }
+                return s;
+            }
+        }
+
+        /**
+         * <code>optional string appc = 2;</code>
+         * <p/>
+         * <pre>
+         * 客户端版本号
+         * </pre>
+         */
+        public com.google.protobuf.ByteString
+        getAppcBytes() {
+            Object ref = appc_;
+            if (ref instanceof String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (String) ref);
+                appc_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        /**
+         * <code>optional string appn = 3;</code>
+         * <p/>
+         * <pre>
+         * 客户端版本名
+         * </pre>
+         */
+        public boolean hasAppn() {
+            return ((bitField0_ & 0x00000004) == 0x00000004);
+        }
+
+        /**
+         * <code>optional string appn = 3;</code>
+         * <p/>
+         * <pre>
+         * 客户端版本名
+         * </pre>
+         */
+        public String getAppn() {
+            Object ref = appn_;
+            if (ref instanceof String) {
+                return (String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                String s = bs.toStringUtf8();
+                if (bs.isValidUtf8()) {
+                    appn_ = s;
+                }
+                return s;
+            }
+        }
+
+        /**
+         * <code>optional string appn = 3;</code>
+         * <p/>
+         * <pre>
+         * 客户端版本名
+         * </pre>
+         */
+        public com.google.protobuf.ByteString
+        getAppnBytes() {
+            Object ref = appn_;
+            if (ref instanceof String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (String) ref);
+                appn_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        private void initFields() {
+            engineVersion_ = "";
+            appc_ = "";
+            appn_ = "";
+        }
+
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1) return true;
+            if (isInitialized == 0) return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                throws java.io.IOException {
+            getSerializedSize();
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                output.writeBytes(1, getEngineVersionBytes());
+            }
+            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                output.writeBytes(2, getAppcBytes());
+            }
+            if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                output.writeBytes(3, getAppnBytes());
+            }
+            getUnknownFields().writeTo(output);
+        }
+
+        public int getSerializedSize() {
+            int size = memoizedSerializedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeBytesSize(1, getEngineVersionBytes());
+            }
+            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeBytesSize(2, getAppcBytes());
+            }
+            if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeBytesSize(3, getAppnBytes());
+            }
+            size += getUnknownFields().getSerializedSize();
+            memoizedSerializedSize = size;
+            return size;
+        }
+
+        @Override
+        protected Object writeReplace()
+                throws java.io.ObjectStreamException {
+            return super.writeReplace();
+        }
+
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public Builder toBuilder() {
+            return newBuilder(this);
+        }
+
+        @Override
+        protected Builder newBuilderForType(
+                com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * Protobuf type {@code proto.NaviVersion}
+         * <p/>
+         * <pre>
+         * 版本
+         * </pre>
+         */
+        public static final class Builder extends
+                com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:proto.NaviVersion)
+                com.zhk.protobuf.LogicalDataModelProtos.NaviVersionOrBuilder {
+            private int bitField0_;
+            private Object engineVersion_ = "";
+            private Object appc_ = "";
+            private Object appn_ = "";
+
+            // Construct using com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(
+                    com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+                return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_NaviVersion_descriptor;
+            }
+
+            private static Builder create() {
+                return new Builder();
+            }
+
+            protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+                return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_NaviVersion_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.class, com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.Builder.class);
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+                }
+            }
+
+            public Builder clear() {
+                super.clear();
+                engineVersion_ = "";
+                bitField0_ = (bitField0_ & ~0x00000001);
+                appc_ = "";
+                bitField0_ = (bitField0_ & ~0x00000002);
+                appn_ = "";
+                bitField0_ = (bitField0_ & ~0x00000004);
+                return this;
+            }
+
+            public Builder clone() {
+                return create().mergeFrom(buildPartial());
+            }
+
+            public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+                return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_NaviVersion_descriptor;
+            }
+
+            public com.zhk.protobuf.LogicalDataModelProtos.NaviVersion getDefaultInstanceForType() {
+                return com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.getDefaultInstance();
+            }
+
+            public com.zhk.protobuf.LogicalDataModelProtos.NaviVersion build() {
+                com.zhk.protobuf.LogicalDataModelProtos.NaviVersion result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            public com.zhk.protobuf.LogicalDataModelProtos.NaviVersion buildPartial() {
+                com.zhk.protobuf.LogicalDataModelProtos.NaviVersion result = new com.zhk.protobuf.LogicalDataModelProtos.NaviVersion(this);
+                int from_bitField0_ = bitField0_;
+                int to_bitField0_ = 0;
+                if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+                    to_bitField0_ |= 0x00000001;
+                }
+                result.engineVersion_ = engineVersion_;
+                if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+                    to_bitField0_ |= 0x00000002;
+                }
+                result.appc_ = appc_;
+                if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+                    to_bitField0_ |= 0x00000004;
+                }
+                result.appn_ = appn_;
+                result.bitField0_ = to_bitField0_;
+                onBuilt();
+                return result;
+            }
+
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof com.zhk.protobuf.LogicalDataModelProtos.NaviVersion) {
+                    return mergeFrom((com.zhk.protobuf.LogicalDataModelProtos.NaviVersion) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(com.zhk.protobuf.LogicalDataModelProtos.NaviVersion other) {
+                if (other == com.zhk.protobuf.LogicalDataModelProtos.NaviVersion.getDefaultInstance()) return this;
+                if (other.hasEngineVersion()) {
+                    bitField0_ |= 0x00000001;
+                    engineVersion_ = other.engineVersion_;
+                    onChanged();
+                }
+                if (other.hasAppc()) {
+                    bitField0_ |= 0x00000002;
+                    appc_ = other.appc_;
+                    onChanged();
+                }
+                if (other.hasAppn()) {
+                    bitField0_ |= 0x00000004;
+                    appn_ = other.appn_;
+                    onChanged();
+                }
+                this.mergeUnknownFields(other.getUnknownFields());
+                return this;
+            }
+
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            public Builder mergeFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws java.io.IOException {
+                com.zhk.protobuf.LogicalDataModelProtos.NaviVersion parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (com.zhk.protobuf.LogicalDataModelProtos.NaviVersion) e.getUnfinishedMessage();
+                    throw e;
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            /**
+             * <code>optional string engineVersion = 1;</code>
+             * <p/>
+             * <pre>
+             * 引擎版本
+             * </pre>
+             */
+            public boolean hasEngineVersion() {
+                return ((bitField0_ & 0x00000001) == 0x00000001);
+            }
+
+            /**
+             * <code>optional string engineVersion = 1;</code>
+             * <p/>
+             * <pre>
+             * 引擎版本
+             * </pre>
+             */
+            public String getEngineVersion() {
+                Object ref = engineVersion_;
+                if (!(ref instanceof String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    String s = bs.toStringUtf8();
+                    if (bs.isValidUtf8()) {
+                        engineVersion_ = s;
+                    }
+                    return s;
+                } else {
+                    return (String) ref;
+                }
+            }
+
+            /**
+             * <code>optional string engineVersion = 1;</code>
+             * <p/>
+             * <pre>
+             * 引擎版本
+             * </pre>
+             */
+            public Builder setEngineVersion(
+                    String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                bitField0_ |= 0x00000001;
+                engineVersion_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional string engineVersion = 1;</code>
+             * <p/>
+             * <pre>
+             * 引擎版本
+             * </pre>
+             */
+            public com.google.protobuf.ByteString
+            getEngineVersionBytes() {
+                Object ref = engineVersion_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (String) ref);
+                    engineVersion_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>optional string engineVersion = 1;</code>
+             * <p/>
+             * <pre>
+             * 引擎版本
+             * </pre>
+             */
+            public Builder setEngineVersionBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                bitField0_ |= 0x00000001;
+                engineVersion_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional string engineVersion = 1;</code>
+             * <p/>
+             * <pre>
+             * 引擎版本
+             * </pre>
+             */
+            public Builder clearEngineVersion() {
+                bitField0_ = (bitField0_ & ~0x00000001);
+                engineVersion_ = getDefaultInstance().getEngineVersion();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional string appc = 2;</code>
+             * <p/>
+             * <pre>
+             * 客户端版本号
+             * </pre>
+             */
+            public boolean hasAppc() {
+                return ((bitField0_ & 0x00000002) == 0x00000002);
+            }
+
+            /**
+             * <code>optional string appc = 2;</code>
+             * <p/>
+             * <pre>
+             * 客户端版本号
+             * </pre>
+             */
+            public String getAppc() {
+                Object ref = appc_;
+                if (!(ref instanceof String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    String s = bs.toStringUtf8();
+                    if (bs.isValidUtf8()) {
+                        appc_ = s;
+                    }
+                    return s;
+                } else {
+                    return (String) ref;
+                }
+            }
+
+            /**
+             * <code>optional string appc = 2;</code>
+             * <p/>
+             * <pre>
+             * 客户端版本号
+             * </pre>
+             */
+            public Builder setAppc(
+                    String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                bitField0_ |= 0x00000002;
+                appc_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional string appc = 2;</code>
+             * <p/>
+             * <pre>
+             * 客户端版本号
+             * </pre>
+             */
+            public com.google.protobuf.ByteString
+            getAppcBytes() {
+                Object ref = appc_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (String) ref);
+                    appc_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>optional string appc = 2;</code>
+             * <p/>
+             * <pre>
+             * 客户端版本号
+             * </pre>
+             */
+            public Builder setAppcBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                bitField0_ |= 0x00000002;
+                appc_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional string appc = 2;</code>
+             * <p/>
+             * <pre>
+             * 客户端版本号
+             * </pre>
+             */
+            public Builder clearAppc() {
+                bitField0_ = (bitField0_ & ~0x00000002);
+                appc_ = getDefaultInstance().getAppc();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional string appn = 3;</code>
+             * <p/>
+             * <pre>
+             * 客户端版本名
+             * </pre>
+             */
+            public boolean hasAppn() {
+                return ((bitField0_ & 0x00000004) == 0x00000004);
+            }
+
+            /**
+             * <code>optional string appn = 3;</code>
+             * <p/>
+             * <pre>
+             * 客户端版本名
+             * </pre>
+             */
+            public String getAppn() {
+                Object ref = appn_;
+                if (!(ref instanceof String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    String s = bs.toStringUtf8();
+                    if (bs.isValidUtf8()) {
+                        appn_ = s;
+                    }
+                    return s;
+                } else {
+                    return (String) ref;
+                }
+            }
+
+            /**
+             * <code>optional string appn = 3;</code>
+             * <p/>
+             * <pre>
+             * 客户端版本名
+             * </pre>
+             */
+            public Builder setAppn(
+                    String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                bitField0_ |= 0x00000004;
+                appn_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional string appn = 3;</code>
+             * <p/>
+             * <pre>
+             * 客户端版本名
+             * </pre>
+             */
+            public com.google.protobuf.ByteString
+            getAppnBytes() {
+                Object ref = appn_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (String) ref);
+                    appn_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>optional string appn = 3;</code>
+             * <p/>
+             * <pre>
+             * 客户端版本名
+             * </pre>
+             */
+            public Builder setAppnBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                bitField0_ |= 0x00000004;
+                appn_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional string appn = 3;</code>
+             * <p/>
+             * <pre>
+             * 客户端版本名
+             * </pre>
+             */
+            public Builder clearAppn() {
+                bitField0_ = (bitField0_ & ~0x00000004);
+                appn_ = getDefaultInstance().getAppn();
+                onChanged();
+                return this;
+            }
+
+            // @@protoc_insertion_point(builder_scope:proto.NaviVersion)
+        }
+
+        static {
+            defaultInstance = new NaviVersion(true);
+            defaultInstance.initFields();
+        }
+
+        // @@protoc_insertion_point(class_scope:proto.NaviVersion)
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      for (int i = 0; i < positionEstimate_.size(); i++) {
-        output.writeMessage(1, positionEstimate_.get(i));
-      }
-      for (int i = 0; i < pathSegments_.size(); i++) {
-        output.writeMessage(2, pathSegments_.get(i));
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < positionEstimate_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, positionEstimate_.get(i));
-      }
-      for (int i = 0; i < pathSegments_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, pathSegments_.get(i));
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @Override
-    protected Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
-    public static com.zhk.protobuf.LogicalDataModelProtos.Path parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.Path parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.Path parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.Path parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.Path parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.Path parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.Path parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.Path parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.Path parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.Path parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.zhk.protobuf.LogicalDataModelProtos.Path prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-
-    @Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code proto.Path}
-     *
+     * <p/>
      * <pre>
      * 轨迹与路线
      * </pre>
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:proto.Path)
-        com.zhk.protobuf.LogicalDataModelProtos.PathOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_Path_descriptor;
-      }
+    public static final class Path extends
+            com.google.protobuf.GeneratedMessage implements
+            // @@protoc_insertion_point(message_implements:proto.Path)
+            PathOrBuilder {
+        public static final int POSITIONESTIMATE_FIELD_NUMBER = 1;
+        public static final int PATHSEGMENTS_FIELD_NUMBER = 2;
+        private static final Path defaultInstance;
+        private static final long serialVersionUID = 0L;
+        public static com.google.protobuf.Parser<Path> PARSER =
+                new com.google.protobuf.AbstractParser<Path>() {
+                    public Path parsePartialFrom(
+                            com.google.protobuf.CodedInputStream input,
+                            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                            throws com.google.protobuf.InvalidProtocolBufferException {
+                        return new Path(input, extensionRegistry);
+                    }
+                };
+        private final com.google.protobuf.UnknownFieldSet unknownFields;
+        private java.util.List<com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate> positionEstimate_;
+        private java.util.List<com.zhk.protobuf.LogicalDataModelProtos.PathSegment> pathSegments_;
+        private byte memoizedIsInitialized = -1;
+        private int memoizedSerializedSize = -1;
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_Path_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.zhk.protobuf.LogicalDataModelProtos.Path.class, com.zhk.protobuf.LogicalDataModelProtos.Path.Builder.class);
-      }
-
-      // Construct using com.zhk.protobuf.LogicalDataModelProtos.Path.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getPositionEstimateFieldBuilder();
-          getPathSegmentsFieldBuilder();
+        // Use Path.newBuilder() to construct.
+        private Path(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+            super(builder);
+            this.unknownFields = builder.getUnknownFields();
         }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
 
-      public Builder clear() {
-        super.clear();
-        if (positionEstimateBuilder_ == null) {
-          positionEstimate_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        } else {
-          positionEstimateBuilder_.clear();
+        private Path(boolean noInit) {
+            this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance();
         }
-        if (pathSegmentsBuilder_ == null) {
-          pathSegments_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        } else {
-          pathSegmentsBuilder_.clear();
-        }
-        return this;
-      }
 
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_Path_descriptor;
-      }
-
-      public com.zhk.protobuf.LogicalDataModelProtos.Path getDefaultInstanceForType() {
-        return com.zhk.protobuf.LogicalDataModelProtos.Path.getDefaultInstance();
-      }
-
-      public com.zhk.protobuf.LogicalDataModelProtos.Path build() {
-        com.zhk.protobuf.LogicalDataModelProtos.Path result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.zhk.protobuf.LogicalDataModelProtos.Path buildPartial() {
-        com.zhk.protobuf.LogicalDataModelProtos.Path result = new com.zhk.protobuf.LogicalDataModelProtos.Path(this);
-        int from_bitField0_ = bitField0_;
-        if (positionEstimateBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
-            positionEstimate_ = java.util.Collections.unmodifiableList(positionEstimate_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.positionEstimate_ = positionEstimate_;
-        } else {
-          result.positionEstimate_ = positionEstimateBuilder_.build();
-        }
-        if (pathSegmentsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
-            pathSegments_ = java.util.Collections.unmodifiableList(pathSegments_);
-            bitField0_ = (bitField0_ & ~0x00000002);
-          }
-          result.pathSegments_ = pathSegments_;
-        } else {
-          result.pathSegments_ = pathSegmentsBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.zhk.protobuf.LogicalDataModelProtos.Path) {
-          return mergeFrom((com.zhk.protobuf.LogicalDataModelProtos.Path)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.zhk.protobuf.LogicalDataModelProtos.Path other) {
-        if (other == com.zhk.protobuf.LogicalDataModelProtos.Path.getDefaultInstance()) return this;
-        if (positionEstimateBuilder_ == null) {
-          if (!other.positionEstimate_.isEmpty()) {
-            if (positionEstimate_.isEmpty()) {
-              positionEstimate_ = other.positionEstimate_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensurePositionEstimateIsMutable();
-              positionEstimate_.addAll(other.positionEstimate_);
+        private Path(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            initFields();
+            int mutable_bitField0_ = 0;
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+                    com.google.protobuf.UnknownFieldSet.newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                        case 0:
+                            done = true;
+                            break;
+                        default: {
+                            if (!parseUnknownField(input, unknownFields,
+                                    extensionRegistry, tag)) {
+                                done = true;
+                            }
+                            break;
+                        }
+                        case 10: {
+                            if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                                positionEstimate_ = new java.util.ArrayList<com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate>();
+                                mutable_bitField0_ |= 0x00000001;
+                            }
+                            positionEstimate_.add(input.readMessage(com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.PARSER, extensionRegistry));
+                            break;
+                        }
+                        case 18: {
+                            if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                                pathSegments_ = new java.util.ArrayList<com.zhk.protobuf.LogicalDataModelProtos.PathSegment>();
+                                mutable_bitField0_ |= 0x00000002;
+                            }
+                            pathSegments_.add(input.readMessage(com.zhk.protobuf.LogicalDataModelProtos.PathSegment.PARSER, extensionRegistry));
+                            break;
+                        }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(
+                        e.getMessage()).setUnfinishedMessage(this);
+            } finally {
+                if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                    positionEstimate_ = java.util.Collections.unmodifiableList(positionEstimate_);
+                }
+                if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                    pathSegments_ = java.util.Collections.unmodifiableList(pathSegments_);
+                }
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
             }
-            onChanged();
-          }
-        } else {
-          if (!other.positionEstimate_.isEmpty()) {
-            if (positionEstimateBuilder_.isEmpty()) {
-              positionEstimateBuilder_.dispose();
-              positionEstimateBuilder_ = null;
-              positionEstimate_ = other.positionEstimate_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              positionEstimateBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getPositionEstimateFieldBuilder() : null;
-            } else {
-              positionEstimateBuilder_.addAllMessages(other.positionEstimate_);
-            }
-          }
         }
-        if (pathSegmentsBuilder_ == null) {
-          if (!other.pathSegments_.isEmpty()) {
-            if (pathSegments_.isEmpty()) {
-              pathSegments_ = other.pathSegments_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-            } else {
-              ensurePathSegmentsIsMutable();
-              pathSegments_.addAll(other.pathSegments_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.pathSegments_.isEmpty()) {
-            if (pathSegmentsBuilder_.isEmpty()) {
-              pathSegmentsBuilder_.dispose();
-              pathSegmentsBuilder_ = null;
-              pathSegments_ = other.pathSegments_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-              pathSegmentsBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getPathSegmentsFieldBuilder() : null;
-            } else {
-              pathSegmentsBuilder_.addAllMessages(other.pathSegments_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
 
-      public final boolean isInitialized() {
-        for (int i = 0; i < getPositionEstimateCount(); i++) {
-          if (!getPositionEstimate(i).isInitialized()) {
-            
-            return false;
-          }
+        public static Path getDefaultInstance() {
+            return defaultInstance;
         }
-        for (int i = 0; i < getPathSegmentsCount(); i++) {
-          if (!getPathSegments(i).isInitialized()) {
-            
-            return false;
-          }
-        }
-        return true;
-      }
 
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.zhk.protobuf.LogicalDataModelProtos.Path parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.zhk.protobuf.LogicalDataModelProtos.Path) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.util.List<com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate> positionEstimate_ =
-        java.util.Collections.emptyList();
-      private void ensurePositionEstimateIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          positionEstimate_ = new java.util.ArrayList<com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate>(positionEstimate_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
-          com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate, com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.Builder, com.zhk.protobuf.LogicalDataModelProtos.PositionEstimateOrBuilder> positionEstimateBuilder_;
-
-      /**
-       * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
-       *
-       * <pre>
-       * 轨迹（GPS...）
-       * </pre>
-       */
-      public java.util.List<com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate> getPositionEstimateList() {
-        if (positionEstimateBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(positionEstimate_);
-        } else {
-          return positionEstimateBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
-       *
-       * <pre>
-       * 轨迹（GPS...）
-       * </pre>
-       */
-      public int getPositionEstimateCount() {
-        if (positionEstimateBuilder_ == null) {
-          return positionEstimate_.size();
-        } else {
-          return positionEstimateBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
-       *
-       * <pre>
-       * 轨迹（GPS...）
-       * </pre>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate getPositionEstimate(int index) {
-        if (positionEstimateBuilder_ == null) {
-          return positionEstimate_.get(index);
-        } else {
-          return positionEstimateBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
-       *
-       * <pre>
-       * 轨迹（GPS...）
-       * </pre>
-       */
-      public Builder setPositionEstimate(
-          int index, com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate value) {
-        if (positionEstimateBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensurePositionEstimateIsMutable();
-          positionEstimate_.set(index, value);
-          onChanged();
-        } else {
-          positionEstimateBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
-       *
-       * <pre>
-       * 轨迹（GPS...）
-       * </pre>
-       */
-      public Builder setPositionEstimate(
-          int index, com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.Builder builderForValue) {
-        if (positionEstimateBuilder_ == null) {
-          ensurePositionEstimateIsMutable();
-          positionEstimate_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          positionEstimateBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
-       *
-       * <pre>
-       * 轨迹（GPS...）
-       * </pre>
-       */
-      public Builder addPositionEstimate(com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate value) {
-        if (positionEstimateBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensurePositionEstimateIsMutable();
-          positionEstimate_.add(value);
-          onChanged();
-        } else {
-          positionEstimateBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
-       *
-       * <pre>
-       * 轨迹（GPS...）
-       * </pre>
-       */
-      public Builder addPositionEstimate(
-          int index, com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate value) {
-        if (positionEstimateBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensurePositionEstimateIsMutable();
-          positionEstimate_.add(index, value);
-          onChanged();
-        } else {
-          positionEstimateBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
-       *
-       * <pre>
-       * 轨迹（GPS...）
-       * </pre>
-       */
-      public Builder addPositionEstimate(
-          com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.Builder builderForValue) {
-        if (positionEstimateBuilder_ == null) {
-          ensurePositionEstimateIsMutable();
-          positionEstimate_.add(builderForValue.build());
-          onChanged();
-        } else {
-          positionEstimateBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
-       *
-       * <pre>
-       * 轨迹（GPS...）
-       * </pre>
-       */
-      public Builder addPositionEstimate(
-          int index, com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.Builder builderForValue) {
-        if (positionEstimateBuilder_ == null) {
-          ensurePositionEstimateIsMutable();
-          positionEstimate_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          positionEstimateBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
-       *
-       * <pre>
-       * 轨迹（GPS...）
-       * </pre>
-       */
-      public Builder addAllPositionEstimate(
-          Iterable<? extends com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate> values) {
-        if (positionEstimateBuilder_ == null) {
-          ensurePositionEstimateIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, positionEstimate_);
-          onChanged();
-        } else {
-          positionEstimateBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
-       *
-       * <pre>
-       * 轨迹（GPS...）
-       * </pre>
-       */
-      public Builder clearPositionEstimate() {
-        if (positionEstimateBuilder_ == null) {
-          positionEstimate_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          positionEstimateBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
-       *
-       * <pre>
-       * 轨迹（GPS...）
-       * </pre>
-       */
-      public Builder removePositionEstimate(int index) {
-        if (positionEstimateBuilder_ == null) {
-          ensurePositionEstimateIsMutable();
-          positionEstimate_.remove(index);
-          onChanged();
-        } else {
-          positionEstimateBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
-       *
-       * <pre>
-       * 轨迹（GPS...）
-       * </pre>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.Builder getPositionEstimateBuilder(
-          int index) {
-        return getPositionEstimateFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
-       *
-       * <pre>
-       * 轨迹（GPS...）
-       * </pre>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.PositionEstimateOrBuilder getPositionEstimateOrBuilder(
-          int index) {
-        if (positionEstimateBuilder_ == null) {
-          return positionEstimate_.get(index);  } else {
-          return positionEstimateBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
-       *
-       * <pre>
-       * 轨迹（GPS...）
-       * </pre>
-       */
-      public java.util.List<? extends com.zhk.protobuf.LogicalDataModelProtos.PositionEstimateOrBuilder> 
-           getPositionEstimateOrBuilderList() {
-        if (positionEstimateBuilder_ != null) {
-          return positionEstimateBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(positionEstimate_);
-        }
-      }
-      /**
-       * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
-       *
-       * <pre>
-       * 轨迹（GPS...）
-       * </pre>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.Builder addPositionEstimateBuilder() {
-        return getPositionEstimateFieldBuilder().addBuilder(
-            com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
-       *
-       * <pre>
-       * 轨迹（GPS...）
-       * </pre>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.Builder addPositionEstimateBuilder(
-          int index) {
-        return getPositionEstimateFieldBuilder().addBuilder(
-            index, com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
-       *
-       * <pre>
-       * 轨迹（GPS...）
-       * </pre>
-       */
-      public java.util.List<com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.Builder> 
-           getPositionEstimateBuilderList() {
-        return getPositionEstimateFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
-          com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate, com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.Builder, com.zhk.protobuf.LogicalDataModelProtos.PositionEstimateOrBuilder> 
-          getPositionEstimateFieldBuilder() {
-        if (positionEstimateBuilder_ == null) {
-          positionEstimateBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate, com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.Builder, com.zhk.protobuf.LogicalDataModelProtos.PositionEstimateOrBuilder>(
-                  positionEstimate_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
-                  getParentForChildren(),
-                  isClean());
-          positionEstimate_ = null;
-        }
-        return positionEstimateBuilder_;
-      }
-
-      private java.util.List<com.zhk.protobuf.LogicalDataModelProtos.PathSegment> pathSegments_ =
-        java.util.Collections.emptyList();
-      private void ensurePathSegmentsIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          pathSegments_ = new java.util.ArrayList<com.zhk.protobuf.LogicalDataModelProtos.PathSegment>(pathSegments_);
-          bitField0_ |= 0x00000002;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
-          com.zhk.protobuf.LogicalDataModelProtos.PathSegment, com.zhk.protobuf.LogicalDataModelProtos.PathSegment.Builder, com.zhk.protobuf.LogicalDataModelProtos.PathSegmentOrBuilder> pathSegmentsBuilder_;
-
-      /**
-       * <code>repeated .proto.PathSegment pathSegments = 2;</code>
-       *
-       * <pre>
-       * 路线
-       * </pre>
-       */
-      public java.util.List<com.zhk.protobuf.LogicalDataModelProtos.PathSegment> getPathSegmentsList() {
-        if (pathSegmentsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(pathSegments_);
-        } else {
-          return pathSegmentsBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .proto.PathSegment pathSegments = 2;</code>
-       *
-       * <pre>
-       * 路线
-       * </pre>
-       */
-      public int getPathSegmentsCount() {
-        if (pathSegmentsBuilder_ == null) {
-          return pathSegments_.size();
-        } else {
-          return pathSegmentsBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .proto.PathSegment pathSegments = 2;</code>
-       *
-       * <pre>
-       * 路线
-       * </pre>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.PathSegment getPathSegments(int index) {
-        if (pathSegmentsBuilder_ == null) {
-          return pathSegments_.get(index);
-        } else {
-          return pathSegmentsBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .proto.PathSegment pathSegments = 2;</code>
-       *
-       * <pre>
-       * 路线
-       * </pre>
-       */
-      public Builder setPathSegments(
-          int index, com.zhk.protobuf.LogicalDataModelProtos.PathSegment value) {
-        if (pathSegmentsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensurePathSegmentsIsMutable();
-          pathSegments_.set(index, value);
-          onChanged();
-        } else {
-          pathSegmentsBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.PathSegment pathSegments = 2;</code>
-       *
-       * <pre>
-       * 路线
-       * </pre>
-       */
-      public Builder setPathSegments(
-          int index, com.zhk.protobuf.LogicalDataModelProtos.PathSegment.Builder builderForValue) {
-        if (pathSegmentsBuilder_ == null) {
-          ensurePathSegmentsIsMutable();
-          pathSegments_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          pathSegmentsBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.PathSegment pathSegments = 2;</code>
-       *
-       * <pre>
-       * 路线
-       * </pre>
-       */
-      public Builder addPathSegments(com.zhk.protobuf.LogicalDataModelProtos.PathSegment value) {
-        if (pathSegmentsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensurePathSegmentsIsMutable();
-          pathSegments_.add(value);
-          onChanged();
-        } else {
-          pathSegmentsBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.PathSegment pathSegments = 2;</code>
-       *
-       * <pre>
-       * 路线
-       * </pre>
-       */
-      public Builder addPathSegments(
-          int index, com.zhk.protobuf.LogicalDataModelProtos.PathSegment value) {
-        if (pathSegmentsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensurePathSegmentsIsMutable();
-          pathSegments_.add(index, value);
-          onChanged();
-        } else {
-          pathSegmentsBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.PathSegment pathSegments = 2;</code>
-       *
-       * <pre>
-       * 路线
-       * </pre>
-       */
-      public Builder addPathSegments(
-          com.zhk.protobuf.LogicalDataModelProtos.PathSegment.Builder builderForValue) {
-        if (pathSegmentsBuilder_ == null) {
-          ensurePathSegmentsIsMutable();
-          pathSegments_.add(builderForValue.build());
-          onChanged();
-        } else {
-          pathSegmentsBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.PathSegment pathSegments = 2;</code>
-       *
-       * <pre>
-       * 路线
-       * </pre>
-       */
-      public Builder addPathSegments(
-          int index, com.zhk.protobuf.LogicalDataModelProtos.PathSegment.Builder builderForValue) {
-        if (pathSegmentsBuilder_ == null) {
-          ensurePathSegmentsIsMutable();
-          pathSegments_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          pathSegmentsBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.PathSegment pathSegments = 2;</code>
-       *
-       * <pre>
-       * 路线
-       * </pre>
-       */
-      public Builder addAllPathSegments(
-          Iterable<? extends com.zhk.protobuf.LogicalDataModelProtos.PathSegment> values) {
-        if (pathSegmentsBuilder_ == null) {
-          ensurePathSegmentsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, pathSegments_);
-          onChanged();
-        } else {
-          pathSegmentsBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.PathSegment pathSegments = 2;</code>
-       *
-       * <pre>
-       * 路线
-       * </pre>
-       */
-      public Builder clearPathSegments() {
-        if (pathSegmentsBuilder_ == null) {
-          pathSegments_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-          onChanged();
-        } else {
-          pathSegmentsBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.PathSegment pathSegments = 2;</code>
-       *
-       * <pre>
-       * 路线
-       * </pre>
-       */
-      public Builder removePathSegments(int index) {
-        if (pathSegmentsBuilder_ == null) {
-          ensurePathSegmentsIsMutable();
-          pathSegments_.remove(index);
-          onChanged();
-        } else {
-          pathSegmentsBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.PathSegment pathSegments = 2;</code>
-       *
-       * <pre>
-       * 路线
-       * </pre>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.PathSegment.Builder getPathSegmentsBuilder(
-          int index) {
-        return getPathSegmentsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .proto.PathSegment pathSegments = 2;</code>
-       *
-       * <pre>
-       * 路线
-       * </pre>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.PathSegmentOrBuilder getPathSegmentsOrBuilder(
-          int index) {
-        if (pathSegmentsBuilder_ == null) {
-          return pathSegments_.get(index);  } else {
-          return pathSegmentsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .proto.PathSegment pathSegments = 2;</code>
-       *
-       * <pre>
-       * 路线
-       * </pre>
-       */
-      public java.util.List<? extends com.zhk.protobuf.LogicalDataModelProtos.PathSegmentOrBuilder> 
-           getPathSegmentsOrBuilderList() {
-        if (pathSegmentsBuilder_ != null) {
-          return pathSegmentsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(pathSegments_);
-        }
-      }
-      /**
-       * <code>repeated .proto.PathSegment pathSegments = 2;</code>
-       *
-       * <pre>
-       * 路线
-       * </pre>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.PathSegment.Builder addPathSegmentsBuilder() {
-        return getPathSegmentsFieldBuilder().addBuilder(
-            com.zhk.protobuf.LogicalDataModelProtos.PathSegment.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .proto.PathSegment pathSegments = 2;</code>
-       *
-       * <pre>
-       * 路线
-       * </pre>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.PathSegment.Builder addPathSegmentsBuilder(
-          int index) {
-        return getPathSegmentsFieldBuilder().addBuilder(
-            index, com.zhk.protobuf.LogicalDataModelProtos.PathSegment.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .proto.PathSegment pathSegments = 2;</code>
-       *
-       * <pre>
-       * 路线
-       * </pre>
-       */
-      public java.util.List<com.zhk.protobuf.LogicalDataModelProtos.PathSegment.Builder> 
-           getPathSegmentsBuilderList() {
-        return getPathSegmentsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
-          com.zhk.protobuf.LogicalDataModelProtos.PathSegment, com.zhk.protobuf.LogicalDataModelProtos.PathSegment.Builder, com.zhk.protobuf.LogicalDataModelProtos.PathSegmentOrBuilder> 
-          getPathSegmentsFieldBuilder() {
-        if (pathSegmentsBuilder_ == null) {
-          pathSegmentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              com.zhk.protobuf.LogicalDataModelProtos.PathSegment, com.zhk.protobuf.LogicalDataModelProtos.PathSegment.Builder, com.zhk.protobuf.LogicalDataModelProtos.PathSegmentOrBuilder>(
-                  pathSegments_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
-                  getParentForChildren(),
-                  isClean());
-          pathSegments_ = null;
-        }
-        return pathSegmentsBuilder_;
-      }
-
-      // @@protoc_insertion_point(builder_scope:proto.Path)
-    }
-
-    static {
-      defaultInstance = new Path(true);
-      defaultInstance.initFields();
-    }
-
-    // @@protoc_insertion_point(class_scope:proto.Path)
-  }
-
-  public interface PositionEstimateOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:proto.PositionEstimate)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>required uint64 timestampUTC = 1;</code>
-     *
-     * <pre>
-     * 设备时间
-     * </pre>
-     */
-    boolean hasTimestampUTC();
-    /**
-     * <code>required uint64 timestampUTC = 1;</code>
-     *
-     * <pre>
-     * 设备时间
-     * </pre>
-     */
-    long getTimestampUTC();
-
-    /**
-     * <code>required .proto.PositionEstimate.PositionTypeEnum positionType = 2;</code>
-     */
-    boolean hasPositionType();
-    /**
-     * <code>required .proto.PositionEstimate.PositionTypeEnum positionType = 2;</code>
-     */
-    com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.PositionTypeEnum getPositionType();
-
-    /**
-     * <code>required .proto.MapPoint2D pointSegments = 3;</code>
-     */
-    boolean hasPointSegments();
-    /**
-     * <code>required .proto.MapPoint2D pointSegments = 3;</code>
-     */
-    com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D getPointSegments();
-    /**
-     * <code>required .proto.MapPoint2D pointSegments = 3;</code>
-     */
-    com.zhk.protobuf.LogicalDataModelProtos.MapPoint2DOrBuilder getPointSegmentsOrBuilder();
-
-    /**
-     * <code>required float horizontalAccuracy = 4;</code>
-     *
-     * <pre>
-     * HDOP定位精度
-     * </pre>
-     */
-    boolean hasHorizontalAccuracy();
-    /**
-     * <code>required float horizontalAccuracy = 4;</code>
-     *
-     * <pre>
-     * HDOP定位精度
-     * </pre>
-     */
-    float getHorizontalAccuracy();
-
-    /**
-     * <code>optional float altitude = 5;</code>
-     *
-     * <pre>
-     * 海拔
-     * </pre>
-     */
-    boolean hasAltitude();
-    /**
-     * <code>optional float altitude = 5;</code>
-     *
-     * <pre>
-     * 海拔
-     * </pre>
-     */
-    float getAltitude();
-
-    /**
-     * <code>optional float altitudeAccuracy = 6;</code>
-     *
-     * <pre>
-     * VDOP海拔精度
-     * </pre>
-     */
-    boolean hasAltitudeAccuracy();
-    /**
-     * <code>optional float altitudeAccuracy = 6;</code>
-     *
-     * <pre>
-     * VDOP海拔精度
-     * </pre>
-     */
-    float getAltitudeAccuracy();
-
-    /**
-     * <code>optional float heading = 7;</code>
-     *
-     * <pre>
-     * 朝向
-     * </pre>
-     */
-    boolean hasHeading();
-    /**
-     * <code>optional float heading = 7;</code>
-     *
-     * <pre>
-     * 朝向
-     * </pre>
-     */
-    float getHeading();
-
-    /**
-     * <code>optional float speed = 8;</code>
-     *
-     * <pre>
-     * 速度
-     * </pre>
-     */
-    boolean hasSpeed();
-    /**
-     * <code>optional float speed = 8;</code>
-     *
-     * <pre>
-     * 速度
-     * </pre>
-     */
-    float getSpeed();
-
-    /**
-     * <code>optional int32 satelliteNumber = 9;</code>
-     *
-     * <pre>
-     * 卫星数量
-     * </pre>
-     */
-    boolean hasSatelliteNumber();
-    /**
-     * <code>optional int32 satelliteNumber = 9;</code>
-     *
-     * <pre>
-     * 卫星数量
-     * </pre>
-     */
-    int getSatelliteNumber();
-
-    /**
-     * <code>optional float slope = 10;</code>
-     *
-     * <pre>
-     * slope
-     * </pre>
-     */
-    boolean hasSlope();
-    /**
-     * <code>optional float slope = 10;</code>
-     *
-     * <pre>
-     * slope
-     * </pre>
-     */
-    float getSlope();
-
-    /**
-     * <code>optional float headingAccuracy_deg = 11;</code>
-     */
-    boolean hasHeadingAccuracyDeg();
-    /**
-     * <code>optional float headingAccuracy_deg = 11;</code>
-     */
-    float getHeadingAccuracyDeg();
-
-    /**
-     * <code>optional float speedAccuracy_mps = 12;</code>
-     */
-    boolean hasSpeedAccuracyMps();
-    /**
-     * <code>optional float speedAccuracy_mps = 12;</code>
-     */
-    float getSpeedAccuracyMps();
-
-    /**
-     * <code>optional float slopeAccuracy_deg = 13;</code>
-     */
-    boolean hasSlopeAccuracyDeg();
-    /**
-     * <code>optional float slopeAccuracy_deg = 13;</code>
-     */
-    float getSlopeAccuracyDeg();
-
-    /**
-     * <code>optional .proto.PositionEstimate.HeadingDetectionEnum headingDetectionType = 14;</code>
-     */
-    boolean hasHeadingDetectionType();
-    /**
-     * <code>optional .proto.PositionEstimate.HeadingDetectionEnum headingDetectionType = 14;</code>
-     */
-    com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.HeadingDetectionEnum getHeadingDetectionType();
-
-    /**
-     * <code>optional .proto.PositionEstimate.SpeedDetectionEnum speedDetectionType = 15;</code>
-     */
-    boolean hasSpeedDetectionType();
-    /**
-     * <code>optional .proto.PositionEstimate.SpeedDetectionEnum speedDetectionType = 15;</code>
-     */
-    com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SpeedDetectionEnum getSpeedDetectionType();
-
-    /**
-     * <code>optional .proto.PositionEstimate.SlopeDetectionEnum slopeDetectionType = 16;</code>
-     */
-    boolean hasSlopeDetectionType();
-    /**
-     * <code>optional .proto.PositionEstimate.SlopeDetectionEnum slopeDetectionType = 16;</code>
-     */
-    com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SlopeDetectionEnum getSlopeDetectionType();
-  }
-  /**
-   * Protobuf type {@code proto.PositionEstimate}
-   *
-   * <pre>
-   * 定位点
-   * </pre>
-   */
-  public static final class PositionEstimate extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:proto.PositionEstimate)
-      PositionEstimateOrBuilder {
-    // Use PositionEstimate.newBuilder() to construct.
-    private PositionEstimate(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-      this.unknownFields = builder.getUnknownFields();
-    }
-    private PositionEstimate(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final PositionEstimate defaultInstance;
-    public static PositionEstimate getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public PositionEstimate getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private PositionEstimate(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 8: {
-              bitField0_ |= 0x00000001;
-              timestampUTC_ = input.readUInt64();
-              break;
-            }
-            case 16: {
-              int rawValue = input.readEnum();
-              com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.PositionTypeEnum value = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.PositionTypeEnum.valueOf(rawValue);
-              if (value == null) {
-                unknownFields.mergeVarintField(2, rawValue);
-              } else {
-                bitField0_ |= 0x00000002;
-                positionType_ = value;
-              }
-              break;
-            }
-            case 26: {
-              com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000004) == 0x00000004)) {
-                subBuilder = pointSegments_.toBuilder();
-              }
-              pointSegments_ = input.readMessage(com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.PARSER, extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(pointSegments_);
-                pointSegments_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000004;
-              break;
-            }
-            case 37: {
-              bitField0_ |= 0x00000008;
-              horizontalAccuracy_ = input.readFloat();
-              break;
-            }
-            case 45: {
-              bitField0_ |= 0x00000010;
-              altitude_ = input.readFloat();
-              break;
-            }
-            case 53: {
-              bitField0_ |= 0x00000020;
-              altitudeAccuracy_ = input.readFloat();
-              break;
-            }
-            case 61: {
-              bitField0_ |= 0x00000040;
-              heading_ = input.readFloat();
-              break;
-            }
-            case 69: {
-              bitField0_ |= 0x00000080;
-              speed_ = input.readFloat();
-              break;
-            }
-            case 72: {
-              bitField0_ |= 0x00000100;
-              satelliteNumber_ = input.readInt32();
-              break;
-            }
-            case 85: {
-              bitField0_ |= 0x00000200;
-              slope_ = input.readFloat();
-              break;
-            }
-            case 93: {
-              bitField0_ |= 0x00000400;
-              headingAccuracyDeg_ = input.readFloat();
-              break;
-            }
-            case 101: {
-              bitField0_ |= 0x00000800;
-              speedAccuracyMps_ = input.readFloat();
-              break;
-            }
-            case 109: {
-              bitField0_ |= 0x00001000;
-              slopeAccuracyDeg_ = input.readFloat();
-              break;
-            }
-            case 112: {
-              int rawValue = input.readEnum();
-              com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.HeadingDetectionEnum value = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.HeadingDetectionEnum.valueOf(rawValue);
-              if (value == null) {
-                unknownFields.mergeVarintField(14, rawValue);
-              } else {
-                bitField0_ |= 0x00002000;
-                headingDetectionType_ = value;
-              }
-              break;
-            }
-            case 120: {
-              int rawValue = input.readEnum();
-              com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SpeedDetectionEnum value = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SpeedDetectionEnum.valueOf(rawValue);
-              if (value == null) {
-                unknownFields.mergeVarintField(15, rawValue);
-              } else {
-                bitField0_ |= 0x00004000;
-                speedDetectionType_ = value;
-              }
-              break;
-            }
-            case 128: {
-              int rawValue = input.readEnum();
-              com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SlopeDetectionEnum value = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SlopeDetectionEnum.valueOf(rawValue);
-              if (value == null) {
-                unknownFields.mergeVarintField(16, rawValue);
-              } else {
-                bitField0_ |= 0x00008000;
-                slopeDetectionType_ = value;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
+        public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_PositionEstimate_descriptor;
-    }
+            return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_Path_descriptor;
+        }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        public static com.zhk.protobuf.LogicalDataModelProtos.Path parseFrom(
+                com.google.protobuf.ByteString data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.Path parseFrom(
+                com.google.protobuf.ByteString data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.Path parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.Path parseFrom(
+                byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.Path parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return PARSER.parseFrom(input);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.Path parseFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return PARSER.parseFrom(input, extensionRegistry);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.Path parseDelimitedFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return PARSER.parseDelimitedFrom(input);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.Path parseDelimitedFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.Path parseFrom(
+                com.google.protobuf.CodedInputStream input)
+                throws java.io.IOException {
+            return PARSER.parseFrom(input);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.Path parseFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return PARSER.parseFrom(input, extensionRegistry);
+        }
+
+        public static Builder newBuilder() {
+            return Builder.create();
+        }
+
+        public static Builder newBuilder(com.zhk.protobuf.LogicalDataModelProtos.Path prototype) {
+            return newBuilder().mergeFrom(prototype);
+        }
+
+        public Path getDefaultInstanceForType() {
+            return defaultInstance;
+        }
+
+        @Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+            return this.unknownFields;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_PositionEstimate_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.class, com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.Builder.class);
-    }
-
-    public static com.google.protobuf.Parser<PositionEstimate> PARSER =
-        new com.google.protobuf.AbstractParser<PositionEstimate>() {
-      public PositionEstimate parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PositionEstimate(input, extensionRegistry);
-      }
-    };
-
-    @Override
-    public com.google.protobuf.Parser<PositionEstimate> getParserForType() {
-      return PARSER;
-    }
-
-    /**
-     * Protobuf enum {@code proto.PositionEstimate.PositionTypeEnum}
-     */
-    public enum PositionTypeEnum
-        implements com.google.protobuf.ProtocolMessageEnum {
-      /**
-       * <code>RAW_GPS = 1;</code>
-       */
-      RAW_GPS(0, 1),
-      /**
-       * <code>FILTERED = 2;</code>
-       */
-      FILTERED(1, 2),
-      /**
-       * <code>MAP_MATCHED_REGULAR_MAP = 3;</code>
-       */
-      MAP_MATCHED_REGULAR_MAP(2, 3),
-      /**
-       * <code>MAP_MATCHED_HD_MAP = 4;</code>
-       */
-      MAP_MATCHED_HD_MAP(3, 4),
-      /**
-       * <code>MAP_MATCHED_HD_MAP_LANE = 5;</code>
-       */
-      MAP_MATCHED_HD_MAP_LANE(4, 5),
-      ;
-
-      /**
-       * <code>RAW_GPS = 1;</code>
-       */
-      public static final int RAW_GPS_VALUE = 1;
-      /**
-       * <code>FILTERED = 2;</code>
-       */
-      public static final int FILTERED_VALUE = 2;
-      /**
-       * <code>MAP_MATCHED_REGULAR_MAP = 3;</code>
-       */
-      public static final int MAP_MATCHED_REGULAR_MAP_VALUE = 3;
-      /**
-       * <code>MAP_MATCHED_HD_MAP = 4;</code>
-       */
-      public static final int MAP_MATCHED_HD_MAP_VALUE = 4;
-      /**
-       * <code>MAP_MATCHED_HD_MAP_LANE = 5;</code>
-       */
-      public static final int MAP_MATCHED_HD_MAP_LANE_VALUE = 5;
-
-
-      public final int getNumber() { return value; }
-
-      public static PositionTypeEnum valueOf(int value) {
-        switch (value) {
-          case 1: return RAW_GPS;
-          case 2: return FILTERED;
-          case 3: return MAP_MATCHED_REGULAR_MAP;
-          case 4: return MAP_MATCHED_HD_MAP;
-          case 5: return MAP_MATCHED_HD_MAP_LANE;
-          default: return null;
+            return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_Path_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            com.zhk.protobuf.LogicalDataModelProtos.Path.class, com.zhk.protobuf.LogicalDataModelProtos.Path.Builder.class);
         }
-      }
 
-      public static com.google.protobuf.Internal.EnumLiteMap<PositionTypeEnum>
-          internalGetValueMap() {
-        return internalValueMap;
-      }
-      private static com.google.protobuf.Internal.EnumLiteMap<PositionTypeEnum>
-          internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<PositionTypeEnum>() {
-              public PositionTypeEnum findValueByNumber(int number) {
-                return PositionTypeEnum.valueOf(number);
-              }
-            };
-
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
-          getValueDescriptor() {
-        return getDescriptor().getValues().get(index);
-      }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptorForType() {
-        return getDescriptor();
-      }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptor() {
-        return com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.getDescriptor().getEnumTypes().get(0);
-      }
-
-      private static final PositionTypeEnum[] VALUES = values();
-
-      public static PositionTypeEnum valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-        if (desc.getType() != getDescriptor()) {
-          throw new IllegalArgumentException(
-            "EnumValueDescriptor is not for this type.");
+        @Override
+        public com.google.protobuf.Parser<Path> getParserForType() {
+            return PARSER;
         }
-        return VALUES[desc.getIndex()];
-      }
 
-      private final int index;
-      private final int value;
-
-      private PositionTypeEnum(int index, int value) {
-        this.index = index;
-        this.value = value;
-      }
-
-      // @@protoc_insertion_point(enum_scope:proto.PositionEstimate.PositionTypeEnum)
-    }
-
-    /**
-     * Protobuf enum {@code proto.PositionEstimate.HeadingDetectionEnum}
-     */
-    public enum HeadingDetectionEnum
-        implements com.google.protobuf.ProtocolMessageEnum {
-      /**
-       * <code>HEADING_RAW_GPS = 1;</code>
-       */
-      HEADING_RAW_GPS(0, 1),
-      /**
-       * <code>HEADING_MAGNETIC_SENSOR = 2;</code>
-       */
-      HEADING_MAGNETIC_SENSOR(1, 2),
-      /**
-       * <code>HEADING_MULTI_SENSOR_FUSION = 3;</code>
-       */
-      HEADING_MULTI_SENSOR_FUSION(2, 3),
-      /**
-       * <code>HEADING_BY_MAP = 4;</code>
-       */
-      HEADING_BY_MAP(3, 4),
-      ;
-
-      /**
-       * <code>HEADING_RAW_GPS = 1;</code>
-       */
-      public static final int HEADING_RAW_GPS_VALUE = 1;
-      /**
-       * <code>HEADING_MAGNETIC_SENSOR = 2;</code>
-       */
-      public static final int HEADING_MAGNETIC_SENSOR_VALUE = 2;
-      /**
-       * <code>HEADING_MULTI_SENSOR_FUSION = 3;</code>
-       */
-      public static final int HEADING_MULTI_SENSOR_FUSION_VALUE = 3;
-      /**
-       * <code>HEADING_BY_MAP = 4;</code>
-       */
-      public static final int HEADING_BY_MAP_VALUE = 4;
-
-
-      public final int getNumber() { return value; }
-
-      public static HeadingDetectionEnum valueOf(int value) {
-        switch (value) {
-          case 1: return HEADING_RAW_GPS;
-          case 2: return HEADING_MAGNETIC_SENSOR;
-          case 3: return HEADING_MULTI_SENSOR_FUSION;
-          case 4: return HEADING_BY_MAP;
-          default: return null;
+        /**
+         * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
+         * <p/>
+         * <pre>
+         * 轨迹（GPS...）
+         * </pre>
+         */
+        public java.util.List<com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate> getPositionEstimateList() {
+            return positionEstimate_;
         }
-      }
 
-      public static com.google.protobuf.Internal.EnumLiteMap<HeadingDetectionEnum>
-          internalGetValueMap() {
-        return internalValueMap;
-      }
-      private static com.google.protobuf.Internal.EnumLiteMap<HeadingDetectionEnum>
-          internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<HeadingDetectionEnum>() {
-              public HeadingDetectionEnum findValueByNumber(int number) {
-                return HeadingDetectionEnum.valueOf(number);
-              }
-            };
-
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
-          getValueDescriptor() {
-        return getDescriptor().getValues().get(index);
-      }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptorForType() {
-        return getDescriptor();
-      }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptor() {
-        return com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.getDescriptor().getEnumTypes().get(1);
-      }
-
-      private static final HeadingDetectionEnum[] VALUES = values();
-
-      public static HeadingDetectionEnum valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-        if (desc.getType() != getDescriptor()) {
-          throw new IllegalArgumentException(
-            "EnumValueDescriptor is not for this type.");
+        /**
+         * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
+         * <p/>
+         * <pre>
+         * 轨迹（GPS...）
+         * </pre>
+         */
+        public java.util.List<? extends com.zhk.protobuf.LogicalDataModelProtos.PositionEstimateOrBuilder>
+        getPositionEstimateOrBuilderList() {
+            return positionEstimate_;
         }
-        return VALUES[desc.getIndex()];
-      }
 
-      private final int index;
-      private final int value;
-
-      private HeadingDetectionEnum(int index, int value) {
-        this.index = index;
-        this.value = value;
-      }
-
-      // @@protoc_insertion_point(enum_scope:proto.PositionEstimate.HeadingDetectionEnum)
-    }
-
-    /**
-     * Protobuf enum {@code proto.PositionEstimate.SpeedDetectionEnum}
-     */
-    public enum SpeedDetectionEnum
-        implements com.google.protobuf.ProtocolMessageEnum {
-      /**
-       * <code>SPEED_RAW_GPS = 1;</code>
-       */
-      SPEED_RAW_GPS(0, 1),
-      /**
-       * <code>SPEED_WHEEL_TICKS = 2;</code>
-       */
-      SPEED_WHEEL_TICKS(1, 2),
-      /**
-       * <code>SPEED_RADAR_SONAR = 3;</code>
-       */
-      SPEED_RADAR_SONAR(2, 3),
-      ;
-
-      /**
-       * <code>SPEED_RAW_GPS = 1;</code>
-       */
-      public static final int SPEED_RAW_GPS_VALUE = 1;
-      /**
-       * <code>SPEED_WHEEL_TICKS = 2;</code>
-       */
-      public static final int SPEED_WHEEL_TICKS_VALUE = 2;
-      /**
-       * <code>SPEED_RADAR_SONAR = 3;</code>
-       */
-      public static final int SPEED_RADAR_SONAR_VALUE = 3;
-
-
-      public final int getNumber() { return value; }
-
-      public static SpeedDetectionEnum valueOf(int value) {
-        switch (value) {
-          case 1: return SPEED_RAW_GPS;
-          case 2: return SPEED_WHEEL_TICKS;
-          case 3: return SPEED_RADAR_SONAR;
-          default: return null;
+        /**
+         * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
+         * <p/>
+         * <pre>
+         * 轨迹（GPS...）
+         * </pre>
+         */
+        public int getPositionEstimateCount() {
+            return positionEstimate_.size();
         }
-      }
 
-      public static com.google.protobuf.Internal.EnumLiteMap<SpeedDetectionEnum>
-          internalGetValueMap() {
-        return internalValueMap;
-      }
-      private static com.google.protobuf.Internal.EnumLiteMap<SpeedDetectionEnum>
-          internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<SpeedDetectionEnum>() {
-              public SpeedDetectionEnum findValueByNumber(int number) {
-                return SpeedDetectionEnum.valueOf(number);
-              }
-            };
-
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
-          getValueDescriptor() {
-        return getDescriptor().getValues().get(index);
-      }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptorForType() {
-        return getDescriptor();
-      }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptor() {
-        return com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.getDescriptor().getEnumTypes().get(2);
-      }
-
-      private static final SpeedDetectionEnum[] VALUES = values();
-
-      public static SpeedDetectionEnum valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-        if (desc.getType() != getDescriptor()) {
-          throw new IllegalArgumentException(
-            "EnumValueDescriptor is not for this type.");
+        /**
+         * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
+         * <p/>
+         * <pre>
+         * 轨迹（GPS...）
+         * </pre>
+         */
+        public com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate getPositionEstimate(int index) {
+            return positionEstimate_.get(index);
         }
-        return VALUES[desc.getIndex()];
-      }
 
-      private final int index;
-      private final int value;
-
-      private SpeedDetectionEnum(int index, int value) {
-        this.index = index;
-        this.value = value;
-      }
-
-      // @@protoc_insertion_point(enum_scope:proto.PositionEstimate.SpeedDetectionEnum)
-    }
-
-    /**
-     * Protobuf enum {@code proto.PositionEstimate.SlopeDetectionEnum}
-     */
-    public enum SlopeDetectionEnum
-        implements com.google.protobuf.ProtocolMessageEnum {
-      /**
-       * <code>SLOPE_RAW_GPS = 1;</code>
-       */
-      SLOPE_RAW_GPS(0, 1),
-      /**
-       * <code>SLOPE_ACCELEROMETER_SENSOR = 2;</code>
-       */
-      SLOPE_ACCELEROMETER_SENSOR(1, 2),
-      /**
-       * <code>SLOPE_MULTI_SENSOR_FUSION = 3;</code>
-       */
-      SLOPE_MULTI_SENSOR_FUSION(2, 3),
-      /**
-       * <code>SLOPE_BY_MAP = 4;</code>
-       */
-      SLOPE_BY_MAP(3, 4),
-      ;
-
-      /**
-       * <code>SLOPE_RAW_GPS = 1;</code>
-       */
-      public static final int SLOPE_RAW_GPS_VALUE = 1;
-      /**
-       * <code>SLOPE_ACCELEROMETER_SENSOR = 2;</code>
-       */
-      public static final int SLOPE_ACCELEROMETER_SENSOR_VALUE = 2;
-      /**
-       * <code>SLOPE_MULTI_SENSOR_FUSION = 3;</code>
-       */
-      public static final int SLOPE_MULTI_SENSOR_FUSION_VALUE = 3;
-      /**
-       * <code>SLOPE_BY_MAP = 4;</code>
-       */
-      public static final int SLOPE_BY_MAP_VALUE = 4;
-
-
-      public final int getNumber() { return value; }
-
-      public static SlopeDetectionEnum valueOf(int value) {
-        switch (value) {
-          case 1: return SLOPE_RAW_GPS;
-          case 2: return SLOPE_ACCELEROMETER_SENSOR;
-          case 3: return SLOPE_MULTI_SENSOR_FUSION;
-          case 4: return SLOPE_BY_MAP;
-          default: return null;
+        /**
+         * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
+         * <p/>
+         * <pre>
+         * 轨迹（GPS...）
+         * </pre>
+         */
+        public com.zhk.protobuf.LogicalDataModelProtos.PositionEstimateOrBuilder getPositionEstimateOrBuilder(
+                int index) {
+            return positionEstimate_.get(index);
         }
-      }
 
-      public static com.google.protobuf.Internal.EnumLiteMap<SlopeDetectionEnum>
-          internalGetValueMap() {
-        return internalValueMap;
-      }
-      private static com.google.protobuf.Internal.EnumLiteMap<SlopeDetectionEnum>
-          internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<SlopeDetectionEnum>() {
-              public SlopeDetectionEnum findValueByNumber(int number) {
-                return SlopeDetectionEnum.valueOf(number);
-              }
-            };
-
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
-          getValueDescriptor() {
-        return getDescriptor().getValues().get(index);
-      }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptorForType() {
-        return getDescriptor();
-      }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptor() {
-        return com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.getDescriptor().getEnumTypes().get(3);
-      }
-
-      private static final SlopeDetectionEnum[] VALUES = values();
-
-      public static SlopeDetectionEnum valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-        if (desc.getType() != getDescriptor()) {
-          throw new IllegalArgumentException(
-            "EnumValueDescriptor is not for this type.");
+        /**
+         * <code>repeated .proto.PathSegment pathSegments = 2;</code>
+         * <p/>
+         * <pre>
+         * 路线
+         * </pre>
+         */
+        public java.util.List<com.zhk.protobuf.LogicalDataModelProtos.PathSegment> getPathSegmentsList() {
+            return pathSegments_;
         }
-        return VALUES[desc.getIndex()];
-      }
 
-      private final int index;
-      private final int value;
+        /**
+         * <code>repeated .proto.PathSegment pathSegments = 2;</code>
+         * <p/>
+         * <pre>
+         * 路线
+         * </pre>
+         */
+        public java.util.List<? extends com.zhk.protobuf.LogicalDataModelProtos.PathSegmentOrBuilder>
+        getPathSegmentsOrBuilderList() {
+            return pathSegments_;
+        }
 
-      private SlopeDetectionEnum(int index, int value) {
-        this.index = index;
-        this.value = value;
-      }
+        /**
+         * <code>repeated .proto.PathSegment pathSegments = 2;</code>
+         * <p/>
+         * <pre>
+         * 路线
+         * </pre>
+         */
+        public int getPathSegmentsCount() {
+            return pathSegments_.size();
+        }
 
-      // @@protoc_insertion_point(enum_scope:proto.PositionEstimate.SlopeDetectionEnum)
+        /**
+         * <code>repeated .proto.PathSegment pathSegments = 2;</code>
+         * <p/>
+         * <pre>
+         * 路线
+         * </pre>
+         */
+        public com.zhk.protobuf.LogicalDataModelProtos.PathSegment getPathSegments(int index) {
+            return pathSegments_.get(index);
+        }
+
+        /**
+         * <code>repeated .proto.PathSegment pathSegments = 2;</code>
+         * <p/>
+         * <pre>
+         * 路线
+         * </pre>
+         */
+        public com.zhk.protobuf.LogicalDataModelProtos.PathSegmentOrBuilder getPathSegmentsOrBuilder(
+                int index) {
+            return pathSegments_.get(index);
+        }
+
+        private void initFields() {
+            positionEstimate_ = java.util.Collections.emptyList();
+            pathSegments_ = java.util.Collections.emptyList();
+        }
+
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1) return true;
+            if (isInitialized == 0) return false;
+
+            for (int i = 0; i < getPositionEstimateCount(); i++) {
+                if (!getPositionEstimate(i).isInitialized()) {
+                    memoizedIsInitialized = 0;
+                    return false;
+                }
+            }
+            for (int i = 0; i < getPathSegmentsCount(); i++) {
+                if (!getPathSegments(i).isInitialized()) {
+                    memoizedIsInitialized = 0;
+                    return false;
+                }
+            }
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                throws java.io.IOException {
+            getSerializedSize();
+            for (int i = 0; i < positionEstimate_.size(); i++) {
+                output.writeMessage(1, positionEstimate_.get(i));
+            }
+            for (int i = 0; i < pathSegments_.size(); i++) {
+                output.writeMessage(2, pathSegments_.get(i));
+            }
+            getUnknownFields().writeTo(output);
+        }
+
+        public int getSerializedSize() {
+            int size = memoizedSerializedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            for (int i = 0; i < positionEstimate_.size(); i++) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeMessageSize(1, positionEstimate_.get(i));
+            }
+            for (int i = 0; i < pathSegments_.size(); i++) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeMessageSize(2, pathSegments_.get(i));
+            }
+            size += getUnknownFields().getSerializedSize();
+            memoizedSerializedSize = size;
+            return size;
+        }
+
+        @Override
+        protected Object writeReplace()
+                throws java.io.ObjectStreamException {
+            return super.writeReplace();
+        }
+
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public Builder toBuilder() {
+            return newBuilder(this);
+        }
+
+        @Override
+        protected Builder newBuilderForType(
+                com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * Protobuf type {@code proto.Path}
+         * <p/>
+         * <pre>
+         * 轨迹与路线
+         * </pre>
+         */
+        public static final class Builder extends
+                com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:proto.Path)
+                com.zhk.protobuf.LogicalDataModelProtos.PathOrBuilder {
+            private int bitField0_;
+            private java.util.List<com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate> positionEstimate_ =
+                    java.util.Collections.emptyList();
+            private com.google.protobuf.RepeatedFieldBuilder<
+                    com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate, com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.Builder, com.zhk.protobuf.LogicalDataModelProtos.PositionEstimateOrBuilder> positionEstimateBuilder_;
+            private java.util.List<com.zhk.protobuf.LogicalDataModelProtos.PathSegment> pathSegments_ =
+                    java.util.Collections.emptyList();
+            private com.google.protobuf.RepeatedFieldBuilder<
+                    com.zhk.protobuf.LogicalDataModelProtos.PathSegment, com.zhk.protobuf.LogicalDataModelProtos.PathSegment.Builder, com.zhk.protobuf.LogicalDataModelProtos.PathSegmentOrBuilder> pathSegmentsBuilder_;
+
+            // Construct using com.zhk.protobuf.LogicalDataModelProtos.Path.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(
+                    com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+                return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_Path_descriptor;
+            }
+
+            private static Builder create() {
+                return new Builder();
+            }
+
+            protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+                return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_Path_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                com.zhk.protobuf.LogicalDataModelProtos.Path.class, com.zhk.protobuf.LogicalDataModelProtos.Path.Builder.class);
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+                    getPositionEstimateFieldBuilder();
+                    getPathSegmentsFieldBuilder();
+                }
+            }
+
+            public Builder clear() {
+                super.clear();
+                if (positionEstimateBuilder_ == null) {
+                    positionEstimate_ = java.util.Collections.emptyList();
+                    bitField0_ = (bitField0_ & ~0x00000001);
+                } else {
+                    positionEstimateBuilder_.clear();
+                }
+                if (pathSegmentsBuilder_ == null) {
+                    pathSegments_ = java.util.Collections.emptyList();
+                    bitField0_ = (bitField0_ & ~0x00000002);
+                } else {
+                    pathSegmentsBuilder_.clear();
+                }
+                return this;
+            }
+
+            public Builder clone() {
+                return create().mergeFrom(buildPartial());
+            }
+
+            public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+                return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_Path_descriptor;
+            }
+
+            public com.zhk.protobuf.LogicalDataModelProtos.Path getDefaultInstanceForType() {
+                return com.zhk.protobuf.LogicalDataModelProtos.Path.getDefaultInstance();
+            }
+
+            public com.zhk.protobuf.LogicalDataModelProtos.Path build() {
+                com.zhk.protobuf.LogicalDataModelProtos.Path result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            public com.zhk.protobuf.LogicalDataModelProtos.Path buildPartial() {
+                com.zhk.protobuf.LogicalDataModelProtos.Path result = new com.zhk.protobuf.LogicalDataModelProtos.Path(this);
+                int from_bitField0_ = bitField0_;
+                if (positionEstimateBuilder_ == null) {
+                    if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                        positionEstimate_ = java.util.Collections.unmodifiableList(positionEstimate_);
+                        bitField0_ = (bitField0_ & ~0x00000001);
+                    }
+                    result.positionEstimate_ = positionEstimate_;
+                } else {
+                    result.positionEstimate_ = positionEstimateBuilder_.build();
+                }
+                if (pathSegmentsBuilder_ == null) {
+                    if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                        pathSegments_ = java.util.Collections.unmodifiableList(pathSegments_);
+                        bitField0_ = (bitField0_ & ~0x00000002);
+                    }
+                    result.pathSegments_ = pathSegments_;
+                } else {
+                    result.pathSegments_ = pathSegmentsBuilder_.build();
+                }
+                onBuilt();
+                return result;
+            }
+
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof com.zhk.protobuf.LogicalDataModelProtos.Path) {
+                    return mergeFrom((com.zhk.protobuf.LogicalDataModelProtos.Path) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(com.zhk.protobuf.LogicalDataModelProtos.Path other) {
+                if (other == com.zhk.protobuf.LogicalDataModelProtos.Path.getDefaultInstance()) return this;
+                if (positionEstimateBuilder_ == null) {
+                    if (!other.positionEstimate_.isEmpty()) {
+                        if (positionEstimate_.isEmpty()) {
+                            positionEstimate_ = other.positionEstimate_;
+                            bitField0_ = (bitField0_ & ~0x00000001);
+                        } else {
+                            ensurePositionEstimateIsMutable();
+                            positionEstimate_.addAll(other.positionEstimate_);
+                        }
+                        onChanged();
+                    }
+                } else {
+                    if (!other.positionEstimate_.isEmpty()) {
+                        if (positionEstimateBuilder_.isEmpty()) {
+                            positionEstimateBuilder_.dispose();
+                            positionEstimateBuilder_ = null;
+                            positionEstimate_ = other.positionEstimate_;
+                            bitField0_ = (bitField0_ & ~0x00000001);
+                            positionEstimateBuilder_ =
+                                    com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                                            getPositionEstimateFieldBuilder() : null;
+                        } else {
+                            positionEstimateBuilder_.addAllMessages(other.positionEstimate_);
+                        }
+                    }
+                }
+                if (pathSegmentsBuilder_ == null) {
+                    if (!other.pathSegments_.isEmpty()) {
+                        if (pathSegments_.isEmpty()) {
+                            pathSegments_ = other.pathSegments_;
+                            bitField0_ = (bitField0_ & ~0x00000002);
+                        } else {
+                            ensurePathSegmentsIsMutable();
+                            pathSegments_.addAll(other.pathSegments_);
+                        }
+                        onChanged();
+                    }
+                } else {
+                    if (!other.pathSegments_.isEmpty()) {
+                        if (pathSegmentsBuilder_.isEmpty()) {
+                            pathSegmentsBuilder_.dispose();
+                            pathSegmentsBuilder_ = null;
+                            pathSegments_ = other.pathSegments_;
+                            bitField0_ = (bitField0_ & ~0x00000002);
+                            pathSegmentsBuilder_ =
+                                    com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                                            getPathSegmentsFieldBuilder() : null;
+                        } else {
+                            pathSegmentsBuilder_.addAllMessages(other.pathSegments_);
+                        }
+                    }
+                }
+                this.mergeUnknownFields(other.getUnknownFields());
+                return this;
+            }
+
+            public final boolean isInitialized() {
+                for (int i = 0; i < getPositionEstimateCount(); i++) {
+                    if (!getPositionEstimate(i).isInitialized()) {
+
+                        return false;
+                    }
+                }
+                for (int i = 0; i < getPathSegmentsCount(); i++) {
+                    if (!getPathSegments(i).isInitialized()) {
+
+                        return false;
+                    }
+                }
+                return true;
+            }
+
+            public Builder mergeFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws java.io.IOException {
+                com.zhk.protobuf.LogicalDataModelProtos.Path parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (com.zhk.protobuf.LogicalDataModelProtos.Path) e.getUnfinishedMessage();
+                    throw e;
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private void ensurePositionEstimateIsMutable() {
+                if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+                    positionEstimate_ = new java.util.ArrayList<com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate>(positionEstimate_);
+                    bitField0_ |= 0x00000001;
+                }
+            }
+
+            /**
+             * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
+             * <p/>
+             * <pre>
+             * 轨迹（GPS...）
+             * </pre>
+             */
+            public java.util.List<com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate> getPositionEstimateList() {
+                if (positionEstimateBuilder_ == null) {
+                    return java.util.Collections.unmodifiableList(positionEstimate_);
+                } else {
+                    return positionEstimateBuilder_.getMessageList();
+                }
+            }
+
+            /**
+             * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
+             * <p/>
+             * <pre>
+             * 轨迹（GPS...）
+             * </pre>
+             */
+            public int getPositionEstimateCount() {
+                if (positionEstimateBuilder_ == null) {
+                    return positionEstimate_.size();
+                } else {
+                    return positionEstimateBuilder_.getCount();
+                }
+            }
+
+            /**
+             * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
+             * <p/>
+             * <pre>
+             * 轨迹（GPS...）
+             * </pre>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate getPositionEstimate(int index) {
+                if (positionEstimateBuilder_ == null) {
+                    return positionEstimate_.get(index);
+                } else {
+                    return positionEstimateBuilder_.getMessage(index);
+                }
+            }
+
+            /**
+             * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
+             * <p/>
+             * <pre>
+             * 轨迹（GPS...）
+             * </pre>
+             */
+            public Builder setPositionEstimate(
+                    int index, com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate value) {
+                if (positionEstimateBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    ensurePositionEstimateIsMutable();
+                    positionEstimate_.set(index, value);
+                    onChanged();
+                } else {
+                    positionEstimateBuilder_.setMessage(index, value);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
+             * <p/>
+             * <pre>
+             * 轨迹（GPS...）
+             * </pre>
+             */
+            public Builder setPositionEstimate(
+                    int index, com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.Builder builderForValue) {
+                if (positionEstimateBuilder_ == null) {
+                    ensurePositionEstimateIsMutable();
+                    positionEstimate_.set(index, builderForValue.build());
+                    onChanged();
+                } else {
+                    positionEstimateBuilder_.setMessage(index, builderForValue.build());
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
+             * <p/>
+             * <pre>
+             * 轨迹（GPS...）
+             * </pre>
+             */
+            public Builder addPositionEstimate(com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate value) {
+                if (positionEstimateBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    ensurePositionEstimateIsMutable();
+                    positionEstimate_.add(value);
+                    onChanged();
+                } else {
+                    positionEstimateBuilder_.addMessage(value);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
+             * <p/>
+             * <pre>
+             * 轨迹（GPS...）
+             * </pre>
+             */
+            public Builder addPositionEstimate(
+                    int index, com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate value) {
+                if (positionEstimateBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    ensurePositionEstimateIsMutable();
+                    positionEstimate_.add(index, value);
+                    onChanged();
+                } else {
+                    positionEstimateBuilder_.addMessage(index, value);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
+             * <p/>
+             * <pre>
+             * 轨迹（GPS...）
+             * </pre>
+             */
+            public Builder addPositionEstimate(
+                    com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.Builder builderForValue) {
+                if (positionEstimateBuilder_ == null) {
+                    ensurePositionEstimateIsMutable();
+                    positionEstimate_.add(builderForValue.build());
+                    onChanged();
+                } else {
+                    positionEstimateBuilder_.addMessage(builderForValue.build());
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
+             * <p/>
+             * <pre>
+             * 轨迹（GPS...）
+             * </pre>
+             */
+            public Builder addPositionEstimate(
+                    int index, com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.Builder builderForValue) {
+                if (positionEstimateBuilder_ == null) {
+                    ensurePositionEstimateIsMutable();
+                    positionEstimate_.add(index, builderForValue.build());
+                    onChanged();
+                } else {
+                    positionEstimateBuilder_.addMessage(index, builderForValue.build());
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
+             * <p/>
+             * <pre>
+             * 轨迹（GPS...）
+             * </pre>
+             */
+            public Builder addAllPositionEstimate(
+                    Iterable<? extends com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate> values) {
+                if (positionEstimateBuilder_ == null) {
+                    ensurePositionEstimateIsMutable();
+                    com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                            values, positionEstimate_);
+                    onChanged();
+                } else {
+                    positionEstimateBuilder_.addAllMessages(values);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
+             * <p/>
+             * <pre>
+             * 轨迹（GPS...）
+             * </pre>
+             */
+            public Builder clearPositionEstimate() {
+                if (positionEstimateBuilder_ == null) {
+                    positionEstimate_ = java.util.Collections.emptyList();
+                    bitField0_ = (bitField0_ & ~0x00000001);
+                    onChanged();
+                } else {
+                    positionEstimateBuilder_.clear();
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
+             * <p/>
+             * <pre>
+             * 轨迹（GPS...）
+             * </pre>
+             */
+            public Builder removePositionEstimate(int index) {
+                if (positionEstimateBuilder_ == null) {
+                    ensurePositionEstimateIsMutable();
+                    positionEstimate_.remove(index);
+                    onChanged();
+                } else {
+                    positionEstimateBuilder_.remove(index);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
+             * <p/>
+             * <pre>
+             * 轨迹（GPS...）
+             * </pre>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.Builder getPositionEstimateBuilder(
+                    int index) {
+                return getPositionEstimateFieldBuilder().getBuilder(index);
+            }
+
+            /**
+             * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
+             * <p/>
+             * <pre>
+             * 轨迹（GPS...）
+             * </pre>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.PositionEstimateOrBuilder getPositionEstimateOrBuilder(
+                    int index) {
+                if (positionEstimateBuilder_ == null) {
+                    return positionEstimate_.get(index);
+                } else {
+                    return positionEstimateBuilder_.getMessageOrBuilder(index);
+                }
+            }
+
+            /**
+             * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
+             * <p/>
+             * <pre>
+             * 轨迹（GPS...）
+             * </pre>
+             */
+            public java.util.List<? extends com.zhk.protobuf.LogicalDataModelProtos.PositionEstimateOrBuilder>
+            getPositionEstimateOrBuilderList() {
+                if (positionEstimateBuilder_ != null) {
+                    return positionEstimateBuilder_.getMessageOrBuilderList();
+                } else {
+                    return java.util.Collections.unmodifiableList(positionEstimate_);
+                }
+            }
+
+            /**
+             * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
+             * <p/>
+             * <pre>
+             * 轨迹（GPS...）
+             * </pre>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.Builder addPositionEstimateBuilder() {
+                return getPositionEstimateFieldBuilder().addBuilder(
+                        com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.getDefaultInstance());
+            }
+
+            /**
+             * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
+             * <p/>
+             * <pre>
+             * 轨迹（GPS...）
+             * </pre>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.Builder addPositionEstimateBuilder(
+                    int index) {
+                return getPositionEstimateFieldBuilder().addBuilder(
+                        index, com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.getDefaultInstance());
+            }
+
+            /**
+             * <code>repeated .proto.PositionEstimate positionEstimate = 1;</code>
+             * <p/>
+             * <pre>
+             * 轨迹（GPS...）
+             * </pre>
+             */
+            public java.util.List<com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.Builder>
+            getPositionEstimateBuilderList() {
+                return getPositionEstimateFieldBuilder().getBuilderList();
+            }
+
+            private com.google.protobuf.RepeatedFieldBuilder<
+                    com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate, com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.Builder, com.zhk.protobuf.LogicalDataModelProtos.PositionEstimateOrBuilder>
+            getPositionEstimateFieldBuilder() {
+                if (positionEstimateBuilder_ == null) {
+                    positionEstimateBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+                            com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate, com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.Builder, com.zhk.protobuf.LogicalDataModelProtos.PositionEstimateOrBuilder>(
+                            positionEstimate_,
+                            ((bitField0_ & 0x00000001) == 0x00000001),
+                            getParentForChildren(),
+                            isClean());
+                    positionEstimate_ = null;
+                }
+                return positionEstimateBuilder_;
+            }
+
+            private void ensurePathSegmentsIsMutable() {
+                if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+                    pathSegments_ = new java.util.ArrayList<com.zhk.protobuf.LogicalDataModelProtos.PathSegment>(pathSegments_);
+                    bitField0_ |= 0x00000002;
+                }
+            }
+
+            /**
+             * <code>repeated .proto.PathSegment pathSegments = 2;</code>
+             * <p/>
+             * <pre>
+             * 路线
+             * </pre>
+             */
+            public java.util.List<com.zhk.protobuf.LogicalDataModelProtos.PathSegment> getPathSegmentsList() {
+                if (pathSegmentsBuilder_ == null) {
+                    return java.util.Collections.unmodifiableList(pathSegments_);
+                } else {
+                    return pathSegmentsBuilder_.getMessageList();
+                }
+            }
+
+            /**
+             * <code>repeated .proto.PathSegment pathSegments = 2;</code>
+             * <p/>
+             * <pre>
+             * 路线
+             * </pre>
+             */
+            public int getPathSegmentsCount() {
+                if (pathSegmentsBuilder_ == null) {
+                    return pathSegments_.size();
+                } else {
+                    return pathSegmentsBuilder_.getCount();
+                }
+            }
+
+            /**
+             * <code>repeated .proto.PathSegment pathSegments = 2;</code>
+             * <p/>
+             * <pre>
+             * 路线
+             * </pre>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.PathSegment getPathSegments(int index) {
+                if (pathSegmentsBuilder_ == null) {
+                    return pathSegments_.get(index);
+                } else {
+                    return pathSegmentsBuilder_.getMessage(index);
+                }
+            }
+
+            /**
+             * <code>repeated .proto.PathSegment pathSegments = 2;</code>
+             * <p/>
+             * <pre>
+             * 路线
+             * </pre>
+             */
+            public Builder setPathSegments(
+                    int index, com.zhk.protobuf.LogicalDataModelProtos.PathSegment value) {
+                if (pathSegmentsBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    ensurePathSegmentsIsMutable();
+                    pathSegments_.set(index, value);
+                    onChanged();
+                } else {
+                    pathSegmentsBuilder_.setMessage(index, value);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.PathSegment pathSegments = 2;</code>
+             * <p/>
+             * <pre>
+             * 路线
+             * </pre>
+             */
+            public Builder setPathSegments(
+                    int index, com.zhk.protobuf.LogicalDataModelProtos.PathSegment.Builder builderForValue) {
+                if (pathSegmentsBuilder_ == null) {
+                    ensurePathSegmentsIsMutable();
+                    pathSegments_.set(index, builderForValue.build());
+                    onChanged();
+                } else {
+                    pathSegmentsBuilder_.setMessage(index, builderForValue.build());
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.PathSegment pathSegments = 2;</code>
+             * <p/>
+             * <pre>
+             * 路线
+             * </pre>
+             */
+            public Builder addPathSegments(com.zhk.protobuf.LogicalDataModelProtos.PathSegment value) {
+                if (pathSegmentsBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    ensurePathSegmentsIsMutable();
+                    pathSegments_.add(value);
+                    onChanged();
+                } else {
+                    pathSegmentsBuilder_.addMessage(value);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.PathSegment pathSegments = 2;</code>
+             * <p/>
+             * <pre>
+             * 路线
+             * </pre>
+             */
+            public Builder addPathSegments(
+                    int index, com.zhk.protobuf.LogicalDataModelProtos.PathSegment value) {
+                if (pathSegmentsBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    ensurePathSegmentsIsMutable();
+                    pathSegments_.add(index, value);
+                    onChanged();
+                } else {
+                    pathSegmentsBuilder_.addMessage(index, value);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.PathSegment pathSegments = 2;</code>
+             * <p/>
+             * <pre>
+             * 路线
+             * </pre>
+             */
+            public Builder addPathSegments(
+                    com.zhk.protobuf.LogicalDataModelProtos.PathSegment.Builder builderForValue) {
+                if (pathSegmentsBuilder_ == null) {
+                    ensurePathSegmentsIsMutable();
+                    pathSegments_.add(builderForValue.build());
+                    onChanged();
+                } else {
+                    pathSegmentsBuilder_.addMessage(builderForValue.build());
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.PathSegment pathSegments = 2;</code>
+             * <p/>
+             * <pre>
+             * 路线
+             * </pre>
+             */
+            public Builder addPathSegments(
+                    int index, com.zhk.protobuf.LogicalDataModelProtos.PathSegment.Builder builderForValue) {
+                if (pathSegmentsBuilder_ == null) {
+                    ensurePathSegmentsIsMutable();
+                    pathSegments_.add(index, builderForValue.build());
+                    onChanged();
+                } else {
+                    pathSegmentsBuilder_.addMessage(index, builderForValue.build());
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.PathSegment pathSegments = 2;</code>
+             * <p/>
+             * <pre>
+             * 路线
+             * </pre>
+             */
+            public Builder addAllPathSegments(
+                    Iterable<? extends com.zhk.protobuf.LogicalDataModelProtos.PathSegment> values) {
+                if (pathSegmentsBuilder_ == null) {
+                    ensurePathSegmentsIsMutable();
+                    com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                            values, pathSegments_);
+                    onChanged();
+                } else {
+                    pathSegmentsBuilder_.addAllMessages(values);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.PathSegment pathSegments = 2;</code>
+             * <p/>
+             * <pre>
+             * 路线
+             * </pre>
+             */
+            public Builder clearPathSegments() {
+                if (pathSegmentsBuilder_ == null) {
+                    pathSegments_ = java.util.Collections.emptyList();
+                    bitField0_ = (bitField0_ & ~0x00000002);
+                    onChanged();
+                } else {
+                    pathSegmentsBuilder_.clear();
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.PathSegment pathSegments = 2;</code>
+             * <p/>
+             * <pre>
+             * 路线
+             * </pre>
+             */
+            public Builder removePathSegments(int index) {
+                if (pathSegmentsBuilder_ == null) {
+                    ensurePathSegmentsIsMutable();
+                    pathSegments_.remove(index);
+                    onChanged();
+                } else {
+                    pathSegmentsBuilder_.remove(index);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.PathSegment pathSegments = 2;</code>
+             * <p/>
+             * <pre>
+             * 路线
+             * </pre>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.PathSegment.Builder getPathSegmentsBuilder(
+                    int index) {
+                return getPathSegmentsFieldBuilder().getBuilder(index);
+            }
+
+            /**
+             * <code>repeated .proto.PathSegment pathSegments = 2;</code>
+             * <p/>
+             * <pre>
+             * 路线
+             * </pre>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.PathSegmentOrBuilder getPathSegmentsOrBuilder(
+                    int index) {
+                if (pathSegmentsBuilder_ == null) {
+                    return pathSegments_.get(index);
+                } else {
+                    return pathSegmentsBuilder_.getMessageOrBuilder(index);
+                }
+            }
+
+            /**
+             * <code>repeated .proto.PathSegment pathSegments = 2;</code>
+             * <p/>
+             * <pre>
+             * 路线
+             * </pre>
+             */
+            public java.util.List<? extends com.zhk.protobuf.LogicalDataModelProtos.PathSegmentOrBuilder>
+            getPathSegmentsOrBuilderList() {
+                if (pathSegmentsBuilder_ != null) {
+                    return pathSegmentsBuilder_.getMessageOrBuilderList();
+                } else {
+                    return java.util.Collections.unmodifiableList(pathSegments_);
+                }
+            }
+
+            /**
+             * <code>repeated .proto.PathSegment pathSegments = 2;</code>
+             * <p/>
+             * <pre>
+             * 路线
+             * </pre>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.PathSegment.Builder addPathSegmentsBuilder() {
+                return getPathSegmentsFieldBuilder().addBuilder(
+                        com.zhk.protobuf.LogicalDataModelProtos.PathSegment.getDefaultInstance());
+            }
+
+            /**
+             * <code>repeated .proto.PathSegment pathSegments = 2;</code>
+             * <p/>
+             * <pre>
+             * 路线
+             * </pre>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.PathSegment.Builder addPathSegmentsBuilder(
+                    int index) {
+                return getPathSegmentsFieldBuilder().addBuilder(
+                        index, com.zhk.protobuf.LogicalDataModelProtos.PathSegment.getDefaultInstance());
+            }
+
+            /**
+             * <code>repeated .proto.PathSegment pathSegments = 2;</code>
+             * <p/>
+             * <pre>
+             * 路线
+             * </pre>
+             */
+            public java.util.List<com.zhk.protobuf.LogicalDataModelProtos.PathSegment.Builder>
+            getPathSegmentsBuilderList() {
+                return getPathSegmentsFieldBuilder().getBuilderList();
+            }
+
+            private com.google.protobuf.RepeatedFieldBuilder<
+                    com.zhk.protobuf.LogicalDataModelProtos.PathSegment, com.zhk.protobuf.LogicalDataModelProtos.PathSegment.Builder, com.zhk.protobuf.LogicalDataModelProtos.PathSegmentOrBuilder>
+            getPathSegmentsFieldBuilder() {
+                if (pathSegmentsBuilder_ == null) {
+                    pathSegmentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+                            com.zhk.protobuf.LogicalDataModelProtos.PathSegment, com.zhk.protobuf.LogicalDataModelProtos.PathSegment.Builder, com.zhk.protobuf.LogicalDataModelProtos.PathSegmentOrBuilder>(
+                            pathSegments_,
+                            ((bitField0_ & 0x00000002) == 0x00000002),
+                            getParentForChildren(),
+                            isClean());
+                    pathSegments_ = null;
+                }
+                return pathSegmentsBuilder_;
+            }
+
+            // @@protoc_insertion_point(builder_scope:proto.Path)
+        }
+
+        static {
+            defaultInstance = new Path(true);
+            defaultInstance.initFields();
+        }
+
+        // @@protoc_insertion_point(class_scope:proto.Path)
     }
 
-    private int bitField0_;
-    public static final int TIMESTAMPUTC_FIELD_NUMBER = 1;
-    private long timestampUTC_;
-    /**
-     * <code>required uint64 timestampUTC = 1;</code>
-     *
-     * <pre>
-     * 设备时间
-     * </pre>
-     */
-    public boolean hasTimestampUTC() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>required uint64 timestampUTC = 1;</code>
-     *
-     * <pre>
-     * 设备时间
-     * </pre>
-     */
-    public long getTimestampUTC() {
-      return timestampUTC_;
-    }
-
-    public static final int POSITIONTYPE_FIELD_NUMBER = 2;
-    private com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.PositionTypeEnum positionType_;
-    /**
-     * <code>required .proto.PositionEstimate.PositionTypeEnum positionType = 2;</code>
-     */
-    public boolean hasPositionType() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>required .proto.PositionEstimate.PositionTypeEnum positionType = 2;</code>
-     */
-    public com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.PositionTypeEnum getPositionType() {
-      return positionType_;
-    }
-
-    public static final int POINTSEGMENTS_FIELD_NUMBER = 3;
-    private com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D pointSegments_;
-    /**
-     * <code>required .proto.MapPoint2D pointSegments = 3;</code>
-     */
-    public boolean hasPointSegments() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
-    }
-    /**
-     * <code>required .proto.MapPoint2D pointSegments = 3;</code>
-     */
-    public com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D getPointSegments() {
-      return pointSegments_;
-    }
-    /**
-     * <code>required .proto.MapPoint2D pointSegments = 3;</code>
-     */
-    public com.zhk.protobuf.LogicalDataModelProtos.MapPoint2DOrBuilder getPointSegmentsOrBuilder() {
-      return pointSegments_;
-    }
-
-    public static final int HORIZONTALACCURACY_FIELD_NUMBER = 4;
-    private float horizontalAccuracy_;
-    /**
-     * <code>required float horizontalAccuracy = 4;</code>
-     *
-     * <pre>
-     * HDOP定位精度
-     * </pre>
-     */
-    public boolean hasHorizontalAccuracy() {
-      return ((bitField0_ & 0x00000008) == 0x00000008);
-    }
-    /**
-     * <code>required float horizontalAccuracy = 4;</code>
-     *
-     * <pre>
-     * HDOP定位精度
-     * </pre>
-     */
-    public float getHorizontalAccuracy() {
-      return horizontalAccuracy_;
-    }
-
-    public static final int ALTITUDE_FIELD_NUMBER = 5;
-    private float altitude_;
-    /**
-     * <code>optional float altitude = 5;</code>
-     *
-     * <pre>
-     * 海拔
-     * </pre>
-     */
-    public boolean hasAltitude() {
-      return ((bitField0_ & 0x00000010) == 0x00000010);
-    }
-    /**
-     * <code>optional float altitude = 5;</code>
-     *
-     * <pre>
-     * 海拔
-     * </pre>
-     */
-    public float getAltitude() {
-      return altitude_;
-    }
-
-    public static final int ALTITUDEACCURACY_FIELD_NUMBER = 6;
-    private float altitudeAccuracy_;
-    /**
-     * <code>optional float altitudeAccuracy = 6;</code>
-     *
-     * <pre>
-     * VDOP海拔精度
-     * </pre>
-     */
-    public boolean hasAltitudeAccuracy() {
-      return ((bitField0_ & 0x00000020) == 0x00000020);
-    }
-    /**
-     * <code>optional float altitudeAccuracy = 6;</code>
-     *
-     * <pre>
-     * VDOP海拔精度
-     * </pre>
-     */
-    public float getAltitudeAccuracy() {
-      return altitudeAccuracy_;
-    }
-
-    public static final int HEADING_FIELD_NUMBER = 7;
-    private float heading_;
-    /**
-     * <code>optional float heading = 7;</code>
-     *
-     * <pre>
-     * 朝向
-     * </pre>
-     */
-    public boolean hasHeading() {
-      return ((bitField0_ & 0x00000040) == 0x00000040);
-    }
-    /**
-     * <code>optional float heading = 7;</code>
-     *
-     * <pre>
-     * 朝向
-     * </pre>
-     */
-    public float getHeading() {
-      return heading_;
-    }
-
-    public static final int SPEED_FIELD_NUMBER = 8;
-    private float speed_;
-    /**
-     * <code>optional float speed = 8;</code>
-     *
-     * <pre>
-     * 速度
-     * </pre>
-     */
-    public boolean hasSpeed() {
-      return ((bitField0_ & 0x00000080) == 0x00000080);
-    }
-    /**
-     * <code>optional float speed = 8;</code>
-     *
-     * <pre>
-     * 速度
-     * </pre>
-     */
-    public float getSpeed() {
-      return speed_;
-    }
-
-    public static final int SATELLITENUMBER_FIELD_NUMBER = 9;
-    private int satelliteNumber_;
-    /**
-     * <code>optional int32 satelliteNumber = 9;</code>
-     *
-     * <pre>
-     * 卫星数量
-     * </pre>
-     */
-    public boolean hasSatelliteNumber() {
-      return ((bitField0_ & 0x00000100) == 0x00000100);
-    }
-    /**
-     * <code>optional int32 satelliteNumber = 9;</code>
-     *
-     * <pre>
-     * 卫星数量
-     * </pre>
-     */
-    public int getSatelliteNumber() {
-      return satelliteNumber_;
-    }
-
-    public static final int SLOPE_FIELD_NUMBER = 10;
-    private float slope_;
-    /**
-     * <code>optional float slope = 10;</code>
-     *
-     * <pre>
-     * slope
-     * </pre>
-     */
-    public boolean hasSlope() {
-      return ((bitField0_ & 0x00000200) == 0x00000200);
-    }
-    /**
-     * <code>optional float slope = 10;</code>
-     *
-     * <pre>
-     * slope
-     * </pre>
-     */
-    public float getSlope() {
-      return slope_;
-    }
-
-    public static final int HEADINGACCURACY_DEG_FIELD_NUMBER = 11;
-    private float headingAccuracyDeg_;
-    /**
-     * <code>optional float headingAccuracy_deg = 11;</code>
-     */
-    public boolean hasHeadingAccuracyDeg() {
-      return ((bitField0_ & 0x00000400) == 0x00000400);
-    }
-    /**
-     * <code>optional float headingAccuracy_deg = 11;</code>
-     */
-    public float getHeadingAccuracyDeg() {
-      return headingAccuracyDeg_;
-    }
-
-    public static final int SPEEDACCURACY_MPS_FIELD_NUMBER = 12;
-    private float speedAccuracyMps_;
-    /**
-     * <code>optional float speedAccuracy_mps = 12;</code>
-     */
-    public boolean hasSpeedAccuracyMps() {
-      return ((bitField0_ & 0x00000800) == 0x00000800);
-    }
-    /**
-     * <code>optional float speedAccuracy_mps = 12;</code>
-     */
-    public float getSpeedAccuracyMps() {
-      return speedAccuracyMps_;
-    }
-
-    public static final int SLOPEACCURACY_DEG_FIELD_NUMBER = 13;
-    private float slopeAccuracyDeg_;
-    /**
-     * <code>optional float slopeAccuracy_deg = 13;</code>
-     */
-    public boolean hasSlopeAccuracyDeg() {
-      return ((bitField0_ & 0x00001000) == 0x00001000);
-    }
-    /**
-     * <code>optional float slopeAccuracy_deg = 13;</code>
-     */
-    public float getSlopeAccuracyDeg() {
-      return slopeAccuracyDeg_;
-    }
-
-    public static final int HEADINGDETECTIONTYPE_FIELD_NUMBER = 14;
-    private com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.HeadingDetectionEnum headingDetectionType_;
-    /**
-     * <code>optional .proto.PositionEstimate.HeadingDetectionEnum headingDetectionType = 14;</code>
-     */
-    public boolean hasHeadingDetectionType() {
-      return ((bitField0_ & 0x00002000) == 0x00002000);
-    }
-    /**
-     * <code>optional .proto.PositionEstimate.HeadingDetectionEnum headingDetectionType = 14;</code>
-     */
-    public com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.HeadingDetectionEnum getHeadingDetectionType() {
-      return headingDetectionType_;
-    }
-
-    public static final int SPEEDDETECTIONTYPE_FIELD_NUMBER = 15;
-    private com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SpeedDetectionEnum speedDetectionType_;
-    /**
-     * <code>optional .proto.PositionEstimate.SpeedDetectionEnum speedDetectionType = 15;</code>
-     */
-    public boolean hasSpeedDetectionType() {
-      return ((bitField0_ & 0x00004000) == 0x00004000);
-    }
-    /**
-     * <code>optional .proto.PositionEstimate.SpeedDetectionEnum speedDetectionType = 15;</code>
-     */
-    public com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SpeedDetectionEnum getSpeedDetectionType() {
-      return speedDetectionType_;
-    }
-
-    public static final int SLOPEDETECTIONTYPE_FIELD_NUMBER = 16;
-    private com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SlopeDetectionEnum slopeDetectionType_;
-    /**
-     * <code>optional .proto.PositionEstimate.SlopeDetectionEnum slopeDetectionType = 16;</code>
-     */
-    public boolean hasSlopeDetectionType() {
-      return ((bitField0_ & 0x00008000) == 0x00008000);
-    }
-    /**
-     * <code>optional .proto.PositionEstimate.SlopeDetectionEnum slopeDetectionType = 16;</code>
-     */
-    public com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SlopeDetectionEnum getSlopeDetectionType() {
-      return slopeDetectionType_;
-    }
-
-    private void initFields() {
-      timestampUTC_ = 0L;
-      positionType_ = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.PositionTypeEnum.RAW_GPS;
-      pointSegments_ = com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.getDefaultInstance();
-      horizontalAccuracy_ = 0F;
-      altitude_ = 0F;
-      altitudeAccuracy_ = 0F;
-      heading_ = 0F;
-      speed_ = 0F;
-      satelliteNumber_ = 0;
-      slope_ = 0F;
-      headingAccuracyDeg_ = 0F;
-      speedAccuracyMps_ = 0F;
-      slopeAccuracyDeg_ = 0F;
-      headingDetectionType_ = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.HeadingDetectionEnum.HEADING_RAW_GPS;
-      speedDetectionType_ = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SpeedDetectionEnum.SPEED_RAW_GPS;
-      slopeDetectionType_ = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SlopeDetectionEnum.SLOPE_RAW_GPS;
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      if (!hasTimestampUTC()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasPositionType()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasPointSegments()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasHorizontalAccuracy()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!getPointSegments().isInitialized()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeUInt64(1, timestampUTC_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeEnum(2, positionType_.getNumber());
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeMessage(3, pointSegments_);
-      }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeFloat(4, horizontalAccuracy_);
-      }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        output.writeFloat(5, altitude_);
-      }
-      if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        output.writeFloat(6, altitudeAccuracy_);
-      }
-      if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        output.writeFloat(7, heading_);
-      }
-      if (((bitField0_ & 0x00000080) == 0x00000080)) {
-        output.writeFloat(8, speed_);
-      }
-      if (((bitField0_ & 0x00000100) == 0x00000100)) {
-        output.writeInt32(9, satelliteNumber_);
-      }
-      if (((bitField0_ & 0x00000200) == 0x00000200)) {
-        output.writeFloat(10, slope_);
-      }
-      if (((bitField0_ & 0x00000400) == 0x00000400)) {
-        output.writeFloat(11, headingAccuracyDeg_);
-      }
-      if (((bitField0_ & 0x00000800) == 0x00000800)) {
-        output.writeFloat(12, speedAccuracyMps_);
-      }
-      if (((bitField0_ & 0x00001000) == 0x00001000)) {
-        output.writeFloat(13, slopeAccuracyDeg_);
-      }
-      if (((bitField0_ & 0x00002000) == 0x00002000)) {
-        output.writeEnum(14, headingDetectionType_.getNumber());
-      }
-      if (((bitField0_ & 0x00004000) == 0x00004000)) {
-        output.writeEnum(15, speedDetectionType_.getNumber());
-      }
-      if (((bitField0_ & 0x00008000) == 0x00008000)) {
-        output.writeEnum(16, slopeDetectionType_.getNumber());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(1, timestampUTC_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, positionType_.getNumber());
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, pointSegments_);
-      }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(4, horizontalAccuracy_);
-      }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(5, altitude_);
-      }
-      if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(6, altitudeAccuracy_);
-      }
-      if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(7, heading_);
-      }
-      if (((bitField0_ & 0x00000080) == 0x00000080)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(8, speed_);
-      }
-      if (((bitField0_ & 0x00000100) == 0x00000100)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(9, satelliteNumber_);
-      }
-      if (((bitField0_ & 0x00000200) == 0x00000200)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(10, slope_);
-      }
-      if (((bitField0_ & 0x00000400) == 0x00000400)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(11, headingAccuracyDeg_);
-      }
-      if (((bitField0_ & 0x00000800) == 0x00000800)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(12, speedAccuracyMps_);
-      }
-      if (((bitField0_ & 0x00001000) == 0x00001000)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(13, slopeAccuracyDeg_);
-      }
-      if (((bitField0_ & 0x00002000) == 0x00002000)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(14, headingDetectionType_.getNumber());
-      }
-      if (((bitField0_ & 0x00004000) == 0x00004000)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(15, speedDetectionType_.getNumber());
-      }
-      if (((bitField0_ & 0x00008000) == 0x00008000)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(16, slopeDetectionType_.getNumber());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @Override
-    protected Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
-    public static com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-
-    @Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code proto.PositionEstimate}
-     *
+     * <p/>
      * <pre>
      * 定位点
      * </pre>
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:proto.PositionEstimate)
-        com.zhk.protobuf.LogicalDataModelProtos.PositionEstimateOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_PositionEstimate_descriptor;
-      }
+    public static final class PositionEstimate extends
+            com.google.protobuf.GeneratedMessage implements
+            // @@protoc_insertion_point(message_implements:proto.PositionEstimate)
+            PositionEstimateOrBuilder {
+        public static final int TIMESTAMPUTC_FIELD_NUMBER = 1;
+        public static final int POSITIONTYPE_FIELD_NUMBER = 2;
+        public static final int POINTSEGMENTS_FIELD_NUMBER = 3;
+        public static final int HORIZONTALACCURACY_FIELD_NUMBER = 4;
+        public static final int ALTITUDE_FIELD_NUMBER = 5;
+        public static final int ALTITUDEACCURACY_FIELD_NUMBER = 6;
+        public static final int HEADING_FIELD_NUMBER = 7;
+        public static final int SPEED_FIELD_NUMBER = 8;
+        public static final int SATELLITENUMBER_FIELD_NUMBER = 9;
+        public static final int SLOPE_FIELD_NUMBER = 10;
+        public static final int HEADINGACCURACY_DEG_FIELD_NUMBER = 11;
+        public static final int SPEEDACCURACY_MPS_FIELD_NUMBER = 12;
+        public static final int SLOPEACCURACY_DEG_FIELD_NUMBER = 13;
+        public static final int HEADINGDETECTIONTYPE_FIELD_NUMBER = 14;
+        public static final int SPEEDDETECTIONTYPE_FIELD_NUMBER = 15;
+        public static final int SLOPEDETECTIONTYPE_FIELD_NUMBER = 16;
+        private static final PositionEstimate defaultInstance;
+        private static final long serialVersionUID = 0L;
+        public static com.google.protobuf.Parser<PositionEstimate> PARSER =
+                new com.google.protobuf.AbstractParser<PositionEstimate>() {
+                    public PositionEstimate parsePartialFrom(
+                            com.google.protobuf.CodedInputStream input,
+                            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                            throws com.google.protobuf.InvalidProtocolBufferException {
+                        return new PositionEstimate(input, extensionRegistry);
+                    }
+                };
+        private final com.google.protobuf.UnknownFieldSet unknownFields;
+        private int bitField0_;
+        private long timestampUTC_;
+        private com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.PositionTypeEnum positionType_;
+        private com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D pointSegments_;
+        private float horizontalAccuracy_;
+        private float altitude_;
+        private float altitudeAccuracy_;
+        private float heading_;
+        private float speed_;
+        private int satelliteNumber_;
+        private float slope_;
+        private float headingAccuracyDeg_;
+        private float speedAccuracyMps_;
+        private float slopeAccuracyDeg_;
+        private com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.HeadingDetectionEnum headingDetectionType_;
+        private com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SpeedDetectionEnum speedDetectionType_;
+        private com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SlopeDetectionEnum slopeDetectionType_;
+        private byte memoizedIsInitialized = -1;
+        private int memoizedSerializedSize = -1;
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_PositionEstimate_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.class, com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.Builder.class);
-      }
+        // Use PositionEstimate.newBuilder() to construct.
+        private PositionEstimate(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+            super(builder);
+            this.unknownFields = builder.getUnknownFields();
+        }
 
-      // Construct using com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+        private PositionEstimate(boolean noInit) {
+            this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+        }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getPointSegmentsFieldBuilder();
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-
-      public Builder clear() {
-        super.clear();
-        timestampUTC_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        positionType_ = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.PositionTypeEnum.RAW_GPS;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        if (pointSegmentsBuilder_ == null) {
-          pointSegments_ = com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.getDefaultInstance();
-        } else {
-          pointSegmentsBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000004);
-        horizontalAccuracy_ = 0F;
-        bitField0_ = (bitField0_ & ~0x00000008);
-        altitude_ = 0F;
-        bitField0_ = (bitField0_ & ~0x00000010);
-        altitudeAccuracy_ = 0F;
-        bitField0_ = (bitField0_ & ~0x00000020);
-        heading_ = 0F;
-        bitField0_ = (bitField0_ & ~0x00000040);
-        speed_ = 0F;
-        bitField0_ = (bitField0_ & ~0x00000080);
-        satelliteNumber_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000100);
-        slope_ = 0F;
-        bitField0_ = (bitField0_ & ~0x00000200);
-        headingAccuracyDeg_ = 0F;
-        bitField0_ = (bitField0_ & ~0x00000400);
-        speedAccuracyMps_ = 0F;
-        bitField0_ = (bitField0_ & ~0x00000800);
-        slopeAccuracyDeg_ = 0F;
-        bitField0_ = (bitField0_ & ~0x00001000);
-        headingDetectionType_ = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.HeadingDetectionEnum.HEADING_RAW_GPS;
-        bitField0_ = (bitField0_ & ~0x00002000);
-        speedDetectionType_ = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SpeedDetectionEnum.SPEED_RAW_GPS;
-        bitField0_ = (bitField0_ & ~0x00004000);
-        slopeDetectionType_ = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SlopeDetectionEnum.SLOPE_RAW_GPS;
-        bitField0_ = (bitField0_ & ~0x00008000);
-        return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_PositionEstimate_descriptor;
-      }
-
-      public com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate getDefaultInstanceForType() {
-        return com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.getDefaultInstance();
-      }
-
-      public com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate build() {
-        com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate buildPartial() {
-        com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate result = new com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.timestampUTC_ = timestampUTC_;
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.positionType_ = positionType_;
-        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-          to_bitField0_ |= 0x00000004;
-        }
-        if (pointSegmentsBuilder_ == null) {
-          result.pointSegments_ = pointSegments_;
-        } else {
-          result.pointSegments_ = pointSegmentsBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
-          to_bitField0_ |= 0x00000008;
-        }
-        result.horizontalAccuracy_ = horizontalAccuracy_;
-        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
-          to_bitField0_ |= 0x00000010;
-        }
-        result.altitude_ = altitude_;
-        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
-          to_bitField0_ |= 0x00000020;
-        }
-        result.altitudeAccuracy_ = altitudeAccuracy_;
-        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
-          to_bitField0_ |= 0x00000040;
-        }
-        result.heading_ = heading_;
-        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
-          to_bitField0_ |= 0x00000080;
-        }
-        result.speed_ = speed_;
-        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
-          to_bitField0_ |= 0x00000100;
-        }
-        result.satelliteNumber_ = satelliteNumber_;
-        if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
-          to_bitField0_ |= 0x00000200;
-        }
-        result.slope_ = slope_;
-        if (((from_bitField0_ & 0x00000400) == 0x00000400)) {
-          to_bitField0_ |= 0x00000400;
-        }
-        result.headingAccuracyDeg_ = headingAccuracyDeg_;
-        if (((from_bitField0_ & 0x00000800) == 0x00000800)) {
-          to_bitField0_ |= 0x00000800;
-        }
-        result.speedAccuracyMps_ = speedAccuracyMps_;
-        if (((from_bitField0_ & 0x00001000) == 0x00001000)) {
-          to_bitField0_ |= 0x00001000;
-        }
-        result.slopeAccuracyDeg_ = slopeAccuracyDeg_;
-        if (((from_bitField0_ & 0x00002000) == 0x00002000)) {
-          to_bitField0_ |= 0x00002000;
-        }
-        result.headingDetectionType_ = headingDetectionType_;
-        if (((from_bitField0_ & 0x00004000) == 0x00004000)) {
-          to_bitField0_ |= 0x00004000;
-        }
-        result.speedDetectionType_ = speedDetectionType_;
-        if (((from_bitField0_ & 0x00008000) == 0x00008000)) {
-          to_bitField0_ |= 0x00008000;
-        }
-        result.slopeDetectionType_ = slopeDetectionType_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate) {
-          return mergeFrom((com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate other) {
-        if (other == com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.getDefaultInstance()) return this;
-        if (other.hasTimestampUTC()) {
-          setTimestampUTC(other.getTimestampUTC());
-        }
-        if (other.hasPositionType()) {
-          setPositionType(other.getPositionType());
-        }
-        if (other.hasPointSegments()) {
-          mergePointSegments(other.getPointSegments());
-        }
-        if (other.hasHorizontalAccuracy()) {
-          setHorizontalAccuracy(other.getHorizontalAccuracy());
-        }
-        if (other.hasAltitude()) {
-          setAltitude(other.getAltitude());
-        }
-        if (other.hasAltitudeAccuracy()) {
-          setAltitudeAccuracy(other.getAltitudeAccuracy());
-        }
-        if (other.hasHeading()) {
-          setHeading(other.getHeading());
-        }
-        if (other.hasSpeed()) {
-          setSpeed(other.getSpeed());
-        }
-        if (other.hasSatelliteNumber()) {
-          setSatelliteNumber(other.getSatelliteNumber());
-        }
-        if (other.hasSlope()) {
-          setSlope(other.getSlope());
-        }
-        if (other.hasHeadingAccuracyDeg()) {
-          setHeadingAccuracyDeg(other.getHeadingAccuracyDeg());
-        }
-        if (other.hasSpeedAccuracyMps()) {
-          setSpeedAccuracyMps(other.getSpeedAccuracyMps());
-        }
-        if (other.hasSlopeAccuracyDeg()) {
-          setSlopeAccuracyDeg(other.getSlopeAccuracyDeg());
-        }
-        if (other.hasHeadingDetectionType()) {
-          setHeadingDetectionType(other.getHeadingDetectionType());
-        }
-        if (other.hasSpeedDetectionType()) {
-          setSpeedDetectionType(other.getSpeedDetectionType());
-        }
-        if (other.hasSlopeDetectionType()) {
-          setSlopeDetectionType(other.getSlopeDetectionType());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        if (!hasTimestampUTC()) {
-          
-          return false;
-        }
-        if (!hasPositionType()) {
-          
-          return false;
-        }
-        if (!hasPointSegments()) {
-          
-          return false;
-        }
-        if (!hasHorizontalAccuracy()) {
-          
-          return false;
-        }
-        if (!getPointSegments().isInitialized()) {
-          
-          return false;
-        }
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private long timestampUTC_ ;
-      /**
-       * <code>required uint64 timestampUTC = 1;</code>
-       *
-       * <pre>
-       * 设备时间
-       * </pre>
-       */
-      public boolean hasTimestampUTC() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>required uint64 timestampUTC = 1;</code>
-       *
-       * <pre>
-       * 设备时间
-       * </pre>
-       */
-      public long getTimestampUTC() {
-        return timestampUTC_;
-      }
-      /**
-       * <code>required uint64 timestampUTC = 1;</code>
-       *
-       * <pre>
-       * 设备时间
-       * </pre>
-       */
-      public Builder setTimestampUTC(long value) {
-        bitField0_ |= 0x00000001;
-        timestampUTC_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required uint64 timestampUTC = 1;</code>
-       *
-       * <pre>
-       * 设备时间
-       * </pre>
-       */
-      public Builder clearTimestampUTC() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        timestampUTC_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.PositionTypeEnum positionType_ = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.PositionTypeEnum.RAW_GPS;
-      /**
-       * <code>required .proto.PositionEstimate.PositionTypeEnum positionType = 2;</code>
-       */
-      public boolean hasPositionType() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>required .proto.PositionEstimate.PositionTypeEnum positionType = 2;</code>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.PositionTypeEnum getPositionType() {
-        return positionType_;
-      }
-      /**
-       * <code>required .proto.PositionEstimate.PositionTypeEnum positionType = 2;</code>
-       */
-      public Builder setPositionType(com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.PositionTypeEnum value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000002;
-        positionType_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required .proto.PositionEstimate.PositionTypeEnum positionType = 2;</code>
-       */
-      public Builder clearPositionType() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        positionType_ = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.PositionTypeEnum.RAW_GPS;
-        onChanged();
-        return this;
-      }
-
-      private com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D pointSegments_ = com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
-          com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.Builder, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2DOrBuilder> pointSegmentsBuilder_;
-      /**
-       * <code>required .proto.MapPoint2D pointSegments = 3;</code>
-       */
-      public boolean hasPointSegments() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>required .proto.MapPoint2D pointSegments = 3;</code>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D getPointSegments() {
-        if (pointSegmentsBuilder_ == null) {
-          return pointSegments_;
-        } else {
-          return pointSegmentsBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>required .proto.MapPoint2D pointSegments = 3;</code>
-       */
-      public Builder setPointSegments(com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D value) {
-        if (pointSegmentsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          pointSegments_ = value;
-          onChanged();
-        } else {
-          pointSegmentsBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000004;
-        return this;
-      }
-      /**
-       * <code>required .proto.MapPoint2D pointSegments = 3;</code>
-       */
-      public Builder setPointSegments(
-          com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.Builder builderForValue) {
-        if (pointSegmentsBuilder_ == null) {
-          pointSegments_ = builderForValue.build();
-          onChanged();
-        } else {
-          pointSegmentsBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000004;
-        return this;
-      }
-      /**
-       * <code>required .proto.MapPoint2D pointSegments = 3;</code>
-       */
-      public Builder mergePointSegments(com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D value) {
-        if (pointSegmentsBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004) &&
-              pointSegments_ != com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.getDefaultInstance()) {
-            pointSegments_ =
-              com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.newBuilder(pointSegments_).mergeFrom(value).buildPartial();
-          } else {
-            pointSegments_ = value;
-          }
-          onChanged();
-        } else {
-          pointSegmentsBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000004;
-        return this;
-      }
-      /**
-       * <code>required .proto.MapPoint2D pointSegments = 3;</code>
-       */
-      public Builder clearPointSegments() {
-        if (pointSegmentsBuilder_ == null) {
-          pointSegments_ = com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.getDefaultInstance();
-          onChanged();
-        } else {
-          pointSegmentsBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000004);
-        return this;
-      }
-      /**
-       * <code>required .proto.MapPoint2D pointSegments = 3;</code>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.Builder getPointSegmentsBuilder() {
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return getPointSegmentsFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>required .proto.MapPoint2D pointSegments = 3;</code>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.MapPoint2DOrBuilder getPointSegmentsOrBuilder() {
-        if (pointSegmentsBuilder_ != null) {
-          return pointSegmentsBuilder_.getMessageOrBuilder();
-        } else {
-          return pointSegments_;
-        }
-      }
-      /**
-       * <code>required .proto.MapPoint2D pointSegments = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.Builder, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2DOrBuilder> 
-          getPointSegmentsFieldBuilder() {
-        if (pointSegmentsBuilder_ == null) {
-          pointSegmentsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.Builder, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2DOrBuilder>(
-                  getPointSegments(),
-                  getParentForChildren(),
-                  isClean());
-          pointSegments_ = null;
-        }
-        return pointSegmentsBuilder_;
-      }
-
-      private float horizontalAccuracy_ ;
-      /**
-       * <code>required float horizontalAccuracy = 4;</code>
-       *
-       * <pre>
-       * HDOP定位精度
-       * </pre>
-       */
-      public boolean hasHorizontalAccuracy() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
-      }
-      /**
-       * <code>required float horizontalAccuracy = 4;</code>
-       *
-       * <pre>
-       * HDOP定位精度
-       * </pre>
-       */
-      public float getHorizontalAccuracy() {
-        return horizontalAccuracy_;
-      }
-      /**
-       * <code>required float horizontalAccuracy = 4;</code>
-       *
-       * <pre>
-       * HDOP定位精度
-       * </pre>
-       */
-      public Builder setHorizontalAccuracy(float value) {
-        bitField0_ |= 0x00000008;
-        horizontalAccuracy_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required float horizontalAccuracy = 4;</code>
-       *
-       * <pre>
-       * HDOP定位精度
-       * </pre>
-       */
-      public Builder clearHorizontalAccuracy() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        horizontalAccuracy_ = 0F;
-        onChanged();
-        return this;
-      }
-
-      private float altitude_ ;
-      /**
-       * <code>optional float altitude = 5;</code>
-       *
-       * <pre>
-       * 海拔
-       * </pre>
-       */
-      public boolean hasAltitude() {
-        return ((bitField0_ & 0x00000010) == 0x00000010);
-      }
-      /**
-       * <code>optional float altitude = 5;</code>
-       *
-       * <pre>
-       * 海拔
-       * </pre>
-       */
-      public float getAltitude() {
-        return altitude_;
-      }
-      /**
-       * <code>optional float altitude = 5;</code>
-       *
-       * <pre>
-       * 海拔
-       * </pre>
-       */
-      public Builder setAltitude(float value) {
-        bitField0_ |= 0x00000010;
-        altitude_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional float altitude = 5;</code>
-       *
-       * <pre>
-       * 海拔
-       * </pre>
-       */
-      public Builder clearAltitude() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        altitude_ = 0F;
-        onChanged();
-        return this;
-      }
-
-      private float altitudeAccuracy_ ;
-      /**
-       * <code>optional float altitudeAccuracy = 6;</code>
-       *
-       * <pre>
-       * VDOP海拔精度
-       * </pre>
-       */
-      public boolean hasAltitudeAccuracy() {
-        return ((bitField0_ & 0x00000020) == 0x00000020);
-      }
-      /**
-       * <code>optional float altitudeAccuracy = 6;</code>
-       *
-       * <pre>
-       * VDOP海拔精度
-       * </pre>
-       */
-      public float getAltitudeAccuracy() {
-        return altitudeAccuracy_;
-      }
-      /**
-       * <code>optional float altitudeAccuracy = 6;</code>
-       *
-       * <pre>
-       * VDOP海拔精度
-       * </pre>
-       */
-      public Builder setAltitudeAccuracy(float value) {
-        bitField0_ |= 0x00000020;
-        altitudeAccuracy_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional float altitudeAccuracy = 6;</code>
-       *
-       * <pre>
-       * VDOP海拔精度
-       * </pre>
-       */
-      public Builder clearAltitudeAccuracy() {
-        bitField0_ = (bitField0_ & ~0x00000020);
-        altitudeAccuracy_ = 0F;
-        onChanged();
-        return this;
-      }
-
-      private float heading_ ;
-      /**
-       * <code>optional float heading = 7;</code>
-       *
-       * <pre>
-       * 朝向
-       * </pre>
-       */
-      public boolean hasHeading() {
-        return ((bitField0_ & 0x00000040) == 0x00000040);
-      }
-      /**
-       * <code>optional float heading = 7;</code>
-       *
-       * <pre>
-       * 朝向
-       * </pre>
-       */
-      public float getHeading() {
-        return heading_;
-      }
-      /**
-       * <code>optional float heading = 7;</code>
-       *
-       * <pre>
-       * 朝向
-       * </pre>
-       */
-      public Builder setHeading(float value) {
-        bitField0_ |= 0x00000040;
-        heading_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional float heading = 7;</code>
-       *
-       * <pre>
-       * 朝向
-       * </pre>
-       */
-      public Builder clearHeading() {
-        bitField0_ = (bitField0_ & ~0x00000040);
-        heading_ = 0F;
-        onChanged();
-        return this;
-      }
-
-      private float speed_ ;
-      /**
-       * <code>optional float speed = 8;</code>
-       *
-       * <pre>
-       * 速度
-       * </pre>
-       */
-      public boolean hasSpeed() {
-        return ((bitField0_ & 0x00000080) == 0x00000080);
-      }
-      /**
-       * <code>optional float speed = 8;</code>
-       *
-       * <pre>
-       * 速度
-       * </pre>
-       */
-      public float getSpeed() {
-        return speed_;
-      }
-      /**
-       * <code>optional float speed = 8;</code>
-       *
-       * <pre>
-       * 速度
-       * </pre>
-       */
-      public Builder setSpeed(float value) {
-        bitField0_ |= 0x00000080;
-        speed_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional float speed = 8;</code>
-       *
-       * <pre>
-       * 速度
-       * </pre>
-       */
-      public Builder clearSpeed() {
-        bitField0_ = (bitField0_ & ~0x00000080);
-        speed_ = 0F;
-        onChanged();
-        return this;
-      }
-
-      private int satelliteNumber_ ;
-      /**
-       * <code>optional int32 satelliteNumber = 9;</code>
-       *
-       * <pre>
-       * 卫星数量
-       * </pre>
-       */
-      public boolean hasSatelliteNumber() {
-        return ((bitField0_ & 0x00000100) == 0x00000100);
-      }
-      /**
-       * <code>optional int32 satelliteNumber = 9;</code>
-       *
-       * <pre>
-       * 卫星数量
-       * </pre>
-       */
-      public int getSatelliteNumber() {
-        return satelliteNumber_;
-      }
-      /**
-       * <code>optional int32 satelliteNumber = 9;</code>
-       *
-       * <pre>
-       * 卫星数量
-       * </pre>
-       */
-      public Builder setSatelliteNumber(int value) {
-        bitField0_ |= 0x00000100;
-        satelliteNumber_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int32 satelliteNumber = 9;</code>
-       *
-       * <pre>
-       * 卫星数量
-       * </pre>
-       */
-      public Builder clearSatelliteNumber() {
-        bitField0_ = (bitField0_ & ~0x00000100);
-        satelliteNumber_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private float slope_ ;
-      /**
-       * <code>optional float slope = 10;</code>
-       *
-       * <pre>
-       * slope
-       * </pre>
-       */
-      public boolean hasSlope() {
-        return ((bitField0_ & 0x00000200) == 0x00000200);
-      }
-      /**
-       * <code>optional float slope = 10;</code>
-       *
-       * <pre>
-       * slope
-       * </pre>
-       */
-      public float getSlope() {
-        return slope_;
-      }
-      /**
-       * <code>optional float slope = 10;</code>
-       *
-       * <pre>
-       * slope
-       * </pre>
-       */
-      public Builder setSlope(float value) {
-        bitField0_ |= 0x00000200;
-        slope_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional float slope = 10;</code>
-       *
-       * <pre>
-       * slope
-       * </pre>
-       */
-      public Builder clearSlope() {
-        bitField0_ = (bitField0_ & ~0x00000200);
-        slope_ = 0F;
-        onChanged();
-        return this;
-      }
-
-      private float headingAccuracyDeg_ ;
-      /**
-       * <code>optional float headingAccuracy_deg = 11;</code>
-       */
-      public boolean hasHeadingAccuracyDeg() {
-        return ((bitField0_ & 0x00000400) == 0x00000400);
-      }
-      /**
-       * <code>optional float headingAccuracy_deg = 11;</code>
-       */
-      public float getHeadingAccuracyDeg() {
-        return headingAccuracyDeg_;
-      }
-      /**
-       * <code>optional float headingAccuracy_deg = 11;</code>
-       */
-      public Builder setHeadingAccuracyDeg(float value) {
-        bitField0_ |= 0x00000400;
-        headingAccuracyDeg_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional float headingAccuracy_deg = 11;</code>
-       */
-      public Builder clearHeadingAccuracyDeg() {
-        bitField0_ = (bitField0_ & ~0x00000400);
-        headingAccuracyDeg_ = 0F;
-        onChanged();
-        return this;
-      }
-
-      private float speedAccuracyMps_ ;
-      /**
-       * <code>optional float speedAccuracy_mps = 12;</code>
-       */
-      public boolean hasSpeedAccuracyMps() {
-        return ((bitField0_ & 0x00000800) == 0x00000800);
-      }
-      /**
-       * <code>optional float speedAccuracy_mps = 12;</code>
-       */
-      public float getSpeedAccuracyMps() {
-        return speedAccuracyMps_;
-      }
-      /**
-       * <code>optional float speedAccuracy_mps = 12;</code>
-       */
-      public Builder setSpeedAccuracyMps(float value) {
-        bitField0_ |= 0x00000800;
-        speedAccuracyMps_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional float speedAccuracy_mps = 12;</code>
-       */
-      public Builder clearSpeedAccuracyMps() {
-        bitField0_ = (bitField0_ & ~0x00000800);
-        speedAccuracyMps_ = 0F;
-        onChanged();
-        return this;
-      }
-
-      private float slopeAccuracyDeg_ ;
-      /**
-       * <code>optional float slopeAccuracy_deg = 13;</code>
-       */
-      public boolean hasSlopeAccuracyDeg() {
-        return ((bitField0_ & 0x00001000) == 0x00001000);
-      }
-      /**
-       * <code>optional float slopeAccuracy_deg = 13;</code>
-       */
-      public float getSlopeAccuracyDeg() {
-        return slopeAccuracyDeg_;
-      }
-      /**
-       * <code>optional float slopeAccuracy_deg = 13;</code>
-       */
-      public Builder setSlopeAccuracyDeg(float value) {
-        bitField0_ |= 0x00001000;
-        slopeAccuracyDeg_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional float slopeAccuracy_deg = 13;</code>
-       */
-      public Builder clearSlopeAccuracyDeg() {
-        bitField0_ = (bitField0_ & ~0x00001000);
-        slopeAccuracyDeg_ = 0F;
-        onChanged();
-        return this;
-      }
-
-      private com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.HeadingDetectionEnum headingDetectionType_ = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.HeadingDetectionEnum.HEADING_RAW_GPS;
-      /**
-       * <code>optional .proto.PositionEstimate.HeadingDetectionEnum headingDetectionType = 14;</code>
-       */
-      public boolean hasHeadingDetectionType() {
-        return ((bitField0_ & 0x00002000) == 0x00002000);
-      }
-      /**
-       * <code>optional .proto.PositionEstimate.HeadingDetectionEnum headingDetectionType = 14;</code>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.HeadingDetectionEnum getHeadingDetectionType() {
-        return headingDetectionType_;
-      }
-      /**
-       * <code>optional .proto.PositionEstimate.HeadingDetectionEnum headingDetectionType = 14;</code>
-       */
-      public Builder setHeadingDetectionType(com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.HeadingDetectionEnum value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00002000;
-        headingDetectionType_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional .proto.PositionEstimate.HeadingDetectionEnum headingDetectionType = 14;</code>
-       */
-      public Builder clearHeadingDetectionType() {
-        bitField0_ = (bitField0_ & ~0x00002000);
-        headingDetectionType_ = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.HeadingDetectionEnum.HEADING_RAW_GPS;
-        onChanged();
-        return this;
-      }
-
-      private com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SpeedDetectionEnum speedDetectionType_ = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SpeedDetectionEnum.SPEED_RAW_GPS;
-      /**
-       * <code>optional .proto.PositionEstimate.SpeedDetectionEnum speedDetectionType = 15;</code>
-       */
-      public boolean hasSpeedDetectionType() {
-        return ((bitField0_ & 0x00004000) == 0x00004000);
-      }
-      /**
-       * <code>optional .proto.PositionEstimate.SpeedDetectionEnum speedDetectionType = 15;</code>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SpeedDetectionEnum getSpeedDetectionType() {
-        return speedDetectionType_;
-      }
-      /**
-       * <code>optional .proto.PositionEstimate.SpeedDetectionEnum speedDetectionType = 15;</code>
-       */
-      public Builder setSpeedDetectionType(com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SpeedDetectionEnum value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00004000;
-        speedDetectionType_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional .proto.PositionEstimate.SpeedDetectionEnum speedDetectionType = 15;</code>
-       */
-      public Builder clearSpeedDetectionType() {
-        bitField0_ = (bitField0_ & ~0x00004000);
-        speedDetectionType_ = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SpeedDetectionEnum.SPEED_RAW_GPS;
-        onChanged();
-        return this;
-      }
-
-      private com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SlopeDetectionEnum slopeDetectionType_ = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SlopeDetectionEnum.SLOPE_RAW_GPS;
-      /**
-       * <code>optional .proto.PositionEstimate.SlopeDetectionEnum slopeDetectionType = 16;</code>
-       */
-      public boolean hasSlopeDetectionType() {
-        return ((bitField0_ & 0x00008000) == 0x00008000);
-      }
-      /**
-       * <code>optional .proto.PositionEstimate.SlopeDetectionEnum slopeDetectionType = 16;</code>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SlopeDetectionEnum getSlopeDetectionType() {
-        return slopeDetectionType_;
-      }
-      /**
-       * <code>optional .proto.PositionEstimate.SlopeDetectionEnum slopeDetectionType = 16;</code>
-       */
-      public Builder setSlopeDetectionType(com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SlopeDetectionEnum value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00008000;
-        slopeDetectionType_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional .proto.PositionEstimate.SlopeDetectionEnum slopeDetectionType = 16;</code>
-       */
-      public Builder clearSlopeDetectionType() {
-        bitField0_ = (bitField0_ & ~0x00008000);
-        slopeDetectionType_ = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SlopeDetectionEnum.SLOPE_RAW_GPS;
-        onChanged();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:proto.PositionEstimate)
-    }
-
-    static {
-      defaultInstance = new PositionEstimate(true);
-      defaultInstance.initFields();
-    }
-
-    // @@protoc_insertion_point(class_scope:proto.PositionEstimate)
-  }
-
-  public interface PathSegmentOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:proto.PathSegment)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>required uint64 timestampUTC = 1;</code>
-     *
-     * <pre>
-     * 算路之后采纳路线的时间
-     * </pre>
-     */
-    boolean hasTimestampUTC();
-    /**
-     * <code>required uint64 timestampUTC = 1;</code>
-     *
-     * <pre>
-     * 算路之后采纳路线的时间
-     * </pre>
-     */
-    long getTimestampUTC();
-
-    /**
-     * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
-     */
-    java.util.List<com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D> 
-        getPointSegmentsList();
-    /**
-     * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
-     */
-    com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D getPointSegments(int index);
-    /**
-     * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
-     */
-    int getPointSegmentsCount();
-    /**
-     * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
-     */
-    java.util.List<? extends com.zhk.protobuf.LogicalDataModelProtos.MapPoint2DOrBuilder> 
-        getPointSegmentsOrBuilderList();
-    /**
-     * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
-     */
-    com.zhk.protobuf.LogicalDataModelProtos.MapPoint2DOrBuilder getPointSegmentsOrBuilder(
-            int index);
-
-    /**
-     * <code>repeated int64 navinfoIds = 3;</code>
-     *
-     * <pre>
-     * 在线算路产出的四维ID
-     * </pre>
-     */
-    java.util.List<Long> getNavinfoIdsList();
-    /**
-     * <code>repeated int64 navinfoIds = 3;</code>
-     *
-     * <pre>
-     * 在线算路产出的四维ID
-     * </pre>
-     */
-    int getNavinfoIdsCount();
-    /**
-     * <code>repeated int64 navinfoIds = 3;</code>
-     *
-     * <pre>
-     * 在线算路产出的四维ID
-     * </pre>
-     */
-    long getNavinfoIds(int index);
-
-    /**
-     * <code>required .proto.PathSegment.RouteBaseTypeEnum routeBaseType = 4;</code>
-     *
-     * <pre>
-     * 离线还是在线算路
-     * </pre>
-     */
-    boolean hasRouteBaseType();
-    /**
-     * <code>required .proto.PathSegment.RouteBaseTypeEnum routeBaseType = 4;</code>
-     *
-     * <pre>
-     * 离线还是在线算路
-     * </pre>
-     */
-    com.zhk.protobuf.LogicalDataModelProtos.PathSegment.RouteBaseTypeEnum getRouteBaseType();
-
-    /**
-     * <code>optional string navinfoDataVer = 5;</code>
-     *
-     * <pre>
-     * 离线算路所用数据的版本
-     * </pre>
-     */
-    boolean hasNavinfoDataVer();
-    /**
-     * <code>optional string navinfoDataVer = 5;</code>
-     *
-     * <pre>
-     * 离线算路所用数据的版本
-     * </pre>
-     */
-    String getNavinfoDataVer();
-    /**
-     * <code>optional string navinfoDataVer = 5;</code>
-     *
-     * <pre>
-     * 离线算路所用数据的版本
-     * </pre>
-     */
-    com.google.protobuf.ByteString
-        getNavinfoDataVerBytes();
-  }
-  /**
-   * Protobuf type {@code proto.PathSegment}
-   *
-   * <pre>
-   * 路线
-   * </pre>
-   */
-  public static final class PathSegment extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:proto.PathSegment)
-      PathSegmentOrBuilder {
-    // Use PathSegment.newBuilder() to construct.
-    private PathSegment(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-      this.unknownFields = builder.getUnknownFields();
-    }
-    private PathSegment(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final PathSegment defaultInstance;
-    public static PathSegment getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public PathSegment getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private PathSegment(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
+        private PositionEstimate(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            initFields();
+            int mutable_bitField0_ = 0;
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+                    com.google.protobuf.UnknownFieldSet.newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                        case 0:
+                            done = true;
+                            break;
+                        default: {
+                            if (!parseUnknownField(input, unknownFields,
+                                    extensionRegistry, tag)) {
+                                done = true;
+                            }
+                            break;
+                        }
+                        case 8: {
+                            bitField0_ |= 0x00000001;
+                            timestampUTC_ = input.readUInt64();
+                            break;
+                        }
+                        case 16: {
+                            int rawValue = input.readEnum();
+                            com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.PositionTypeEnum value = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.PositionTypeEnum.valueOf(rawValue);
+                            if (value == null) {
+                                unknownFields.mergeVarintField(2, rawValue);
+                            } else {
+                                bitField0_ |= 0x00000002;
+                                positionType_ = value;
+                            }
+                            break;
+                        }
+                        case 26: {
+                            com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.Builder subBuilder = null;
+                            if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                                subBuilder = pointSegments_.toBuilder();
+                            }
+                            pointSegments_ = input.readMessage(com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.PARSER, extensionRegistry);
+                            if (subBuilder != null) {
+                                subBuilder.mergeFrom(pointSegments_);
+                                pointSegments_ = subBuilder.buildPartial();
+                            }
+                            bitField0_ |= 0x00000004;
+                            break;
+                        }
+                        case 37: {
+                            bitField0_ |= 0x00000008;
+                            horizontalAccuracy_ = input.readFloat();
+                            break;
+                        }
+                        case 45: {
+                            bitField0_ |= 0x00000010;
+                            altitude_ = input.readFloat();
+                            break;
+                        }
+                        case 53: {
+                            bitField0_ |= 0x00000020;
+                            altitudeAccuracy_ = input.readFloat();
+                            break;
+                        }
+                        case 61: {
+                            bitField0_ |= 0x00000040;
+                            heading_ = input.readFloat();
+                            break;
+                        }
+                        case 69: {
+                            bitField0_ |= 0x00000080;
+                            speed_ = input.readFloat();
+                            break;
+                        }
+                        case 72: {
+                            bitField0_ |= 0x00000100;
+                            satelliteNumber_ = input.readInt32();
+                            break;
+                        }
+                        case 85: {
+                            bitField0_ |= 0x00000200;
+                            slope_ = input.readFloat();
+                            break;
+                        }
+                        case 93: {
+                            bitField0_ |= 0x00000400;
+                            headingAccuracyDeg_ = input.readFloat();
+                            break;
+                        }
+                        case 101: {
+                            bitField0_ |= 0x00000800;
+                            speedAccuracyMps_ = input.readFloat();
+                            break;
+                        }
+                        case 109: {
+                            bitField0_ |= 0x00001000;
+                            slopeAccuracyDeg_ = input.readFloat();
+                            break;
+                        }
+                        case 112: {
+                            int rawValue = input.readEnum();
+                            com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.HeadingDetectionEnum value = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.HeadingDetectionEnum.valueOf(rawValue);
+                            if (value == null) {
+                                unknownFields.mergeVarintField(14, rawValue);
+                            } else {
+                                bitField0_ |= 0x00002000;
+                                headingDetectionType_ = value;
+                            }
+                            break;
+                        }
+                        case 120: {
+                            int rawValue = input.readEnum();
+                            com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SpeedDetectionEnum value = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SpeedDetectionEnum.valueOf(rawValue);
+                            if (value == null) {
+                                unknownFields.mergeVarintField(15, rawValue);
+                            } else {
+                                bitField0_ |= 0x00004000;
+                                speedDetectionType_ = value;
+                            }
+                            break;
+                        }
+                        case 128: {
+                            int rawValue = input.readEnum();
+                            com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SlopeDetectionEnum value = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SlopeDetectionEnum.valueOf(rawValue);
+                            if (value == null) {
+                                unknownFields.mergeVarintField(16, rawValue);
+                            } else {
+                                bitField0_ |= 0x00008000;
+                                slopeDetectionType_ = value;
+                            }
+                            break;
+                        }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(
+                        e.getMessage()).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
             }
-            case 8: {
-              bitField0_ |= 0x00000001;
-              timestampUTC_ = input.readUInt64();
-              break;
-            }
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                pointSegments_ = new java.util.ArrayList<com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              pointSegments_.add(input.readMessage(com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.PARSER, extensionRegistry));
-              break;
-            }
-            case 24: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-                navinfoIds_ = new java.util.ArrayList<Long>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              navinfoIds_.add(input.readInt64());
-              break;
-            }
-            case 26: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004) && input.getBytesUntilLimit() > 0) {
-                navinfoIds_ = new java.util.ArrayList<Long>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                navinfoIds_.add(input.readInt64());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 32: {
-              int rawValue = input.readEnum();
-              com.zhk.protobuf.LogicalDataModelProtos.PathSegment.RouteBaseTypeEnum value = com.zhk.protobuf.LogicalDataModelProtos.PathSegment.RouteBaseTypeEnum.valueOf(rawValue);
-              if (value == null) {
-                unknownFields.mergeVarintField(4, rawValue);
-              } else {
-                bitField0_ |= 0x00000002;
-                routeBaseType_ = value;
-              }
-              break;
-            }
-            case 42: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000004;
-              navinfoDataVer_ = bs;
-              break;
-            }
-          }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-          pointSegments_ = java.util.Collections.unmodifiableList(pointSegments_);
+
+        public static PositionEstimate getDefaultInstance() {
+            return defaultInstance;
         }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-          navinfoIds_ = java.util.Collections.unmodifiableList(navinfoIds_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
+
+        public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_PathSegment_descriptor;
-    }
+            return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_PositionEstimate_descriptor;
+        }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        public static com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate parseFrom(
+                com.google.protobuf.ByteString data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate parseFrom(
+                com.google.protobuf.ByteString data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate parseFrom(
+                byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return PARSER.parseFrom(input);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate parseFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return PARSER.parseFrom(input, extensionRegistry);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate parseDelimitedFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return PARSER.parseDelimitedFrom(input);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate parseDelimitedFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate parseFrom(
+                com.google.protobuf.CodedInputStream input)
+                throws java.io.IOException {
+            return PARSER.parseFrom(input);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate parseFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return PARSER.parseFrom(input, extensionRegistry);
+        }
+
+        public static Builder newBuilder() {
+            return Builder.create();
+        }
+
+        public static Builder newBuilder(com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate prototype) {
+            return newBuilder().mergeFrom(prototype);
+        }
+
+        public PositionEstimate getDefaultInstanceForType() {
+            return defaultInstance;
+        }
+
+        @Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+            return this.unknownFields;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_PathSegment_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.zhk.protobuf.LogicalDataModelProtos.PathSegment.class, com.zhk.protobuf.LogicalDataModelProtos.PathSegment.Builder.class);
-    }
-
-    public static com.google.protobuf.Parser<PathSegment> PARSER =
-        new com.google.protobuf.AbstractParser<PathSegment>() {
-      public PathSegment parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PathSegment(input, extensionRegistry);
-      }
-    };
-
-    @Override
-    public com.google.protobuf.Parser<PathSegment> getParserForType() {
-      return PARSER;
-    }
-
-    /**
-     * Protobuf enum {@code proto.PathSegment.RouteBaseTypeEnum}
-     */
-    public enum RouteBaseTypeEnum
-        implements com.google.protobuf.ProtocolMessageEnum {
-      /**
-       * <code>OFF_LINE = 1;</code>
-       *
-       * <pre>
-       * 离线路线
-       * </pre>
-       */
-      OFF_LINE(0, 1),
-      /**
-       * <code>ON_LINE = 2;</code>
-       *
-       * <pre>
-       * 在线路线
-       * </pre>
-       */
-      ON_LINE(1, 2),
-      ;
-
-      /**
-       * <code>OFF_LINE = 1;</code>
-       *
-       * <pre>
-       * 离线路线
-       * </pre>
-       */
-      public static final int OFF_LINE_VALUE = 1;
-      /**
-       * <code>ON_LINE = 2;</code>
-       *
-       * <pre>
-       * 在线路线
-       * </pre>
-       */
-      public static final int ON_LINE_VALUE = 2;
-
-
-      public final int getNumber() { return value; }
-
-      public static RouteBaseTypeEnum valueOf(int value) {
-        switch (value) {
-          case 1: return OFF_LINE;
-          case 2: return ON_LINE;
-          default: return null;
+            return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_PositionEstimate_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.class, com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.Builder.class);
         }
-      }
 
-      public static com.google.protobuf.Internal.EnumLiteMap<RouteBaseTypeEnum>
-          internalGetValueMap() {
-        return internalValueMap;
-      }
-      private static com.google.protobuf.Internal.EnumLiteMap<RouteBaseTypeEnum>
-          internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<RouteBaseTypeEnum>() {
-              public RouteBaseTypeEnum findValueByNumber(int number) {
-                return RouteBaseTypeEnum.valueOf(number);
-              }
-            };
-
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
-          getValueDescriptor() {
-        return getDescriptor().getValues().get(index);
-      }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptorForType() {
-        return getDescriptor();
-      }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptor() {
-        return com.zhk.protobuf.LogicalDataModelProtos.PathSegment.getDescriptor().getEnumTypes().get(0);
-      }
-
-      private static final RouteBaseTypeEnum[] VALUES = values();
-
-      public static RouteBaseTypeEnum valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-        if (desc.getType() != getDescriptor()) {
-          throw new IllegalArgumentException(
-            "EnumValueDescriptor is not for this type.");
+        @Override
+        public com.google.protobuf.Parser<PositionEstimate> getParserForType() {
+            return PARSER;
         }
-        return VALUES[desc.getIndex()];
-      }
 
-      private final int index;
-      private final int value;
-
-      private RouteBaseTypeEnum(int index, int value) {
-        this.index = index;
-        this.value = value;
-      }
-
-      // @@protoc_insertion_point(enum_scope:proto.PathSegment.RouteBaseTypeEnum)
-    }
-
-    private int bitField0_;
-    public static final int TIMESTAMPUTC_FIELD_NUMBER = 1;
-    private long timestampUTC_;
-    /**
-     * <code>required uint64 timestampUTC = 1;</code>
-     *
-     * <pre>
-     * 算路之后采纳路线的时间
-     * </pre>
-     */
-    public boolean hasTimestampUTC() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>required uint64 timestampUTC = 1;</code>
-     *
-     * <pre>
-     * 算路之后采纳路线的时间
-     * </pre>
-     */
-    public long getTimestampUTC() {
-      return timestampUTC_;
-    }
-
-    public static final int POINTSEGMENTS_FIELD_NUMBER = 2;
-    private java.util.List<com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D> pointSegments_;
-    /**
-     * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
-     */
-    public java.util.List<com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D> getPointSegmentsList() {
-      return pointSegments_;
-    }
-    /**
-     * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
-     */
-    public java.util.List<? extends com.zhk.protobuf.LogicalDataModelProtos.MapPoint2DOrBuilder> 
-        getPointSegmentsOrBuilderList() {
-      return pointSegments_;
-    }
-    /**
-     * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
-     */
-    public int getPointSegmentsCount() {
-      return pointSegments_.size();
-    }
-    /**
-     * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
-     */
-    public com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D getPointSegments(int index) {
-      return pointSegments_.get(index);
-    }
-    /**
-     * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
-     */
-    public com.zhk.protobuf.LogicalDataModelProtos.MapPoint2DOrBuilder getPointSegmentsOrBuilder(
-        int index) {
-      return pointSegments_.get(index);
-    }
-
-    public static final int NAVINFOIDS_FIELD_NUMBER = 3;
-    private java.util.List<Long> navinfoIds_;
-    /**
-     * <code>repeated int64 navinfoIds = 3;</code>
-     *
-     * <pre>
-     * 在线算路产出的四维ID
-     * </pre>
-     */
-    public java.util.List<Long>
-        getNavinfoIdsList() {
-      return navinfoIds_;
-    }
-    /**
-     * <code>repeated int64 navinfoIds = 3;</code>
-     *
-     * <pre>
-     * 在线算路产出的四维ID
-     * </pre>
-     */
-    public int getNavinfoIdsCount() {
-      return navinfoIds_.size();
-    }
-    /**
-     * <code>repeated int64 navinfoIds = 3;</code>
-     *
-     * <pre>
-     * 在线算路产出的四维ID
-     * </pre>
-     */
-    public long getNavinfoIds(int index) {
-      return navinfoIds_.get(index);
-    }
-
-    public static final int ROUTEBASETYPE_FIELD_NUMBER = 4;
-    private com.zhk.protobuf.LogicalDataModelProtos.PathSegment.RouteBaseTypeEnum routeBaseType_;
-    /**
-     * <code>required .proto.PathSegment.RouteBaseTypeEnum routeBaseType = 4;</code>
-     *
-     * <pre>
-     * 离线还是在线算路
-     * </pre>
-     */
-    public boolean hasRouteBaseType() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>required .proto.PathSegment.RouteBaseTypeEnum routeBaseType = 4;</code>
-     *
-     * <pre>
-     * 离线还是在线算路
-     * </pre>
-     */
-    public com.zhk.protobuf.LogicalDataModelProtos.PathSegment.RouteBaseTypeEnum getRouteBaseType() {
-      return routeBaseType_;
-    }
-
-    public static final int NAVINFODATAVER_FIELD_NUMBER = 5;
-    private Object navinfoDataVer_;
-    /**
-     * <code>optional string navinfoDataVer = 5;</code>
-     *
-     * <pre>
-     * 离线算路所用数据的版本
-     * </pre>
-     */
-    public boolean hasNavinfoDataVer() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
-    }
-    /**
-     * <code>optional string navinfoDataVer = 5;</code>
-     *
-     * <pre>
-     * 离线算路所用数据的版本
-     * </pre>
-     */
-    public String getNavinfoDataVer() {
-      Object ref = navinfoDataVer_;
-      if (ref instanceof String) {
-        return (String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          navinfoDataVer_ = s;
+        /**
+         * <code>required uint64 timestampUTC = 1;</code>
+         * <p/>
+         * <pre>
+         * 设备时间
+         * </pre>
+         */
+        public boolean hasTimestampUTC() {
+            return ((bitField0_ & 0x00000001) == 0x00000001);
         }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string navinfoDataVer = 5;</code>
-     *
-     * <pre>
-     * 离线算路所用数据的版本
-     * </pre>
-     */
-    public com.google.protobuf.ByteString
-        getNavinfoDataVerBytes() {
-      Object ref = navinfoDataVer_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
-        navinfoDataVer_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
 
-    private void initFields() {
-      timestampUTC_ = 0L;
-      pointSegments_ = java.util.Collections.emptyList();
-      navinfoIds_ = java.util.Collections.emptyList();
-      routeBaseType_ = com.zhk.protobuf.LogicalDataModelProtos.PathSegment.RouteBaseTypeEnum.OFF_LINE;
-      navinfoDataVer_ = "";
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      if (!hasTimestampUTC()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasRouteBaseType()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      for (int i = 0; i < getPointSegmentsCount(); i++) {
-        if (!getPointSegments(i).isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
+        /**
+         * <code>required uint64 timestampUTC = 1;</code>
+         * <p/>
+         * <pre>
+         * 设备时间
+         * </pre>
+         */
+        public long getTimestampUTC() {
+            return timestampUTC_;
         }
-      }
-      memoizedIsInitialized = 1;
-      return true;
-    }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeUInt64(1, timestampUTC_);
-      }
-      for (int i = 0; i < pointSegments_.size(); i++) {
-        output.writeMessage(2, pointSegments_.get(i));
-      }
-      for (int i = 0; i < navinfoIds_.size(); i++) {
-        output.writeInt64(3, navinfoIds_.get(i));
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeEnum(4, routeBaseType_.getNumber());
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeBytes(5, getNavinfoDataVerBytes());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(1, timestampUTC_);
-      }
-      for (int i = 0; i < pointSegments_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, pointSegments_.get(i));
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < navinfoIds_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeInt64SizeNoTag(navinfoIds_.get(i));
+        /**
+         * <code>required .proto.PositionEstimate.PositionTypeEnum positionType = 2;</code>
+         */
+        public boolean hasPositionType() {
+            return ((bitField0_ & 0x00000002) == 0x00000002);
         }
-        size += dataSize;
-        size += 1 * getNavinfoIdsList().size();
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(4, routeBaseType_.getNumber());
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(5, getNavinfoDataVerBytes());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
+
+        /**
+         * <code>required .proto.PositionEstimate.PositionTypeEnum positionType = 2;</code>
+         */
+        public com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.PositionTypeEnum getPositionType() {
+            return positionType_;
+        }
+
+        /**
+         * <code>required .proto.MapPoint2D pointSegments = 3;</code>
+         */
+        public boolean hasPointSegments() {
+            return ((bitField0_ & 0x00000004) == 0x00000004);
+        }
+
+        /**
+         * <code>required .proto.MapPoint2D pointSegments = 3;</code>
+         */
+        public com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D getPointSegments() {
+            return pointSegments_;
+        }
+
+        /**
+         * <code>required .proto.MapPoint2D pointSegments = 3;</code>
+         */
+        public com.zhk.protobuf.LogicalDataModelProtos.MapPoint2DOrBuilder getPointSegmentsOrBuilder() {
+            return pointSegments_;
+        }
+
+        /**
+         * <code>required float horizontalAccuracy = 4;</code>
+         * <p/>
+         * <pre>
+         * HDOP定位精度
+         * </pre>
+         */
+        public boolean hasHorizontalAccuracy() {
+            return ((bitField0_ & 0x00000008) == 0x00000008);
+        }
+
+        /**
+         * <code>required float horizontalAccuracy = 4;</code>
+         * <p/>
+         * <pre>
+         * HDOP定位精度
+         * </pre>
+         */
+        public float getHorizontalAccuracy() {
+            return horizontalAccuracy_;
+        }
+
+        /**
+         * <code>optional float altitude = 5;</code>
+         * <p/>
+         * <pre>
+         * 海拔
+         * </pre>
+         */
+        public boolean hasAltitude() {
+            return ((bitField0_ & 0x00000010) == 0x00000010);
+        }
+
+        /**
+         * <code>optional float altitude = 5;</code>
+         * <p/>
+         * <pre>
+         * 海拔
+         * </pre>
+         */
+        public float getAltitude() {
+            return altitude_;
+        }
+
+        /**
+         * <code>optional float altitudeAccuracy = 6;</code>
+         * <p/>
+         * <pre>
+         * VDOP海拔精度
+         * </pre>
+         */
+        public boolean hasAltitudeAccuracy() {
+            return ((bitField0_ & 0x00000020) == 0x00000020);
+        }
+
+        /**
+         * <code>optional float altitudeAccuracy = 6;</code>
+         * <p/>
+         * <pre>
+         * VDOP海拔精度
+         * </pre>
+         */
+        public float getAltitudeAccuracy() {
+            return altitudeAccuracy_;
+        }
+
+        /**
+         * <code>optional float heading = 7;</code>
+         * <p/>
+         * <pre>
+         * 朝向
+         * </pre>
+         */
+        public boolean hasHeading() {
+            return ((bitField0_ & 0x00000040) == 0x00000040);
+        }
+
+        /**
+         * <code>optional float heading = 7;</code>
+         * <p/>
+         * <pre>
+         * 朝向
+         * </pre>
+         */
+        public float getHeading() {
+            return heading_;
+        }
+
+        /**
+         * <code>optional float speed = 8;</code>
+         * <p/>
+         * <pre>
+         * 速度
+         * </pre>
+         */
+        public boolean hasSpeed() {
+            return ((bitField0_ & 0x00000080) == 0x00000080);
+        }
+
+        /**
+         * <code>optional float speed = 8;</code>
+         * <p/>
+         * <pre>
+         * 速度
+         * </pre>
+         */
+        public float getSpeed() {
+            return speed_;
+        }
+
+        /**
+         * <code>optional int32 satelliteNumber = 9;</code>
+         * <p/>
+         * <pre>
+         * 卫星数量
+         * </pre>
+         */
+        public boolean hasSatelliteNumber() {
+            return ((bitField0_ & 0x00000100) == 0x00000100);
+        }
+
+        /**
+         * <code>optional int32 satelliteNumber = 9;</code>
+         * <p/>
+         * <pre>
+         * 卫星数量
+         * </pre>
+         */
+        public int getSatelliteNumber() {
+            return satelliteNumber_;
+        }
+
+        /**
+         * <code>optional float slope = 10;</code>
+         * <p/>
+         * <pre>
+         * slope
+         * </pre>
+         */
+        public boolean hasSlope() {
+            return ((bitField0_ & 0x00000200) == 0x00000200);
+        }
+
+        /**
+         * <code>optional float slope = 10;</code>
+         * <p/>
+         * <pre>
+         * slope
+         * </pre>
+         */
+        public float getSlope() {
+            return slope_;
+        }
+
+        /**
+         * <code>optional float headingAccuracy_deg = 11;</code>
+         */
+        public boolean hasHeadingAccuracyDeg() {
+            return ((bitField0_ & 0x00000400) == 0x00000400);
+        }
+
+        /**
+         * <code>optional float headingAccuracy_deg = 11;</code>
+         */
+        public float getHeadingAccuracyDeg() {
+            return headingAccuracyDeg_;
+        }
+
+        /**
+         * <code>optional float speedAccuracy_mps = 12;</code>
+         */
+        public boolean hasSpeedAccuracyMps() {
+            return ((bitField0_ & 0x00000800) == 0x00000800);
+        }
+
+        /**
+         * <code>optional float speedAccuracy_mps = 12;</code>
+         */
+        public float getSpeedAccuracyMps() {
+            return speedAccuracyMps_;
+        }
+
+        /**
+         * <code>optional float slopeAccuracy_deg = 13;</code>
+         */
+        public boolean hasSlopeAccuracyDeg() {
+            return ((bitField0_ & 0x00001000) == 0x00001000);
+        }
+
+        /**
+         * <code>optional float slopeAccuracy_deg = 13;</code>
+         */
+        public float getSlopeAccuracyDeg() {
+            return slopeAccuracyDeg_;
+        }
+
+        /**
+         * <code>optional .proto.PositionEstimate.HeadingDetectionEnum headingDetectionType = 14;</code>
+         */
+        public boolean hasHeadingDetectionType() {
+            return ((bitField0_ & 0x00002000) == 0x00002000);
+        }
+
+        /**
+         * <code>optional .proto.PositionEstimate.HeadingDetectionEnum headingDetectionType = 14;</code>
+         */
+        public com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.HeadingDetectionEnum getHeadingDetectionType() {
+            return headingDetectionType_;
+        }
+
+        /**
+         * <code>optional .proto.PositionEstimate.SpeedDetectionEnum speedDetectionType = 15;</code>
+         */
+        public boolean hasSpeedDetectionType() {
+            return ((bitField0_ & 0x00004000) == 0x00004000);
+        }
+
+        /**
+         * <code>optional .proto.PositionEstimate.SpeedDetectionEnum speedDetectionType = 15;</code>
+         */
+        public com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SpeedDetectionEnum getSpeedDetectionType() {
+            return speedDetectionType_;
+        }
+
+        /**
+         * <code>optional .proto.PositionEstimate.SlopeDetectionEnum slopeDetectionType = 16;</code>
+         */
+        public boolean hasSlopeDetectionType() {
+            return ((bitField0_ & 0x00008000) == 0x00008000);
+        }
+
+        /**
+         * <code>optional .proto.PositionEstimate.SlopeDetectionEnum slopeDetectionType = 16;</code>
+         */
+        public com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SlopeDetectionEnum getSlopeDetectionType() {
+            return slopeDetectionType_;
+        }
+
+        private void initFields() {
+            timestampUTC_ = 0L;
+            positionType_ = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.PositionTypeEnum.RAW_GPS;
+            pointSegments_ = com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.getDefaultInstance();
+            horizontalAccuracy_ = 0F;
+            altitude_ = 0F;
+            altitudeAccuracy_ = 0F;
+            heading_ = 0F;
+            speed_ = 0F;
+            satelliteNumber_ = 0;
+            slope_ = 0F;
+            headingAccuracyDeg_ = 0F;
+            speedAccuracyMps_ = 0F;
+            slopeAccuracyDeg_ = 0F;
+            headingDetectionType_ = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.HeadingDetectionEnum.HEADING_RAW_GPS;
+            speedDetectionType_ = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SpeedDetectionEnum.SPEED_RAW_GPS;
+            slopeDetectionType_ = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SlopeDetectionEnum.SLOPE_RAW_GPS;
+        }
+
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1) return true;
+            if (isInitialized == 0) return false;
+
+            if (!hasTimestampUTC()) {
+                memoizedIsInitialized = 0;
+                return false;
+            }
+            if (!hasPositionType()) {
+                memoizedIsInitialized = 0;
+                return false;
+            }
+            if (!hasPointSegments()) {
+                memoizedIsInitialized = 0;
+                return false;
+            }
+            if (!hasHorizontalAccuracy()) {
+                memoizedIsInitialized = 0;
+                return false;
+            }
+            if (!getPointSegments().isInitialized()) {
+                memoizedIsInitialized = 0;
+                return false;
+            }
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                throws java.io.IOException {
+            getSerializedSize();
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                output.writeUInt64(1, timestampUTC_);
+            }
+            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                output.writeEnum(2, positionType_.getNumber());
+            }
+            if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                output.writeMessage(3, pointSegments_);
+            }
+            if (((bitField0_ & 0x00000008) == 0x00000008)) {
+                output.writeFloat(4, horizontalAccuracy_);
+            }
+            if (((bitField0_ & 0x00000010) == 0x00000010)) {
+                output.writeFloat(5, altitude_);
+            }
+            if (((bitField0_ & 0x00000020) == 0x00000020)) {
+                output.writeFloat(6, altitudeAccuracy_);
+            }
+            if (((bitField0_ & 0x00000040) == 0x00000040)) {
+                output.writeFloat(7, heading_);
+            }
+            if (((bitField0_ & 0x00000080) == 0x00000080)) {
+                output.writeFloat(8, speed_);
+            }
+            if (((bitField0_ & 0x00000100) == 0x00000100)) {
+                output.writeInt32(9, satelliteNumber_);
+            }
+            if (((bitField0_ & 0x00000200) == 0x00000200)) {
+                output.writeFloat(10, slope_);
+            }
+            if (((bitField0_ & 0x00000400) == 0x00000400)) {
+                output.writeFloat(11, headingAccuracyDeg_);
+            }
+            if (((bitField0_ & 0x00000800) == 0x00000800)) {
+                output.writeFloat(12, speedAccuracyMps_);
+            }
+            if (((bitField0_ & 0x00001000) == 0x00001000)) {
+                output.writeFloat(13, slopeAccuracyDeg_);
+            }
+            if (((bitField0_ & 0x00002000) == 0x00002000)) {
+                output.writeEnum(14, headingDetectionType_.getNumber());
+            }
+            if (((bitField0_ & 0x00004000) == 0x00004000)) {
+                output.writeEnum(15, speedDetectionType_.getNumber());
+            }
+            if (((bitField0_ & 0x00008000) == 0x00008000)) {
+                output.writeEnum(16, slopeDetectionType_.getNumber());
+            }
+            getUnknownFields().writeTo(output);
+        }
+
+        public int getSerializedSize() {
+            int size = memoizedSerializedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeUInt64Size(1, timestampUTC_);
+            }
+            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeEnumSize(2, positionType_.getNumber());
+            }
+            if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeMessageSize(3, pointSegments_);
+            }
+            if (((bitField0_ & 0x00000008) == 0x00000008)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeFloatSize(4, horizontalAccuracy_);
+            }
+            if (((bitField0_ & 0x00000010) == 0x00000010)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeFloatSize(5, altitude_);
+            }
+            if (((bitField0_ & 0x00000020) == 0x00000020)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeFloatSize(6, altitudeAccuracy_);
+            }
+            if (((bitField0_ & 0x00000040) == 0x00000040)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeFloatSize(7, heading_);
+            }
+            if (((bitField0_ & 0x00000080) == 0x00000080)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeFloatSize(8, speed_);
+            }
+            if (((bitField0_ & 0x00000100) == 0x00000100)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeInt32Size(9, satelliteNumber_);
+            }
+            if (((bitField0_ & 0x00000200) == 0x00000200)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeFloatSize(10, slope_);
+            }
+            if (((bitField0_ & 0x00000400) == 0x00000400)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeFloatSize(11, headingAccuracyDeg_);
+            }
+            if (((bitField0_ & 0x00000800) == 0x00000800)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeFloatSize(12, speedAccuracyMps_);
+            }
+            if (((bitField0_ & 0x00001000) == 0x00001000)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeFloatSize(13, slopeAccuracyDeg_);
+            }
+            if (((bitField0_ & 0x00002000) == 0x00002000)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeEnumSize(14, headingDetectionType_.getNumber());
+            }
+            if (((bitField0_ & 0x00004000) == 0x00004000)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeEnumSize(15, speedDetectionType_.getNumber());
+            }
+            if (((bitField0_ & 0x00008000) == 0x00008000)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeEnumSize(16, slopeDetectionType_.getNumber());
+            }
+            size += getUnknownFields().getSerializedSize();
+            memoizedSerializedSize = size;
+            return size;
+        }
+
+        @Override
+        protected Object writeReplace()
+                throws java.io.ObjectStreamException {
+            return super.writeReplace();
+        }
+
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public Builder toBuilder() {
+            return newBuilder(this);
+        }
+
+        @Override
+        protected Builder newBuilderForType(
+                com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * Protobuf enum {@code proto.PositionEstimate.PositionTypeEnum}
+         */
+        public enum PositionTypeEnum
+                implements com.google.protobuf.ProtocolMessageEnum {
+            /**
+             * <code>RAW_GPS = 1;</code>
+             */
+            RAW_GPS(0, 1),
+            /**
+             * <code>FILTERED = 2;</code>
+             */
+            FILTERED(1, 2),
+            /**
+             * <code>MAP_MATCHED_REGULAR_MAP = 3;</code>
+             */
+            MAP_MATCHED_REGULAR_MAP(2, 3),
+            /**
+             * <code>MAP_MATCHED_HD_MAP = 4;</code>
+             */
+            MAP_MATCHED_HD_MAP(3, 4),
+            /**
+             * <code>MAP_MATCHED_HD_MAP_LANE = 5;</code>
+             */
+            MAP_MATCHED_HD_MAP_LANE(4, 5),;
+
+            /**
+             * <code>RAW_GPS = 1;</code>
+             */
+            public static final int RAW_GPS_VALUE = 1;
+            /**
+             * <code>FILTERED = 2;</code>
+             */
+            public static final int FILTERED_VALUE = 2;
+            /**
+             * <code>MAP_MATCHED_REGULAR_MAP = 3;</code>
+             */
+            public static final int MAP_MATCHED_REGULAR_MAP_VALUE = 3;
+            /**
+             * <code>MAP_MATCHED_HD_MAP = 4;</code>
+             */
+            public static final int MAP_MATCHED_HD_MAP_VALUE = 4;
+            /**
+             * <code>MAP_MATCHED_HD_MAP_LANE = 5;</code>
+             */
+            public static final int MAP_MATCHED_HD_MAP_LANE_VALUE = 5;
+            private static final PositionTypeEnum[] VALUES = values();
+            private static com.google.protobuf.Internal.EnumLiteMap<PositionTypeEnum>
+                    internalValueMap =
+                    new com.google.protobuf.Internal.EnumLiteMap<PositionTypeEnum>() {
+                        public PositionTypeEnum findValueByNumber(int number) {
+                            return PositionTypeEnum.valueOf(number);
+                        }
+                    };
+            private final int index;
+            private final int value;
+
+            private PositionTypeEnum(int index, int value) {
+                this.index = index;
+                this.value = value;
+            }
+
+            public static PositionTypeEnum valueOf(int value) {
+                switch (value) {
+                    case 1:
+                        return RAW_GPS;
+                    case 2:
+                        return FILTERED;
+                    case 3:
+                        return MAP_MATCHED_REGULAR_MAP;
+                    case 4:
+                        return MAP_MATCHED_HD_MAP;
+                    case 5:
+                        return MAP_MATCHED_HD_MAP_LANE;
+                    default:
+                        return null;
+                }
+            }
+
+            public static com.google.protobuf.Internal.EnumLiteMap<PositionTypeEnum>
+            internalGetValueMap() {
+                return internalValueMap;
+            }
+
+            public static final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptor() {
+                return com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.getDescriptor().getEnumTypes().get(0);
+            }
+
+            public static PositionTypeEnum valueOf(
+                    com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+                if (desc.getType() != getDescriptor()) {
+                    throw new IllegalArgumentException(
+                            "EnumValueDescriptor is not for this type.");
+                }
+                return VALUES[desc.getIndex()];
+            }
+
+            public final int getNumber() {
+                return value;
+            }
+
+            public final com.google.protobuf.Descriptors.EnumValueDescriptor
+            getValueDescriptor() {
+                return getDescriptor().getValues().get(index);
+            }
+
+            public final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptorForType() {
+                return getDescriptor();
+            }
+
+            // @@protoc_insertion_point(enum_scope:proto.PositionEstimate.PositionTypeEnum)
+        }
+
+        /**
+         * Protobuf enum {@code proto.PositionEstimate.HeadingDetectionEnum}
+         */
+        public enum HeadingDetectionEnum
+                implements com.google.protobuf.ProtocolMessageEnum {
+            /**
+             * <code>HEADING_RAW_GPS = 1;</code>
+             */
+            HEADING_RAW_GPS(0, 1),
+            /**
+             * <code>HEADING_MAGNETIC_SENSOR = 2;</code>
+             */
+            HEADING_MAGNETIC_SENSOR(1, 2),
+            /**
+             * <code>HEADING_MULTI_SENSOR_FUSION = 3;</code>
+             */
+            HEADING_MULTI_SENSOR_FUSION(2, 3),
+            /**
+             * <code>HEADING_BY_MAP = 4;</code>
+             */
+            HEADING_BY_MAP(3, 4),;
+
+            /**
+             * <code>HEADING_RAW_GPS = 1;</code>
+             */
+            public static final int HEADING_RAW_GPS_VALUE = 1;
+            /**
+             * <code>HEADING_MAGNETIC_SENSOR = 2;</code>
+             */
+            public static final int HEADING_MAGNETIC_SENSOR_VALUE = 2;
+            /**
+             * <code>HEADING_MULTI_SENSOR_FUSION = 3;</code>
+             */
+            public static final int HEADING_MULTI_SENSOR_FUSION_VALUE = 3;
+            /**
+             * <code>HEADING_BY_MAP = 4;</code>
+             */
+            public static final int HEADING_BY_MAP_VALUE = 4;
+            private static final HeadingDetectionEnum[] VALUES = values();
+            private static com.google.protobuf.Internal.EnumLiteMap<HeadingDetectionEnum>
+                    internalValueMap =
+                    new com.google.protobuf.Internal.EnumLiteMap<HeadingDetectionEnum>() {
+                        public HeadingDetectionEnum findValueByNumber(int number) {
+                            return HeadingDetectionEnum.valueOf(number);
+                        }
+                    };
+            private final int index;
+            private final int value;
+
+            private HeadingDetectionEnum(int index, int value) {
+                this.index = index;
+                this.value = value;
+            }
+
+            public static HeadingDetectionEnum valueOf(int value) {
+                switch (value) {
+                    case 1:
+                        return HEADING_RAW_GPS;
+                    case 2:
+                        return HEADING_MAGNETIC_SENSOR;
+                    case 3:
+                        return HEADING_MULTI_SENSOR_FUSION;
+                    case 4:
+                        return HEADING_BY_MAP;
+                    default:
+                        return null;
+                }
+            }
+
+            public static com.google.protobuf.Internal.EnumLiteMap<HeadingDetectionEnum>
+            internalGetValueMap() {
+                return internalValueMap;
+            }
+
+            public static final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptor() {
+                return com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.getDescriptor().getEnumTypes().get(1);
+            }
+
+            public static HeadingDetectionEnum valueOf(
+                    com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+                if (desc.getType() != getDescriptor()) {
+                    throw new IllegalArgumentException(
+                            "EnumValueDescriptor is not for this type.");
+                }
+                return VALUES[desc.getIndex()];
+            }
+
+            public final int getNumber() {
+                return value;
+            }
+
+            public final com.google.protobuf.Descriptors.EnumValueDescriptor
+            getValueDescriptor() {
+                return getDescriptor().getValues().get(index);
+            }
+
+            public final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptorForType() {
+                return getDescriptor();
+            }
+
+            // @@protoc_insertion_point(enum_scope:proto.PositionEstimate.HeadingDetectionEnum)
+        }
+
+        /**
+         * Protobuf enum {@code proto.PositionEstimate.SpeedDetectionEnum}
+         */
+        public enum SpeedDetectionEnum
+                implements com.google.protobuf.ProtocolMessageEnum {
+            /**
+             * <code>SPEED_RAW_GPS = 1;</code>
+             */
+            SPEED_RAW_GPS(0, 1),
+            /**
+             * <code>SPEED_WHEEL_TICKS = 2;</code>
+             */
+            SPEED_WHEEL_TICKS(1, 2),
+            /**
+             * <code>SPEED_RADAR_SONAR = 3;</code>
+             */
+            SPEED_RADAR_SONAR(2, 3),;
+
+            /**
+             * <code>SPEED_RAW_GPS = 1;</code>
+             */
+            public static final int SPEED_RAW_GPS_VALUE = 1;
+            /**
+             * <code>SPEED_WHEEL_TICKS = 2;</code>
+             */
+            public static final int SPEED_WHEEL_TICKS_VALUE = 2;
+            /**
+             * <code>SPEED_RADAR_SONAR = 3;</code>
+             */
+            public static final int SPEED_RADAR_SONAR_VALUE = 3;
+            private static final SpeedDetectionEnum[] VALUES = values();
+            private static com.google.protobuf.Internal.EnumLiteMap<SpeedDetectionEnum>
+                    internalValueMap =
+                    new com.google.protobuf.Internal.EnumLiteMap<SpeedDetectionEnum>() {
+                        public SpeedDetectionEnum findValueByNumber(int number) {
+                            return SpeedDetectionEnum.valueOf(number);
+                        }
+                    };
+            private final int index;
+            private final int value;
+
+            private SpeedDetectionEnum(int index, int value) {
+                this.index = index;
+                this.value = value;
+            }
+
+            public static SpeedDetectionEnum valueOf(int value) {
+                switch (value) {
+                    case 1:
+                        return SPEED_RAW_GPS;
+                    case 2:
+                        return SPEED_WHEEL_TICKS;
+                    case 3:
+                        return SPEED_RADAR_SONAR;
+                    default:
+                        return null;
+                }
+            }
+
+            public static com.google.protobuf.Internal.EnumLiteMap<SpeedDetectionEnum>
+            internalGetValueMap() {
+                return internalValueMap;
+            }
+
+            public static final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptor() {
+                return com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.getDescriptor().getEnumTypes().get(2);
+            }
+
+            public static SpeedDetectionEnum valueOf(
+                    com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+                if (desc.getType() != getDescriptor()) {
+                    throw new IllegalArgumentException(
+                            "EnumValueDescriptor is not for this type.");
+                }
+                return VALUES[desc.getIndex()];
+            }
+
+            public final int getNumber() {
+                return value;
+            }
+
+            public final com.google.protobuf.Descriptors.EnumValueDescriptor
+            getValueDescriptor() {
+                return getDescriptor().getValues().get(index);
+            }
+
+            public final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptorForType() {
+                return getDescriptor();
+            }
+
+            // @@protoc_insertion_point(enum_scope:proto.PositionEstimate.SpeedDetectionEnum)
+        }
+
+        /**
+         * Protobuf enum {@code proto.PositionEstimate.SlopeDetectionEnum}
+         */
+        public enum SlopeDetectionEnum
+                implements com.google.protobuf.ProtocolMessageEnum {
+            /**
+             * <code>SLOPE_RAW_GPS = 1;</code>
+             */
+            SLOPE_RAW_GPS(0, 1),
+            /**
+             * <code>SLOPE_ACCELEROMETER_SENSOR = 2;</code>
+             */
+            SLOPE_ACCELEROMETER_SENSOR(1, 2),
+            /**
+             * <code>SLOPE_MULTI_SENSOR_FUSION = 3;</code>
+             */
+            SLOPE_MULTI_SENSOR_FUSION(2, 3),
+            /**
+             * <code>SLOPE_BY_MAP = 4;</code>
+             */
+            SLOPE_BY_MAP(3, 4),;
+
+            /**
+             * <code>SLOPE_RAW_GPS = 1;</code>
+             */
+            public static final int SLOPE_RAW_GPS_VALUE = 1;
+            /**
+             * <code>SLOPE_ACCELEROMETER_SENSOR = 2;</code>
+             */
+            public static final int SLOPE_ACCELEROMETER_SENSOR_VALUE = 2;
+            /**
+             * <code>SLOPE_MULTI_SENSOR_FUSION = 3;</code>
+             */
+            public static final int SLOPE_MULTI_SENSOR_FUSION_VALUE = 3;
+            /**
+             * <code>SLOPE_BY_MAP = 4;</code>
+             */
+            public static final int SLOPE_BY_MAP_VALUE = 4;
+            private static final SlopeDetectionEnum[] VALUES = values();
+            private static com.google.protobuf.Internal.EnumLiteMap<SlopeDetectionEnum>
+                    internalValueMap =
+                    new com.google.protobuf.Internal.EnumLiteMap<SlopeDetectionEnum>() {
+                        public SlopeDetectionEnum findValueByNumber(int number) {
+                            return SlopeDetectionEnum.valueOf(number);
+                        }
+                    };
+            private final int index;
+            private final int value;
+
+            private SlopeDetectionEnum(int index, int value) {
+                this.index = index;
+                this.value = value;
+            }
+
+            public static SlopeDetectionEnum valueOf(int value) {
+                switch (value) {
+                    case 1:
+                        return SLOPE_RAW_GPS;
+                    case 2:
+                        return SLOPE_ACCELEROMETER_SENSOR;
+                    case 3:
+                        return SLOPE_MULTI_SENSOR_FUSION;
+                    case 4:
+                        return SLOPE_BY_MAP;
+                    default:
+                        return null;
+                }
+            }
+
+            public static com.google.protobuf.Internal.EnumLiteMap<SlopeDetectionEnum>
+            internalGetValueMap() {
+                return internalValueMap;
+            }
+
+            public static final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptor() {
+                return com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.getDescriptor().getEnumTypes().get(3);
+            }
+
+            public static SlopeDetectionEnum valueOf(
+                    com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+                if (desc.getType() != getDescriptor()) {
+                    throw new IllegalArgumentException(
+                            "EnumValueDescriptor is not for this type.");
+                }
+                return VALUES[desc.getIndex()];
+            }
+
+            public final int getNumber() {
+                return value;
+            }
+
+            public final com.google.protobuf.Descriptors.EnumValueDescriptor
+            getValueDescriptor() {
+                return getDescriptor().getValues().get(index);
+            }
+
+            public final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptorForType() {
+                return getDescriptor();
+            }
+
+            // @@protoc_insertion_point(enum_scope:proto.PositionEstimate.SlopeDetectionEnum)
+        }
+
+        /**
+         * Protobuf type {@code proto.PositionEstimate}
+         * <p/>
+         * <pre>
+         * 定位点
+         * </pre>
+         */
+        public static final class Builder extends
+                com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:proto.PositionEstimate)
+                com.zhk.protobuf.LogicalDataModelProtos.PositionEstimateOrBuilder {
+            private int bitField0_;
+            private long timestampUTC_;
+            private com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.PositionTypeEnum positionType_ = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.PositionTypeEnum.RAW_GPS;
+            private com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D pointSegments_ = com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.getDefaultInstance();
+            private com.google.protobuf.SingleFieldBuilder<
+                    com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.Builder, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2DOrBuilder> pointSegmentsBuilder_;
+            private float horizontalAccuracy_;
+            private float altitude_;
+            private float altitudeAccuracy_;
+            private float heading_;
+            private float speed_;
+            private int satelliteNumber_;
+            private float slope_;
+            private float headingAccuracyDeg_;
+            private float speedAccuracyMps_;
+            private float slopeAccuracyDeg_;
+            private com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.HeadingDetectionEnum headingDetectionType_ = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.HeadingDetectionEnum.HEADING_RAW_GPS;
+            private com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SpeedDetectionEnum speedDetectionType_ = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SpeedDetectionEnum.SPEED_RAW_GPS;
+            private com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SlopeDetectionEnum slopeDetectionType_ = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SlopeDetectionEnum.SLOPE_RAW_GPS;
+
+            // Construct using com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(
+                    com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+                return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_PositionEstimate_descriptor;
+            }
+
+            private static Builder create() {
+                return new Builder();
+            }
+
+            protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+                return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_PositionEstimate_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.class, com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.Builder.class);
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+                    getPointSegmentsFieldBuilder();
+                }
+            }
+
+            public Builder clear() {
+                super.clear();
+                timestampUTC_ = 0L;
+                bitField0_ = (bitField0_ & ~0x00000001);
+                positionType_ = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.PositionTypeEnum.RAW_GPS;
+                bitField0_ = (bitField0_ & ~0x00000002);
+                if (pointSegmentsBuilder_ == null) {
+                    pointSegments_ = com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.getDefaultInstance();
+                } else {
+                    pointSegmentsBuilder_.clear();
+                }
+                bitField0_ = (bitField0_ & ~0x00000004);
+                horizontalAccuracy_ = 0F;
+                bitField0_ = (bitField0_ & ~0x00000008);
+                altitude_ = 0F;
+                bitField0_ = (bitField0_ & ~0x00000010);
+                altitudeAccuracy_ = 0F;
+                bitField0_ = (bitField0_ & ~0x00000020);
+                heading_ = 0F;
+                bitField0_ = (bitField0_ & ~0x00000040);
+                speed_ = 0F;
+                bitField0_ = (bitField0_ & ~0x00000080);
+                satelliteNumber_ = 0;
+                bitField0_ = (bitField0_ & ~0x00000100);
+                slope_ = 0F;
+                bitField0_ = (bitField0_ & ~0x00000200);
+                headingAccuracyDeg_ = 0F;
+                bitField0_ = (bitField0_ & ~0x00000400);
+                speedAccuracyMps_ = 0F;
+                bitField0_ = (bitField0_ & ~0x00000800);
+                slopeAccuracyDeg_ = 0F;
+                bitField0_ = (bitField0_ & ~0x00001000);
+                headingDetectionType_ = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.HeadingDetectionEnum.HEADING_RAW_GPS;
+                bitField0_ = (bitField0_ & ~0x00002000);
+                speedDetectionType_ = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SpeedDetectionEnum.SPEED_RAW_GPS;
+                bitField0_ = (bitField0_ & ~0x00004000);
+                slopeDetectionType_ = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SlopeDetectionEnum.SLOPE_RAW_GPS;
+                bitField0_ = (bitField0_ & ~0x00008000);
+                return this;
+            }
+
+            public Builder clone() {
+                return create().mergeFrom(buildPartial());
+            }
+
+            public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+                return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_PositionEstimate_descriptor;
+            }
+
+            public com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate getDefaultInstanceForType() {
+                return com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.getDefaultInstance();
+            }
+
+            public com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate build() {
+                com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            public com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate buildPartial() {
+                com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate result = new com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate(this);
+                int from_bitField0_ = bitField0_;
+                int to_bitField0_ = 0;
+                if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+                    to_bitField0_ |= 0x00000001;
+                }
+                result.timestampUTC_ = timestampUTC_;
+                if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+                    to_bitField0_ |= 0x00000002;
+                }
+                result.positionType_ = positionType_;
+                if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+                    to_bitField0_ |= 0x00000004;
+                }
+                if (pointSegmentsBuilder_ == null) {
+                    result.pointSegments_ = pointSegments_;
+                } else {
+                    result.pointSegments_ = pointSegmentsBuilder_.build();
+                }
+                if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+                    to_bitField0_ |= 0x00000008;
+                }
+                result.horizontalAccuracy_ = horizontalAccuracy_;
+                if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+                    to_bitField0_ |= 0x00000010;
+                }
+                result.altitude_ = altitude_;
+                if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+                    to_bitField0_ |= 0x00000020;
+                }
+                result.altitudeAccuracy_ = altitudeAccuracy_;
+                if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+                    to_bitField0_ |= 0x00000040;
+                }
+                result.heading_ = heading_;
+                if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+                    to_bitField0_ |= 0x00000080;
+                }
+                result.speed_ = speed_;
+                if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
+                    to_bitField0_ |= 0x00000100;
+                }
+                result.satelliteNumber_ = satelliteNumber_;
+                if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
+                    to_bitField0_ |= 0x00000200;
+                }
+                result.slope_ = slope_;
+                if (((from_bitField0_ & 0x00000400) == 0x00000400)) {
+                    to_bitField0_ |= 0x00000400;
+                }
+                result.headingAccuracyDeg_ = headingAccuracyDeg_;
+                if (((from_bitField0_ & 0x00000800) == 0x00000800)) {
+                    to_bitField0_ |= 0x00000800;
+                }
+                result.speedAccuracyMps_ = speedAccuracyMps_;
+                if (((from_bitField0_ & 0x00001000) == 0x00001000)) {
+                    to_bitField0_ |= 0x00001000;
+                }
+                result.slopeAccuracyDeg_ = slopeAccuracyDeg_;
+                if (((from_bitField0_ & 0x00002000) == 0x00002000)) {
+                    to_bitField0_ |= 0x00002000;
+                }
+                result.headingDetectionType_ = headingDetectionType_;
+                if (((from_bitField0_ & 0x00004000) == 0x00004000)) {
+                    to_bitField0_ |= 0x00004000;
+                }
+                result.speedDetectionType_ = speedDetectionType_;
+                if (((from_bitField0_ & 0x00008000) == 0x00008000)) {
+                    to_bitField0_ |= 0x00008000;
+                }
+                result.slopeDetectionType_ = slopeDetectionType_;
+                result.bitField0_ = to_bitField0_;
+                onBuilt();
+                return result;
+            }
+
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate) {
+                    return mergeFrom((com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate other) {
+                if (other == com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.getDefaultInstance()) return this;
+                if (other.hasTimestampUTC()) {
+                    setTimestampUTC(other.getTimestampUTC());
+                }
+                if (other.hasPositionType()) {
+                    setPositionType(other.getPositionType());
+                }
+                if (other.hasPointSegments()) {
+                    mergePointSegments(other.getPointSegments());
+                }
+                if (other.hasHorizontalAccuracy()) {
+                    setHorizontalAccuracy(other.getHorizontalAccuracy());
+                }
+                if (other.hasAltitude()) {
+                    setAltitude(other.getAltitude());
+                }
+                if (other.hasAltitudeAccuracy()) {
+                    setAltitudeAccuracy(other.getAltitudeAccuracy());
+                }
+                if (other.hasHeading()) {
+                    setHeading(other.getHeading());
+                }
+                if (other.hasSpeed()) {
+                    setSpeed(other.getSpeed());
+                }
+                if (other.hasSatelliteNumber()) {
+                    setSatelliteNumber(other.getSatelliteNumber());
+                }
+                if (other.hasSlope()) {
+                    setSlope(other.getSlope());
+                }
+                if (other.hasHeadingAccuracyDeg()) {
+                    setHeadingAccuracyDeg(other.getHeadingAccuracyDeg());
+                }
+                if (other.hasSpeedAccuracyMps()) {
+                    setSpeedAccuracyMps(other.getSpeedAccuracyMps());
+                }
+                if (other.hasSlopeAccuracyDeg()) {
+                    setSlopeAccuracyDeg(other.getSlopeAccuracyDeg());
+                }
+                if (other.hasHeadingDetectionType()) {
+                    setHeadingDetectionType(other.getHeadingDetectionType());
+                }
+                if (other.hasSpeedDetectionType()) {
+                    setSpeedDetectionType(other.getSpeedDetectionType());
+                }
+                if (other.hasSlopeDetectionType()) {
+                    setSlopeDetectionType(other.getSlopeDetectionType());
+                }
+                this.mergeUnknownFields(other.getUnknownFields());
+                return this;
+            }
+
+            public final boolean isInitialized() {
+                if (!hasTimestampUTC()) {
+
+                    return false;
+                }
+                if (!hasPositionType()) {
+
+                    return false;
+                }
+                if (!hasPointSegments()) {
+
+                    return false;
+                }
+                if (!hasHorizontalAccuracy()) {
+
+                    return false;
+                }
+                if (!getPointSegments().isInitialized()) {
+
+                    return false;
+                }
+                return true;
+            }
+
+            public Builder mergeFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws java.io.IOException {
+                com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate) e.getUnfinishedMessage();
+                    throw e;
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            /**
+             * <code>required uint64 timestampUTC = 1;</code>
+             * <p/>
+             * <pre>
+             * 设备时间
+             * </pre>
+             */
+            public boolean hasTimestampUTC() {
+                return ((bitField0_ & 0x00000001) == 0x00000001);
+            }
+
+            /**
+             * <code>required uint64 timestampUTC = 1;</code>
+             * <p/>
+             * <pre>
+             * 设备时间
+             * </pre>
+             */
+            public long getTimestampUTC() {
+                return timestampUTC_;
+            }
+
+            /**
+             * <code>required uint64 timestampUTC = 1;</code>
+             * <p/>
+             * <pre>
+             * 设备时间
+             * </pre>
+             */
+            public Builder setTimestampUTC(long value) {
+                bitField0_ |= 0x00000001;
+                timestampUTC_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>required uint64 timestampUTC = 1;</code>
+             * <p/>
+             * <pre>
+             * 设备时间
+             * </pre>
+             */
+            public Builder clearTimestampUTC() {
+                bitField0_ = (bitField0_ & ~0x00000001);
+                timestampUTC_ = 0L;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>required .proto.PositionEstimate.PositionTypeEnum positionType = 2;</code>
+             */
+            public boolean hasPositionType() {
+                return ((bitField0_ & 0x00000002) == 0x00000002);
+            }
+
+            /**
+             * <code>required .proto.PositionEstimate.PositionTypeEnum positionType = 2;</code>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.PositionTypeEnum getPositionType() {
+                return positionType_;
+            }
+
+            /**
+             * <code>required .proto.PositionEstimate.PositionTypeEnum positionType = 2;</code>
+             */
+            public Builder setPositionType(com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.PositionTypeEnum value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                bitField0_ |= 0x00000002;
+                positionType_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>required .proto.PositionEstimate.PositionTypeEnum positionType = 2;</code>
+             */
+            public Builder clearPositionType() {
+                bitField0_ = (bitField0_ & ~0x00000002);
+                positionType_ = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.PositionTypeEnum.RAW_GPS;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>required .proto.MapPoint2D pointSegments = 3;</code>
+             */
+            public boolean hasPointSegments() {
+                return ((bitField0_ & 0x00000004) == 0x00000004);
+            }
+
+            /**
+             * <code>required .proto.MapPoint2D pointSegments = 3;</code>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D getPointSegments() {
+                if (pointSegmentsBuilder_ == null) {
+                    return pointSegments_;
+                } else {
+                    return pointSegmentsBuilder_.getMessage();
+                }
+            }
+
+            /**
+             * <code>required .proto.MapPoint2D pointSegments = 3;</code>
+             */
+            public Builder setPointSegments(com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D value) {
+                if (pointSegmentsBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    pointSegments_ = value;
+                    onChanged();
+                } else {
+                    pointSegmentsBuilder_.setMessage(value);
+                }
+                bitField0_ |= 0x00000004;
+                return this;
+            }
+
+            /**
+             * <code>required .proto.MapPoint2D pointSegments = 3;</code>
+             */
+            public Builder setPointSegments(
+                    com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.Builder builderForValue) {
+                if (pointSegmentsBuilder_ == null) {
+                    pointSegments_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    pointSegmentsBuilder_.setMessage(builderForValue.build());
+                }
+                bitField0_ |= 0x00000004;
+                return this;
+            }
+
+            /**
+             * <code>required .proto.MapPoint2D pointSegments = 3;</code>
+             */
+            public Builder mergePointSegments(com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D value) {
+                if (pointSegmentsBuilder_ == null) {
+                    if (((bitField0_ & 0x00000004) == 0x00000004) &&
+                            pointSegments_ != com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.getDefaultInstance()) {
+                        pointSegments_ =
+                                com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.newBuilder(pointSegments_).mergeFrom(value).buildPartial();
+                    } else {
+                        pointSegments_ = value;
+                    }
+                    onChanged();
+                } else {
+                    pointSegmentsBuilder_.mergeFrom(value);
+                }
+                bitField0_ |= 0x00000004;
+                return this;
+            }
+
+            /**
+             * <code>required .proto.MapPoint2D pointSegments = 3;</code>
+             */
+            public Builder clearPointSegments() {
+                if (pointSegmentsBuilder_ == null) {
+                    pointSegments_ = com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.getDefaultInstance();
+                    onChanged();
+                } else {
+                    pointSegmentsBuilder_.clear();
+                }
+                bitField0_ = (bitField0_ & ~0x00000004);
+                return this;
+            }
+
+            /**
+             * <code>required .proto.MapPoint2D pointSegments = 3;</code>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.Builder getPointSegmentsBuilder() {
+                bitField0_ |= 0x00000004;
+                onChanged();
+                return getPointSegmentsFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <code>required .proto.MapPoint2D pointSegments = 3;</code>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.MapPoint2DOrBuilder getPointSegmentsOrBuilder() {
+                if (pointSegmentsBuilder_ != null) {
+                    return pointSegmentsBuilder_.getMessageOrBuilder();
+                } else {
+                    return pointSegments_;
+                }
+            }
+
+            /**
+             * <code>required .proto.MapPoint2D pointSegments = 3;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilder<
+                    com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.Builder, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2DOrBuilder>
+            getPointSegmentsFieldBuilder() {
+                if (pointSegmentsBuilder_ == null) {
+                    pointSegmentsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+                            com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.Builder, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2DOrBuilder>(
+                            getPointSegments(),
+                            getParentForChildren(),
+                            isClean());
+                    pointSegments_ = null;
+                }
+                return pointSegmentsBuilder_;
+            }
+
+            /**
+             * <code>required float horizontalAccuracy = 4;</code>
+             * <p/>
+             * <pre>
+             * HDOP定位精度
+             * </pre>
+             */
+            public boolean hasHorizontalAccuracy() {
+                return ((bitField0_ & 0x00000008) == 0x00000008);
+            }
+
+            /**
+             * <code>required float horizontalAccuracy = 4;</code>
+             * <p/>
+             * <pre>
+             * HDOP定位精度
+             * </pre>
+             */
+            public float getHorizontalAccuracy() {
+                return horizontalAccuracy_;
+            }
+
+            /**
+             * <code>required float horizontalAccuracy = 4;</code>
+             * <p/>
+             * <pre>
+             * HDOP定位精度
+             * </pre>
+             */
+            public Builder setHorizontalAccuracy(float value) {
+                bitField0_ |= 0x00000008;
+                horizontalAccuracy_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>required float horizontalAccuracy = 4;</code>
+             * <p/>
+             * <pre>
+             * HDOP定位精度
+             * </pre>
+             */
+            public Builder clearHorizontalAccuracy() {
+                bitField0_ = (bitField0_ & ~0x00000008);
+                horizontalAccuracy_ = 0F;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional float altitude = 5;</code>
+             * <p/>
+             * <pre>
+             * 海拔
+             * </pre>
+             */
+            public boolean hasAltitude() {
+                return ((bitField0_ & 0x00000010) == 0x00000010);
+            }
+
+            /**
+             * <code>optional float altitude = 5;</code>
+             * <p/>
+             * <pre>
+             * 海拔
+             * </pre>
+             */
+            public float getAltitude() {
+                return altitude_;
+            }
+
+            /**
+             * <code>optional float altitude = 5;</code>
+             * <p/>
+             * <pre>
+             * 海拔
+             * </pre>
+             */
+            public Builder setAltitude(float value) {
+                bitField0_ |= 0x00000010;
+                altitude_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional float altitude = 5;</code>
+             * <p/>
+             * <pre>
+             * 海拔
+             * </pre>
+             */
+            public Builder clearAltitude() {
+                bitField0_ = (bitField0_ & ~0x00000010);
+                altitude_ = 0F;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional float altitudeAccuracy = 6;</code>
+             * <p/>
+             * <pre>
+             * VDOP海拔精度
+             * </pre>
+             */
+            public boolean hasAltitudeAccuracy() {
+                return ((bitField0_ & 0x00000020) == 0x00000020);
+            }
+
+            /**
+             * <code>optional float altitudeAccuracy = 6;</code>
+             * <p/>
+             * <pre>
+             * VDOP海拔精度
+             * </pre>
+             */
+            public float getAltitudeAccuracy() {
+                return altitudeAccuracy_;
+            }
+
+            /**
+             * <code>optional float altitudeAccuracy = 6;</code>
+             * <p/>
+             * <pre>
+             * VDOP海拔精度
+             * </pre>
+             */
+            public Builder setAltitudeAccuracy(float value) {
+                bitField0_ |= 0x00000020;
+                altitudeAccuracy_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional float altitudeAccuracy = 6;</code>
+             * <p/>
+             * <pre>
+             * VDOP海拔精度
+             * </pre>
+             */
+            public Builder clearAltitudeAccuracy() {
+                bitField0_ = (bitField0_ & ~0x00000020);
+                altitudeAccuracy_ = 0F;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional float heading = 7;</code>
+             * <p/>
+             * <pre>
+             * 朝向
+             * </pre>
+             */
+            public boolean hasHeading() {
+                return ((bitField0_ & 0x00000040) == 0x00000040);
+            }
+
+            /**
+             * <code>optional float heading = 7;</code>
+             * <p/>
+             * <pre>
+             * 朝向
+             * </pre>
+             */
+            public float getHeading() {
+                return heading_;
+            }
+
+            /**
+             * <code>optional float heading = 7;</code>
+             * <p/>
+             * <pre>
+             * 朝向
+             * </pre>
+             */
+            public Builder setHeading(float value) {
+                bitField0_ |= 0x00000040;
+                heading_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional float heading = 7;</code>
+             * <p/>
+             * <pre>
+             * 朝向
+             * </pre>
+             */
+            public Builder clearHeading() {
+                bitField0_ = (bitField0_ & ~0x00000040);
+                heading_ = 0F;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional float speed = 8;</code>
+             * <p/>
+             * <pre>
+             * 速度
+             * </pre>
+             */
+            public boolean hasSpeed() {
+                return ((bitField0_ & 0x00000080) == 0x00000080);
+            }
+
+            /**
+             * <code>optional float speed = 8;</code>
+             * <p/>
+             * <pre>
+             * 速度
+             * </pre>
+             */
+            public float getSpeed() {
+                return speed_;
+            }
+
+            /**
+             * <code>optional float speed = 8;</code>
+             * <p/>
+             * <pre>
+             * 速度
+             * </pre>
+             */
+            public Builder setSpeed(float value) {
+                bitField0_ |= 0x00000080;
+                speed_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional float speed = 8;</code>
+             * <p/>
+             * <pre>
+             * 速度
+             * </pre>
+             */
+            public Builder clearSpeed() {
+                bitField0_ = (bitField0_ & ~0x00000080);
+                speed_ = 0F;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional int32 satelliteNumber = 9;</code>
+             * <p/>
+             * <pre>
+             * 卫星数量
+             * </pre>
+             */
+            public boolean hasSatelliteNumber() {
+                return ((bitField0_ & 0x00000100) == 0x00000100);
+            }
+
+            /**
+             * <code>optional int32 satelliteNumber = 9;</code>
+             * <p/>
+             * <pre>
+             * 卫星数量
+             * </pre>
+             */
+            public int getSatelliteNumber() {
+                return satelliteNumber_;
+            }
+
+            /**
+             * <code>optional int32 satelliteNumber = 9;</code>
+             * <p/>
+             * <pre>
+             * 卫星数量
+             * </pre>
+             */
+            public Builder setSatelliteNumber(int value) {
+                bitField0_ |= 0x00000100;
+                satelliteNumber_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional int32 satelliteNumber = 9;</code>
+             * <p/>
+             * <pre>
+             * 卫星数量
+             * </pre>
+             */
+            public Builder clearSatelliteNumber() {
+                bitField0_ = (bitField0_ & ~0x00000100);
+                satelliteNumber_ = 0;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional float slope = 10;</code>
+             * <p/>
+             * <pre>
+             * slope
+             * </pre>
+             */
+            public boolean hasSlope() {
+                return ((bitField0_ & 0x00000200) == 0x00000200);
+            }
+
+            /**
+             * <code>optional float slope = 10;</code>
+             * <p/>
+             * <pre>
+             * slope
+             * </pre>
+             */
+            public float getSlope() {
+                return slope_;
+            }
+
+            /**
+             * <code>optional float slope = 10;</code>
+             * <p/>
+             * <pre>
+             * slope
+             * </pre>
+             */
+            public Builder setSlope(float value) {
+                bitField0_ |= 0x00000200;
+                slope_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional float slope = 10;</code>
+             * <p/>
+             * <pre>
+             * slope
+             * </pre>
+             */
+            public Builder clearSlope() {
+                bitField0_ = (bitField0_ & ~0x00000200);
+                slope_ = 0F;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional float headingAccuracy_deg = 11;</code>
+             */
+            public boolean hasHeadingAccuracyDeg() {
+                return ((bitField0_ & 0x00000400) == 0x00000400);
+            }
+
+            /**
+             * <code>optional float headingAccuracy_deg = 11;</code>
+             */
+            public float getHeadingAccuracyDeg() {
+                return headingAccuracyDeg_;
+            }
+
+            /**
+             * <code>optional float headingAccuracy_deg = 11;</code>
+             */
+            public Builder setHeadingAccuracyDeg(float value) {
+                bitField0_ |= 0x00000400;
+                headingAccuracyDeg_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional float headingAccuracy_deg = 11;</code>
+             */
+            public Builder clearHeadingAccuracyDeg() {
+                bitField0_ = (bitField0_ & ~0x00000400);
+                headingAccuracyDeg_ = 0F;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional float speedAccuracy_mps = 12;</code>
+             */
+            public boolean hasSpeedAccuracyMps() {
+                return ((bitField0_ & 0x00000800) == 0x00000800);
+            }
+
+            /**
+             * <code>optional float speedAccuracy_mps = 12;</code>
+             */
+            public float getSpeedAccuracyMps() {
+                return speedAccuracyMps_;
+            }
+
+            /**
+             * <code>optional float speedAccuracy_mps = 12;</code>
+             */
+            public Builder setSpeedAccuracyMps(float value) {
+                bitField0_ |= 0x00000800;
+                speedAccuracyMps_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional float speedAccuracy_mps = 12;</code>
+             */
+            public Builder clearSpeedAccuracyMps() {
+                bitField0_ = (bitField0_ & ~0x00000800);
+                speedAccuracyMps_ = 0F;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional float slopeAccuracy_deg = 13;</code>
+             */
+            public boolean hasSlopeAccuracyDeg() {
+                return ((bitField0_ & 0x00001000) == 0x00001000);
+            }
+
+            /**
+             * <code>optional float slopeAccuracy_deg = 13;</code>
+             */
+            public float getSlopeAccuracyDeg() {
+                return slopeAccuracyDeg_;
+            }
+
+            /**
+             * <code>optional float slopeAccuracy_deg = 13;</code>
+             */
+            public Builder setSlopeAccuracyDeg(float value) {
+                bitField0_ |= 0x00001000;
+                slopeAccuracyDeg_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional float slopeAccuracy_deg = 13;</code>
+             */
+            public Builder clearSlopeAccuracyDeg() {
+                bitField0_ = (bitField0_ & ~0x00001000);
+                slopeAccuracyDeg_ = 0F;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional .proto.PositionEstimate.HeadingDetectionEnum headingDetectionType = 14;</code>
+             */
+            public boolean hasHeadingDetectionType() {
+                return ((bitField0_ & 0x00002000) == 0x00002000);
+            }
+
+            /**
+             * <code>optional .proto.PositionEstimate.HeadingDetectionEnum headingDetectionType = 14;</code>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.HeadingDetectionEnum getHeadingDetectionType() {
+                return headingDetectionType_;
+            }
+
+            /**
+             * <code>optional .proto.PositionEstimate.HeadingDetectionEnum headingDetectionType = 14;</code>
+             */
+            public Builder setHeadingDetectionType(com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.HeadingDetectionEnum value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                bitField0_ |= 0x00002000;
+                headingDetectionType_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional .proto.PositionEstimate.HeadingDetectionEnum headingDetectionType = 14;</code>
+             */
+            public Builder clearHeadingDetectionType() {
+                bitField0_ = (bitField0_ & ~0x00002000);
+                headingDetectionType_ = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.HeadingDetectionEnum.HEADING_RAW_GPS;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional .proto.PositionEstimate.SpeedDetectionEnum speedDetectionType = 15;</code>
+             */
+            public boolean hasSpeedDetectionType() {
+                return ((bitField0_ & 0x00004000) == 0x00004000);
+            }
+
+            /**
+             * <code>optional .proto.PositionEstimate.SpeedDetectionEnum speedDetectionType = 15;</code>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SpeedDetectionEnum getSpeedDetectionType() {
+                return speedDetectionType_;
+            }
+
+            /**
+             * <code>optional .proto.PositionEstimate.SpeedDetectionEnum speedDetectionType = 15;</code>
+             */
+            public Builder setSpeedDetectionType(com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SpeedDetectionEnum value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                bitField0_ |= 0x00004000;
+                speedDetectionType_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional .proto.PositionEstimate.SpeedDetectionEnum speedDetectionType = 15;</code>
+             */
+            public Builder clearSpeedDetectionType() {
+                bitField0_ = (bitField0_ & ~0x00004000);
+                speedDetectionType_ = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SpeedDetectionEnum.SPEED_RAW_GPS;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional .proto.PositionEstimate.SlopeDetectionEnum slopeDetectionType = 16;</code>
+             */
+            public boolean hasSlopeDetectionType() {
+                return ((bitField0_ & 0x00008000) == 0x00008000);
+            }
+
+            /**
+             * <code>optional .proto.PositionEstimate.SlopeDetectionEnum slopeDetectionType = 16;</code>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SlopeDetectionEnum getSlopeDetectionType() {
+                return slopeDetectionType_;
+            }
+
+            /**
+             * <code>optional .proto.PositionEstimate.SlopeDetectionEnum slopeDetectionType = 16;</code>
+             */
+            public Builder setSlopeDetectionType(com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SlopeDetectionEnum value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                bitField0_ |= 0x00008000;
+                slopeDetectionType_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional .proto.PositionEstimate.SlopeDetectionEnum slopeDetectionType = 16;</code>
+             */
+            public Builder clearSlopeDetectionType() {
+                bitField0_ = (bitField0_ & ~0x00008000);
+                slopeDetectionType_ = com.zhk.protobuf.LogicalDataModelProtos.PositionEstimate.SlopeDetectionEnum.SLOPE_RAW_GPS;
+                onChanged();
+                return this;
+            }
+
+            // @@protoc_insertion_point(builder_scope:proto.PositionEstimate)
+        }
+
+        static {
+            defaultInstance = new PositionEstimate(true);
+            defaultInstance.initFields();
+        }
+
+        // @@protoc_insertion_point(class_scope:proto.PositionEstimate)
     }
 
-    private static final long serialVersionUID = 0L;
-    @Override
-    protected Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
-    public static com.zhk.protobuf.LogicalDataModelProtos.PathSegment parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.PathSegment parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.PathSegment parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.PathSegment parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.PathSegment parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.PathSegment parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.PathSegment parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.PathSegment parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.PathSegment parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.PathSegment parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.zhk.protobuf.LogicalDataModelProtos.PathSegment prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-
-    @Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code proto.PathSegment}
-     *
+     * <p/>
      * <pre>
      * 路线
      * </pre>
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:proto.PathSegment)
-        com.zhk.protobuf.LogicalDataModelProtos.PathSegmentOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_PathSegment_descriptor;
-      }
+    public static final class PathSegment extends
+            com.google.protobuf.GeneratedMessage implements
+            // @@protoc_insertion_point(message_implements:proto.PathSegment)
+            PathSegmentOrBuilder {
+        public static final int TIMESTAMPUTC_FIELD_NUMBER = 1;
+        public static final int POINTSEGMENTS_FIELD_NUMBER = 2;
+        public static final int NAVINFOIDS_FIELD_NUMBER = 3;
+        public static final int ROUTEBASETYPE_FIELD_NUMBER = 4;
+        public static final int NAVINFODATAVER_FIELD_NUMBER = 5;
+        private static final PathSegment defaultInstance;
+        private static final long serialVersionUID = 0L;
+        public static com.google.protobuf.Parser<PathSegment> PARSER =
+                new com.google.protobuf.AbstractParser<PathSegment>() {
+                    public PathSegment parsePartialFrom(
+                            com.google.protobuf.CodedInputStream input,
+                            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                            throws com.google.protobuf.InvalidProtocolBufferException {
+                        return new PathSegment(input, extensionRegistry);
+                    }
+                };
+        private final com.google.protobuf.UnknownFieldSet unknownFields;
+        private int bitField0_;
+        private long timestampUTC_;
+        private java.util.List<com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D> pointSegments_;
+        private java.util.List<Long> navinfoIds_;
+        private com.zhk.protobuf.LogicalDataModelProtos.PathSegment.RouteBaseTypeEnum routeBaseType_;
+        private Object navinfoDataVer_;
+        private byte memoizedIsInitialized = -1;
+        private int memoizedSerializedSize = -1;
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_PathSegment_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.zhk.protobuf.LogicalDataModelProtos.PathSegment.class, com.zhk.protobuf.LogicalDataModelProtos.PathSegment.Builder.class);
-      }
-
-      // Construct using com.zhk.protobuf.LogicalDataModelProtos.PathSegment.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getPointSegmentsFieldBuilder();
+        // Use PathSegment.newBuilder() to construct.
+        private PathSegment(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+            super(builder);
+            this.unknownFields = builder.getUnknownFields();
         }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
 
-      public Builder clear() {
-        super.clear();
-        timestampUTC_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        if (pointSegmentsBuilder_ == null) {
-          pointSegments_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        } else {
-          pointSegmentsBuilder_.clear();
+        private PathSegment(boolean noInit) {
+            this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance();
         }
-        navinfoIds_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
-        routeBaseType_ = com.zhk.protobuf.LogicalDataModelProtos.PathSegment.RouteBaseTypeEnum.OFF_LINE;
-        bitField0_ = (bitField0_ & ~0x00000008);
-        navinfoDataVer_ = "";
-        bitField0_ = (bitField0_ & ~0x00000010);
-        return this;
-      }
 
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_PathSegment_descriptor;
-      }
-
-      public com.zhk.protobuf.LogicalDataModelProtos.PathSegment getDefaultInstanceForType() {
-        return com.zhk.protobuf.LogicalDataModelProtos.PathSegment.getDefaultInstance();
-      }
-
-      public com.zhk.protobuf.LogicalDataModelProtos.PathSegment build() {
-        com.zhk.protobuf.LogicalDataModelProtos.PathSegment result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.zhk.protobuf.LogicalDataModelProtos.PathSegment buildPartial() {
-        com.zhk.protobuf.LogicalDataModelProtos.PathSegment result = new com.zhk.protobuf.LogicalDataModelProtos.PathSegment(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.timestampUTC_ = timestampUTC_;
-        if (pointSegmentsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
-            pointSegments_ = java.util.Collections.unmodifiableList(pointSegments_);
-            bitField0_ = (bitField0_ & ~0x00000002);
-          }
-          result.pointSegments_ = pointSegments_;
-        } else {
-          result.pointSegments_ = pointSegmentsBuilder_.build();
-        }
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          navinfoIds_ = java.util.Collections.unmodifiableList(navinfoIds_);
-          bitField0_ = (bitField0_ & ~0x00000004);
-        }
-        result.navinfoIds_ = navinfoIds_;
-        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.routeBaseType_ = routeBaseType_;
-        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
-          to_bitField0_ |= 0x00000004;
-        }
-        result.navinfoDataVer_ = navinfoDataVer_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.zhk.protobuf.LogicalDataModelProtos.PathSegment) {
-          return mergeFrom((com.zhk.protobuf.LogicalDataModelProtos.PathSegment)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.zhk.protobuf.LogicalDataModelProtos.PathSegment other) {
-        if (other == com.zhk.protobuf.LogicalDataModelProtos.PathSegment.getDefaultInstance()) return this;
-        if (other.hasTimestampUTC()) {
-          setTimestampUTC(other.getTimestampUTC());
-        }
-        if (pointSegmentsBuilder_ == null) {
-          if (!other.pointSegments_.isEmpty()) {
-            if (pointSegments_.isEmpty()) {
-              pointSegments_ = other.pointSegments_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-            } else {
-              ensurePointSegmentsIsMutable();
-              pointSegments_.addAll(other.pointSegments_);
+        private PathSegment(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            initFields();
+            int mutable_bitField0_ = 0;
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+                    com.google.protobuf.UnknownFieldSet.newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                        case 0:
+                            done = true;
+                            break;
+                        default: {
+                            if (!parseUnknownField(input, unknownFields,
+                                    extensionRegistry, tag)) {
+                                done = true;
+                            }
+                            break;
+                        }
+                        case 8: {
+                            bitField0_ |= 0x00000001;
+                            timestampUTC_ = input.readUInt64();
+                            break;
+                        }
+                        case 18: {
+                            if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                                pointSegments_ = new java.util.ArrayList<com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D>();
+                                mutable_bitField0_ |= 0x00000002;
+                            }
+                            pointSegments_.add(input.readMessage(com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.PARSER, extensionRegistry));
+                            break;
+                        }
+                        case 24: {
+                            if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                                navinfoIds_ = new java.util.ArrayList<Long>();
+                                mutable_bitField0_ |= 0x00000004;
+                            }
+                            navinfoIds_.add(input.readInt64());
+                            break;
+                        }
+                        case 26: {
+                            int length = input.readRawVarint32();
+                            int limit = input.pushLimit(length);
+                            if (!((mutable_bitField0_ & 0x00000004) == 0x00000004) && input.getBytesUntilLimit() > 0) {
+                                navinfoIds_ = new java.util.ArrayList<Long>();
+                                mutable_bitField0_ |= 0x00000004;
+                            }
+                            while (input.getBytesUntilLimit() > 0) {
+                                navinfoIds_.add(input.readInt64());
+                            }
+                            input.popLimit(limit);
+                            break;
+                        }
+                        case 32: {
+                            int rawValue = input.readEnum();
+                            com.zhk.protobuf.LogicalDataModelProtos.PathSegment.RouteBaseTypeEnum value = com.zhk.protobuf.LogicalDataModelProtos.PathSegment.RouteBaseTypeEnum.valueOf(rawValue);
+                            if (value == null) {
+                                unknownFields.mergeVarintField(4, rawValue);
+                            } else {
+                                bitField0_ |= 0x00000002;
+                                routeBaseType_ = value;
+                            }
+                            break;
+                        }
+                        case 42: {
+                            com.google.protobuf.ByteString bs = input.readBytes();
+                            bitField0_ |= 0x00000004;
+                            navinfoDataVer_ = bs;
+                            break;
+                        }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(
+                        e.getMessage()).setUnfinishedMessage(this);
+            } finally {
+                if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                    pointSegments_ = java.util.Collections.unmodifiableList(pointSegments_);
+                }
+                if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                    navinfoIds_ = java.util.Collections.unmodifiableList(navinfoIds_);
+                }
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
             }
-            onChanged();
-          }
-        } else {
-          if (!other.pointSegments_.isEmpty()) {
-            if (pointSegmentsBuilder_.isEmpty()) {
-              pointSegmentsBuilder_.dispose();
-              pointSegmentsBuilder_ = null;
-              pointSegments_ = other.pointSegments_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-              pointSegmentsBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getPointSegmentsFieldBuilder() : null;
-            } else {
-              pointSegmentsBuilder_.addAllMessages(other.pointSegments_);
-            }
-          }
         }
-        if (!other.navinfoIds_.isEmpty()) {
-          if (navinfoIds_.isEmpty()) {
-            navinfoIds_ = other.navinfoIds_;
-            bitField0_ = (bitField0_ & ~0x00000004);
-          } else {
-            ensureNavinfoIdsIsMutable();
-            navinfoIds_.addAll(other.navinfoIds_);
-          }
-          onChanged();
-        }
-        if (other.hasRouteBaseType()) {
-          setRouteBaseType(other.getRouteBaseType());
-        }
-        if (other.hasNavinfoDataVer()) {
-          bitField0_ |= 0x00000010;
-          navinfoDataVer_ = other.navinfoDataVer_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
 
-      public final boolean isInitialized() {
-        if (!hasTimestampUTC()) {
-          
-          return false;
+        public static PathSegment getDefaultInstance() {
+            return defaultInstance;
         }
-        if (!hasRouteBaseType()) {
-          
-          return false;
-        }
-        for (int i = 0; i < getPointSegmentsCount(); i++) {
-          if (!getPointSegments(i).isInitialized()) {
-            
-            return false;
-          }
-        }
-        return true;
-      }
 
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.zhk.protobuf.LogicalDataModelProtos.PathSegment parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.zhk.protobuf.LogicalDataModelProtos.PathSegment) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private long timestampUTC_ ;
-      /**
-       * <code>required uint64 timestampUTC = 1;</code>
-       *
-       * <pre>
-       * 算路之后采纳路线的时间
-       * </pre>
-       */
-      public boolean hasTimestampUTC() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>required uint64 timestampUTC = 1;</code>
-       *
-       * <pre>
-       * 算路之后采纳路线的时间
-       * </pre>
-       */
-      public long getTimestampUTC() {
-        return timestampUTC_;
-      }
-      /**
-       * <code>required uint64 timestampUTC = 1;</code>
-       *
-       * <pre>
-       * 算路之后采纳路线的时间
-       * </pre>
-       */
-      public Builder setTimestampUTC(long value) {
-        bitField0_ |= 0x00000001;
-        timestampUTC_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required uint64 timestampUTC = 1;</code>
-       *
-       * <pre>
-       * 算路之后采纳路线的时间
-       * </pre>
-       */
-      public Builder clearTimestampUTC() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        timestampUTC_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private java.util.List<com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D> pointSegments_ =
-        java.util.Collections.emptyList();
-      private void ensurePointSegmentsIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          pointSegments_ = new java.util.ArrayList<com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D>(pointSegments_);
-          bitField0_ |= 0x00000002;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
-          com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.Builder, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2DOrBuilder> pointSegmentsBuilder_;
-
-      /**
-       * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
-       */
-      public java.util.List<com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D> getPointSegmentsList() {
-        if (pointSegmentsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(pointSegments_);
-        } else {
-          return pointSegmentsBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
-       */
-      public int getPointSegmentsCount() {
-        if (pointSegmentsBuilder_ == null) {
-          return pointSegments_.size();
-        } else {
-          return pointSegmentsBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D getPointSegments(int index) {
-        if (pointSegmentsBuilder_ == null) {
-          return pointSegments_.get(index);
-        } else {
-          return pointSegmentsBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
-       */
-      public Builder setPointSegments(
-          int index, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D value) {
-        if (pointSegmentsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensurePointSegmentsIsMutable();
-          pointSegments_.set(index, value);
-          onChanged();
-        } else {
-          pointSegmentsBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
-       */
-      public Builder setPointSegments(
-          int index, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.Builder builderForValue) {
-        if (pointSegmentsBuilder_ == null) {
-          ensurePointSegmentsIsMutable();
-          pointSegments_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          pointSegmentsBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
-       */
-      public Builder addPointSegments(com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D value) {
-        if (pointSegmentsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensurePointSegmentsIsMutable();
-          pointSegments_.add(value);
-          onChanged();
-        } else {
-          pointSegmentsBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
-       */
-      public Builder addPointSegments(
-          int index, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D value) {
-        if (pointSegmentsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensurePointSegmentsIsMutable();
-          pointSegments_.add(index, value);
-          onChanged();
-        } else {
-          pointSegmentsBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
-       */
-      public Builder addPointSegments(
-          com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.Builder builderForValue) {
-        if (pointSegmentsBuilder_ == null) {
-          ensurePointSegmentsIsMutable();
-          pointSegments_.add(builderForValue.build());
-          onChanged();
-        } else {
-          pointSegmentsBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
-       */
-      public Builder addPointSegments(
-          int index, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.Builder builderForValue) {
-        if (pointSegmentsBuilder_ == null) {
-          ensurePointSegmentsIsMutable();
-          pointSegments_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          pointSegmentsBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
-       */
-      public Builder addAllPointSegments(
-          Iterable<? extends com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D> values) {
-        if (pointSegmentsBuilder_ == null) {
-          ensurePointSegmentsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, pointSegments_);
-          onChanged();
-        } else {
-          pointSegmentsBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
-       */
-      public Builder clearPointSegments() {
-        if (pointSegmentsBuilder_ == null) {
-          pointSegments_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-          onChanged();
-        } else {
-          pointSegmentsBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
-       */
-      public Builder removePointSegments(int index) {
-        if (pointSegmentsBuilder_ == null) {
-          ensurePointSegmentsIsMutable();
-          pointSegments_.remove(index);
-          onChanged();
-        } else {
-          pointSegmentsBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.Builder getPointSegmentsBuilder(
-          int index) {
-        return getPointSegmentsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.MapPoint2DOrBuilder getPointSegmentsOrBuilder(
-          int index) {
-        if (pointSegmentsBuilder_ == null) {
-          return pointSegments_.get(index);  } else {
-          return pointSegmentsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
-       */
-      public java.util.List<? extends com.zhk.protobuf.LogicalDataModelProtos.MapPoint2DOrBuilder> 
-           getPointSegmentsOrBuilderList() {
-        if (pointSegmentsBuilder_ != null) {
-          return pointSegmentsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(pointSegments_);
-        }
-      }
-      /**
-       * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.Builder addPointSegmentsBuilder() {
-        return getPointSegmentsFieldBuilder().addBuilder(
-            com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.Builder addPointSegmentsBuilder(
-          int index) {
-        return getPointSegmentsFieldBuilder().addBuilder(
-            index, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
-       */
-      public java.util.List<com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.Builder> 
-           getPointSegmentsBuilderList() {
-        return getPointSegmentsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
-          com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.Builder, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2DOrBuilder> 
-          getPointSegmentsFieldBuilder() {
-        if (pointSegmentsBuilder_ == null) {
-          pointSegmentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.Builder, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2DOrBuilder>(
-                  pointSegments_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
-                  getParentForChildren(),
-                  isClean());
-          pointSegments_ = null;
-        }
-        return pointSegmentsBuilder_;
-      }
-
-      private java.util.List<Long> navinfoIds_ = java.util.Collections.emptyList();
-      private void ensureNavinfoIdsIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-          navinfoIds_ = new java.util.ArrayList<Long>(navinfoIds_);
-          bitField0_ |= 0x00000004;
-         }
-      }
-      /**
-       * <code>repeated int64 navinfoIds = 3;</code>
-       *
-       * <pre>
-       * 在线算路产出的四维ID
-       * </pre>
-       */
-      public java.util.List<Long>
-          getNavinfoIdsList() {
-        return java.util.Collections.unmodifiableList(navinfoIds_);
-      }
-      /**
-       * <code>repeated int64 navinfoIds = 3;</code>
-       *
-       * <pre>
-       * 在线算路产出的四维ID
-       * </pre>
-       */
-      public int getNavinfoIdsCount() {
-        return navinfoIds_.size();
-      }
-      /**
-       * <code>repeated int64 navinfoIds = 3;</code>
-       *
-       * <pre>
-       * 在线算路产出的四维ID
-       * </pre>
-       */
-      public long getNavinfoIds(int index) {
-        return navinfoIds_.get(index);
-      }
-      /**
-       * <code>repeated int64 navinfoIds = 3;</code>
-       *
-       * <pre>
-       * 在线算路产出的四维ID
-       * </pre>
-       */
-      public Builder setNavinfoIds(
-          int index, long value) {
-        ensureNavinfoIdsIsMutable();
-        navinfoIds_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated int64 navinfoIds = 3;</code>
-       *
-       * <pre>
-       * 在线算路产出的四维ID
-       * </pre>
-       */
-      public Builder addNavinfoIds(long value) {
-        ensureNavinfoIdsIsMutable();
-        navinfoIds_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated int64 navinfoIds = 3;</code>
-       *
-       * <pre>
-       * 在线算路产出的四维ID
-       * </pre>
-       */
-      public Builder addAllNavinfoIds(
-          Iterable<? extends Long> values) {
-        ensureNavinfoIdsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, navinfoIds_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated int64 navinfoIds = 3;</code>
-       *
-       * <pre>
-       * 在线算路产出的四维ID
-       * </pre>
-       */
-      public Builder clearNavinfoIds() {
-        navinfoIds_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
-        return this;
-      }
-
-      private com.zhk.protobuf.LogicalDataModelProtos.PathSegment.RouteBaseTypeEnum routeBaseType_ = com.zhk.protobuf.LogicalDataModelProtos.PathSegment.RouteBaseTypeEnum.OFF_LINE;
-      /**
-       * <code>required .proto.PathSegment.RouteBaseTypeEnum routeBaseType = 4;</code>
-       *
-       * <pre>
-       * 离线还是在线算路
-       * </pre>
-       */
-      public boolean hasRouteBaseType() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
-      }
-      /**
-       * <code>required .proto.PathSegment.RouteBaseTypeEnum routeBaseType = 4;</code>
-       *
-       * <pre>
-       * 离线还是在线算路
-       * </pre>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.PathSegment.RouteBaseTypeEnum getRouteBaseType() {
-        return routeBaseType_;
-      }
-      /**
-       * <code>required .proto.PathSegment.RouteBaseTypeEnum routeBaseType = 4;</code>
-       *
-       * <pre>
-       * 离线还是在线算路
-       * </pre>
-       */
-      public Builder setRouteBaseType(com.zhk.protobuf.LogicalDataModelProtos.PathSegment.RouteBaseTypeEnum value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000008;
-        routeBaseType_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required .proto.PathSegment.RouteBaseTypeEnum routeBaseType = 4;</code>
-       *
-       * <pre>
-       * 离线还是在线算路
-       * </pre>
-       */
-      public Builder clearRouteBaseType() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        routeBaseType_ = com.zhk.protobuf.LogicalDataModelProtos.PathSegment.RouteBaseTypeEnum.OFF_LINE;
-        onChanged();
-        return this;
-      }
-
-      private Object navinfoDataVer_ = "";
-      /**
-       * <code>optional string navinfoDataVer = 5;</code>
-       *
-       * <pre>
-       * 离线算路所用数据的版本
-       * </pre>
-       */
-      public boolean hasNavinfoDataVer() {
-        return ((bitField0_ & 0x00000010) == 0x00000010);
-      }
-      /**
-       * <code>optional string navinfoDataVer = 5;</code>
-       *
-       * <pre>
-       * 离线算路所用数据的版本
-       * </pre>
-       */
-      public String getNavinfoDataVer() {
-        Object ref = navinfoDataVer_;
-        if (!(ref instanceof String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            navinfoDataVer_ = s;
-          }
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      /**
-       * <code>optional string navinfoDataVer = 5;</code>
-       *
-       * <pre>
-       * 离线算路所用数据的版本
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getNavinfoDataVerBytes() {
-        Object ref = navinfoDataVer_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
-          navinfoDataVer_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string navinfoDataVer = 5;</code>
-       *
-       * <pre>
-       * 离线算路所用数据的版本
-       * </pre>
-       */
-      public Builder setNavinfoDataVer(
-          String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
-        navinfoDataVer_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string navinfoDataVer = 5;</code>
-       *
-       * <pre>
-       * 离线算路所用数据的版本
-       * </pre>
-       */
-      public Builder clearNavinfoDataVer() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        navinfoDataVer_ = getDefaultInstance().getNavinfoDataVer();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string navinfoDataVer = 5;</code>
-       *
-       * <pre>
-       * 离线算路所用数据的版本
-       * </pre>
-       */
-      public Builder setNavinfoDataVerBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
-        navinfoDataVer_ = value;
-        onChanged();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:proto.PathSegment)
-    }
-
-    static {
-      defaultInstance = new PathSegment(true);
-      defaultInstance.initFields();
-    }
-
-    // @@protoc_insertion_point(class_scope:proto.PathSegment)
-  }
-
-  public interface MapPoint2DOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:proto.MapPoint2D)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>required int32 lon = 1;</code>
-     */
-    boolean hasLon();
-    /**
-     * <code>required int32 lon = 1;</code>
-     */
-    int getLon();
-
-    /**
-     * <code>required int32 lat = 2;</code>
-     */
-    boolean hasLat();
-    /**
-     * <code>required int32 lat = 2;</code>
-     */
-    int getLat();
-  }
-  /**
-   * Protobuf type {@code proto.MapPoint2D}
-   *
-   * <pre>
-   * 坐标点
-   * </pre>
-   */
-  public static final class MapPoint2D extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:proto.MapPoint2D)
-      MapPoint2DOrBuilder {
-    // Use MapPoint2D.newBuilder() to construct.
-    private MapPoint2D(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-      this.unknownFields = builder.getUnknownFields();
-    }
-    private MapPoint2D(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final MapPoint2D defaultInstance;
-    public static MapPoint2D getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public MapPoint2D getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private MapPoint2D(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 8: {
-              bitField0_ |= 0x00000001;
-              lon_ = input.readInt32();
-              break;
-            }
-            case 16: {
-              bitField0_ |= 0x00000002;
-              lat_ = input.readInt32();
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
+        public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_MapPoint2D_descriptor;
-    }
+            return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_PathSegment_descriptor;
+        }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        public static com.zhk.protobuf.LogicalDataModelProtos.PathSegment parseFrom(
+                com.google.protobuf.ByteString data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.PathSegment parseFrom(
+                com.google.protobuf.ByteString data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.PathSegment parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.PathSegment parseFrom(
+                byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.PathSegment parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return PARSER.parseFrom(input);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.PathSegment parseFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return PARSER.parseFrom(input, extensionRegistry);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.PathSegment parseDelimitedFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return PARSER.parseDelimitedFrom(input);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.PathSegment parseDelimitedFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.PathSegment parseFrom(
+                com.google.protobuf.CodedInputStream input)
+                throws java.io.IOException {
+            return PARSER.parseFrom(input);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.PathSegment parseFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return PARSER.parseFrom(input, extensionRegistry);
+        }
+
+        public static Builder newBuilder() {
+            return Builder.create();
+        }
+
+        public static Builder newBuilder(com.zhk.protobuf.LogicalDataModelProtos.PathSegment prototype) {
+            return newBuilder().mergeFrom(prototype);
+        }
+
+        public PathSegment getDefaultInstanceForType() {
+            return defaultInstance;
+        }
+
+        @Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+            return this.unknownFields;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_MapPoint2D_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.class, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.Builder.class);
+            return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_PathSegment_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            com.zhk.protobuf.LogicalDataModelProtos.PathSegment.class, com.zhk.protobuf.LogicalDataModelProtos.PathSegment.Builder.class);
+        }
+
+        @Override
+        public com.google.protobuf.Parser<PathSegment> getParserForType() {
+            return PARSER;
+        }
+
+        /**
+         * <code>required uint64 timestampUTC = 1;</code>
+         * <p/>
+         * <pre>
+         * 算路之后采纳路线的时间
+         * </pre>
+         */
+        public boolean hasTimestampUTC() {
+            return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+
+        /**
+         * <code>required uint64 timestampUTC = 1;</code>
+         * <p/>
+         * <pre>
+         * 算路之后采纳路线的时间
+         * </pre>
+         */
+        public long getTimestampUTC() {
+            return timestampUTC_;
+        }
+
+        /**
+         * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
+         */
+        public java.util.List<com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D> getPointSegmentsList() {
+            return pointSegments_;
+        }
+
+        /**
+         * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
+         */
+        public java.util.List<? extends com.zhk.protobuf.LogicalDataModelProtos.MapPoint2DOrBuilder>
+        getPointSegmentsOrBuilderList() {
+            return pointSegments_;
+        }
+
+        /**
+         * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
+         */
+        public int getPointSegmentsCount() {
+            return pointSegments_.size();
+        }
+
+        /**
+         * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
+         */
+        public com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D getPointSegments(int index) {
+            return pointSegments_.get(index);
+        }
+
+        /**
+         * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
+         */
+        public com.zhk.protobuf.LogicalDataModelProtos.MapPoint2DOrBuilder getPointSegmentsOrBuilder(
+                int index) {
+            return pointSegments_.get(index);
+        }
+
+        /**
+         * <code>repeated int64 navinfoIds = 3;</code>
+         * <p/>
+         * <pre>
+         * 在线算路产出的四维ID
+         * </pre>
+         */
+        public java.util.List<Long>
+        getNavinfoIdsList() {
+            return navinfoIds_;
+        }
+
+        /**
+         * <code>repeated int64 navinfoIds = 3;</code>
+         * <p/>
+         * <pre>
+         * 在线算路产出的四维ID
+         * </pre>
+         */
+        public int getNavinfoIdsCount() {
+            return navinfoIds_.size();
+        }
+
+        /**
+         * <code>repeated int64 navinfoIds = 3;</code>
+         * <p/>
+         * <pre>
+         * 在线算路产出的四维ID
+         * </pre>
+         */
+        public long getNavinfoIds(int index) {
+            return navinfoIds_.get(index);
+        }
+
+        /**
+         * <code>required .proto.PathSegment.RouteBaseTypeEnum routeBaseType = 4;</code>
+         * <p/>
+         * <pre>
+         * 离线还是在线算路
+         * </pre>
+         */
+        public boolean hasRouteBaseType() {
+            return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+
+        /**
+         * <code>required .proto.PathSegment.RouteBaseTypeEnum routeBaseType = 4;</code>
+         * <p/>
+         * <pre>
+         * 离线还是在线算路
+         * </pre>
+         */
+        public com.zhk.protobuf.LogicalDataModelProtos.PathSegment.RouteBaseTypeEnum getRouteBaseType() {
+            return routeBaseType_;
+        }
+
+        /**
+         * <code>optional string navinfoDataVer = 5;</code>
+         * <p/>
+         * <pre>
+         * 离线算路所用数据的版本
+         * </pre>
+         */
+        public boolean hasNavinfoDataVer() {
+            return ((bitField0_ & 0x00000004) == 0x00000004);
+        }
+
+        /**
+         * <code>optional string navinfoDataVer = 5;</code>
+         * <p/>
+         * <pre>
+         * 离线算路所用数据的版本
+         * </pre>
+         */
+        public String getNavinfoDataVer() {
+            Object ref = navinfoDataVer_;
+            if (ref instanceof String) {
+                return (String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                String s = bs.toStringUtf8();
+                if (bs.isValidUtf8()) {
+                    navinfoDataVer_ = s;
+                }
+                return s;
+            }
+        }
+
+        /**
+         * <code>optional string navinfoDataVer = 5;</code>
+         * <p/>
+         * <pre>
+         * 离线算路所用数据的版本
+         * </pre>
+         */
+        public com.google.protobuf.ByteString
+        getNavinfoDataVerBytes() {
+            Object ref = navinfoDataVer_;
+            if (ref instanceof String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (String) ref);
+                navinfoDataVer_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        private void initFields() {
+            timestampUTC_ = 0L;
+            pointSegments_ = java.util.Collections.emptyList();
+            navinfoIds_ = java.util.Collections.emptyList();
+            routeBaseType_ = com.zhk.protobuf.LogicalDataModelProtos.PathSegment.RouteBaseTypeEnum.OFF_LINE;
+            navinfoDataVer_ = "";
+        }
+
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1) return true;
+            if (isInitialized == 0) return false;
+
+            if (!hasTimestampUTC()) {
+                memoizedIsInitialized = 0;
+                return false;
+            }
+            if (!hasRouteBaseType()) {
+                memoizedIsInitialized = 0;
+                return false;
+            }
+            for (int i = 0; i < getPointSegmentsCount(); i++) {
+                if (!getPointSegments(i).isInitialized()) {
+                    memoizedIsInitialized = 0;
+                    return false;
+                }
+            }
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                throws java.io.IOException {
+            getSerializedSize();
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                output.writeUInt64(1, timestampUTC_);
+            }
+            for (int i = 0; i < pointSegments_.size(); i++) {
+                output.writeMessage(2, pointSegments_.get(i));
+            }
+            for (int i = 0; i < navinfoIds_.size(); i++) {
+                output.writeInt64(3, navinfoIds_.get(i));
+            }
+            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                output.writeEnum(4, routeBaseType_.getNumber());
+            }
+            if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                output.writeBytes(5, getNavinfoDataVerBytes());
+            }
+            getUnknownFields().writeTo(output);
+        }
+
+        public int getSerializedSize() {
+            int size = memoizedSerializedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeUInt64Size(1, timestampUTC_);
+            }
+            for (int i = 0; i < pointSegments_.size(); i++) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeMessageSize(2, pointSegments_.get(i));
+            }
+            {
+                int dataSize = 0;
+                for (int i = 0; i < navinfoIds_.size(); i++) {
+                    dataSize += com.google.protobuf.CodedOutputStream
+                            .computeInt64SizeNoTag(navinfoIds_.get(i));
+                }
+                size += dataSize;
+                size += 1 * getNavinfoIdsList().size();
+            }
+            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeEnumSize(4, routeBaseType_.getNumber());
+            }
+            if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeBytesSize(5, getNavinfoDataVerBytes());
+            }
+            size += getUnknownFields().getSerializedSize();
+            memoizedSerializedSize = size;
+            return size;
+        }
+
+        @Override
+        protected Object writeReplace()
+                throws java.io.ObjectStreamException {
+            return super.writeReplace();
+        }
+
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public Builder toBuilder() {
+            return newBuilder(this);
+        }
+
+        @Override
+        protected Builder newBuilderForType(
+                com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * Protobuf enum {@code proto.PathSegment.RouteBaseTypeEnum}
+         */
+        public enum RouteBaseTypeEnum
+                implements com.google.protobuf.ProtocolMessageEnum {
+            /**
+             * <code>OFF_LINE = 1;</code>
+             * <p/>
+             * <pre>
+             * 离线路线
+             * </pre>
+             */
+            OFF_LINE(0, 1),
+            /**
+             * <code>ON_LINE = 2;</code>
+             * <p/>
+             * <pre>
+             * 在线路线
+             * </pre>
+             */
+            ON_LINE(1, 2),;
+
+            /**
+             * <code>OFF_LINE = 1;</code>
+             * <p/>
+             * <pre>
+             * 离线路线
+             * </pre>
+             */
+            public static final int OFF_LINE_VALUE = 1;
+            /**
+             * <code>ON_LINE = 2;</code>
+             * <p/>
+             * <pre>
+             * 在线路线
+             * </pre>
+             */
+            public static final int ON_LINE_VALUE = 2;
+            private static final RouteBaseTypeEnum[] VALUES = values();
+            private static com.google.protobuf.Internal.EnumLiteMap<RouteBaseTypeEnum>
+                    internalValueMap =
+                    new com.google.protobuf.Internal.EnumLiteMap<RouteBaseTypeEnum>() {
+                        public RouteBaseTypeEnum findValueByNumber(int number) {
+                            return RouteBaseTypeEnum.valueOf(number);
+                        }
+                    };
+            private final int index;
+            private final int value;
+
+            private RouteBaseTypeEnum(int index, int value) {
+                this.index = index;
+                this.value = value;
+            }
+
+            public static RouteBaseTypeEnum valueOf(int value) {
+                switch (value) {
+                    case 1:
+                        return OFF_LINE;
+                    case 2:
+                        return ON_LINE;
+                    default:
+                        return null;
+                }
+            }
+
+            public static com.google.protobuf.Internal.EnumLiteMap<RouteBaseTypeEnum>
+            internalGetValueMap() {
+                return internalValueMap;
+            }
+
+            public static final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptor() {
+                return com.zhk.protobuf.LogicalDataModelProtos.PathSegment.getDescriptor().getEnumTypes().get(0);
+            }
+
+            public static RouteBaseTypeEnum valueOf(
+                    com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+                if (desc.getType() != getDescriptor()) {
+                    throw new IllegalArgumentException(
+                            "EnumValueDescriptor is not for this type.");
+                }
+                return VALUES[desc.getIndex()];
+            }
+
+            public final int getNumber() {
+                return value;
+            }
+
+            public final com.google.protobuf.Descriptors.EnumValueDescriptor
+            getValueDescriptor() {
+                return getDescriptor().getValues().get(index);
+            }
+
+            public final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptorForType() {
+                return getDescriptor();
+            }
+
+            // @@protoc_insertion_point(enum_scope:proto.PathSegment.RouteBaseTypeEnum)
+        }
+
+        /**
+         * Protobuf type {@code proto.PathSegment}
+         * <p/>
+         * <pre>
+         * 路线
+         * </pre>
+         */
+        public static final class Builder extends
+                com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:proto.PathSegment)
+                com.zhk.protobuf.LogicalDataModelProtos.PathSegmentOrBuilder {
+            private int bitField0_;
+            private long timestampUTC_;
+            private java.util.List<com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D> pointSegments_ =
+                    java.util.Collections.emptyList();
+            private com.google.protobuf.RepeatedFieldBuilder<
+                    com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.Builder, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2DOrBuilder> pointSegmentsBuilder_;
+            private java.util.List<Long> navinfoIds_ = java.util.Collections.emptyList();
+            private com.zhk.protobuf.LogicalDataModelProtos.PathSegment.RouteBaseTypeEnum routeBaseType_ = com.zhk.protobuf.LogicalDataModelProtos.PathSegment.RouteBaseTypeEnum.OFF_LINE;
+            private Object navinfoDataVer_ = "";
+
+            // Construct using com.zhk.protobuf.LogicalDataModelProtos.PathSegment.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(
+                    com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+                return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_PathSegment_descriptor;
+            }
+
+            private static Builder create() {
+                return new Builder();
+            }
+
+            protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+                return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_PathSegment_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                com.zhk.protobuf.LogicalDataModelProtos.PathSegment.class, com.zhk.protobuf.LogicalDataModelProtos.PathSegment.Builder.class);
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+                    getPointSegmentsFieldBuilder();
+                }
+            }
+
+            public Builder clear() {
+                super.clear();
+                timestampUTC_ = 0L;
+                bitField0_ = (bitField0_ & ~0x00000001);
+                if (pointSegmentsBuilder_ == null) {
+                    pointSegments_ = java.util.Collections.emptyList();
+                    bitField0_ = (bitField0_ & ~0x00000002);
+                } else {
+                    pointSegmentsBuilder_.clear();
+                }
+                navinfoIds_ = java.util.Collections.emptyList();
+                bitField0_ = (bitField0_ & ~0x00000004);
+                routeBaseType_ = com.zhk.protobuf.LogicalDataModelProtos.PathSegment.RouteBaseTypeEnum.OFF_LINE;
+                bitField0_ = (bitField0_ & ~0x00000008);
+                navinfoDataVer_ = "";
+                bitField0_ = (bitField0_ & ~0x00000010);
+                return this;
+            }
+
+            public Builder clone() {
+                return create().mergeFrom(buildPartial());
+            }
+
+            public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+                return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_PathSegment_descriptor;
+            }
+
+            public com.zhk.protobuf.LogicalDataModelProtos.PathSegment getDefaultInstanceForType() {
+                return com.zhk.protobuf.LogicalDataModelProtos.PathSegment.getDefaultInstance();
+            }
+
+            public com.zhk.protobuf.LogicalDataModelProtos.PathSegment build() {
+                com.zhk.protobuf.LogicalDataModelProtos.PathSegment result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            public com.zhk.protobuf.LogicalDataModelProtos.PathSegment buildPartial() {
+                com.zhk.protobuf.LogicalDataModelProtos.PathSegment result = new com.zhk.protobuf.LogicalDataModelProtos.PathSegment(this);
+                int from_bitField0_ = bitField0_;
+                int to_bitField0_ = 0;
+                if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+                    to_bitField0_ |= 0x00000001;
+                }
+                result.timestampUTC_ = timestampUTC_;
+                if (pointSegmentsBuilder_ == null) {
+                    if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                        pointSegments_ = java.util.Collections.unmodifiableList(pointSegments_);
+                        bitField0_ = (bitField0_ & ~0x00000002);
+                    }
+                    result.pointSegments_ = pointSegments_;
+                } else {
+                    result.pointSegments_ = pointSegmentsBuilder_.build();
+                }
+                if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                    navinfoIds_ = java.util.Collections.unmodifiableList(navinfoIds_);
+                    bitField0_ = (bitField0_ & ~0x00000004);
+                }
+                result.navinfoIds_ = navinfoIds_;
+                if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+                    to_bitField0_ |= 0x00000002;
+                }
+                result.routeBaseType_ = routeBaseType_;
+                if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+                    to_bitField0_ |= 0x00000004;
+                }
+                result.navinfoDataVer_ = navinfoDataVer_;
+                result.bitField0_ = to_bitField0_;
+                onBuilt();
+                return result;
+            }
+
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof com.zhk.protobuf.LogicalDataModelProtos.PathSegment) {
+                    return mergeFrom((com.zhk.protobuf.LogicalDataModelProtos.PathSegment) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(com.zhk.protobuf.LogicalDataModelProtos.PathSegment other) {
+                if (other == com.zhk.protobuf.LogicalDataModelProtos.PathSegment.getDefaultInstance()) return this;
+                if (other.hasTimestampUTC()) {
+                    setTimestampUTC(other.getTimestampUTC());
+                }
+                if (pointSegmentsBuilder_ == null) {
+                    if (!other.pointSegments_.isEmpty()) {
+                        if (pointSegments_.isEmpty()) {
+                            pointSegments_ = other.pointSegments_;
+                            bitField0_ = (bitField0_ & ~0x00000002);
+                        } else {
+                            ensurePointSegmentsIsMutable();
+                            pointSegments_.addAll(other.pointSegments_);
+                        }
+                        onChanged();
+                    }
+                } else {
+                    if (!other.pointSegments_.isEmpty()) {
+                        if (pointSegmentsBuilder_.isEmpty()) {
+                            pointSegmentsBuilder_.dispose();
+                            pointSegmentsBuilder_ = null;
+                            pointSegments_ = other.pointSegments_;
+                            bitField0_ = (bitField0_ & ~0x00000002);
+                            pointSegmentsBuilder_ =
+                                    com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                                            getPointSegmentsFieldBuilder() : null;
+                        } else {
+                            pointSegmentsBuilder_.addAllMessages(other.pointSegments_);
+                        }
+                    }
+                }
+                if (!other.navinfoIds_.isEmpty()) {
+                    if (navinfoIds_.isEmpty()) {
+                        navinfoIds_ = other.navinfoIds_;
+                        bitField0_ = (bitField0_ & ~0x00000004);
+                    } else {
+                        ensureNavinfoIdsIsMutable();
+                        navinfoIds_.addAll(other.navinfoIds_);
+                    }
+                    onChanged();
+                }
+                if (other.hasRouteBaseType()) {
+                    setRouteBaseType(other.getRouteBaseType());
+                }
+                if (other.hasNavinfoDataVer()) {
+                    bitField0_ |= 0x00000010;
+                    navinfoDataVer_ = other.navinfoDataVer_;
+                    onChanged();
+                }
+                this.mergeUnknownFields(other.getUnknownFields());
+                return this;
+            }
+
+            public final boolean isInitialized() {
+                if (!hasTimestampUTC()) {
+
+                    return false;
+                }
+                if (!hasRouteBaseType()) {
+
+                    return false;
+                }
+                for (int i = 0; i < getPointSegmentsCount(); i++) {
+                    if (!getPointSegments(i).isInitialized()) {
+
+                        return false;
+                    }
+                }
+                return true;
+            }
+
+            public Builder mergeFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws java.io.IOException {
+                com.zhk.protobuf.LogicalDataModelProtos.PathSegment parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (com.zhk.protobuf.LogicalDataModelProtos.PathSegment) e.getUnfinishedMessage();
+                    throw e;
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            /**
+             * <code>required uint64 timestampUTC = 1;</code>
+             * <p/>
+             * <pre>
+             * 算路之后采纳路线的时间
+             * </pre>
+             */
+            public boolean hasTimestampUTC() {
+                return ((bitField0_ & 0x00000001) == 0x00000001);
+            }
+
+            /**
+             * <code>required uint64 timestampUTC = 1;</code>
+             * <p/>
+             * <pre>
+             * 算路之后采纳路线的时间
+             * </pre>
+             */
+            public long getTimestampUTC() {
+                return timestampUTC_;
+            }
+
+            /**
+             * <code>required uint64 timestampUTC = 1;</code>
+             * <p/>
+             * <pre>
+             * 算路之后采纳路线的时间
+             * </pre>
+             */
+            public Builder setTimestampUTC(long value) {
+                bitField0_ |= 0x00000001;
+                timestampUTC_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>required uint64 timestampUTC = 1;</code>
+             * <p/>
+             * <pre>
+             * 算路之后采纳路线的时间
+             * </pre>
+             */
+            public Builder clearTimestampUTC() {
+                bitField0_ = (bitField0_ & ~0x00000001);
+                timestampUTC_ = 0L;
+                onChanged();
+                return this;
+            }
+
+            private void ensurePointSegmentsIsMutable() {
+                if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+                    pointSegments_ = new java.util.ArrayList<com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D>(pointSegments_);
+                    bitField0_ |= 0x00000002;
+                }
+            }
+
+            /**
+             * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
+             */
+            public java.util.List<com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D> getPointSegmentsList() {
+                if (pointSegmentsBuilder_ == null) {
+                    return java.util.Collections.unmodifiableList(pointSegments_);
+                } else {
+                    return pointSegmentsBuilder_.getMessageList();
+                }
+            }
+
+            /**
+             * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
+             */
+            public int getPointSegmentsCount() {
+                if (pointSegmentsBuilder_ == null) {
+                    return pointSegments_.size();
+                } else {
+                    return pointSegmentsBuilder_.getCount();
+                }
+            }
+
+            /**
+             * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D getPointSegments(int index) {
+                if (pointSegmentsBuilder_ == null) {
+                    return pointSegments_.get(index);
+                } else {
+                    return pointSegmentsBuilder_.getMessage(index);
+                }
+            }
+
+            /**
+             * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
+             */
+            public Builder setPointSegments(
+                    int index, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D value) {
+                if (pointSegmentsBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    ensurePointSegmentsIsMutable();
+                    pointSegments_.set(index, value);
+                    onChanged();
+                } else {
+                    pointSegmentsBuilder_.setMessage(index, value);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
+             */
+            public Builder setPointSegments(
+                    int index, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.Builder builderForValue) {
+                if (pointSegmentsBuilder_ == null) {
+                    ensurePointSegmentsIsMutable();
+                    pointSegments_.set(index, builderForValue.build());
+                    onChanged();
+                } else {
+                    pointSegmentsBuilder_.setMessage(index, builderForValue.build());
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
+             */
+            public Builder addPointSegments(com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D value) {
+                if (pointSegmentsBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    ensurePointSegmentsIsMutable();
+                    pointSegments_.add(value);
+                    onChanged();
+                } else {
+                    pointSegmentsBuilder_.addMessage(value);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
+             */
+            public Builder addPointSegments(
+                    int index, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D value) {
+                if (pointSegmentsBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    ensurePointSegmentsIsMutable();
+                    pointSegments_.add(index, value);
+                    onChanged();
+                } else {
+                    pointSegmentsBuilder_.addMessage(index, value);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
+             */
+            public Builder addPointSegments(
+                    com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.Builder builderForValue) {
+                if (pointSegmentsBuilder_ == null) {
+                    ensurePointSegmentsIsMutable();
+                    pointSegments_.add(builderForValue.build());
+                    onChanged();
+                } else {
+                    pointSegmentsBuilder_.addMessage(builderForValue.build());
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
+             */
+            public Builder addPointSegments(
+                    int index, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.Builder builderForValue) {
+                if (pointSegmentsBuilder_ == null) {
+                    ensurePointSegmentsIsMutable();
+                    pointSegments_.add(index, builderForValue.build());
+                    onChanged();
+                } else {
+                    pointSegmentsBuilder_.addMessage(index, builderForValue.build());
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
+             */
+            public Builder addAllPointSegments(
+                    Iterable<? extends com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D> values) {
+                if (pointSegmentsBuilder_ == null) {
+                    ensurePointSegmentsIsMutable();
+                    com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                            values, pointSegments_);
+                    onChanged();
+                } else {
+                    pointSegmentsBuilder_.addAllMessages(values);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
+             */
+            public Builder clearPointSegments() {
+                if (pointSegmentsBuilder_ == null) {
+                    pointSegments_ = java.util.Collections.emptyList();
+                    bitField0_ = (bitField0_ & ~0x00000002);
+                    onChanged();
+                } else {
+                    pointSegmentsBuilder_.clear();
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
+             */
+            public Builder removePointSegments(int index) {
+                if (pointSegmentsBuilder_ == null) {
+                    ensurePointSegmentsIsMutable();
+                    pointSegments_.remove(index);
+                    onChanged();
+                } else {
+                    pointSegmentsBuilder_.remove(index);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.Builder getPointSegmentsBuilder(
+                    int index) {
+                return getPointSegmentsFieldBuilder().getBuilder(index);
+            }
+
+            /**
+             * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.MapPoint2DOrBuilder getPointSegmentsOrBuilder(
+                    int index) {
+                if (pointSegmentsBuilder_ == null) {
+                    return pointSegments_.get(index);
+                } else {
+                    return pointSegmentsBuilder_.getMessageOrBuilder(index);
+                }
+            }
+
+            /**
+             * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
+             */
+            public java.util.List<? extends com.zhk.protobuf.LogicalDataModelProtos.MapPoint2DOrBuilder>
+            getPointSegmentsOrBuilderList() {
+                if (pointSegmentsBuilder_ != null) {
+                    return pointSegmentsBuilder_.getMessageOrBuilderList();
+                } else {
+                    return java.util.Collections.unmodifiableList(pointSegments_);
+                }
+            }
+
+            /**
+             * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.Builder addPointSegmentsBuilder() {
+                return getPointSegmentsFieldBuilder().addBuilder(
+                        com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.getDefaultInstance());
+            }
+
+            /**
+             * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.Builder addPointSegmentsBuilder(
+                    int index) {
+                return getPointSegmentsFieldBuilder().addBuilder(
+                        index, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.getDefaultInstance());
+            }
+
+            /**
+             * <code>repeated .proto.MapPoint2D pointSegments = 2;</code>
+             */
+            public java.util.List<com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.Builder>
+            getPointSegmentsBuilderList() {
+                return getPointSegmentsFieldBuilder().getBuilderList();
+            }
+
+            private com.google.protobuf.RepeatedFieldBuilder<
+                    com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.Builder, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2DOrBuilder>
+            getPointSegmentsFieldBuilder() {
+                if (pointSegmentsBuilder_ == null) {
+                    pointSegmentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+                            com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.Builder, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2DOrBuilder>(
+                            pointSegments_,
+                            ((bitField0_ & 0x00000002) == 0x00000002),
+                            getParentForChildren(),
+                            isClean());
+                    pointSegments_ = null;
+                }
+                return pointSegmentsBuilder_;
+            }
+
+            private void ensureNavinfoIdsIsMutable() {
+                if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+                    navinfoIds_ = new java.util.ArrayList<Long>(navinfoIds_);
+                    bitField0_ |= 0x00000004;
+                }
+            }
+
+            /**
+             * <code>repeated int64 navinfoIds = 3;</code>
+             * <p/>
+             * <pre>
+             * 在线算路产出的四维ID
+             * </pre>
+             */
+            public java.util.List<Long>
+            getNavinfoIdsList() {
+                return java.util.Collections.unmodifiableList(navinfoIds_);
+            }
+
+            /**
+             * <code>repeated int64 navinfoIds = 3;</code>
+             * <p/>
+             * <pre>
+             * 在线算路产出的四维ID
+             * </pre>
+             */
+            public int getNavinfoIdsCount() {
+                return navinfoIds_.size();
+            }
+
+            /**
+             * <code>repeated int64 navinfoIds = 3;</code>
+             * <p/>
+             * <pre>
+             * 在线算路产出的四维ID
+             * </pre>
+             */
+            public long getNavinfoIds(int index) {
+                return navinfoIds_.get(index);
+            }
+
+            /**
+             * <code>repeated int64 navinfoIds = 3;</code>
+             * <p/>
+             * <pre>
+             * 在线算路产出的四维ID
+             * </pre>
+             */
+            public Builder setNavinfoIds(
+                    int index, long value) {
+                ensureNavinfoIdsIsMutable();
+                navinfoIds_.set(index, value);
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>repeated int64 navinfoIds = 3;</code>
+             * <p/>
+             * <pre>
+             * 在线算路产出的四维ID
+             * </pre>
+             */
+            public Builder addNavinfoIds(long value) {
+                ensureNavinfoIdsIsMutable();
+                navinfoIds_.add(value);
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>repeated int64 navinfoIds = 3;</code>
+             * <p/>
+             * <pre>
+             * 在线算路产出的四维ID
+             * </pre>
+             */
+            public Builder addAllNavinfoIds(
+                    Iterable<? extends Long> values) {
+                ensureNavinfoIdsIsMutable();
+                com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                        values, navinfoIds_);
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>repeated int64 navinfoIds = 3;</code>
+             * <p/>
+             * <pre>
+             * 在线算路产出的四维ID
+             * </pre>
+             */
+            public Builder clearNavinfoIds() {
+                navinfoIds_ = java.util.Collections.emptyList();
+                bitField0_ = (bitField0_ & ~0x00000004);
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>required .proto.PathSegment.RouteBaseTypeEnum routeBaseType = 4;</code>
+             * <p/>
+             * <pre>
+             * 离线还是在线算路
+             * </pre>
+             */
+            public boolean hasRouteBaseType() {
+                return ((bitField0_ & 0x00000008) == 0x00000008);
+            }
+
+            /**
+             * <code>required .proto.PathSegment.RouteBaseTypeEnum routeBaseType = 4;</code>
+             * <p/>
+             * <pre>
+             * 离线还是在线算路
+             * </pre>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.PathSegment.RouteBaseTypeEnum getRouteBaseType() {
+                return routeBaseType_;
+            }
+
+            /**
+             * <code>required .proto.PathSegment.RouteBaseTypeEnum routeBaseType = 4;</code>
+             * <p/>
+             * <pre>
+             * 离线还是在线算路
+             * </pre>
+             */
+            public Builder setRouteBaseType(com.zhk.protobuf.LogicalDataModelProtos.PathSegment.RouteBaseTypeEnum value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                bitField0_ |= 0x00000008;
+                routeBaseType_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>required .proto.PathSegment.RouteBaseTypeEnum routeBaseType = 4;</code>
+             * <p/>
+             * <pre>
+             * 离线还是在线算路
+             * </pre>
+             */
+            public Builder clearRouteBaseType() {
+                bitField0_ = (bitField0_ & ~0x00000008);
+                routeBaseType_ = com.zhk.protobuf.LogicalDataModelProtos.PathSegment.RouteBaseTypeEnum.OFF_LINE;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional string navinfoDataVer = 5;</code>
+             * <p/>
+             * <pre>
+             * 离线算路所用数据的版本
+             * </pre>
+             */
+            public boolean hasNavinfoDataVer() {
+                return ((bitField0_ & 0x00000010) == 0x00000010);
+            }
+
+            /**
+             * <code>optional string navinfoDataVer = 5;</code>
+             * <p/>
+             * <pre>
+             * 离线算路所用数据的版本
+             * </pre>
+             */
+            public String getNavinfoDataVer() {
+                Object ref = navinfoDataVer_;
+                if (!(ref instanceof String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    String s = bs.toStringUtf8();
+                    if (bs.isValidUtf8()) {
+                        navinfoDataVer_ = s;
+                    }
+                    return s;
+                } else {
+                    return (String) ref;
+                }
+            }
+
+            /**
+             * <code>optional string navinfoDataVer = 5;</code>
+             * <p/>
+             * <pre>
+             * 离线算路所用数据的版本
+             * </pre>
+             */
+            public Builder setNavinfoDataVer(
+                    String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                bitField0_ |= 0x00000010;
+                navinfoDataVer_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional string navinfoDataVer = 5;</code>
+             * <p/>
+             * <pre>
+             * 离线算路所用数据的版本
+             * </pre>
+             */
+            public com.google.protobuf.ByteString
+            getNavinfoDataVerBytes() {
+                Object ref = navinfoDataVer_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (String) ref);
+                    navinfoDataVer_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>optional string navinfoDataVer = 5;</code>
+             * <p/>
+             * <pre>
+             * 离线算路所用数据的版本
+             * </pre>
+             */
+            public Builder setNavinfoDataVerBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                bitField0_ |= 0x00000010;
+                navinfoDataVer_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional string navinfoDataVer = 5;</code>
+             * <p/>
+             * <pre>
+             * 离线算路所用数据的版本
+             * </pre>
+             */
+            public Builder clearNavinfoDataVer() {
+                bitField0_ = (bitField0_ & ~0x00000010);
+                navinfoDataVer_ = getDefaultInstance().getNavinfoDataVer();
+                onChanged();
+                return this;
+            }
+
+            // @@protoc_insertion_point(builder_scope:proto.PathSegment)
+        }
+
+        static {
+            defaultInstance = new PathSegment(true);
+            defaultInstance.initFields();
+        }
+
+        // @@protoc_insertion_point(class_scope:proto.PathSegment)
     }
 
-    public static com.google.protobuf.Parser<MapPoint2D> PARSER =
-        new com.google.protobuf.AbstractParser<MapPoint2D>() {
-      public MapPoint2D parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new MapPoint2D(input, extensionRegistry);
-      }
-    };
-
-    @Override
-    public com.google.protobuf.Parser<MapPoint2D> getParserForType() {
-      return PARSER;
-    }
-
-    private int bitField0_;
-    public static final int LON_FIELD_NUMBER = 1;
-    private int lon_;
-    /**
-     * <code>required int32 lon = 1;</code>
-     */
-    public boolean hasLon() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>required int32 lon = 1;</code>
-     */
-    public int getLon() {
-      return lon_;
-    }
-
-    public static final int LAT_FIELD_NUMBER = 2;
-    private int lat_;
-    /**
-     * <code>required int32 lat = 2;</code>
-     */
-    public boolean hasLat() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>required int32 lat = 2;</code>
-     */
-    public int getLat() {
-      return lat_;
-    }
-
-    private void initFields() {
-      lon_ = 0;
-      lat_ = 0;
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      if (!hasLon()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasLat()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeInt32(1, lon_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeInt32(2, lat_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, lon_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, lat_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @Override
-    protected Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
-    public static com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-
-    @Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code proto.MapPoint2D}
-     *
+     * <p/>
      * <pre>
      * 坐标点
      * </pre>
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:proto.MapPoint2D)
-        com.zhk.protobuf.LogicalDataModelProtos.MapPoint2DOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_MapPoint2D_descriptor;
-      }
+    public static final class MapPoint2D extends
+            com.google.protobuf.GeneratedMessage implements
+            // @@protoc_insertion_point(message_implements:proto.MapPoint2D)
+            MapPoint2DOrBuilder {
+        public static final int LON_FIELD_NUMBER = 1;
+        public static final int LAT_FIELD_NUMBER = 2;
+        private static final MapPoint2D defaultInstance;
+        private static final long serialVersionUID = 0L;
+        public static com.google.protobuf.Parser<MapPoint2D> PARSER =
+                new com.google.protobuf.AbstractParser<MapPoint2D>() {
+                    public MapPoint2D parsePartialFrom(
+                            com.google.protobuf.CodedInputStream input,
+                            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                            throws com.google.protobuf.InvalidProtocolBufferException {
+                        return new MapPoint2D(input, extensionRegistry);
+                    }
+                };
+        private final com.google.protobuf.UnknownFieldSet unknownFields;
+        private int bitField0_;
+        private int lon_;
+        private int lat_;
+        private byte memoizedIsInitialized = -1;
+        private int memoizedSerializedSize = -1;
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_MapPoint2D_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.class, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.Builder.class);
-      }
-
-      // Construct using com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        // Use MapPoint2D.newBuilder() to construct.
+        private MapPoint2D(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+            super(builder);
+            this.unknownFields = builder.getUnknownFields();
         }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
 
-      public Builder clear() {
-        super.clear();
-        lon_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        lat_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_MapPoint2D_descriptor;
-      }
-
-      public com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D getDefaultInstanceForType() {
-        return com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.getDefaultInstance();
-      }
-
-      public com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D build() {
-        com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private MapPoint2D(boolean noInit) {
+            this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance();
         }
-        return result;
-      }
 
-      public com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D buildPartial() {
-        com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D result = new com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.lon_ = lon_;
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.lat_ = lat_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D) {
-          return mergeFrom((com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D other) {
-        if (other == com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.getDefaultInstance()) return this;
-        if (other.hasLon()) {
-          setLon(other.getLon());
-        }
-        if (other.hasLat()) {
-          setLat(other.getLat());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        if (!hasLon()) {
-          
-          return false;
-        }
-        if (!hasLat()) {
-          
-          return false;
-        }
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private int lon_ ;
-      /**
-       * <code>required int32 lon = 1;</code>
-       */
-      public boolean hasLon() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>required int32 lon = 1;</code>
-       */
-      public int getLon() {
-        return lon_;
-      }
-      /**
-       * <code>required int32 lon = 1;</code>
-       */
-      public Builder setLon(int value) {
-        bitField0_ |= 0x00000001;
-        lon_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required int32 lon = 1;</code>
-       */
-      public Builder clearLon() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        lon_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int lat_ ;
-      /**
-       * <code>required int32 lat = 2;</code>
-       */
-      public boolean hasLat() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>required int32 lat = 2;</code>
-       */
-      public int getLat() {
-        return lat_;
-      }
-      /**
-       * <code>required int32 lat = 2;</code>
-       */
-      public Builder setLat(int value) {
-        bitField0_ |= 0x00000002;
-        lat_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required int32 lat = 2;</code>
-       */
-      public Builder clearLat() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        lat_ = 0;
-        onChanged();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:proto.MapPoint2D)
-    }
-
-    static {
-      defaultInstance = new MapPoint2D(true);
-      defaultInstance.initFields();
-    }
-
-    // @@protoc_insertion_point(class_scope:proto.MapPoint2D)
-  }
-
-  public interface PathEventOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:proto.PathEvent)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
-     *
-     * <pre>
-     * 导航过程事件
-     * </pre>
-     */
-    java.util.List<com.zhk.protobuf.LogicalDataModelProtos.NaviEvent> 
-        getNaviEventList();
-    /**
-     * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
-     *
-     * <pre>
-     * 导航过程事件
-     * </pre>
-     */
-    com.zhk.protobuf.LogicalDataModelProtos.NaviEvent getNaviEvent(int index);
-    /**
-     * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
-     *
-     * <pre>
-     * 导航过程事件
-     * </pre>
-     */
-    int getNaviEventCount();
-    /**
-     * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
-     *
-     * <pre>
-     * 导航过程事件
-     * </pre>
-     */
-    java.util.List<? extends com.zhk.protobuf.LogicalDataModelProtos.NaviEventOrBuilder> 
-        getNaviEventOrBuilderList();
-    /**
-     * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
-     *
-     * <pre>
-     * 导航过程事件
-     * </pre>
-     */
-    com.zhk.protobuf.LogicalDataModelProtos.NaviEventOrBuilder getNaviEventOrBuilder(
-            int index);
-  }
-  /**
-   * Protobuf type {@code proto.PathEvent}
-   *
-   * <pre>
-   * 所有事件容器
-   * </pre>
-   */
-  public static final class PathEvent extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:proto.PathEvent)
-      PathEventOrBuilder {
-    // Use PathEvent.newBuilder() to construct.
-    private PathEvent(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-      this.unknownFields = builder.getUnknownFields();
-    }
-    private PathEvent(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final PathEvent defaultInstance;
-    public static PathEvent getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public PathEvent getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private PathEvent(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
+        private MapPoint2D(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            initFields();
+            int mutable_bitField0_ = 0;
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+                    com.google.protobuf.UnknownFieldSet.newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                        case 0:
+                            done = true;
+                            break;
+                        default: {
+                            if (!parseUnknownField(input, unknownFields,
+                                    extensionRegistry, tag)) {
+                                done = true;
+                            }
+                            break;
+                        }
+                        case 8: {
+                            bitField0_ |= 0x00000001;
+                            lon_ = input.readInt32();
+                            break;
+                        }
+                        case 16: {
+                            bitField0_ |= 0x00000002;
+                            lat_ = input.readInt32();
+                            break;
+                        }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(
+                        e.getMessage()).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
             }
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                naviEvent_ = new java.util.ArrayList<com.zhk.protobuf.LogicalDataModelProtos.NaviEvent>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              naviEvent_.add(input.readMessage(com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.PARSER, extensionRegistry));
-              break;
-            }
-          }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-          naviEvent_ = java.util.Collections.unmodifiableList(naviEvent_);
+
+        public static MapPoint2D getDefaultInstance() {
+            return defaultInstance;
         }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
+
+        public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_PathEvent_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_PathEvent_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.zhk.protobuf.LogicalDataModelProtos.PathEvent.class, com.zhk.protobuf.LogicalDataModelProtos.PathEvent.Builder.class);
-    }
-
-    public static com.google.protobuf.Parser<PathEvent> PARSER =
-        new com.google.protobuf.AbstractParser<PathEvent>() {
-      public PathEvent parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PathEvent(input, extensionRegistry);
-      }
-    };
-
-    @Override
-    public com.google.protobuf.Parser<PathEvent> getParserForType() {
-      return PARSER;
-    }
-
-    public static final int NAVIEVENT_FIELD_NUMBER = 1;
-    private java.util.List<com.zhk.protobuf.LogicalDataModelProtos.NaviEvent> naviEvent_;
-    /**
-     * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
-     *
-     * <pre>
-     * 导航过程事件
-     * </pre>
-     */
-    public java.util.List<com.zhk.protobuf.LogicalDataModelProtos.NaviEvent> getNaviEventList() {
-      return naviEvent_;
-    }
-    /**
-     * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
-     *
-     * <pre>
-     * 导航过程事件
-     * </pre>
-     */
-    public java.util.List<? extends com.zhk.protobuf.LogicalDataModelProtos.NaviEventOrBuilder> 
-        getNaviEventOrBuilderList() {
-      return naviEvent_;
-    }
-    /**
-     * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
-     *
-     * <pre>
-     * 导航过程事件
-     * </pre>
-     */
-    public int getNaviEventCount() {
-      return naviEvent_.size();
-    }
-    /**
-     * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
-     *
-     * <pre>
-     * 导航过程事件
-     * </pre>
-     */
-    public com.zhk.protobuf.LogicalDataModelProtos.NaviEvent getNaviEvent(int index) {
-      return naviEvent_.get(index);
-    }
-    /**
-     * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
-     *
-     * <pre>
-     * 导航过程事件
-     * </pre>
-     */
-    public com.zhk.protobuf.LogicalDataModelProtos.NaviEventOrBuilder getNaviEventOrBuilder(
-        int index) {
-      return naviEvent_.get(index);
-    }
-
-    private void initFields() {
-      naviEvent_ = java.util.Collections.emptyList();
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      for (int i = 0; i < getNaviEventCount(); i++) {
-        if (!getNaviEvent(i).isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
+            return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_MapPoint2D_descriptor;
         }
-      }
-      memoizedIsInitialized = 1;
-      return true;
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D parseFrom(
+                com.google.protobuf.ByteString data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D parseFrom(
+                com.google.protobuf.ByteString data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D parseFrom(
+                byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return PARSER.parseFrom(input);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D parseFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return PARSER.parseFrom(input, extensionRegistry);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D parseDelimitedFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return PARSER.parseDelimitedFrom(input);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D parseDelimitedFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D parseFrom(
+                com.google.protobuf.CodedInputStream input)
+                throws java.io.IOException {
+            return PARSER.parseFrom(input);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D parseFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return PARSER.parseFrom(input, extensionRegistry);
+        }
+
+        public static Builder newBuilder() {
+            return Builder.create();
+        }
+
+        public static Builder newBuilder(com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D prototype) {
+            return newBuilder().mergeFrom(prototype);
+        }
+
+        public MapPoint2D getDefaultInstanceForType() {
+            return defaultInstance;
+        }
+
+        @Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+            return this.unknownFields;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+            return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_MapPoint2D_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.class, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.Builder.class);
+        }
+
+        @Override
+        public com.google.protobuf.Parser<MapPoint2D> getParserForType() {
+            return PARSER;
+        }
+
+        /**
+         * <code>required int32 lon = 1;</code>
+         */
+        public boolean hasLon() {
+            return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+
+        /**
+         * <code>required int32 lon = 1;</code>
+         */
+        public int getLon() {
+            return lon_;
+        }
+
+        /**
+         * <code>required int32 lat = 2;</code>
+         */
+        public boolean hasLat() {
+            return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+
+        /**
+         * <code>required int32 lat = 2;</code>
+         */
+        public int getLat() {
+            return lat_;
+        }
+
+        private void initFields() {
+            lon_ = 0;
+            lat_ = 0;
+        }
+
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1) return true;
+            if (isInitialized == 0) return false;
+
+            if (!hasLon()) {
+                memoizedIsInitialized = 0;
+                return false;
+            }
+            if (!hasLat()) {
+                memoizedIsInitialized = 0;
+                return false;
+            }
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                throws java.io.IOException {
+            getSerializedSize();
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                output.writeInt32(1, lon_);
+            }
+            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                output.writeInt32(2, lat_);
+            }
+            getUnknownFields().writeTo(output);
+        }
+
+        public int getSerializedSize() {
+            int size = memoizedSerializedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeInt32Size(1, lon_);
+            }
+            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeInt32Size(2, lat_);
+            }
+            size += getUnknownFields().getSerializedSize();
+            memoizedSerializedSize = size;
+            return size;
+        }
+
+        @Override
+        protected Object writeReplace()
+                throws java.io.ObjectStreamException {
+            return super.writeReplace();
+        }
+
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public Builder toBuilder() {
+            return newBuilder(this);
+        }
+
+        @Override
+        protected Builder newBuilderForType(
+                com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * Protobuf type {@code proto.MapPoint2D}
+         * <p/>
+         * <pre>
+         * 坐标点
+         * </pre>
+         */
+        public static final class Builder extends
+                com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:proto.MapPoint2D)
+                com.zhk.protobuf.LogicalDataModelProtos.MapPoint2DOrBuilder {
+            private int bitField0_;
+            private int lon_;
+            private int lat_;
+
+            // Construct using com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(
+                    com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+                return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_MapPoint2D_descriptor;
+            }
+
+            private static Builder create() {
+                return new Builder();
+            }
+
+            protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+                return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_MapPoint2D_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.class, com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.Builder.class);
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+                }
+            }
+
+            public Builder clear() {
+                super.clear();
+                lon_ = 0;
+                bitField0_ = (bitField0_ & ~0x00000001);
+                lat_ = 0;
+                bitField0_ = (bitField0_ & ~0x00000002);
+                return this;
+            }
+
+            public Builder clone() {
+                return create().mergeFrom(buildPartial());
+            }
+
+            public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+                return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_MapPoint2D_descriptor;
+            }
+
+            public com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D getDefaultInstanceForType() {
+                return com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.getDefaultInstance();
+            }
+
+            public com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D build() {
+                com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            public com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D buildPartial() {
+                com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D result = new com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D(this);
+                int from_bitField0_ = bitField0_;
+                int to_bitField0_ = 0;
+                if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+                    to_bitField0_ |= 0x00000001;
+                }
+                result.lon_ = lon_;
+                if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+                    to_bitField0_ |= 0x00000002;
+                }
+                result.lat_ = lat_;
+                result.bitField0_ = to_bitField0_;
+                onBuilt();
+                return result;
+            }
+
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D) {
+                    return mergeFrom((com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D other) {
+                if (other == com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D.getDefaultInstance()) return this;
+                if (other.hasLon()) {
+                    setLon(other.getLon());
+                }
+                if (other.hasLat()) {
+                    setLat(other.getLat());
+                }
+                this.mergeUnknownFields(other.getUnknownFields());
+                return this;
+            }
+
+            public final boolean isInitialized() {
+                if (!hasLon()) {
+
+                    return false;
+                }
+                if (!hasLat()) {
+
+                    return false;
+                }
+                return true;
+            }
+
+            public Builder mergeFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws java.io.IOException {
+                com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (com.zhk.protobuf.LogicalDataModelProtos.MapPoint2D) e.getUnfinishedMessage();
+                    throw e;
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            /**
+             * <code>required int32 lon = 1;</code>
+             */
+            public boolean hasLon() {
+                return ((bitField0_ & 0x00000001) == 0x00000001);
+            }
+
+            /**
+             * <code>required int32 lon = 1;</code>
+             */
+            public int getLon() {
+                return lon_;
+            }
+
+            /**
+             * <code>required int32 lon = 1;</code>
+             */
+            public Builder setLon(int value) {
+                bitField0_ |= 0x00000001;
+                lon_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>required int32 lon = 1;</code>
+             */
+            public Builder clearLon() {
+                bitField0_ = (bitField0_ & ~0x00000001);
+                lon_ = 0;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>required int32 lat = 2;</code>
+             */
+            public boolean hasLat() {
+                return ((bitField0_ & 0x00000002) == 0x00000002);
+            }
+
+            /**
+             * <code>required int32 lat = 2;</code>
+             */
+            public int getLat() {
+                return lat_;
+            }
+
+            /**
+             * <code>required int32 lat = 2;</code>
+             */
+            public Builder setLat(int value) {
+                bitField0_ |= 0x00000002;
+                lat_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>required int32 lat = 2;</code>
+             */
+            public Builder clearLat() {
+                bitField0_ = (bitField0_ & ~0x00000002);
+                lat_ = 0;
+                onChanged();
+                return this;
+            }
+
+            // @@protoc_insertion_point(builder_scope:proto.MapPoint2D)
+        }
+
+        static {
+            defaultInstance = new MapPoint2D(true);
+            defaultInstance.initFields();
+        }
+
+        // @@protoc_insertion_point(class_scope:proto.MapPoint2D)
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      for (int i = 0; i < naviEvent_.size(); i++) {
-        output.writeMessage(1, naviEvent_.get(i));
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < naviEvent_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, naviEvent_.get(i));
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @Override
-    protected Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
-    public static com.zhk.protobuf.LogicalDataModelProtos.PathEvent parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.PathEvent parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.PathEvent parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.PathEvent parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.PathEvent parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.PathEvent parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.PathEvent parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.PathEvent parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.PathEvent parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.PathEvent parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.zhk.protobuf.LogicalDataModelProtos.PathEvent prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-
-    @Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code proto.PathEvent}
-     *
+     * <p/>
      * <pre>
      * 所有事件容器
      * </pre>
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:proto.PathEvent)
-        com.zhk.protobuf.LogicalDataModelProtos.PathEventOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_PathEvent_descriptor;
-      }
+    public static final class PathEvent extends
+            com.google.protobuf.GeneratedMessage implements
+            // @@protoc_insertion_point(message_implements:proto.PathEvent)
+            PathEventOrBuilder {
+        public static final int NAVIEVENT_FIELD_NUMBER = 1;
+        private static final PathEvent defaultInstance;
+        private static final long serialVersionUID = 0L;
+        public static com.google.protobuf.Parser<PathEvent> PARSER =
+                new com.google.protobuf.AbstractParser<PathEvent>() {
+                    public PathEvent parsePartialFrom(
+                            com.google.protobuf.CodedInputStream input,
+                            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                            throws com.google.protobuf.InvalidProtocolBufferException {
+                        return new PathEvent(input, extensionRegistry);
+                    }
+                };
+        private final com.google.protobuf.UnknownFieldSet unknownFields;
+        private java.util.List<com.zhk.protobuf.LogicalDataModelProtos.NaviEvent> naviEvent_;
+        private byte memoizedIsInitialized = -1;
+        private int memoizedSerializedSize = -1;
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_PathEvent_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.zhk.protobuf.LogicalDataModelProtos.PathEvent.class, com.zhk.protobuf.LogicalDataModelProtos.PathEvent.Builder.class);
-      }
-
-      // Construct using com.zhk.protobuf.LogicalDataModelProtos.PathEvent.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getNaviEventFieldBuilder();
+        // Use PathEvent.newBuilder() to construct.
+        private PathEvent(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+            super(builder);
+            this.unknownFields = builder.getUnknownFields();
         }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
 
-      public Builder clear() {
-        super.clear();
-        if (naviEventBuilder_ == null) {
-          naviEvent_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        } else {
-          naviEventBuilder_.clear();
+        private PathEvent(boolean noInit) {
+            this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance();
         }
-        return this;
-      }
 
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_PathEvent_descriptor;
-      }
-
-      public com.zhk.protobuf.LogicalDataModelProtos.PathEvent getDefaultInstanceForType() {
-        return com.zhk.protobuf.LogicalDataModelProtos.PathEvent.getDefaultInstance();
-      }
-
-      public com.zhk.protobuf.LogicalDataModelProtos.PathEvent build() {
-        com.zhk.protobuf.LogicalDataModelProtos.PathEvent result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.zhk.protobuf.LogicalDataModelProtos.PathEvent buildPartial() {
-        com.zhk.protobuf.LogicalDataModelProtos.PathEvent result = new com.zhk.protobuf.LogicalDataModelProtos.PathEvent(this);
-        int from_bitField0_ = bitField0_;
-        if (naviEventBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
-            naviEvent_ = java.util.Collections.unmodifiableList(naviEvent_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.naviEvent_ = naviEvent_;
-        } else {
-          result.naviEvent_ = naviEventBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.zhk.protobuf.LogicalDataModelProtos.PathEvent) {
-          return mergeFrom((com.zhk.protobuf.LogicalDataModelProtos.PathEvent)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.zhk.protobuf.LogicalDataModelProtos.PathEvent other) {
-        if (other == com.zhk.protobuf.LogicalDataModelProtos.PathEvent.getDefaultInstance()) return this;
-        if (naviEventBuilder_ == null) {
-          if (!other.naviEvent_.isEmpty()) {
-            if (naviEvent_.isEmpty()) {
-              naviEvent_ = other.naviEvent_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureNaviEventIsMutable();
-              naviEvent_.addAll(other.naviEvent_);
+        private PathEvent(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            initFields();
+            int mutable_bitField0_ = 0;
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+                    com.google.protobuf.UnknownFieldSet.newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                        case 0:
+                            done = true;
+                            break;
+                        default: {
+                            if (!parseUnknownField(input, unknownFields,
+                                    extensionRegistry, tag)) {
+                                done = true;
+                            }
+                            break;
+                        }
+                        case 10: {
+                            if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                                naviEvent_ = new java.util.ArrayList<com.zhk.protobuf.LogicalDataModelProtos.NaviEvent>();
+                                mutable_bitField0_ |= 0x00000001;
+                            }
+                            naviEvent_.add(input.readMessage(com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.PARSER, extensionRegistry));
+                            break;
+                        }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(
+                        e.getMessage()).setUnfinishedMessage(this);
+            } finally {
+                if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                    naviEvent_ = java.util.Collections.unmodifiableList(naviEvent_);
+                }
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
             }
-            onChanged();
-          }
-        } else {
-          if (!other.naviEvent_.isEmpty()) {
-            if (naviEventBuilder_.isEmpty()) {
-              naviEventBuilder_.dispose();
-              naviEventBuilder_ = null;
-              naviEvent_ = other.naviEvent_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              naviEventBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getNaviEventFieldBuilder() : null;
-            } else {
-              naviEventBuilder_.addAllMessages(other.naviEvent_);
-            }
-          }
         }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
 
-      public final boolean isInitialized() {
-        for (int i = 0; i < getNaviEventCount(); i++) {
-          if (!getNaviEvent(i).isInitialized()) {
-            
-            return false;
-          }
+        public static PathEvent getDefaultInstance() {
+            return defaultInstance;
         }
-        return true;
-      }
 
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.zhk.protobuf.LogicalDataModelProtos.PathEvent parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.zhk.protobuf.LogicalDataModelProtos.PathEvent) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.util.List<com.zhk.protobuf.LogicalDataModelProtos.NaviEvent> naviEvent_ =
-        java.util.Collections.emptyList();
-      private void ensureNaviEventIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          naviEvent_ = new java.util.ArrayList<com.zhk.protobuf.LogicalDataModelProtos.NaviEvent>(naviEvent_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
-          com.zhk.protobuf.LogicalDataModelProtos.NaviEvent, com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.Builder, com.zhk.protobuf.LogicalDataModelProtos.NaviEventOrBuilder> naviEventBuilder_;
-
-      /**
-       * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
-       *
-       * <pre>
-       * 导航过程事件
-       * </pre>
-       */
-      public java.util.List<com.zhk.protobuf.LogicalDataModelProtos.NaviEvent> getNaviEventList() {
-        if (naviEventBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(naviEvent_);
-        } else {
-          return naviEventBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
-       *
-       * <pre>
-       * 导航过程事件
-       * </pre>
-       */
-      public int getNaviEventCount() {
-        if (naviEventBuilder_ == null) {
-          return naviEvent_.size();
-        } else {
-          return naviEventBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
-       *
-       * <pre>
-       * 导航过程事件
-       * </pre>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.NaviEvent getNaviEvent(int index) {
-        if (naviEventBuilder_ == null) {
-          return naviEvent_.get(index);
-        } else {
-          return naviEventBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
-       *
-       * <pre>
-       * 导航过程事件
-       * </pre>
-       */
-      public Builder setNaviEvent(
-          int index, com.zhk.protobuf.LogicalDataModelProtos.NaviEvent value) {
-        if (naviEventBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureNaviEventIsMutable();
-          naviEvent_.set(index, value);
-          onChanged();
-        } else {
-          naviEventBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
-       *
-       * <pre>
-       * 导航过程事件
-       * </pre>
-       */
-      public Builder setNaviEvent(
-          int index, com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.Builder builderForValue) {
-        if (naviEventBuilder_ == null) {
-          ensureNaviEventIsMutable();
-          naviEvent_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          naviEventBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
-       *
-       * <pre>
-       * 导航过程事件
-       * </pre>
-       */
-      public Builder addNaviEvent(com.zhk.protobuf.LogicalDataModelProtos.NaviEvent value) {
-        if (naviEventBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureNaviEventIsMutable();
-          naviEvent_.add(value);
-          onChanged();
-        } else {
-          naviEventBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
-       *
-       * <pre>
-       * 导航过程事件
-       * </pre>
-       */
-      public Builder addNaviEvent(
-          int index, com.zhk.protobuf.LogicalDataModelProtos.NaviEvent value) {
-        if (naviEventBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureNaviEventIsMutable();
-          naviEvent_.add(index, value);
-          onChanged();
-        } else {
-          naviEventBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
-       *
-       * <pre>
-       * 导航过程事件
-       * </pre>
-       */
-      public Builder addNaviEvent(
-          com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.Builder builderForValue) {
-        if (naviEventBuilder_ == null) {
-          ensureNaviEventIsMutable();
-          naviEvent_.add(builderForValue.build());
-          onChanged();
-        } else {
-          naviEventBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
-       *
-       * <pre>
-       * 导航过程事件
-       * </pre>
-       */
-      public Builder addNaviEvent(
-          int index, com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.Builder builderForValue) {
-        if (naviEventBuilder_ == null) {
-          ensureNaviEventIsMutable();
-          naviEvent_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          naviEventBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
-       *
-       * <pre>
-       * 导航过程事件
-       * </pre>
-       */
-      public Builder addAllNaviEvent(
-          Iterable<? extends com.zhk.protobuf.LogicalDataModelProtos.NaviEvent> values) {
-        if (naviEventBuilder_ == null) {
-          ensureNaviEventIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, naviEvent_);
-          onChanged();
-        } else {
-          naviEventBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
-       *
-       * <pre>
-       * 导航过程事件
-       * </pre>
-       */
-      public Builder clearNaviEvent() {
-        if (naviEventBuilder_ == null) {
-          naviEvent_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          naviEventBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
-       *
-       * <pre>
-       * 导航过程事件
-       * </pre>
-       */
-      public Builder removeNaviEvent(int index) {
-        if (naviEventBuilder_ == null) {
-          ensureNaviEventIsMutable();
-          naviEvent_.remove(index);
-          onChanged();
-        } else {
-          naviEventBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
-       *
-       * <pre>
-       * 导航过程事件
-       * </pre>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.Builder getNaviEventBuilder(
-          int index) {
-        return getNaviEventFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
-       *
-       * <pre>
-       * 导航过程事件
-       * </pre>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.NaviEventOrBuilder getNaviEventOrBuilder(
-          int index) {
-        if (naviEventBuilder_ == null) {
-          return naviEvent_.get(index);  } else {
-          return naviEventBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
-       *
-       * <pre>
-       * 导航过程事件
-       * </pre>
-       */
-      public java.util.List<? extends com.zhk.protobuf.LogicalDataModelProtos.NaviEventOrBuilder> 
-           getNaviEventOrBuilderList() {
-        if (naviEventBuilder_ != null) {
-          return naviEventBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(naviEvent_);
-        }
-      }
-      /**
-       * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
-       *
-       * <pre>
-       * 导航过程事件
-       * </pre>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.Builder addNaviEventBuilder() {
-        return getNaviEventFieldBuilder().addBuilder(
-            com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
-       *
-       * <pre>
-       * 导航过程事件
-       * </pre>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.Builder addNaviEventBuilder(
-          int index) {
-        return getNaviEventFieldBuilder().addBuilder(
-            index, com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
-       *
-       * <pre>
-       * 导航过程事件
-       * </pre>
-       */
-      public java.util.List<com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.Builder> 
-           getNaviEventBuilderList() {
-        return getNaviEventFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
-          com.zhk.protobuf.LogicalDataModelProtos.NaviEvent, com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.Builder, com.zhk.protobuf.LogicalDataModelProtos.NaviEventOrBuilder> 
-          getNaviEventFieldBuilder() {
-        if (naviEventBuilder_ == null) {
-          naviEventBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              com.zhk.protobuf.LogicalDataModelProtos.NaviEvent, com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.Builder, com.zhk.protobuf.LogicalDataModelProtos.NaviEventOrBuilder>(
-                  naviEvent_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
-                  getParentForChildren(),
-                  isClean());
-          naviEvent_ = null;
-        }
-        return naviEventBuilder_;
-      }
-
-      // @@protoc_insertion_point(builder_scope:proto.PathEvent)
-    }
-
-    static {
-      defaultInstance = new PathEvent(true);
-      defaultInstance.initFields();
-    }
-
-    // @@protoc_insertion_point(class_scope:proto.PathEvent)
-  }
-
-  public interface NaviEventOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:proto.NaviEvent)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>required uint64 timestampUTC = 1;</code>
-     *
-     * <pre>
-     * 发生时间
-     * </pre>
-     */
-    boolean hasTimestampUTC();
-    /**
-     * <code>required uint64 timestampUTC = 1;</code>
-     *
-     * <pre>
-     * 发生时间
-     * </pre>
-     */
-    long getTimestampUTC();
-
-    /**
-     * <code>required .proto.NaviEvent.NaviEventEnum type = 2;</code>
-     */
-    boolean hasType();
-    /**
-     * <code>required .proto.NaviEvent.NaviEventEnum type = 2;</code>
-     */
-    com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.NaviEventEnum getType();
-  }
-  /**
-   * Protobuf type {@code proto.NaviEvent}
-   *
-   * <pre>
-   * 导航过程事件
-   * </pre>
-   */
-  public static final class NaviEvent extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:proto.NaviEvent)
-      NaviEventOrBuilder {
-    // Use NaviEvent.newBuilder() to construct.
-    private NaviEvent(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-      this.unknownFields = builder.getUnknownFields();
-    }
-    private NaviEvent(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final NaviEvent defaultInstance;
-    public static NaviEvent getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public NaviEvent getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private NaviEvent(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 8: {
-              bitField0_ |= 0x00000001;
-              timestampUTC_ = input.readUInt64();
-              break;
-            }
-            case 16: {
-              int rawValue = input.readEnum();
-              com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.NaviEventEnum value = com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.NaviEventEnum.valueOf(rawValue);
-              if (value == null) {
-                unknownFields.mergeVarintField(2, rawValue);
-              } else {
-                bitField0_ |= 0x00000002;
-                type_ = value;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
+        public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_NaviEvent_descriptor;
-    }
+            return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_PathEvent_descriptor;
+        }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        public static com.zhk.protobuf.LogicalDataModelProtos.PathEvent parseFrom(
+                com.google.protobuf.ByteString data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.PathEvent parseFrom(
+                com.google.protobuf.ByteString data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.PathEvent parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.PathEvent parseFrom(
+                byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.PathEvent parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return PARSER.parseFrom(input);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.PathEvent parseFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return PARSER.parseFrom(input, extensionRegistry);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.PathEvent parseDelimitedFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return PARSER.parseDelimitedFrom(input);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.PathEvent parseDelimitedFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.PathEvent parseFrom(
+                com.google.protobuf.CodedInputStream input)
+                throws java.io.IOException {
+            return PARSER.parseFrom(input);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.PathEvent parseFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return PARSER.parseFrom(input, extensionRegistry);
+        }
+
+        public static Builder newBuilder() {
+            return Builder.create();
+        }
+
+        public static Builder newBuilder(com.zhk.protobuf.LogicalDataModelProtos.PathEvent prototype) {
+            return newBuilder().mergeFrom(prototype);
+        }
+
+        public PathEvent getDefaultInstanceForType() {
+            return defaultInstance;
+        }
+
+        @Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+            return this.unknownFields;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_NaviEvent_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.class, com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.Builder.class);
-    }
-
-    public static com.google.protobuf.Parser<NaviEvent> PARSER =
-        new com.google.protobuf.AbstractParser<NaviEvent>() {
-      public NaviEvent parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new NaviEvent(input, extensionRegistry);
-      }
-    };
-
-    @Override
-    public com.google.protobuf.Parser<NaviEvent> getParserForType() {
-      return PARSER;
-    }
-
-    /**
-     * Protobuf enum {@code proto.NaviEvent.NaviEventEnum}
-     */
-    public enum NaviEventEnum
-        implements com.google.protobuf.ProtocolMessageEnum {
-      /**
-       * <code>ROUTE_STARTED = 1;</code>
-       *
-       * <pre>
-       * 算路开始
-       * </pre>
-       */
-      ROUTE_STARTED(0, 1),
-      /**
-       * <code>ROUTE_CANCELLED = 2;</code>
-       *
-       * <pre>
-       * 算路放弃
-       * </pre>
-       */
-      ROUTE_CANCELLED(1, 2),
-      /**
-       * <code>ROUTE_COMPLETE = 3;</code>
-       *
-       * <pre>
-       * 算路完成
-       * </pre>
-       */
-      ROUTE_COMPLETE(2, 3),
-      /**
-       * <code>ROUTE_FAILED = 4;</code>
-       *
-       * <pre>
-       * 算路失败
-       * </pre>
-       */
-      ROUTE_FAILED(3, 4),
-      /**
-       * <code>NEEDS_REROUTE = 5;</code>
-       *
-       * <pre>
-       * 偏航发生
-       * </pre>
-       */
-      NEEDS_REROUTE(4, 5),
-      /**
-       * <code>NAVI_BEGIN = 6;</code>
-       *
-       * <pre>
-       * 导航开始
-       * </pre>
-       */
-      NAVI_BEGIN(5, 6),
-      /**
-       * <code>NAVI_END_MANUAL = 7;</code>
-       *
-       * <pre>
-       * 导航手动结束
-       * </pre>
-       */
-      NAVI_END_MANUAL(6, 7),
-      /**
-       * <code>NAVI_END_AUTOMATIC = 8;</code>
-       *
-       * <pre>
-       * 导航自动结束
-       * </pre>
-       */
-      NAVI_END_AUTOMATIC(7, 8),
-      /**
-       * <code>NEW_ROUTE_TAKEN = 9;</code>
-       *
-       * <pre>
-       * 采纳路线（首次算路之后采纳其中一路线和偏航重算路之后采纳路线都会触发，也是采集路线数据的时机与依据）
-       * </pre>
-       */
-      NEW_ROUTE_TAKEN(8, 9),
-      /**
-       * <code>REROUTE_STARTED = 10;</code>
-       *
-       * <pre>
-       * 重算路开始
-       * </pre>
-       */
-      REROUTE_STARTED(9, 10),
-      /**
-       * <code>REROUTE_CANCELLED = 11;</code>
-       *
-       * <pre>
-       * 重算路放弃
-       * </pre>
-       */
-      REROUTE_CANCELLED(10, 11),
-      /**
-       * <code>REROUTE_COMPLETE = 12;</code>
-       *
-       * <pre>
-       * 重算路完成
-       * </pre>
-       */
-      REROUTE_COMPLETE(11, 12),
-      /**
-       * <code>REROUTE_FAILED = 13;</code>
-       *
-       * <pre>
-       * 重算路失败
-       * </pre>
-       */
-      REROUTE_FAILED(12, 13),
-      /**
-       * <code>SATELLITE_SIGNAL_LOSS = 14;</code>
-       *
-       * <pre>
-       * 卫星信号丢失
-       * </pre>
-       */
-      SATELLITE_SIGNAL_LOSS(13, 14),
-      /**
-       * <code>SATELLITE_SIGNAL_RECOVER = 15;</code>
-       *
-       * <pre>
-       * 卫星信号恢复
-       * </pre>
-       */
-      SATELLITE_SIGNAL_RECOVER(14, 15),
-      /**
-       * <code>OFF_ROAD = 16;</code>
-       *
-       * <pre>
-       * 进入无路状况
-       * </pre>
-       */
-      OFF_ROAD(15, 16),
-      /**
-       * <code>ON_ROAD = 17;</code>
-       *
-       * <pre>
-       * 退出无路状况
-       * </pre>
-       */
-      ON_ROAD(16, 17),
-      ;
-
-      /**
-       * <code>ROUTE_STARTED = 1;</code>
-       *
-       * <pre>
-       * 算路开始
-       * </pre>
-       */
-      public static final int ROUTE_STARTED_VALUE = 1;
-      /**
-       * <code>ROUTE_CANCELLED = 2;</code>
-       *
-       * <pre>
-       * 算路放弃
-       * </pre>
-       */
-      public static final int ROUTE_CANCELLED_VALUE = 2;
-      /**
-       * <code>ROUTE_COMPLETE = 3;</code>
-       *
-       * <pre>
-       * 算路完成
-       * </pre>
-       */
-      public static final int ROUTE_COMPLETE_VALUE = 3;
-      /**
-       * <code>ROUTE_FAILED = 4;</code>
-       *
-       * <pre>
-       * 算路失败
-       * </pre>
-       */
-      public static final int ROUTE_FAILED_VALUE = 4;
-      /**
-       * <code>NEEDS_REROUTE = 5;</code>
-       *
-       * <pre>
-       * 偏航发生
-       * </pre>
-       */
-      public static final int NEEDS_REROUTE_VALUE = 5;
-      /**
-       * <code>NAVI_BEGIN = 6;</code>
-       *
-       * <pre>
-       * 导航开始
-       * </pre>
-       */
-      public static final int NAVI_BEGIN_VALUE = 6;
-      /**
-       * <code>NAVI_END_MANUAL = 7;</code>
-       *
-       * <pre>
-       * 导航手动结束
-       * </pre>
-       */
-      public static final int NAVI_END_MANUAL_VALUE = 7;
-      /**
-       * <code>NAVI_END_AUTOMATIC = 8;</code>
-       *
-       * <pre>
-       * 导航自动结束
-       * </pre>
-       */
-      public static final int NAVI_END_AUTOMATIC_VALUE = 8;
-      /**
-       * <code>NEW_ROUTE_TAKEN = 9;</code>
-       *
-       * <pre>
-       * 采纳路线（首次算路之后采纳其中一路线和偏航重算路之后采纳路线都会触发，也是采集路线数据的时机与依据）
-       * </pre>
-       */
-      public static final int NEW_ROUTE_TAKEN_VALUE = 9;
-      /**
-       * <code>REROUTE_STARTED = 10;</code>
-       *
-       * <pre>
-       * 重算路开始
-       * </pre>
-       */
-      public static final int REROUTE_STARTED_VALUE = 10;
-      /**
-       * <code>REROUTE_CANCELLED = 11;</code>
-       *
-       * <pre>
-       * 重算路放弃
-       * </pre>
-       */
-      public static final int REROUTE_CANCELLED_VALUE = 11;
-      /**
-       * <code>REROUTE_COMPLETE = 12;</code>
-       *
-       * <pre>
-       * 重算路完成
-       * </pre>
-       */
-      public static final int REROUTE_COMPLETE_VALUE = 12;
-      /**
-       * <code>REROUTE_FAILED = 13;</code>
-       *
-       * <pre>
-       * 重算路失败
-       * </pre>
-       */
-      public static final int REROUTE_FAILED_VALUE = 13;
-      /**
-       * <code>SATELLITE_SIGNAL_LOSS = 14;</code>
-       *
-       * <pre>
-       * 卫星信号丢失
-       * </pre>
-       */
-      public static final int SATELLITE_SIGNAL_LOSS_VALUE = 14;
-      /**
-       * <code>SATELLITE_SIGNAL_RECOVER = 15;</code>
-       *
-       * <pre>
-       * 卫星信号恢复
-       * </pre>
-       */
-      public static final int SATELLITE_SIGNAL_RECOVER_VALUE = 15;
-      /**
-       * <code>OFF_ROAD = 16;</code>
-       *
-       * <pre>
-       * 进入无路状况
-       * </pre>
-       */
-      public static final int OFF_ROAD_VALUE = 16;
-      /**
-       * <code>ON_ROAD = 17;</code>
-       *
-       * <pre>
-       * 退出无路状况
-       * </pre>
-       */
-      public static final int ON_ROAD_VALUE = 17;
-
-
-      public final int getNumber() { return value; }
-
-      public static NaviEventEnum valueOf(int value) {
-        switch (value) {
-          case 1: return ROUTE_STARTED;
-          case 2: return ROUTE_CANCELLED;
-          case 3: return ROUTE_COMPLETE;
-          case 4: return ROUTE_FAILED;
-          case 5: return NEEDS_REROUTE;
-          case 6: return NAVI_BEGIN;
-          case 7: return NAVI_END_MANUAL;
-          case 8: return NAVI_END_AUTOMATIC;
-          case 9: return NEW_ROUTE_TAKEN;
-          case 10: return REROUTE_STARTED;
-          case 11: return REROUTE_CANCELLED;
-          case 12: return REROUTE_COMPLETE;
-          case 13: return REROUTE_FAILED;
-          case 14: return SATELLITE_SIGNAL_LOSS;
-          case 15: return SATELLITE_SIGNAL_RECOVER;
-          case 16: return OFF_ROAD;
-          case 17: return ON_ROAD;
-          default: return null;
+            return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_PathEvent_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            com.zhk.protobuf.LogicalDataModelProtos.PathEvent.class, com.zhk.protobuf.LogicalDataModelProtos.PathEvent.Builder.class);
         }
-      }
 
-      public static com.google.protobuf.Internal.EnumLiteMap<NaviEventEnum>
-          internalGetValueMap() {
-        return internalValueMap;
-      }
-      private static com.google.protobuf.Internal.EnumLiteMap<NaviEventEnum>
-          internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<NaviEventEnum>() {
-              public NaviEventEnum findValueByNumber(int number) {
-                return NaviEventEnum.valueOf(number);
-              }
-            };
-
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
-          getValueDescriptor() {
-        return getDescriptor().getValues().get(index);
-      }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptorForType() {
-        return getDescriptor();
-      }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptor() {
-        return com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.getDescriptor().getEnumTypes().get(0);
-      }
-
-      private static final NaviEventEnum[] VALUES = values();
-
-      public static NaviEventEnum valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-        if (desc.getType() != getDescriptor()) {
-          throw new IllegalArgumentException(
-            "EnumValueDescriptor is not for this type.");
+        @Override
+        public com.google.protobuf.Parser<PathEvent> getParserForType() {
+            return PARSER;
         }
-        return VALUES[desc.getIndex()];
-      }
 
-      private final int index;
-      private final int value;
+        /**
+         * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
+         * <p/>
+         * <pre>
+         * 导航过程事件
+         * </pre>
+         */
+        public java.util.List<com.zhk.protobuf.LogicalDataModelProtos.NaviEvent> getNaviEventList() {
+            return naviEvent_;
+        }
 
-      private NaviEventEnum(int index, int value) {
-        this.index = index;
-        this.value = value;
-      }
+        /**
+         * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
+         * <p/>
+         * <pre>
+         * 导航过程事件
+         * </pre>
+         */
+        public java.util.List<? extends com.zhk.protobuf.LogicalDataModelProtos.NaviEventOrBuilder>
+        getNaviEventOrBuilderList() {
+            return naviEvent_;
+        }
 
-      // @@protoc_insertion_point(enum_scope:proto.NaviEvent.NaviEventEnum)
+        /**
+         * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
+         * <p/>
+         * <pre>
+         * 导航过程事件
+         * </pre>
+         */
+        public int getNaviEventCount() {
+            return naviEvent_.size();
+        }
+
+        /**
+         * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
+         * <p/>
+         * <pre>
+         * 导航过程事件
+         * </pre>
+         */
+        public com.zhk.protobuf.LogicalDataModelProtos.NaviEvent getNaviEvent(int index) {
+            return naviEvent_.get(index);
+        }
+
+        /**
+         * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
+         * <p/>
+         * <pre>
+         * 导航过程事件
+         * </pre>
+         */
+        public com.zhk.protobuf.LogicalDataModelProtos.NaviEventOrBuilder getNaviEventOrBuilder(
+                int index) {
+            return naviEvent_.get(index);
+        }
+
+        private void initFields() {
+            naviEvent_ = java.util.Collections.emptyList();
+        }
+
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1) return true;
+            if (isInitialized == 0) return false;
+
+            for (int i = 0; i < getNaviEventCount(); i++) {
+                if (!getNaviEvent(i).isInitialized()) {
+                    memoizedIsInitialized = 0;
+                    return false;
+                }
+            }
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                throws java.io.IOException {
+            getSerializedSize();
+            for (int i = 0; i < naviEvent_.size(); i++) {
+                output.writeMessage(1, naviEvent_.get(i));
+            }
+            getUnknownFields().writeTo(output);
+        }
+
+        public int getSerializedSize() {
+            int size = memoizedSerializedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            for (int i = 0; i < naviEvent_.size(); i++) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeMessageSize(1, naviEvent_.get(i));
+            }
+            size += getUnknownFields().getSerializedSize();
+            memoizedSerializedSize = size;
+            return size;
+        }
+
+        @Override
+        protected Object writeReplace()
+                throws java.io.ObjectStreamException {
+            return super.writeReplace();
+        }
+
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public Builder toBuilder() {
+            return newBuilder(this);
+        }
+
+        @Override
+        protected Builder newBuilderForType(
+                com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * Protobuf type {@code proto.PathEvent}
+         * <p/>
+         * <pre>
+         * 所有事件容器
+         * </pre>
+         */
+        public static final class Builder extends
+                com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:proto.PathEvent)
+                com.zhk.protobuf.LogicalDataModelProtos.PathEventOrBuilder {
+            private int bitField0_;
+            private java.util.List<com.zhk.protobuf.LogicalDataModelProtos.NaviEvent> naviEvent_ =
+                    java.util.Collections.emptyList();
+            private com.google.protobuf.RepeatedFieldBuilder<
+                    com.zhk.protobuf.LogicalDataModelProtos.NaviEvent, com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.Builder, com.zhk.protobuf.LogicalDataModelProtos.NaviEventOrBuilder> naviEventBuilder_;
+
+            // Construct using com.zhk.protobuf.LogicalDataModelProtos.PathEvent.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(
+                    com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+                return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_PathEvent_descriptor;
+            }
+
+            private static Builder create() {
+                return new Builder();
+            }
+
+            protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+                return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_PathEvent_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                com.zhk.protobuf.LogicalDataModelProtos.PathEvent.class, com.zhk.protobuf.LogicalDataModelProtos.PathEvent.Builder.class);
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+                    getNaviEventFieldBuilder();
+                }
+            }
+
+            public Builder clear() {
+                super.clear();
+                if (naviEventBuilder_ == null) {
+                    naviEvent_ = java.util.Collections.emptyList();
+                    bitField0_ = (bitField0_ & ~0x00000001);
+                } else {
+                    naviEventBuilder_.clear();
+                }
+                return this;
+            }
+
+            public Builder clone() {
+                return create().mergeFrom(buildPartial());
+            }
+
+            public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+                return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_PathEvent_descriptor;
+            }
+
+            public com.zhk.protobuf.LogicalDataModelProtos.PathEvent getDefaultInstanceForType() {
+                return com.zhk.protobuf.LogicalDataModelProtos.PathEvent.getDefaultInstance();
+            }
+
+            public com.zhk.protobuf.LogicalDataModelProtos.PathEvent build() {
+                com.zhk.protobuf.LogicalDataModelProtos.PathEvent result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            public com.zhk.protobuf.LogicalDataModelProtos.PathEvent buildPartial() {
+                com.zhk.protobuf.LogicalDataModelProtos.PathEvent result = new com.zhk.protobuf.LogicalDataModelProtos.PathEvent(this);
+                int from_bitField0_ = bitField0_;
+                if (naviEventBuilder_ == null) {
+                    if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                        naviEvent_ = java.util.Collections.unmodifiableList(naviEvent_);
+                        bitField0_ = (bitField0_ & ~0x00000001);
+                    }
+                    result.naviEvent_ = naviEvent_;
+                } else {
+                    result.naviEvent_ = naviEventBuilder_.build();
+                }
+                onBuilt();
+                return result;
+            }
+
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof com.zhk.protobuf.LogicalDataModelProtos.PathEvent) {
+                    return mergeFrom((com.zhk.protobuf.LogicalDataModelProtos.PathEvent) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(com.zhk.protobuf.LogicalDataModelProtos.PathEvent other) {
+                if (other == com.zhk.protobuf.LogicalDataModelProtos.PathEvent.getDefaultInstance()) return this;
+                if (naviEventBuilder_ == null) {
+                    if (!other.naviEvent_.isEmpty()) {
+                        if (naviEvent_.isEmpty()) {
+                            naviEvent_ = other.naviEvent_;
+                            bitField0_ = (bitField0_ & ~0x00000001);
+                        } else {
+                            ensureNaviEventIsMutable();
+                            naviEvent_.addAll(other.naviEvent_);
+                        }
+                        onChanged();
+                    }
+                } else {
+                    if (!other.naviEvent_.isEmpty()) {
+                        if (naviEventBuilder_.isEmpty()) {
+                            naviEventBuilder_.dispose();
+                            naviEventBuilder_ = null;
+                            naviEvent_ = other.naviEvent_;
+                            bitField0_ = (bitField0_ & ~0x00000001);
+                            naviEventBuilder_ =
+                                    com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                                            getNaviEventFieldBuilder() : null;
+                        } else {
+                            naviEventBuilder_.addAllMessages(other.naviEvent_);
+                        }
+                    }
+                }
+                this.mergeUnknownFields(other.getUnknownFields());
+                return this;
+            }
+
+            public final boolean isInitialized() {
+                for (int i = 0; i < getNaviEventCount(); i++) {
+                    if (!getNaviEvent(i).isInitialized()) {
+
+                        return false;
+                    }
+                }
+                return true;
+            }
+
+            public Builder mergeFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws java.io.IOException {
+                com.zhk.protobuf.LogicalDataModelProtos.PathEvent parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (com.zhk.protobuf.LogicalDataModelProtos.PathEvent) e.getUnfinishedMessage();
+                    throw e;
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            private void ensureNaviEventIsMutable() {
+                if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+                    naviEvent_ = new java.util.ArrayList<com.zhk.protobuf.LogicalDataModelProtos.NaviEvent>(naviEvent_);
+                    bitField0_ |= 0x00000001;
+                }
+            }
+
+            /**
+             * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
+             * <p/>
+             * <pre>
+             * 导航过程事件
+             * </pre>
+             */
+            public java.util.List<com.zhk.protobuf.LogicalDataModelProtos.NaviEvent> getNaviEventList() {
+                if (naviEventBuilder_ == null) {
+                    return java.util.Collections.unmodifiableList(naviEvent_);
+                } else {
+                    return naviEventBuilder_.getMessageList();
+                }
+            }
+
+            /**
+             * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
+             * <p/>
+             * <pre>
+             * 导航过程事件
+             * </pre>
+             */
+            public int getNaviEventCount() {
+                if (naviEventBuilder_ == null) {
+                    return naviEvent_.size();
+                } else {
+                    return naviEventBuilder_.getCount();
+                }
+            }
+
+            /**
+             * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
+             * <p/>
+             * <pre>
+             * 导航过程事件
+             * </pre>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.NaviEvent getNaviEvent(int index) {
+                if (naviEventBuilder_ == null) {
+                    return naviEvent_.get(index);
+                } else {
+                    return naviEventBuilder_.getMessage(index);
+                }
+            }
+
+            /**
+             * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
+             * <p/>
+             * <pre>
+             * 导航过程事件
+             * </pre>
+             */
+            public Builder setNaviEvent(
+                    int index, com.zhk.protobuf.LogicalDataModelProtos.NaviEvent value) {
+                if (naviEventBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    ensureNaviEventIsMutable();
+                    naviEvent_.set(index, value);
+                    onChanged();
+                } else {
+                    naviEventBuilder_.setMessage(index, value);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
+             * <p/>
+             * <pre>
+             * 导航过程事件
+             * </pre>
+             */
+            public Builder setNaviEvent(
+                    int index, com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.Builder builderForValue) {
+                if (naviEventBuilder_ == null) {
+                    ensureNaviEventIsMutable();
+                    naviEvent_.set(index, builderForValue.build());
+                    onChanged();
+                } else {
+                    naviEventBuilder_.setMessage(index, builderForValue.build());
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
+             * <p/>
+             * <pre>
+             * 导航过程事件
+             * </pre>
+             */
+            public Builder addNaviEvent(com.zhk.protobuf.LogicalDataModelProtos.NaviEvent value) {
+                if (naviEventBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    ensureNaviEventIsMutable();
+                    naviEvent_.add(value);
+                    onChanged();
+                } else {
+                    naviEventBuilder_.addMessage(value);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
+             * <p/>
+             * <pre>
+             * 导航过程事件
+             * </pre>
+             */
+            public Builder addNaviEvent(
+                    int index, com.zhk.protobuf.LogicalDataModelProtos.NaviEvent value) {
+                if (naviEventBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    ensureNaviEventIsMutable();
+                    naviEvent_.add(index, value);
+                    onChanged();
+                } else {
+                    naviEventBuilder_.addMessage(index, value);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
+             * <p/>
+             * <pre>
+             * 导航过程事件
+             * </pre>
+             */
+            public Builder addNaviEvent(
+                    com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.Builder builderForValue) {
+                if (naviEventBuilder_ == null) {
+                    ensureNaviEventIsMutable();
+                    naviEvent_.add(builderForValue.build());
+                    onChanged();
+                } else {
+                    naviEventBuilder_.addMessage(builderForValue.build());
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
+             * <p/>
+             * <pre>
+             * 导航过程事件
+             * </pre>
+             */
+            public Builder addNaviEvent(
+                    int index, com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.Builder builderForValue) {
+                if (naviEventBuilder_ == null) {
+                    ensureNaviEventIsMutable();
+                    naviEvent_.add(index, builderForValue.build());
+                    onChanged();
+                } else {
+                    naviEventBuilder_.addMessage(index, builderForValue.build());
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
+             * <p/>
+             * <pre>
+             * 导航过程事件
+             * </pre>
+             */
+            public Builder addAllNaviEvent(
+                    Iterable<? extends com.zhk.protobuf.LogicalDataModelProtos.NaviEvent> values) {
+                if (naviEventBuilder_ == null) {
+                    ensureNaviEventIsMutable();
+                    com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                            values, naviEvent_);
+                    onChanged();
+                } else {
+                    naviEventBuilder_.addAllMessages(values);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
+             * <p/>
+             * <pre>
+             * 导航过程事件
+             * </pre>
+             */
+            public Builder clearNaviEvent() {
+                if (naviEventBuilder_ == null) {
+                    naviEvent_ = java.util.Collections.emptyList();
+                    bitField0_ = (bitField0_ & ~0x00000001);
+                    onChanged();
+                } else {
+                    naviEventBuilder_.clear();
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
+             * <p/>
+             * <pre>
+             * 导航过程事件
+             * </pre>
+             */
+            public Builder removeNaviEvent(int index) {
+                if (naviEventBuilder_ == null) {
+                    ensureNaviEventIsMutable();
+                    naviEvent_.remove(index);
+                    onChanged();
+                } else {
+                    naviEventBuilder_.remove(index);
+                }
+                return this;
+            }
+
+            /**
+             * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
+             * <p/>
+             * <pre>
+             * 导航过程事件
+             * </pre>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.Builder getNaviEventBuilder(
+                    int index) {
+                return getNaviEventFieldBuilder().getBuilder(index);
+            }
+
+            /**
+             * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
+             * <p/>
+             * <pre>
+             * 导航过程事件
+             * </pre>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.NaviEventOrBuilder getNaviEventOrBuilder(
+                    int index) {
+                if (naviEventBuilder_ == null) {
+                    return naviEvent_.get(index);
+                } else {
+                    return naviEventBuilder_.getMessageOrBuilder(index);
+                }
+            }
+
+            /**
+             * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
+             * <p/>
+             * <pre>
+             * 导航过程事件
+             * </pre>
+             */
+            public java.util.List<? extends com.zhk.protobuf.LogicalDataModelProtos.NaviEventOrBuilder>
+            getNaviEventOrBuilderList() {
+                if (naviEventBuilder_ != null) {
+                    return naviEventBuilder_.getMessageOrBuilderList();
+                } else {
+                    return java.util.Collections.unmodifiableList(naviEvent_);
+                }
+            }
+
+            /**
+             * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
+             * <p/>
+             * <pre>
+             * 导航过程事件
+             * </pre>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.Builder addNaviEventBuilder() {
+                return getNaviEventFieldBuilder().addBuilder(
+                        com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.getDefaultInstance());
+            }
+
+            /**
+             * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
+             * <p/>
+             * <pre>
+             * 导航过程事件
+             * </pre>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.Builder addNaviEventBuilder(
+                    int index) {
+                return getNaviEventFieldBuilder().addBuilder(
+                        index, com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.getDefaultInstance());
+            }
+
+            /**
+             * <code>repeated .proto.NaviEvent naviEvent = 1;</code>
+             * <p/>
+             * <pre>
+             * 导航过程事件
+             * </pre>
+             */
+            public java.util.List<com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.Builder>
+            getNaviEventBuilderList() {
+                return getNaviEventFieldBuilder().getBuilderList();
+            }
+
+            private com.google.protobuf.RepeatedFieldBuilder<
+                    com.zhk.protobuf.LogicalDataModelProtos.NaviEvent, com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.Builder, com.zhk.protobuf.LogicalDataModelProtos.NaviEventOrBuilder>
+            getNaviEventFieldBuilder() {
+                if (naviEventBuilder_ == null) {
+                    naviEventBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+                            com.zhk.protobuf.LogicalDataModelProtos.NaviEvent, com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.Builder, com.zhk.protobuf.LogicalDataModelProtos.NaviEventOrBuilder>(
+                            naviEvent_,
+                            ((bitField0_ & 0x00000001) == 0x00000001),
+                            getParentForChildren(),
+                            isClean());
+                    naviEvent_ = null;
+                }
+                return naviEventBuilder_;
+            }
+
+            // @@protoc_insertion_point(builder_scope:proto.PathEvent)
+        }
+
+        static {
+            defaultInstance = new PathEvent(true);
+            defaultInstance.initFields();
+        }
+
+        // @@protoc_insertion_point(class_scope:proto.PathEvent)
     }
 
-    private int bitField0_;
-    public static final int TIMESTAMPUTC_FIELD_NUMBER = 1;
-    private long timestampUTC_;
-    /**
-     * <code>required uint64 timestampUTC = 1;</code>
-     *
-     * <pre>
-     * 发生时间
-     * </pre>
-     */
-    public boolean hasTimestampUTC() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>required uint64 timestampUTC = 1;</code>
-     *
-     * <pre>
-     * 发生时间
-     * </pre>
-     */
-    public long getTimestampUTC() {
-      return timestampUTC_;
-    }
-
-    public static final int TYPE_FIELD_NUMBER = 2;
-    private com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.NaviEventEnum type_;
-    /**
-     * <code>required .proto.NaviEvent.NaviEventEnum type = 2;</code>
-     */
-    public boolean hasType() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>required .proto.NaviEvent.NaviEventEnum type = 2;</code>
-     */
-    public com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.NaviEventEnum getType() {
-      return type_;
-    }
-
-    private void initFields() {
-      timestampUTC_ = 0L;
-      type_ = com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.NaviEventEnum.ROUTE_STARTED;
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      if (!hasTimestampUTC()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasType()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeUInt64(1, timestampUTC_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeEnum(2, type_.getNumber());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(1, timestampUTC_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, type_.getNumber());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @Override
-    protected Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
-    public static com.zhk.protobuf.LogicalDataModelProtos.NaviEvent parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.NaviEvent parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.NaviEvent parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.NaviEvent parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.NaviEvent parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.NaviEvent parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.NaviEvent parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.NaviEvent parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.NaviEvent parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.zhk.protobuf.LogicalDataModelProtos.NaviEvent parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.zhk.protobuf.LogicalDataModelProtos.NaviEvent prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-
-    @Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code proto.NaviEvent}
-     *
+     * <p/>
      * <pre>
      * 导航过程事件
      * </pre>
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:proto.NaviEvent)
-        com.zhk.protobuf.LogicalDataModelProtos.NaviEventOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_NaviEvent_descriptor;
-      }
+    public static final class NaviEvent extends
+            com.google.protobuf.GeneratedMessage implements
+            // @@protoc_insertion_point(message_implements:proto.NaviEvent)
+            NaviEventOrBuilder {
+        public static final int TIMESTAMPUTC_FIELD_NUMBER = 1;
+        public static final int TYPE_FIELD_NUMBER = 2;
+        private static final NaviEvent defaultInstance;
+        private static final long serialVersionUID = 0L;
+        public static com.google.protobuf.Parser<NaviEvent> PARSER =
+                new com.google.protobuf.AbstractParser<NaviEvent>() {
+                    public NaviEvent parsePartialFrom(
+                            com.google.protobuf.CodedInputStream input,
+                            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                            throws com.google.protobuf.InvalidProtocolBufferException {
+                        return new NaviEvent(input, extensionRegistry);
+                    }
+                };
+        private final com.google.protobuf.UnknownFieldSet unknownFields;
+        private int bitField0_;
+        private long timestampUTC_;
+        private com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.NaviEventEnum type_;
+        private byte memoizedIsInitialized = -1;
+        private int memoizedSerializedSize = -1;
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_NaviEvent_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.class, com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.Builder.class);
-      }
-
-      // Construct using com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        // Use NaviEvent.newBuilder() to construct.
+        private NaviEvent(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+            super(builder);
+            this.unknownFields = builder.getUnknownFields();
         }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
 
-      public Builder clear() {
-        super.clear();
-        timestampUTC_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        type_ = com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.NaviEventEnum.ROUTE_STARTED;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_NaviEvent_descriptor;
-      }
-
-      public com.zhk.protobuf.LogicalDataModelProtos.NaviEvent getDefaultInstanceForType() {
-        return com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.getDefaultInstance();
-      }
-
-      public com.zhk.protobuf.LogicalDataModelProtos.NaviEvent build() {
-        com.zhk.protobuf.LogicalDataModelProtos.NaviEvent result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+        private NaviEvent(boolean noInit) {
+            this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance();
         }
-        return result;
-      }
 
-      public com.zhk.protobuf.LogicalDataModelProtos.NaviEvent buildPartial() {
-        com.zhk.protobuf.LogicalDataModelProtos.NaviEvent result = new com.zhk.protobuf.LogicalDataModelProtos.NaviEvent(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
+        private NaviEvent(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            initFields();
+            int mutable_bitField0_ = 0;
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+                    com.google.protobuf.UnknownFieldSet.newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                        case 0:
+                            done = true;
+                            break;
+                        default: {
+                            if (!parseUnknownField(input, unknownFields,
+                                    extensionRegistry, tag)) {
+                                done = true;
+                            }
+                            break;
+                        }
+                        case 8: {
+                            bitField0_ |= 0x00000001;
+                            timestampUTC_ = input.readUInt64();
+                            break;
+                        }
+                        case 16: {
+                            int rawValue = input.readEnum();
+                            com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.NaviEventEnum value = com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.NaviEventEnum.valueOf(rawValue);
+                            if (value == null) {
+                                unknownFields.mergeVarintField(2, rawValue);
+                            } else {
+                                bitField0_ |= 0x00000002;
+                                type_ = value;
+                            }
+                            break;
+                        }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(
+                        e.getMessage()).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
+            }
         }
-        result.timestampUTC_ = timestampUTC_;
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.type_ = type_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.zhk.protobuf.LogicalDataModelProtos.NaviEvent) {
-          return mergeFrom((com.zhk.protobuf.LogicalDataModelProtos.NaviEvent)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+        public static NaviEvent getDefaultInstance() {
+            return defaultInstance;
         }
-      }
 
-      public Builder mergeFrom(com.zhk.protobuf.LogicalDataModelProtos.NaviEvent other) {
-        if (other == com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.getDefaultInstance()) return this;
-        if (other.hasTimestampUTC()) {
-          setTimestampUTC(other.getTimestampUTC());
+        public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+            return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_NaviEvent_descriptor;
         }
-        if (other.hasType()) {
-          setType(other.getType());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
 
-      public final boolean isInitialized() {
-        if (!hasTimestampUTC()) {
-          
-          return false;
+        public static com.zhk.protobuf.LogicalDataModelProtos.NaviEvent parseFrom(
+                com.google.protobuf.ByteString data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
         }
-        if (!hasType()) {
-          
-          return false;
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.NaviEvent parseFrom(
+                com.google.protobuf.ByteString data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
         }
-        return true;
-      }
 
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.zhk.protobuf.LogicalDataModelProtos.NaviEvent parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.zhk.protobuf.LogicalDataModelProtos.NaviEvent) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
+        public static com.zhk.protobuf.LogicalDataModelProtos.NaviEvent parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
         }
-        return this;
-      }
-      private int bitField0_;
 
-      private long timestampUTC_ ;
-      /**
-       * <code>required uint64 timestampUTC = 1;</code>
-       *
-       * <pre>
-       * 发生时间
-       * </pre>
-       */
-      public boolean hasTimestampUTC() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>required uint64 timestampUTC = 1;</code>
-       *
-       * <pre>
-       * 发生时间
-       * </pre>
-       */
-      public long getTimestampUTC() {
-        return timestampUTC_;
-      }
-      /**
-       * <code>required uint64 timestampUTC = 1;</code>
-       *
-       * <pre>
-       * 发生时间
-       * </pre>
-       */
-      public Builder setTimestampUTC(long value) {
-        bitField0_ |= 0x00000001;
-        timestampUTC_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required uint64 timestampUTC = 1;</code>
-       *
-       * <pre>
-       * 发生时间
-       * </pre>
-       */
-      public Builder clearTimestampUTC() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        timestampUTC_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.NaviEventEnum type_ = com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.NaviEventEnum.ROUTE_STARTED;
-      /**
-       * <code>required .proto.NaviEvent.NaviEventEnum type = 2;</code>
-       */
-      public boolean hasType() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>required .proto.NaviEvent.NaviEventEnum type = 2;</code>
-       */
-      public com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.NaviEventEnum getType() {
-        return type_;
-      }
-      /**
-       * <code>required .proto.NaviEvent.NaviEventEnum type = 2;</code>
-       */
-      public Builder setType(com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.NaviEventEnum value) {
-        if (value == null) {
-          throw new NullPointerException();
+        public static com.zhk.protobuf.LogicalDataModelProtos.NaviEvent parseFrom(
+                byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
         }
-        bitField0_ |= 0x00000002;
-        type_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required .proto.NaviEvent.NaviEventEnum type = 2;</code>
-       */
-      public Builder clearType() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        type_ = com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.NaviEventEnum.ROUTE_STARTED;
-        onChanged();
-        return this;
-      }
 
-      // @@protoc_insertion_point(builder_scope:proto.NaviEvent)
+        public static com.zhk.protobuf.LogicalDataModelProtos.NaviEvent parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return PARSER.parseFrom(input);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.NaviEvent parseFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return PARSER.parseFrom(input, extensionRegistry);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.NaviEvent parseDelimitedFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return PARSER.parseDelimitedFrom(input);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.NaviEvent parseDelimitedFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.NaviEvent parseFrom(
+                com.google.protobuf.CodedInputStream input)
+                throws java.io.IOException {
+            return PARSER.parseFrom(input);
+        }
+
+        public static com.zhk.protobuf.LogicalDataModelProtos.NaviEvent parseFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return PARSER.parseFrom(input, extensionRegistry);
+        }
+
+        public static Builder newBuilder() {
+            return Builder.create();
+        }
+
+        public static Builder newBuilder(com.zhk.protobuf.LogicalDataModelProtos.NaviEvent prototype) {
+            return newBuilder().mergeFrom(prototype);
+        }
+
+        public NaviEvent getDefaultInstanceForType() {
+            return defaultInstance;
+        }
+
+        @Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+            return this.unknownFields;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+            return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_NaviEvent_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.class, com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.Builder.class);
+        }
+
+        @Override
+        public com.google.protobuf.Parser<NaviEvent> getParserForType() {
+            return PARSER;
+        }
+
+        /**
+         * <code>required uint64 timestampUTC = 1;</code>
+         * <p/>
+         * <pre>
+         * 发生时间
+         * </pre>
+         */
+        public boolean hasTimestampUTC() {
+            return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+
+        /**
+         * <code>required uint64 timestampUTC = 1;</code>
+         * <p/>
+         * <pre>
+         * 发生时间
+         * </pre>
+         */
+        public long getTimestampUTC() {
+            return timestampUTC_;
+        }
+
+        /**
+         * <code>required .proto.NaviEvent.NaviEventEnum type = 2;</code>
+         */
+        public boolean hasType() {
+            return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+
+        /**
+         * <code>required .proto.NaviEvent.NaviEventEnum type = 2;</code>
+         */
+        public com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.NaviEventEnum getType() {
+            return type_;
+        }
+
+        private void initFields() {
+            timestampUTC_ = 0L;
+            type_ = com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.NaviEventEnum.ROUTE_STARTED;
+        }
+
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1) return true;
+            if (isInitialized == 0) return false;
+
+            if (!hasTimestampUTC()) {
+                memoizedIsInitialized = 0;
+                return false;
+            }
+            if (!hasType()) {
+                memoizedIsInitialized = 0;
+                return false;
+            }
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                throws java.io.IOException {
+            getSerializedSize();
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                output.writeUInt64(1, timestampUTC_);
+            }
+            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                output.writeEnum(2, type_.getNumber());
+            }
+            getUnknownFields().writeTo(output);
+        }
+
+        public int getSerializedSize() {
+            int size = memoizedSerializedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeUInt64Size(1, timestampUTC_);
+            }
+            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeEnumSize(2, type_.getNumber());
+            }
+            size += getUnknownFields().getSerializedSize();
+            memoizedSerializedSize = size;
+            return size;
+        }
+
+        @Override
+        protected Object writeReplace()
+                throws java.io.ObjectStreamException {
+            return super.writeReplace();
+        }
+
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public Builder toBuilder() {
+            return newBuilder(this);
+        }
+
+        @Override
+        protected Builder newBuilderForType(
+                com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        /**
+         * Protobuf enum {@code proto.NaviEvent.NaviEventEnum}
+         */
+        public enum NaviEventEnum
+                implements com.google.protobuf.ProtocolMessageEnum {
+            /**
+             * <code>ROUTE_STARTED = 1;</code>
+             * <p/>
+             * <pre>
+             * 算路开始
+             * </pre>
+             */
+            ROUTE_STARTED(0, 1),
+            /**
+             * <code>ROUTE_CANCELLED = 2;</code>
+             * <p/>
+             * <pre>
+             * 算路放弃
+             * </pre>
+             */
+            ROUTE_CANCELLED(1, 2),
+            /**
+             * <code>ROUTE_COMPLETE = 3;</code>
+             * <p/>
+             * <pre>
+             * 算路完成
+             * </pre>
+             */
+            ROUTE_COMPLETE(2, 3),
+            /**
+             * <code>ROUTE_FAILED = 4;</code>
+             * <p/>
+             * <pre>
+             * 算路失败
+             * </pre>
+             */
+            ROUTE_FAILED(3, 4),
+            /**
+             * <code>NEEDS_REROUTE = 5;</code>
+             * <p/>
+             * <pre>
+             * 偏航发生
+             * </pre>
+             */
+            NEEDS_REROUTE(4, 5),
+            /**
+             * <code>NAVI_BEGIN = 6;</code>
+             * <p/>
+             * <pre>
+             * 导航开始
+             * </pre>
+             */
+            NAVI_BEGIN(5, 6),
+            /**
+             * <code>NAVI_END_MANUAL = 7;</code>
+             * <p/>
+             * <pre>
+             * 导航手动结束
+             * </pre>
+             */
+            NAVI_END_MANUAL(6, 7),
+            /**
+             * <code>NAVI_END_AUTOMATIC = 8;</code>
+             * <p/>
+             * <pre>
+             * 导航自动结束
+             * </pre>
+             */
+            NAVI_END_AUTOMATIC(7, 8),
+            /**
+             * <code>NEW_ROUTE_TAKEN = 9;</code>
+             * <p/>
+             * <pre>
+             * 采纳路线（首次算路之后采纳其中一路线和偏航重算路之后采纳路线都会触发，也是采集路线数据的时机与依据）
+             * </pre>
+             */
+            NEW_ROUTE_TAKEN(8, 9),
+            /**
+             * <code>REROUTE_STARTED = 10;</code>
+             * <p/>
+             * <pre>
+             * 重算路开始
+             * </pre>
+             */
+            REROUTE_STARTED(9, 10),
+            /**
+             * <code>REROUTE_CANCELLED = 11;</code>
+             * <p/>
+             * <pre>
+             * 重算路放弃
+             * </pre>
+             */
+            REROUTE_CANCELLED(10, 11),
+            /**
+             * <code>REROUTE_COMPLETE = 12;</code>
+             * <p/>
+             * <pre>
+             * 重算路完成
+             * </pre>
+             */
+            REROUTE_COMPLETE(11, 12),
+            /**
+             * <code>REROUTE_FAILED = 13;</code>
+             * <p/>
+             * <pre>
+             * 重算路失败
+             * </pre>
+             */
+            REROUTE_FAILED(12, 13),
+            /**
+             * <code>SATELLITE_SIGNAL_LOSS = 14;</code>
+             * <p/>
+             * <pre>
+             * 卫星信号丢失
+             * </pre>
+             */
+            SATELLITE_SIGNAL_LOSS(13, 14),
+            /**
+             * <code>SATELLITE_SIGNAL_RECOVER = 15;</code>
+             * <p/>
+             * <pre>
+             * 卫星信号恢复
+             * </pre>
+             */
+            SATELLITE_SIGNAL_RECOVER(14, 15),
+            /**
+             * <code>OFF_ROAD = 16;</code>
+             * <p/>
+             * <pre>
+             * 进入无路状况
+             * </pre>
+             */
+            OFF_ROAD(15, 16),
+            /**
+             * <code>ON_ROAD = 17;</code>
+             * <p/>
+             * <pre>
+             * 退出无路状况
+             * </pre>
+             */
+            ON_ROAD(16, 17),;
+
+            /**
+             * <code>ROUTE_STARTED = 1;</code>
+             * <p/>
+             * <pre>
+             * 算路开始
+             * </pre>
+             */
+            public static final int ROUTE_STARTED_VALUE = 1;
+            /**
+             * <code>ROUTE_CANCELLED = 2;</code>
+             * <p/>
+             * <pre>
+             * 算路放弃
+             * </pre>
+             */
+            public static final int ROUTE_CANCELLED_VALUE = 2;
+            /**
+             * <code>ROUTE_COMPLETE = 3;</code>
+             * <p/>
+             * <pre>
+             * 算路完成
+             * </pre>
+             */
+            public static final int ROUTE_COMPLETE_VALUE = 3;
+            /**
+             * <code>ROUTE_FAILED = 4;</code>
+             * <p/>
+             * <pre>
+             * 算路失败
+             * </pre>
+             */
+            public static final int ROUTE_FAILED_VALUE = 4;
+            /**
+             * <code>NEEDS_REROUTE = 5;</code>
+             * <p/>
+             * <pre>
+             * 偏航发生
+             * </pre>
+             */
+            public static final int NEEDS_REROUTE_VALUE = 5;
+            /**
+             * <code>NAVI_BEGIN = 6;</code>
+             * <p/>
+             * <pre>
+             * 导航开始
+             * </pre>
+             */
+            public static final int NAVI_BEGIN_VALUE = 6;
+            /**
+             * <code>NAVI_END_MANUAL = 7;</code>
+             * <p/>
+             * <pre>
+             * 导航手动结束
+             * </pre>
+             */
+            public static final int NAVI_END_MANUAL_VALUE = 7;
+            /**
+             * <code>NAVI_END_AUTOMATIC = 8;</code>
+             * <p/>
+             * <pre>
+             * 导航自动结束
+             * </pre>
+             */
+            public static final int NAVI_END_AUTOMATIC_VALUE = 8;
+            /**
+             * <code>NEW_ROUTE_TAKEN = 9;</code>
+             * <p/>
+             * <pre>
+             * 采纳路线（首次算路之后采纳其中一路线和偏航重算路之后采纳路线都会触发，也是采集路线数据的时机与依据）
+             * </pre>
+             */
+            public static final int NEW_ROUTE_TAKEN_VALUE = 9;
+            /**
+             * <code>REROUTE_STARTED = 10;</code>
+             * <p/>
+             * <pre>
+             * 重算路开始
+             * </pre>
+             */
+            public static final int REROUTE_STARTED_VALUE = 10;
+            /**
+             * <code>REROUTE_CANCELLED = 11;</code>
+             * <p/>
+             * <pre>
+             * 重算路放弃
+             * </pre>
+             */
+            public static final int REROUTE_CANCELLED_VALUE = 11;
+            /**
+             * <code>REROUTE_COMPLETE = 12;</code>
+             * <p/>
+             * <pre>
+             * 重算路完成
+             * </pre>
+             */
+            public static final int REROUTE_COMPLETE_VALUE = 12;
+            /**
+             * <code>REROUTE_FAILED = 13;</code>
+             * <p/>
+             * <pre>
+             * 重算路失败
+             * </pre>
+             */
+            public static final int REROUTE_FAILED_VALUE = 13;
+            /**
+             * <code>SATELLITE_SIGNAL_LOSS = 14;</code>
+             * <p/>
+             * <pre>
+             * 卫星信号丢失
+             * </pre>
+             */
+            public static final int SATELLITE_SIGNAL_LOSS_VALUE = 14;
+            /**
+             * <code>SATELLITE_SIGNAL_RECOVER = 15;</code>
+             * <p/>
+             * <pre>
+             * 卫星信号恢复
+             * </pre>
+             */
+            public static final int SATELLITE_SIGNAL_RECOVER_VALUE = 15;
+            /**
+             * <code>OFF_ROAD = 16;</code>
+             * <p/>
+             * <pre>
+             * 进入无路状况
+             * </pre>
+             */
+            public static final int OFF_ROAD_VALUE = 16;
+            /**
+             * <code>ON_ROAD = 17;</code>
+             * <p/>
+             * <pre>
+             * 退出无路状况
+             * </pre>
+             */
+            public static final int ON_ROAD_VALUE = 17;
+            private static final NaviEventEnum[] VALUES = values();
+            private static com.google.protobuf.Internal.EnumLiteMap<NaviEventEnum>
+                    internalValueMap =
+                    new com.google.protobuf.Internal.EnumLiteMap<NaviEventEnum>() {
+                        public NaviEventEnum findValueByNumber(int number) {
+                            return NaviEventEnum.valueOf(number);
+                        }
+                    };
+            private final int index;
+            private final int value;
+
+            private NaviEventEnum(int index, int value) {
+                this.index = index;
+                this.value = value;
+            }
+
+            public static NaviEventEnum valueOf(int value) {
+                switch (value) {
+                    case 1:
+                        return ROUTE_STARTED;
+                    case 2:
+                        return ROUTE_CANCELLED;
+                    case 3:
+                        return ROUTE_COMPLETE;
+                    case 4:
+                        return ROUTE_FAILED;
+                    case 5:
+                        return NEEDS_REROUTE;
+                    case 6:
+                        return NAVI_BEGIN;
+                    case 7:
+                        return NAVI_END_MANUAL;
+                    case 8:
+                        return NAVI_END_AUTOMATIC;
+                    case 9:
+                        return NEW_ROUTE_TAKEN;
+                    case 10:
+                        return REROUTE_STARTED;
+                    case 11:
+                        return REROUTE_CANCELLED;
+                    case 12:
+                        return REROUTE_COMPLETE;
+                    case 13:
+                        return REROUTE_FAILED;
+                    case 14:
+                        return SATELLITE_SIGNAL_LOSS;
+                    case 15:
+                        return SATELLITE_SIGNAL_RECOVER;
+                    case 16:
+                        return OFF_ROAD;
+                    case 17:
+                        return ON_ROAD;
+                    default:
+                        return null;
+                }
+            }
+
+            public static com.google.protobuf.Internal.EnumLiteMap<NaviEventEnum>
+            internalGetValueMap() {
+                return internalValueMap;
+            }
+
+            public static final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptor() {
+                return com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.getDescriptor().getEnumTypes().get(0);
+            }
+
+            public static NaviEventEnum valueOf(
+                    com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+                if (desc.getType() != getDescriptor()) {
+                    throw new IllegalArgumentException(
+                            "EnumValueDescriptor is not for this type.");
+                }
+                return VALUES[desc.getIndex()];
+            }
+
+            public final int getNumber() {
+                return value;
+            }
+
+            public final com.google.protobuf.Descriptors.EnumValueDescriptor
+            getValueDescriptor() {
+                return getDescriptor().getValues().get(index);
+            }
+
+            public final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptorForType() {
+                return getDescriptor();
+            }
+
+            // @@protoc_insertion_point(enum_scope:proto.NaviEvent.NaviEventEnum)
+        }
+
+        /**
+         * Protobuf type {@code proto.NaviEvent}
+         * <p/>
+         * <pre>
+         * 导航过程事件
+         * </pre>
+         */
+        public static final class Builder extends
+                com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:proto.NaviEvent)
+                com.zhk.protobuf.LogicalDataModelProtos.NaviEventOrBuilder {
+            private int bitField0_;
+            private long timestampUTC_;
+            private com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.NaviEventEnum type_ = com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.NaviEventEnum.ROUTE_STARTED;
+
+            // Construct using com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(
+                    com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+                return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_NaviEvent_descriptor;
+            }
+
+            private static Builder create() {
+                return new Builder();
+            }
+
+            protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+                return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_NaviEvent_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.class, com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.Builder.class);
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+                }
+            }
+
+            public Builder clear() {
+                super.clear();
+                timestampUTC_ = 0L;
+                bitField0_ = (bitField0_ & ~0x00000001);
+                type_ = com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.NaviEventEnum.ROUTE_STARTED;
+                bitField0_ = (bitField0_ & ~0x00000002);
+                return this;
+            }
+
+            public Builder clone() {
+                return create().mergeFrom(buildPartial());
+            }
+
+            public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+                return com.zhk.protobuf.LogicalDataModelProtos.internal_static_proto_NaviEvent_descriptor;
+            }
+
+            public com.zhk.protobuf.LogicalDataModelProtos.NaviEvent getDefaultInstanceForType() {
+                return com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.getDefaultInstance();
+            }
+
+            public com.zhk.protobuf.LogicalDataModelProtos.NaviEvent build() {
+                com.zhk.protobuf.LogicalDataModelProtos.NaviEvent result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            public com.zhk.protobuf.LogicalDataModelProtos.NaviEvent buildPartial() {
+                com.zhk.protobuf.LogicalDataModelProtos.NaviEvent result = new com.zhk.protobuf.LogicalDataModelProtos.NaviEvent(this);
+                int from_bitField0_ = bitField0_;
+                int to_bitField0_ = 0;
+                if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+                    to_bitField0_ |= 0x00000001;
+                }
+                result.timestampUTC_ = timestampUTC_;
+                if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+                    to_bitField0_ |= 0x00000002;
+                }
+                result.type_ = type_;
+                result.bitField0_ = to_bitField0_;
+                onBuilt();
+                return result;
+            }
+
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof com.zhk.protobuf.LogicalDataModelProtos.NaviEvent) {
+                    return mergeFrom((com.zhk.protobuf.LogicalDataModelProtos.NaviEvent) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(com.zhk.protobuf.LogicalDataModelProtos.NaviEvent other) {
+                if (other == com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.getDefaultInstance()) return this;
+                if (other.hasTimestampUTC()) {
+                    setTimestampUTC(other.getTimestampUTC());
+                }
+                if (other.hasType()) {
+                    setType(other.getType());
+                }
+                this.mergeUnknownFields(other.getUnknownFields());
+                return this;
+            }
+
+            public final boolean isInitialized() {
+                if (!hasTimestampUTC()) {
+
+                    return false;
+                }
+                if (!hasType()) {
+
+                    return false;
+                }
+                return true;
+            }
+
+            public Builder mergeFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws java.io.IOException {
+                com.zhk.protobuf.LogicalDataModelProtos.NaviEvent parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (com.zhk.protobuf.LogicalDataModelProtos.NaviEvent) e.getUnfinishedMessage();
+                    throw e;
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            /**
+             * <code>required uint64 timestampUTC = 1;</code>
+             * <p/>
+             * <pre>
+             * 发生时间
+             * </pre>
+             */
+            public boolean hasTimestampUTC() {
+                return ((bitField0_ & 0x00000001) == 0x00000001);
+            }
+
+            /**
+             * <code>required uint64 timestampUTC = 1;</code>
+             * <p/>
+             * <pre>
+             * 发生时间
+             * </pre>
+             */
+            public long getTimestampUTC() {
+                return timestampUTC_;
+            }
+
+            /**
+             * <code>required uint64 timestampUTC = 1;</code>
+             * <p/>
+             * <pre>
+             * 发生时间
+             * </pre>
+             */
+            public Builder setTimestampUTC(long value) {
+                bitField0_ |= 0x00000001;
+                timestampUTC_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>required uint64 timestampUTC = 1;</code>
+             * <p/>
+             * <pre>
+             * 发生时间
+             * </pre>
+             */
+            public Builder clearTimestampUTC() {
+                bitField0_ = (bitField0_ & ~0x00000001);
+                timestampUTC_ = 0L;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>required .proto.NaviEvent.NaviEventEnum type = 2;</code>
+             */
+            public boolean hasType() {
+                return ((bitField0_ & 0x00000002) == 0x00000002);
+            }
+
+            /**
+             * <code>required .proto.NaviEvent.NaviEventEnum type = 2;</code>
+             */
+            public com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.NaviEventEnum getType() {
+                return type_;
+            }
+
+            /**
+             * <code>required .proto.NaviEvent.NaviEventEnum type = 2;</code>
+             */
+            public Builder setType(com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.NaviEventEnum value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                bitField0_ |= 0x00000002;
+                type_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>required .proto.NaviEvent.NaviEventEnum type = 2;</code>
+             */
+            public Builder clearType() {
+                bitField0_ = (bitField0_ & ~0x00000002);
+                type_ = com.zhk.protobuf.LogicalDataModelProtos.NaviEvent.NaviEventEnum.ROUTE_STARTED;
+                onChanged();
+                return this;
+            }
+
+            // @@protoc_insertion_point(builder_scope:proto.NaviEvent)
+        }
+
+        static {
+            defaultInstance = new NaviEvent(true);
+            defaultInstance.initFields();
+        }
+
+        // @@protoc_insertion_point(class_scope:proto.NaviEvent)
     }
 
-    static {
-      defaultInstance = new NaviEvent(true);
-      defaultInstance.initFields();
-    }
-
-    // @@protoc_insertion_point(class_scope:proto.NaviEvent)
-  }
-
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_LogicalDataModel_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_proto_LogicalDataModel_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_Envelope_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_proto_Envelope_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_NaviVersion_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_proto_NaviVersion_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_Path_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_proto_Path_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_PositionEstimate_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_proto_PositionEstimate_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_PathSegment_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_proto_PathSegment_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_MapPoint2D_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_proto_MapPoint2D_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_PathEvent_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_proto_PathEvent_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_NaviEvent_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_proto_NaviEvent_fieldAccessorTable;
-
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
-  static {
-    String[] descriptorData = {
-      "\n\025data_collection.proto\022\005proto\"u\n\020Logica" +
-      "lDataModel\022!\n\010envelope\030\001 \002(\0132\017.proto.Env" +
-      "elope\022\031\n\004path\030\002 \002(\0132\013.proto.Path\022#\n\tpath" +
-      "Event\030\003 \003(\0132\020.proto.PathEvent\"\230\001\n\010Envelo" +
-      "pe\022\017\n\007version\030\001 \002(\005\022\'\n\013naviVersion\030\002 \001(\013" +
-      "2\022.proto.NaviVersion\022\016\n\006appKey\030\003 \002(\t\022\014\n\004" +
-      "guid\030\004 \002(\t\022\013\n\003sid\030\005 \002(\t\022\024\n\014timestampNTP\030" +
-      "\006 \002(\004\022\021\n\ttimestamp\030\007 \002(\004\"@\n\013NaviVersion\022" +
-      "\025\n\rengineVersion\030\001 \001(\t\022\014\n\004appc\030\002 \001(\t\022\014\n\004" +
-      "appn\030\003 \001(\t\"c\n\004Path\0221\n\020positionEstimate\030\001",
-      " \003(\0132\027.proto.PositionEstimate\022(\n\014pathSeg" +
-      "ments\030\002 \003(\0132\022.proto.PathSegment\"\242\010\n\020Posi" +
-      "tionEstimate\022\024\n\014timestampUTC\030\001 \002(\004\022>\n\014po" +
-      "sitionType\030\002 \002(\0162(.proto.PositionEstimat" +
-      "e.PositionTypeEnum\022(\n\rpointSegments\030\003 \002(" +
-      "\0132\021.proto.MapPoint2D\022\032\n\022horizontalAccura" +
-      "cy\030\004 \002(\002\022\020\n\010altitude\030\005 \001(\002\022\030\n\020altitudeAc" +
-      "curacy\030\006 \001(\002\022\017\n\007heading\030\007 \001(\002\022\r\n\005speed\030\010" +
-      " \001(\002\022\027\n\017satelliteNumber\030\t \001(\005\022\r\n\005slope\030\n" +
-      " \001(\002\022\033\n\023headingAccuracy_deg\030\013 \001(\002\022\031\n\021spe",
-      "edAccuracy_mps\030\014 \001(\002\022\031\n\021slopeAccuracy_de" +
-      "g\030\r \001(\002\022J\n\024headingDetectionType\030\016 \001(\0162,." +
-      "proto.PositionEstimate.HeadingDetectionE" +
-      "num\022F\n\022speedDetectionType\030\017 \001(\0162*.proto." +
-      "PositionEstimate.SpeedDetectionEnum\022F\n\022s" +
-      "lopeDetectionType\030\020 \001(\0162*.proto.Position" +
-      "Estimate.SlopeDetectionEnum\"\177\n\020PositionT" +
-      "ypeEnum\022\013\n\007RAW_GPS\020\001\022\014\n\010FILTERED\020\002\022\033\n\027MA" +
-      "P_MATCHED_REGULAR_MAP\020\003\022\026\n\022MAP_MATCHED_H" +
-      "D_MAP\020\004\022\033\n\027MAP_MATCHED_HD_MAP_LANE\020\005\"}\n\024",
-      "HeadingDetectionEnum\022\023\n\017HEADING_RAW_GPS\020" +
-      "\001\022\033\n\027HEADING_MAGNETIC_SENSOR\020\002\022\037\n\033HEADIN" +
-      "G_MULTI_SENSOR_FUSION\020\003\022\022\n\016HEADING_BY_MA" +
-      "P\020\004\"U\n\022SpeedDetectionEnum\022\021\n\rSPEED_RAW_G" +
-      "PS\020\001\022\025\n\021SPEED_WHEEL_TICKS\020\002\022\025\n\021SPEED_RAD" +
-      "AR_SONAR\020\003\"x\n\022SlopeDetectionEnum\022\021\n\rSLOP" +
-      "E_RAW_GPS\020\001\022\036\n\032SLOPE_ACCELEROMETER_SENSO" +
-      "R\020\002\022\035\n\031SLOPE_MULTI_SENSOR_FUSION\020\003\022\020\n\014SL" +
-      "OPE_BY_MAP\020\004\"\346\001\n\013PathSegment\022\024\n\014timestam" +
-      "pUTC\030\001 \002(\004\022(\n\rpointSegments\030\002 \003(\0132\021.prot",
-      "o.MapPoint2D\022\022\n\nnavinfoIds\030\003 \003(\003\022;\n\rrout" +
-      "eBaseType\030\004 \002(\0162$.proto.PathSegment.Rout" +
-      "eBaseTypeEnum\022\026\n\016navinfoDataVer\030\005 \001(\t\".\n" +
-      "\021RouteBaseTypeEnum\022\014\n\010OFF_LINE\020\001\022\013\n\007ON_L" +
-      "INE\020\002\"&\n\nMapPoint2D\022\013\n\003lon\030\001 \002(\005\022\013\n\003lat\030" +
-      "\002 \002(\005\"0\n\tPathEvent\022#\n\tnaviEvent\030\001 \003(\0132\020." +
-      "proto.NaviEvent\"\276\003\n\tNaviEvent\022\024\n\014timesta" +
-      "mpUTC\030\001 \002(\004\022,\n\004type\030\002 \002(\0162\036.proto.NaviEv" +
-      "ent.NaviEventEnum\"\354\002\n\rNaviEventEnum\022\021\n\rR" +
-      "OUTE_STARTED\020\001\022\023\n\017ROUTE_CANCELLED\020\002\022\022\n\016R",
-      "OUTE_COMPLETE\020\003\022\020\n\014ROUTE_FAILED\020\004\022\021\n\rNEE" +
-      "DS_REROUTE\020\005\022\016\n\nNAVI_BEGIN\020\006\022\023\n\017NAVI_END" +
-      "_MANUAL\020\007\022\026\n\022NAVI_END_AUTOMATIC\020\010\022\023\n\017NEW" +
-      "_ROUTE_TAKEN\020\t\022\023\n\017REROUTE_STARTED\020\n\022\025\n\021R" +
-      "EROUTE_CANCELLED\020\013\022\024\n\020REROUTE_COMPLETE\020\014" +
-      "\022\022\n\016REROUTE_FAILED\020\r\022\031\n\025SATELLITE_SIGNAL" +
-      "_LOSS\020\016\022\034\n\030SATELLITE_SIGNAL_RECOVER\020\017\022\014\n" +
-      "\010OFF_ROAD\020\020\022\013\n\007ON_ROAD\020\021B-\n\023com.mapbar.p" +
-      "rotobufB\026LogicalDataModelProtos"
-    };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-        }, assigner);
-    internal_static_proto_LogicalDataModel_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_proto_LogicalDataModel_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_proto_LogicalDataModel_descriptor,
-        new String[] { "Envelope", "Path", "PathEvent", });
-    internal_static_proto_Envelope_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_proto_Envelope_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_proto_Envelope_descriptor,
-        new String[] { "Version", "NaviVersion", "AppKey", "Guid", "Sid", "TimestampNTP", "Timestamp", });
-    internal_static_proto_NaviVersion_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_proto_NaviVersion_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_proto_NaviVersion_descriptor,
-        new String[] { "EngineVersion", "Appc", "Appn", });
-    internal_static_proto_Path_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_proto_Path_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_proto_Path_descriptor,
-        new String[] { "PositionEstimate", "PathSegments", });
-    internal_static_proto_PositionEstimate_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_proto_PositionEstimate_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_proto_PositionEstimate_descriptor,
-        new String[] { "TimestampUTC", "PositionType", "PointSegments", "HorizontalAccuracy", "Altitude", "AltitudeAccuracy", "Heading", "Speed", "SatelliteNumber", "Slope", "HeadingAccuracyDeg", "SpeedAccuracyMps", "SlopeAccuracyDeg", "HeadingDetectionType", "SpeedDetectionType", "SlopeDetectionType", });
-    internal_static_proto_PathSegment_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_proto_PathSegment_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_proto_PathSegment_descriptor,
-        new String[] { "TimestampUTC", "PointSegments", "NavinfoIds", "RouteBaseType", "NavinfoDataVer", });
-    internal_static_proto_MapPoint2D_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_proto_MapPoint2D_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_proto_MapPoint2D_descriptor,
-        new String[] { "Lon", "Lat", });
-    internal_static_proto_PathEvent_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_proto_PathEvent_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_proto_PathEvent_descriptor,
-        new String[] { "NaviEvent", });
-    internal_static_proto_NaviEvent_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_proto_NaviEvent_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_proto_NaviEvent_descriptor,
-        new String[] { "TimestampUTC", "Type", });
-  }
-
-  // @@protoc_insertion_point(outer_class_scope)
+    // @@protoc_insertion_point(outer_class_scope)
 }

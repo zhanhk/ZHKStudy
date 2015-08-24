@@ -29,7 +29,7 @@ public class Client1 {
         Socket client = new Socket("127.0.0.1", 8000);
         client.setSoTimeout(10000);
 
-        System.out.println("start  " + client.getLocalAddress().getHostAddress()+":"+client.getLocalPort());
+        System.out.println("start  " + client.getLocalAddress().getHostAddress() + ":" + client.getLocalPort());
 
         //获取键盘输入
         BufferedReader input = new BufferedReader(new InputStreamReader(System.in));

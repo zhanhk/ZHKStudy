@@ -35,8 +35,10 @@ public class HelloServer {
     private static class HelloServerHandler extends SimpleChannelHandler {
 
         //channelOpen => channelConnected
+
         /**
          * 先打开连接
+         *
          * @param ctx
          * @param e
          * @throws Exception
@@ -47,6 +49,7 @@ public class HelloServer {
 
         /**
          * 客户端连接后，再触发此方法
+         *
          * @param ctx
          * @param e
          */
@@ -58,8 +61,8 @@ public class HelloServer {
         // 服务端收到客户端发送过来的消息时，触发此方法
         @Override
         public void messageReceived(ChannelHandlerContext ctx, MessageEvent e) throws Exception {
-            ChannelBuffer buffer = (ChannelBuffer)e.getMessage();
-            System.out.println("Receive:"+buffer.toString(Charset.defaultCharset()));
+            ChannelBuffer buffer = (ChannelBuffer) e.getMessage();
+            System.out.println("Receive:" + buffer.toString(Charset.defaultCharset()));
             String msg = buffer.toString(Charset.defaultCharset()) + "has been processed!";
             ChannelBuffer buffer2 = ChannelBuffers.buffer(msg.length());
             buffer2.writeBytes(msg.getBytes());
