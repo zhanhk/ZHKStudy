@@ -1,7 +1,20 @@
-target/
-*.class
-*.iml
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Intellij
 .idea/
-*.log
+*.iml
+*.iws
+*.ipr
+*.ids
+*.eml
+
+# Mac
+.DS_Store
+
+# Maven
+target/
 log/
 logs/
