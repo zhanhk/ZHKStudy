@@ -1,4 +1,4 @@
-package netty;
+package com.zhk.tcp.netty3;
 
 import org.jboss.netty.bootstrap.ServerBootstrap;
 import org.jboss.netty.buffer.ChannelBuffer;

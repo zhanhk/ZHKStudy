@@ -1,4 +1,4 @@
-package netty;
+package com.zhk.tcp.netty3;
 
 import org.jboss.netty.bootstrap.ClientBootstrap;
 import org.jboss.netty.buffer.ChannelBuffer;
@@ -24,7 +24,7 @@ public class HelloClient {
         bootstrap.setPipelineFactory(new ChannelPipelineFactory() {
             @Override
             public ChannelPipeline getPipeline() throws Exception {
-                return org.jboss.netty.channel.Channels.pipeline(new HelloClientHandler());
+                return Channels.pipeline(new HelloClientHandler());
             }
         });
         // 连接到本地的8000端口的服务端

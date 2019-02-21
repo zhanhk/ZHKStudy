@@ -1,4 +1,4 @@
-package socket;
+package com.zhk.tcp.socket;
 
 import java.io.BufferedReader;
 import java.io.IOException;

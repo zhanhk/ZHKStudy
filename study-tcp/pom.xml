@@ -10,40 +10,30 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>study-tcp</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>tcp-netty3</module>
+        <module>tcp-netty4</module>
+    </modules>
 
     <dependencies>
         <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty</artifactId>
-            <version>3.6.10.Final</version>
+            <groupId>zhk.study</groupId>
+            <artifactId>common-util</artifactId>
         </dependency>
     </dependencies>
 
-    <!-- 打成可执行JIAR包 -->
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-shade-plugin</artifactId>
-                <version>2.4</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>shade</goal>
-                        </goals>
-                        <configuration>
-                            <transformers>
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <!-- 指定启动Main方法的类 -->
-                                    <mainClass>netty.HelloServer</mainClass>
-                                </transformer>
-                            </transformers>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <!-- Import dependency management from Spring Boot -->
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-parent</artifactId>
+                <version>2.1.1.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
